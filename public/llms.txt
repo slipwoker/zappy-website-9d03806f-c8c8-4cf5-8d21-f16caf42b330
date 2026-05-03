@@ -1,0 +1,47 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+מערכת Access קרסה? מפתח נעלם? ב־90% מהמקרים אפשר לתקן בלי לבנות מחדש. מומחה עם 25 שנה מציל מסדי נתונים ומחזיר עסקים לפעילות מלאה.
+
+### שירותים
+https://example.com/services
+תיקון תקלות, שדרוג מסד נתונים Access ל-SQL Server, מעבר לגרסת 64 ביט ושיפור ביצועים — פתרונות מקצועיים מהירים שמחזירים את המערכת שלך לעבוד בשיא הכוח.
+
+### ניסיון
+https://example.com/experience
+מערכות שפותחו עבור יד ושם, רשתות בתי ספר, ניהול בטיחות ואיגודי רכיבה — ניסיון אמיתי בפרויקטים מורכבים שמדבר בעד עצמו. גלה למה עסקים בוחרים במומחה Access בעל רקורד מוכח.
+
+### צור קשר
+https://example.com/contact
+מסד הנתונים שלך לא עובד? אל תחכה — צור קשר עכשיו לאבחון מהיר. מומחה Access זמין לתיקון תקלות, שדרוג ותמיכה שוטפת לעסקים קטנים וגדולים כאחד.
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
