@@ -8267,6 +8267,210 @@ body .whatsapp-float:hover {
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
 
+
+.index-problems-section {
+  background: linear-gradient(180deg, #D0D8E8 0%, #C4CEDF 100%) !important;
+  position: relative;
+}
+
+.index-services-section {
+  background: linear-gradient(160deg, #0E1E38 0%, var(--text-color) 100%) !important;
+  color: var(--text-light) !important;
+  position: relative;
+}
+
+.index-services-section .index-services-heading,
+.index-services-section .index-services-lead,
+.index-services-section .index-services-row-title,
+.index-services-section .index-services-row-desc,
+.index-services-section .index-services-label,
+.index-services-section .index-services-process-sub,
+.index-services-section .index-services-step-title,
+.index-services-section .index-services-step-desc {
+  color: var(--surface-color) !important;
+}
+
+.index-services-section .index-services-process-badge {
+  background: rgba(0, 208, 132, 0.15) !important;
+  color: var(--accent-color) !important;
+  border: 1px solid rgba(0, 208, 132, 0.3) !important;
+}
+
+.index-services-section .index-services-row-icon svg {
+  color: var(--accent-color) !important;
+  stroke: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle {
+  background: rgba(24, 87, 214, 0.2) !important;
+  border: 1px solid rgba(24, 87, 214, 0.4) !important;
+  color: #C8D8F0 !important;
+}
+
+.index-services-section .index-services-principle strong {
+  color: #60AAFF !important;
+}
+
+.index-services-section .index-services-step-num {
+  background: linear-gradient(135deg, var(--primary-color), #0E3DA8) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(24, 87, 214, 0.45) !important;
+}
+
+.index-services-section .index-services-connector {
+  background: linear-gradient(180deg, var(--primary-color) 0%, rgba(24,87,214,0.2) 100%) !important;
+}
+
+.index-services-section .index-services-step {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 10px !important;
+}
+
+.index-services-section .index-services-row {
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.index-services-section .index-services-img-wrap img {
+  border-radius: 12px !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4) !important;
+}
+
+.index-case-studies-section {
+  background: linear-gradient(180deg, #EBF0F8 0%, #E2EAF5 100%) !important;
+  position: relative;
+}
+
+.index-cta-section {
+  background: linear-gradient(135deg, var(--text-color) 0%, #0E2248 50%, var(--text-color) 100%) !important;
+  position: relative;
+}
+
+.index-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(24,87,214,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.nav-cta-btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #0E3DA8 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(24, 87, 214, 0.4) !important;
+  border: none !important;
+  font-weight: 700 !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+.nav-cta-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 24px rgba(24, 87, 214, 0.55) !important;
+}
+
+.site-footer {
+  background: linear-gradient(180deg, var(--text-color) 0%, #060E1C 100%) !important;
+}
+
+.site-footer, .site-footer p, .site-footer span, .site-footer li, .site-footer a {
+  color: #A0B4CC !important;
+}
+
+.site-footer h3, .site-footer .footer-heading {
+  color: var(--surface-color) !important;
+}
+
+.site-footer .footer-tagline {
+  color: #7A90AA !important;
+}
+
+.site-footer .footer-bottom {
+  background: rgba(0,0,0,0.3) !important;
+  border-top: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+.site-footer .footer-copyright {
+  color: #5A6A7E !important;
+}
+
+.site-footer .footer-legal a {
+  color: #7A90AA !important;
+}
+
+.site-footer .social-link {
+  background: rgba(255,255,255,0.07) !important;
+  color: #A0B4CC !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  transition: background 0.18s ease, color 0.18s ease !important;
+}
+
+.site-footer .social-link:hover {
+  background: rgba(24,87,214,0.3) !important;
+  color: #fff !important;
+}
+
+.navbar {
+  background: var(--text-color) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3) !important;
+}
+
+.nav-menu a {
+  color: #C8D8F0 !important;
+  font-weight: 500 !important;
+}
+
+.nav-menu a:hover {
+  color: var(--accent-color) !important;
+}
+
+.site-footer .contact-list a {
+  color: #A0B4CC !important;
+}
+
+.site-footer .contact-list li {
+  color: #A0B4CC !important;
+}
+
+.site-footer .contact-list span {
+  color: #A0B4CC !important;
+}
+
+.site-footer .footer-legal a {
+  color: #A0B4CC !important;
+}
+
+.site-footer .copyright p {
+  color: #A0B4CC !important;
+}
+
+.site-footer .footer-description {
+  color: #A0B4CC !important;
+}
+
+.site-footer .footer-bottom a {
+  color: #A0B4CC !important;
+}
+
+.site-footer .footer-bottom p {
+  color: #A0B4CC !important;
+}
+
+.site-footer .footer-bottom span:not(.separator) {
+  color: #A0B4CC !important;
+}
+
+.site-footer .footer-legal .separator {
+  color: #A0B4CC !important;
+}
+
+.nav-menu > li > a {
+  color: #C8D8F0 !important;
+}
+
+.nav-menu > .nav-item > a {
+  color: #C8D8F0 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
