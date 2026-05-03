@@ -8471,6 +8471,258 @@ body .whatsapp-float:hover {
 .nav-menu > .nav-item > a {
   color: #C8D8F0 !important;
 }
+
+.index-problems-section .index-problems-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(24, 87, 214, 0.12) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.10), 0 1px 4px rgba(10, 22, 40, 0.06) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+.index-problems-section .index-problems-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 36px rgba(10, 22, 40, 0.16), 0 2px 8px rgba(10, 22, 40, 0.08) !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: var(--text-color) !important;
+  font-weight: 700 !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: var(--text-secondary-color) !important;
+}
+
+.index-problems-section .index-problems-icon-wrap {
+  background: linear-gradient(135deg, rgba(24,87,214,0.1), rgba(24,87,214,0.06)) !important;
+  border: 1px solid rgba(24,87,214,0.18) !important;
+  color: var(--primary-color) !important;
+  border-radius: 10px !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  background: rgba(24, 87, 214, 0.1) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(24,87,214,0.2) !important;
+  border-radius: 20px !important;
+  padding: 4px 14px !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+}
+
+.index-problems-section .index-problems-title {
+  color: var(--text-color) !important;
+  font-weight: 800 !important;
+}
+
+.index-problems-section .index-problems-subtitle {
+  color: var(--text-secondary-color) !important;
+}
+
+.index-problems-section .index-problems-summary {
+  background: linear-gradient(135deg, var(--primary-color), #0E3DA8) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 32px rgba(24, 87, 214, 0.35) !important;
+}
+
+.index-problems-section .index-problems-summary-text {
+  color: #E8F0FF !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  color: var(--accent-color) !important;
+  font-weight: 700 !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: var(--accent-color) !important;
+  stroke: var(--accent-color) !important;
+}
+
+.index-hero-section .index-hero-label {
+  background: rgba(0, 208, 132, 0.12) !important;
+  color: var(--accent-color) !important;
+  border: 1px solid rgba(0, 208, 132, 0.3) !important;
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+}
+
+.index-hero-section .index-hero-trust {
+  background: rgba(255,255,255,0.07) !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  border-radius: 8px !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: #A8C4E0 !important;
+}
+
+.index-hero-section .index-hero-divider-wrapper svg path {
+  fill: #C4CEDF !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #0E3DA8 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 32px rgba(24, 87, 214, 0.55), 0 2px 8px rgba(24,87,214,0.3) !important;
+  border: none !important;
+  font-weight: 700 !important;
+}
+
+.index-hero-section .index-hero-btn-primary:hover {
+  background: linear-gradient(135deg, #2068E8 0%, #1550CC 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 42px rgba(24, 87, 214, 0.65) !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  background: rgba(0, 208, 132, 0.12) !important;
+  color: var(--accent-color) !important;
+  border: 2px solid rgba(0, 208, 132, 0.6) !important;
+  font-weight: 700 !important;
+}
+
+.index-hero-section .index-hero-btn-secondary:hover {
+  background: rgba(0, 208, 132, 0.22) !important;
+  box-shadow: 0 8px 28px rgba(0, 208, 132, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+.index-case-studies-section .case-tile {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(24, 87, 214, 0.10) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.09), 0 1px 4px rgba(10, 22, 40, 0.05) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+.index-case-studies-section .case-tile:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 40px rgba(10, 22, 40, 0.15) !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: var(--text-color) !important;
+  font-weight: 700 !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: var(--text-secondary-color) !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  background: rgba(24, 87, 214, 0.08) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(24,87,214,0.2) !important;
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+}
+
+.index-case-studies-section .case-tile-outcome {
+  color: #00A864 !important;
+  font-weight: 600 !important;
+}
+
+.index-case-studies-section .case-tile-outcome i {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: var(--text-color) !important;
+  font-weight: 800 !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: var(--text-secondary-color) !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  background: rgba(24, 87, 214, 0.1) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(24,87,214,0.2) !important;
+  border-radius: 20px !important;
+  padding: 4px 14px !important;
+  font-weight: 600 !important;
+}
+
+.index-case-studies-section .case-credibility-strip {
+  background: linear-gradient(135deg, #0E1E38, var(--text-color)) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(24,87,214,0.3) !important;
+  box-shadow: 0 8px 40px rgba(10,22,40,0.3) !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: #60AAFF !important;
+  font-weight: 800 !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: #A0B4CC !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: #C8D8F0 !important;
+}
+
+.index-case-studies-section .case-studies-divider-wrapper svg path {
+  fill: var(--text-color) !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #0E3DA8 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 32px rgba(24, 87, 214, 0.6), 0 2px 8px rgba(24,87,214,0.3) !important;
+  border: none !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+}
+
+.index-cta-section .index-cta-btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 44px rgba(24, 87, 214, 0.7) !important;
+}
+
+.index-cta-section .index-cta-btn-secondary {
+  background: rgba(0, 208, 132, 0.1) !important;
+  color: var(--accent-color) !important;
+  border: 2px solid rgba(0, 208, 132, 0.6) !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+}
+
+.index-cta-section .index-cta-btn-secondary:hover {
+  background: rgba(0, 208, 132, 0.2) !important;
+  box-shadow: 0 8px 28px rgba(0, 208, 132, 0.35) !important;
+  transform: translateY(-2px) !important;
+}
+
+.index-cta-section .index-cta-heading {
+  color: #E8F0FF !important;
+  font-weight: 800 !important;
+}
+
+.index-cta-section .index-cta-subtext {
+  color: #A0B8D8 !important;
+}
+
+.index-cta-section .index-cta-reassurance {
+  color: #6A8CAA !important;
+}
+
+.navbar .nav-cta-btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #0E3DA8 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(24, 87, 214, 0.4) !important;
+  border: none !important;
+  font-weight: 700 !important;
+}
+
+.navbar .nav-cta-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 24px rgba(24, 87, 214, 0.55) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
