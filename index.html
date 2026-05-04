@@ -245,6 +245,324 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.index-hero-section {
+  position: relative;
+  background-color: var(--bg-light);
+  background-image: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  color: var(--text-dark);
+  overflow: hidden;
+  padding: 140px 24px 80px;
+  direction: rtl;
+}
+
+/* Decorative blob */
+.index-hero-section .index-hero-blob {
+  position: absolute;
+  top: -80px;
+  left: -100px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(36,87,255,0.10) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  aria-hidden: true;
+}
+
+.index-hero-section .index-hero-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  direction: rtl;
+}
+
+/* ── TEXT COLUMN ── */
+.index-hero-section .index-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: right;
+}
+
+.index-hero-section .index-hero-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(36,87,255,0.08);
+  border: 1px solid rgba(36,87,255,0.18);
+  border-radius: 100px;
+  padding: 6px 16px;
+  width: fit-content;
+}
+
+.index-hero-section .index-hero-headline {
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.index-hero-section .index-hero-subtitle {
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--secondary);
+  margin: 0;
+  opacity: 0.85;
+}
+
+.index-hero-section .index-hero-body {
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 480px;
+}
+
+/* CTAs */
+.index-hero-section .index-hero-ctas {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary);
+  color: var(--text-light);
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(36,87,255,0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.index-hero-section .index-hero-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(36,87,255,0.38);
+}
+
+.index-hero-section .index-hero-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.index-hero-section .index-hero-btn-ghost:hover {
+  background: var(--primary);
+  color: var(--text-light);
+}
+
+/* Trust strip */
+.index-hero-section .index-hero-trust {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.index-hero-section .index-hero-trust-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: right;
+}
+
+.index-hero-section .index-hero-trust-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', sans-serif;
+}
+
+.index-hero-section .index-hero-trust-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 100px;
+}
+
+.index-hero-section .index-hero-trust-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-light);
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+/* ── IMAGE COLUMN ── */
+.index-hero-section .index-hero-image-col {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-hero-section .index-hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+}
+
+.index-hero-section .index-hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(13,27,62,0.18);
+  display: block;
+  aspect-ratio: 6/5;
+}
+
+/* Floating badge */
+.index-hero-section .index-hero-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 12px 40px rgba(13,27,62,0.14);
+  direction: rtl;
+  text-align: right;
+  min-width: 200px;
+  z-index: 10;
+}
+
+.index-hero-section .index-hero-badge i {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.index-hero-section .index-hero-badge strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', sans-serif;
+}
+
+.index-hero-section .index-hero-badge small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', sans-serif;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .index-hero-section .index-hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .index-hero-section .index-hero-image-col {
+    order: -1;
+  }
+
+  .index-hero-section .index-hero-image-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-hero-section {
+    padding: 110px 16px 60px;
+  }
+
+  .index-hero-section .index-hero-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .index-hero-section .index-hero-headline {
+    font-size: 2.1rem;
+  }
+
+  .index-hero-section .index-hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .index-hero-section .index-hero-ctas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .index-hero-section .index-hero-btn-primary,
+  .index-hero-section .index-hero-btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .index-hero-section .index-hero-trust {
+    gap: 14px;
+  }
+
+  .index-hero-section .index-hero-trust-label {
+    max-width: 80px;
+  }
+
+  .index-hero-section .index-hero-badge {
+    position: static;
+    margin-top: 16px;
+    width: 100%;
+    min-width: unset;
+    box-sizing: border-box;
+  }
+
+  .index-hero-section .index-hero-blob {
+    width: 280px;
+    height: 280px;
+    top: -40px;
+    left: -60px;
+  }
+}
+</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -769,72 +1087,59 @@
 </script>
   
   <main>
-    <section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim" data-zappy-content-align="center-right">
-  <!-- Background Image -->
-  <div class="index-hero-bg">
-    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Professional enterprise workspace: a large wooden desk with dual monitors showing Microsoft Access database management screens with tables and forms, printed reports stacked neatly, a coffee mug, and calm organized office environment. Cool-neutral desaturated color grading, no people visible, serious business atmosphere, soft natural window light from the left, shallow depth of field, photorealistic." width="1440" height="900" src="/assets/site-index-hero-image-1.webp" alt="סביבת עבודה מקצועית עם מסכי מסד נתונים ודוחות עסקיים">
-  </div>
+    <section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="side-by-side">
+  <!-- Decorative blob -->
+  <div class="index-hero-blob" aria-hidden="true"></div>
 
-  <!-- Scrim Overlay -->
-  <div class="index-hero-scrim" aria-hidden="true"></div>
-
-  <!-- Content Card -->
-  <div class="index-hero-container" data-zappy-align-target="true">
-    <div class="index-hero-card">
-
-      <!-- Label -->
-      <span class="index-hero-label">25 שנות ניסיון ב-Microsoft Access</span>
-
-      <!-- H1 -->
-      <h1 class="index-hero-h1">מערכת Access איטית, קורסת או תקועה?
-מאבחנים את הבעיה — ומתקנים בלי להרוס מה שעובד.</h1>
-
-      <!-- Subtitle H3 -->
-      <h3 class="index-hero-subtitle" style="color: #F5A623">
-        גישה של פרמדיק: אבחון מהיר, טיפול מדויק, ושימור המערכת הקיימת.
-      </h3>
-
-      <!-- Differentiator Line -->
-      <div class="index-hero-differentiator" style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
-        <span style="color:#F5A623;font-size:1.1em;">★</span>
-        <span style="color:#F5A623;font-weight:600;font-size:0.97em;">ב־90% מהמקרים — אין צורך לבנות מערכת חדשה</span>
-      </div>
-
-      <!-- Trust Line -->
-      <div class="index-hero-trust">
-        <span class="index-hero-trust-icon" aria-hidden="true">✓</span>
-        <strong>25 שנות ניסיון עם מערכות Access מורכבות — כולל תיקון תקלות שאחרים לא הצליחו לפתור</strong>
-      </div>
-
-      <!-- CTAs -->
+  <div class="index-hero-container">
+    <!-- Text Column (right) -->
+    <div class="index-hero-content">
+      <span class="index-hero-eyebrow">מומחה Microsoft Access | 25+ שנות ניסיון</span>
+      <h1 class="index-hero-headline">המערכת קרסה?<br>אנחנו מתקנים אותה.</h1>
+      <h3 class="index-hero-subtitle">בלי לבנות מחדש. בלי לאבד נתונים. ב-90% מהמקרים — הפתרון כבר קיים במערכת שלכם.</h3>
+      <p class="index-hero-body">אריאל פיתוח תוכנה מתמחה בהצלה, שדרוג ותחזוקה של מערכות Access עסקיות. מיד ושם, הלקוחות: יד ושם, רשתות בתי ספר, מערכות בטיחות ועוד.</p>
       <div class="index-hero-ctas">
         <a href="/contact" class="index-hero-btn-primary">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i>
-          לאבחון ראשוני — צרו קשר
+          <i class="fa fa-wrench"></i>
+          לאבחון מהיר — צרו קשר
         </a>
-        <a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" class="index-hero-btn-secondary">
-          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-          שלחו וואטסאפ עכשיו
+        <a href="/services" class="index-hero-btn-ghost">
+          הכירו את השירותים
+          <i class="fa fa-chevron-left"></i>
         </a>
       </div>
-
-      <!-- Reassurance Row -->
-      <div class="index-hero-reassurance" role="list">
-        <span class="index-hero-reassurance-item" role="listitem">מענה תוך שעות</span>
-        <span class="index-hero-reassurance-sep" aria-hidden="true">·</span>
-        <span class="index-hero-reassurance-item" role="listitem">עבודה מרחוק</span>
-        <span class="index-hero-reassurance-sep" aria-hidden="true">·</span>
-        <span class="index-hero-reassurance-item" role="listitem">פתרון ממוקד בלי סיבוכים</span>
+      <div class="index-hero-trust">
+        <div class="index-hero-trust-item">
+          <span class="index-hero-trust-num">25+</span>
+          <span class="index-hero-trust-label">שנות ניסיון</span>
+        </div>
+        <div class="index-hero-trust-divider"></div>
+        <div class="index-hero-trust-item">
+          <span class="index-hero-trust-num">90%</span>
+          <span class="index-hero-trust-label">ניתן לתיקון ללא בנייה מחדש</span>
+        </div>
+        <div class="index-hero-trust-divider"></div>
+        <div class="index-hero-trust-item">
+          <span class="index-hero-trust-num">100+</span>
+          <span class="index-hero-trust-label">מערכות הוצלו</span>
+        </div>
       </div>
-
     </div>
-  </div>
 
-  <!-- Bottom Divider -->
-  <div class="index-hero-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,72 L0,42 Q120,28 240,38 T480,32 Q600,26 720,36 T960,30 Q1080,24 1200,34 T1440,28 L1440,72 Z" fill="#FAFAF7"></path>
-    </svg>
+    <!-- Image Column (left) -->
+    <div class="index-hero-image-col">
+      <div class="index-hero-image-wrapper">
+        <img data-hero-bg="true" data-context="A professional male software consultant in his 40s-50s sitting at a modern desk with dual monitors showing Microsoft Access database tables and forms. The workspace is tidy and professional with a blue-toned ambient light. The atmosphere conveys expertise, calm competence, and decades of experience. The style is clean editorial photography, slightly warm lighting, Israeli tech professional aesthetic." width="600" height="520" src="/assets/section-בית-hero-index-hero-image-1.webp" alt="מומחה Microsoft Access עובד על מערכת מסד נתונים" class="index-hero-img">
+        <!-- Floating badge -->
+        <div class="index-hero-badge">
+          <i class="fa fa-shield" style="color: var(--accent);"></i>
+          <div>
+            <strong>ניסיון מוכח</strong>
+            <small>יד ושם, בתי ספר ועוד</small>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
