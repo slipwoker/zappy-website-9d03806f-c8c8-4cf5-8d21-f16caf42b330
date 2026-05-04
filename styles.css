@@ -2449,22 +2449,15 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   object-fit: cover;
   object-position: center center;
   display: block;
-  filter: saturate(0.75) brightness(0.95);
+  filter: saturate(0.75) brightness(1.35);
 }
 
-/* ── Scrim Overlay ── */
 .index-hero-section .index-hero-scrim {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background-image:
-    linear-gradient(
-      to left,
-      rgba(15, 23, 42, 0.82) 0%,
-      rgba(15, 23, 42, 0.60) 55%,
-      rgba(15, 23, 42, 0.15) 100%
-    );
+  background-image: linear-gradient(to left, rgba(15, 23, 42, 0.50) 0%, rgba(15, 23, 42, 0.30) 55%, rgba(15, 23, 42, 0.05) 100%);
 }
 
 /* ── Container ── */
@@ -11490,6 +11483,14 @@ html, body {
 .index-hero-section .index-hero-label {
   color: #F5A623 !important;
 }
+}
+
+.index-hero-section .index-hero-bg img {
+  filter: saturate(0.75) brightness(1.5) !important;
+}
+
+.index-hero-section .index-hero-scrim {
+  background-image: linear-gradient(to left, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.18) 55%, rgba(15, 23, 42, 0.02) 100%) !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
