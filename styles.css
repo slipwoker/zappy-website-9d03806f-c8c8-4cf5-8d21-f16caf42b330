@@ -2458,7 +2458,6 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background-image: linear-gradient(to left, rgba(10,22,40,1.0) 0%, rgba(10,22,40,0.98) 45%, rgba(10,22,40,0.55) 65%, rgba(10,22,40,0.05) 100%);
 }
 
-/* ── Container ── */
 .index-hero-section .index-hero-container {
   position: relative;
   z-index: 10;
@@ -2469,6 +2468,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  grid-template-columns: 1fr 1.5fr;
 }
 
 .index-hero-section .index-hero-card {
