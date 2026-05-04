@@ -8826,6 +8826,11 @@ body .whatsapp-float:hover {
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
   color: #25D366 !important;
 }
+
+.index-hero-section .index-hero-card {
+  max-width: 780px !important;
+  width: 90% !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
