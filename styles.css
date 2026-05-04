@@ -8719,6 +8719,51 @@ body .whatsapp-float:hover {
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
 
+
+.index-hero-section .index-hero-label {
+  color: var(--accent-color) !important;
+  background: rgba(245, 166, 35, 0.15) !important;
+  border: 1px solid rgba(245, 166, 35, 0.40) !important;
+}
+
+.index-hero-section .index-hero-trust {
+  background: rgba(245, 166, 35, 0.12) !important;
+  border: 1px solid rgba(245, 166, 35, 0.35) !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: var(--accent-color) !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: var(--accent-color) !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  background: transparent !important;
+  color: #25D366 !important;
+  border: 1.5px solid #25D366 !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: #25D366 !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: var(--accent-color) !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  color: var(--accent-color) !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  color: var(--accent-color) !important;
+}
+
+.index-hero-section .index-hero-label {
+  color: var(--accent-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
