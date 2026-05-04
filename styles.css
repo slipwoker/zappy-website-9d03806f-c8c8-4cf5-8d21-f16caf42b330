@@ -8900,6 +8900,323 @@ body .whatsapp-float:hover {
   max-width: fit-content !important;
   align-self: flex-start !important;
 }
+
+/* AI-generated section */
+/* =============================================
+   FAMILIAR SECTION — "זה נשמע מוכר?"
+   Dark navy background, RTL, seamless hero follow
+   ============================================= */
+
+.familiar-section {
+  background: var(--secondary-color, #0A1628);
+  padding: 72px 20px 80px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top border to blend with hero */
+.familiar-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(36, 87, 255, 0.4) 40%, rgba(245, 166, 35, 0.3) 70%, transparent 100%);
+}
+
+/* ── Container ── */
+.familiar-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.familiar-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.familiar-title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.familiar-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary-color, #97a7c5);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ── Pain List ── */
+.familiar-pain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  display: grid;
+  gap: 12px;
+}
+
+.familiar-pain-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 80, 80, 0.18);
+  border-radius: 10px;
+  padding: 14px 18px;
+  transition: background 0.22s ease, border-color 0.22s ease, transform 0.18s ease;
+}
+
+.familiar-pain-item:hover {
+  background: rgba(255, 80, 80, 0.07);
+  border-color: rgba(255, 80, 80, 0.35);
+  transform: translateX(-3px);
+}
+
+.familiar-pain-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  background: rgba(220, 50, 50, 0.18);
+  border: 1px solid rgba(220, 50, 50, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: #ff6b6b;
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.familiar-pain-text {
+  font-size: 1rem;
+  color: #d4dff0;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+/* ── Callout / Highlight Box ── */
+.familiar-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(36, 87, 255, 0.15) 0%, rgba(0, 48, 205, 0.1) 100%);
+  border: 1.5px solid rgba(36, 87, 255, 0.45);
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 24px rgba(36, 87, 255, 0.12);
+}
+
+.familiar-callout-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  filter: drop-shadow(0 0 6px rgba(245, 166, 35, 0.5));
+}
+
+.familiar-callout-text {
+  font-size: 1.08rem;
+  color: #e8eeff;
+  line-height: 1.65;
+  margin: 0;
+  font-weight: 500;
+}
+
+.familiar-callout-text strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ── Transition Paragraph ── */
+.familiar-transition {
+  font-size: 0.97rem;
+  color: var(--text-secondary-color, #97a7c5);
+  line-height: 1.7;
+  margin: 0 0 40px;
+  text-align: center;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 8px;
+}
+
+/* ── Benefits Grid ── */
+.familiar-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 44px;
+}
+
+.familiar-benefit-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(36, 87, 255, 0.22);
+  border-radius: 14px;
+  padding: 26px 20px 22px;
+  text-align: center;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.familiar-benefit-card:hover {
+  background: rgba(36, 87, 255, 0.1);
+  border-color: rgba(36, 87, 255, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(36, 87, 255, 0.18);
+}
+
+.familiar-benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  display: block;
+  line-height: 1;
+}
+
+.familiar-benefit-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.familiar-benefit-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary-color, #97a7c5);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── CTA Wrapper ── */
+.familiar-cta-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Ghost / outline CTA — intentionally smaller than hero buttons */
+.familiar-cta-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: #a8c0ff;
+  background: transparent;
+  border: 1.5px solid rgba(36, 87, 255, 0.55);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, transform 0.18s ease;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+}
+
+.familiar-cta-btn:hover,
+.familiar-cta-btn:focus-visible {
+  color: #ffffff;
+  background: rgba(36, 87, 255, 0.18);
+  border-color: rgba(36, 87, 255, 0.85);
+  box-shadow: 0 0 18px rgba(36, 87, 255, 0.25);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.familiar-cta-btn:focus-visible {
+  outline: 2px solid var(--primary-color, #2457FF);
+  outline-offset: 3px;
+}
+
+/* ── Footnote ── */
+.familiar-footnote {
+  font-size: 0.82rem;
+  color: rgba(151, 167, 197, 0.6);
+  margin: 0;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+/* =============================================
+   RESPONSIVE — Tablet
+   ============================================= */
+@media (max-width: 768px) {
+  .familiar-section {
+    padding: 56px 16px 64px;
+  }
+
+  .familiar-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .familiar-benefit-card {
+    padding: 22px 18px 18px;
+    text-align: right;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .familiar-benefit-icon {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .familiar-benefit-card > div:not(.familiar-benefit-icon) {
+    flex: 1;
+  }
+
+  .familiar-callout {
+    padding: 18px 16px;
+  }
+
+  .familiar-cta-btn {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+    text-align: center;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — Mobile
+   ============================================= */
+@media (max-width: 480px) {
+  .familiar-title {
+    font-size: 1.75rem;
+  }
+
+  .familiar-pain-item {
+    padding: 12px 14px;
+  }
+
+  .familiar-pain-text {
+    font-size: 0.93rem;
+  }
+
+  .familiar-callout-text {
+    font-size: 0.97rem;
+  }
+
+  .familiar-transition {
+    font-size: 0.9rem;
+  }
+
+  .familiar-benefit-card {
+    flex-direction: row;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
