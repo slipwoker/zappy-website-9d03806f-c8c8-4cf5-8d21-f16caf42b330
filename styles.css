@@ -11445,6 +11445,52 @@ html, body {
 .index-hero-section .index-hero-bg img {
   filter: saturate(0.75) brightness(0.88) !important;
 }
+
+@media (min-width: 769px) {
+.index-hero-section .index-hero-card {
+  background: #0F172A !important;
+  border: 1px solid rgba(245, 166, 35, 0.25) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-subtitle {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-differentiator span {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-trust {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.index-hero-section .index-hero-reassurance-sep {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.index-hero-section .index-hero-label {
+  color: #F5A623 !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
