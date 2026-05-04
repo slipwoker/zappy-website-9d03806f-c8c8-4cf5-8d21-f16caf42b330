@@ -11469,6 +11469,18 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .index-hero-section .index-hero-h1 {
   color: rgba(255,255,255,0.88) !important;
 }
+
+.index-hero-section .index-hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(8,16,40,1) 0%, rgba(8,16,40,1) 60%, rgba(8,16,40,0) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
