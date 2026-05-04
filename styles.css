@@ -11435,6 +11435,16 @@ html, body {
 .index-hero-section .index-hero-differentiator span {
   color: #F5A623 !important;
 }
+
+.index-hero-section .index-hero-card {
+  background: rgba(10, 22, 40, 0.93) !important;
+  backdrop-filter: none !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+}
+
+.index-hero-section .index-hero-bg img {
+  filter: saturate(0.75) brightness(0.88) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
