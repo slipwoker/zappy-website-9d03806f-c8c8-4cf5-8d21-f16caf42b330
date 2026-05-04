@@ -10059,6 +10059,79 @@ body .whatsapp-float:hover {
 .index-services-section .index-services-heading {
   color: #3d4a6b !important;
 }
+
+.index-services-section {
+  background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 100%) !important;
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-heading {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-lead {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-row-title {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-row-desc {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-label {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-process-sub {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-step-title {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-step-desc {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-process-badge {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-row-icon svg {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-principle {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-principle strong {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section h2.index-services-heading {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section p.index-services-lead {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section h3.index-services-row-title {
+  color: rgb(138, 150, 168) !important;
+}
+
+.index-services-section p.index-services-row-desc {
+  color: rgb(138, 150, 168) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
