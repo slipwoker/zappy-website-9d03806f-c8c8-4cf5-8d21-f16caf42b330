@@ -11120,6 +11120,115 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .index-hero-section .index-hero-btn-primary {
   box-shadow: 0 8px 32px rgba(36,87,255,0.45), 0 2px 8px rgba(0,0,0,0.30) !important;
 }
+
+.index-hero-section .index-hero-card,
+.index-hero-section .index-hero-card * {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-label {
+  color: var(--accent-color) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-subtitle {
+  color: rgba(255,255,255,0.88) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-item {
+  color: rgba(255,255,255,0.80) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-sep {
+  color: rgba(255,255,255,0.45) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-differentiator span {
+  color: rgba(255,255,255,0.75) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-trust {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(255,255,255,0.18) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary {
+  color: #25D366 !important;
+  border-color: #25D366 !important;
+  opacity: 1 !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
+  color: #25D366 !important;
+}
+
+.index-hero-section .index-hero-card {
+  width: 44% !important;
+  max-width: 560px !important;
+}
+
+.index-hero-section .index-hero-label {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-reassurance-sep {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-subtitle {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card {
+  color: #FFFFFF !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
