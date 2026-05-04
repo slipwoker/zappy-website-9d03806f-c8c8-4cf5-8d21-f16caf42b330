@@ -2449,15 +2449,22 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   object-fit: cover;
   object-position: center center;
   display: block;
-  filter: saturate(0.75) brightness(1.35);
+  filter: saturate(0.75) brightness(0.95);
 }
 
+/* ── Scrim Overlay ── */
 .index-hero-section .index-hero-scrim {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background-image: linear-gradient(to left, rgba(10, 16, 30, 0.92) 0%, rgba(10, 16, 30, 0.82) 55%, rgba(10, 16, 30, 0.65) 100%);
+  background-image:
+    linear-gradient(
+      to left,
+      rgba(15, 23, 42, 0.82) 0%,
+      rgba(15, 23, 42, 0.60) 55%,
+      rgba(15, 23, 42, 0.15) 100%
+    );
 }
 
 /* ── Container ── */
@@ -2477,7 +2484,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 42%;
   min-width: 320px;
   max-width: 520px;
-  background: rgba(10, 22, 40, 0.75);
+  background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 100%);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 18px;
   padding: 40px 36px 32px;
@@ -2485,7 +2492,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 20px;
-  color: #FFFFFF;
+  color: #111111;
 }
 
 .index-hero-section .index-hero-label {
@@ -11486,11 +11493,68 @@ html, body {
 }
 
 .index-hero-section .index-hero-card {
-  background: rgba(10, 22, 40, 0.15) !important;
+  background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 100%) !important;
+  color: var(--text-color) !important;
 }
 
-.index-hero-section .index-hero-card {
-  background: rgba(10, 22, 40, 0.75) !important;
+.index-hero-section .index-hero-label {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-reassurance-sep {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-trust {
+  color: var(--text-color) !important;
+}
+
+.index-hero-section .index-hero-differentiator span {
+  color: var(--text-color) !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
