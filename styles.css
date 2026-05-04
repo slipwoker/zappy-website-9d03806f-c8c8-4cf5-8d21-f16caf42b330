@@ -2449,15 +2449,22 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   object-fit: cover;
   object-position: center center;
   display: block;
-  filter: saturate(0.75) brightness(1.35);
+  filter: saturate(0.6) brightness(0.75);
 }
 
+/* ── Scrim Overlay ── */
 .index-hero-section .index-hero-scrim {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background-image: linear-gradient(to left, rgba(10, 16, 30, 0.92) 0%, rgba(10, 16, 30, 0.82) 55%, rgba(10, 16, 30, 0.65) 100%);
+  background-image:
+    linear-gradient(
+      to left,
+      rgba(15, 23, 42, 0.82) 0%,
+      rgba(15, 23, 42, 0.60) 55%,
+      rgba(15, 23, 42, 0.15) 100%
+    );
 }
 
 /* ── Container ── */
@@ -2477,7 +2484,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 42%;
   min-width: 320px;
   max-width: 520px;
-  background: rgba(10, 22, 40, 0.75);
+  background: #0A1628;
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 18px;
   padding: 40px 36px 32px;
@@ -2494,9 +2501,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #F5A623;
+  color: #2e78ff;
   background: rgba(245,166,35,0.15);
-  border: 1px solid rgba(245,166,35,0.45);
+  border: 1px solid rgba(245,166,35,0.35);
   border-radius: 4px;
   padding: 4px 10px;
   text-align: right;
@@ -11356,142 +11363,6 @@ html, body {
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
 
-
-.index-hero-section .index-hero-card {
-  background: rgba(10, 22, 40, 0.45) !important;
-  backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(255,255,255,0.22) !important;
-}
-
-.index-hero-section .index-hero-label {
-  color: #F5A623 !important;
-  background: rgba(245,166,35,0.15) !important;
-  border: 1px solid rgba(245,166,35,0.45) !important;
-}
-
-.index-hero-section .index-hero-bg img {
-  filter: saturate(0.75) brightness(0.95) !important;
-}
-
-.index-hero-section .index-hero-reassurance-item {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-btn-primary {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-btn-secondary {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-trust strong {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-trust-icon {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-h1 {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-reassurance-sep {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-trust {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-differentiator span {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-card {
-  background: rgba(10, 22, 40, 0.93) !important;
-  backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,0.15) !important;
-}
-
-.index-hero-section .index-hero-bg img {
-  filter: saturate(0.75) brightness(0.88) !important;
-}
-
-@media (min-width: 769px) {
-.index-hero-section .index-hero-card {
-  background: #0F172A !important;
-  border: 1px solid rgba(245, 166, 35, 0.25) !important;
-  color: var(--surface-color) !important;
-}
-
-.index-hero-section .index-hero-h1 {
-  color: var(--surface-color) !important;
-}
-
-.index-hero-section .index-hero-subtitle {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-differentiator span {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-trust {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  color: var(--surface-color) !important;
-}
-
-.index-hero-section .index-hero-trust strong {
-  color: var(--surface-color) !important;
-}
-
-.index-hero-section .index-hero-trust-icon {
-  color: #F5A623 !important;
-}
-
-.index-hero-section .index-hero-reassurance-item {
-  color: rgba(255, 255, 255, 0.85) !important;
-}
-
-.index-hero-section .index-hero-reassurance-sep {
-  color: rgba(255, 255, 255, 0.4) !important;
-}
-
-.index-hero-section .index-hero-label {
-  color: #F5A623 !important;
-}
-}
-
-.index-hero-section .index-hero-card {
-  background: rgba(10, 22, 40, 0.15) !important;
-}
-
-.index-hero-section .index-hero-card {
-  background: rgba(10, 22, 40, 0.75) !important;
-}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
