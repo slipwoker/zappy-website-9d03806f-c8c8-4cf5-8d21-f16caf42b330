@@ -2477,7 +2477,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 42%;
   min-width: 320px;
   max-width: 520px;
-  background: #0A1628;
+  background: rgba(10, 22, 40, 0.55);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 18px;
   padding: 40px 36px 32px;
