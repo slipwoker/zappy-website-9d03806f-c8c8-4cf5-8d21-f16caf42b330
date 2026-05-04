@@ -11484,14 +11484,6 @@ html, body {
   color: #F5A623 !important;
 }
 }
-
-.index-hero-section .index-hero-bg img {
-  filter: saturate(0.75) brightness(1.5) !important;
-}
-
-.index-hero-section .index-hero-scrim {
-  background-image: linear-gradient(to left, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.18) 55%, rgba(15, 23, 42, 0.02) 100%) !important;
-}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
