@@ -11657,6 +11657,21 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .index-hero-section .index-hero-h1 span {
   color: #1A6E85 !important;
 }
+
+.index-hero-section .index-hero-image-wrap {
+  flex: 1.6 1 0 !important;
+}
+
+.index-hero-section .index-hero-panel {
+  flex: 1 1 0 !important;
+}
+
+.index-hero-section .index-hero-img {
+  height: 520px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
