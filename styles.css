@@ -10126,6 +10126,8 @@ body .whatsapp-float:hover {
 .index-services-section p.index-services-row-desc {
   color: rgb(138, 150, 168) !important;
 }
+/* Batch: גרדיאנט רקע אחיד כחול-אפור בהיר על כל הסקשיינים */
+section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 100%) !important; background-image: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 100%) !important; }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
