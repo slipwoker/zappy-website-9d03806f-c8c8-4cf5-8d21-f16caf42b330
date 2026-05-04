@@ -1,6 +1,4 @@
-# אריאל פיתוח תוכנה — Generative Engine Optimization Map
-
-> Ariel Software Development is a one-person expert consultancy specializing in Microsoft Access systems with over 25 years of hands-on experience. The brand identity is built around being the trusted 'rescue expert' — the professional who steps in when systems fail, developers disappear, or legacy databases become liabilities. The tone is direct, results-driven, and confidence-inspiring, emphasizing that in 90% of cases, systems can be fixed without rebuilding from scratch. The business has a proven track record with real-world deployments including Yad Vashem, school networks, safety management systems, and equestrian associations — projecting deep credibility and enterprise-level expertise.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -40,18 +38,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About אריאל פיתוח תוכנה
-Ariel Software Development is a one-person expert consultancy specializing in Microsoft Access systems with over 25 years of hands-on experience. The brand identity is built around being the trusted 'rescue expert' — the professional who steps in when systems fail, developers disappear, or legacy databases become liabilities. The tone is direct, results-driven, and confidence-inspiring, emphasizing that in 90% of cases, systems can be fixed without rebuilding from scratch. The business has a proven track record with real-world deployments including Yad Vashem, school networks, safety management systems, and equestrian associations — projecting deep credibility and enterprise-level expertise.
-
-## Target Audience
-- עסקים קטנים ובינוניים, ארגונים, מנהלי תפעול, מנהלי IT ומנהלי כספים עם מערכות Access קיימות
-- עסקים קטנים ובינוניים עם בעיות Access
-- מנהלי IT עם מערכות Access
-- מנהלי כספים עם מערכות Access
-
-## Industry
-טכנולוגיה ופיתוח תוכנה
-
+## About Business
 ---
 
 # Additional Resources
