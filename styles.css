@@ -11484,6 +11484,10 @@ html, body {
   color: #F5A623 !important;
 }
 }
+
+.index-hero-section .index-hero-card {
+  background: rgba(10, 22, 40, 0.15) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
