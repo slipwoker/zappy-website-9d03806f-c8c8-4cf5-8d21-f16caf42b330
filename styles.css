@@ -2449,7 +2449,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   object-fit: cover;
   object-position: center center;
   display: block;
-  filter: saturate(0.6) brightness(0.75);
+  filter: saturate(0.75) brightness(0.95);
 }
 
 /* ── Scrim Overlay ── */
@@ -2501,9 +2501,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #2e78ff;
+  color: #F5A623;
   background: rgba(245,166,35,0.15);
-  border: 1px solid rgba(245,166,35,0.35);
+  border: 1px solid rgba(245,166,35,0.45);
   border-radius: 4px;
   padding: 4px 10px;
   text-align: right;
@@ -11363,6 +11363,78 @@ html, body {
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
 
+
+.index-hero-section .index-hero-card {
+  background: rgba(10, 22, 40, 0.45) !important;
+  backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+}
+
+.index-hero-section .index-hero-label {
+  color: #F5A623 !important;
+  background: rgba(245,166,35,0.15) !important;
+  border: 1px solid rgba(245,166,35,0.45) !important;
+}
+
+.index-hero-section .index-hero-bg img {
+  filter: saturate(0.75) brightness(0.95) !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-reassurance-sep {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-trust {
+  color: #F5A623 !important;
+}
+
+.index-hero-section .index-hero-differentiator span {
+  color: #F5A623 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
@@ -12227,9 +12299,9 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   --cc-modal-bg: #ffffff;
   --cc-primary-color: #1f2937;
   --cc-secondary-color: #4b5563;
-  --cc-btn-primary-bg: #1A6BFF;
+  --cc-btn-primary-bg: #1a6bff;
   --cc-btn-primary-color: #ffffff;
-  --cc-btn-primary-border: #1A6BFF;
+  --cc-btn-primary-border: #1a6bff;
   --cc-btn-primary-hover-bg: #0152e6;
   --cc-btn-primary-hover-border: #0152e6;
   --cc-btn-primary-hover-color: #ffffff;
@@ -12245,7 +12317,7 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
   --cc-btn-secondary-hover-bg: #e5e7eb;
   --cc-btn-secondary-hover-color: #111827;
   --cc-btn-secondary-hover-border: #d1d5db;
-  --cc-toggle-on-bg: #1A6BFF;
+  --cc-toggle-on-bg: #1a6bff;
 }
 
 #cc-main,
@@ -12358,7 +12430,7 @@ html[dir="ltr"] .zappy-products-dropdown .zappy-nav-child > a {
  * defaults for the preferences modal's two secondary pills). */
 #zappy-cookie-banner .zappy-cookie-banner__button--customize {
   background-color: transparent !important;
-  color: #1A6BFF !important;
+  color: #1a6bff !important;
   border: none !important;
   padding: 0 8px !important;
   height: 32px !important;
