@@ -10128,6 +10128,25 @@ body .whatsapp-float:hover {
 }
 /* Batch: גרדיאנט רקע אחיד כחול-אפור בהיר על כל הסקשיינים */
 section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 100%) !important; background-image: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 100%) !important; }
+
+.familiar-section,
+.familiar-section .familiar-title,
+.familiar-section .familiar-subtitle,
+.familiar-section .familiar-pain-text,
+.familiar-section .familiar-callout-text,
+.familiar-section .familiar-transition,
+.familiar-section .familiar-benefit-title,
+.familiar-section .familiar-benefit-desc,
+.familiar-section .familiar-footnote,
+.familiar-section .familiar-callout-icon,
+.familiar-section .familiar-pain-icon,
+.familiar-section h2,
+.familiar-section h3,
+.familiar-section p,
+.familiar-section span,
+.familiar-section li {
+  color: #1a2a3a !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
