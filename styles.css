@@ -2447,22 +2447,15 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   object-fit: cover;
   object-position: center center;
   display: block;
-  filter: saturate(0.6) brightness(0.75);
+  filter: saturate(0.45) brightness(0.60);
 }
 
-/* ── Scrim Overlay ── */
 .index-hero-section .index-hero-scrim {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background-image:
-    linear-gradient(
-      to left,
-      rgba(15, 23, 42, 0.82) 0%,
-      rgba(15, 23, 42, 0.60) 55%,
-      rgba(15, 23, 42, 0.15) 100%
-    );
+  background-image: linear-gradient(to left, rgba(15,23,42,0.70) 0%, rgba(15,23,42,0.45) 50%, rgba(15,23,42,0.10) 100%);
 }
 
 /* ── Container ── */
@@ -2510,9 +2503,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-hero-section .index-hero-h1 {
   font-family: 'Rubik', sans-serif;
-  font-size: 2.6rem;
+  font-size: 2.95rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.12;
   letter-spacing: -0.02em;
   color: #FFFFFF;
   text-align: right;
@@ -2575,16 +2568,17 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: var(--primary);
   color: #ffffff;
   font-family: 'Rubik', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  padding: 14px 24px;
+  padding: 16px 30px;
   border-radius: 6px;
   border: none;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
+  box-shadow: 0 8px 32px rgba(36,87,255,0.45), 0 2px 8px rgba(0,0,0,0.30);
 }
 
 .index-hero-section .index-hero-btn-primary:hover {
@@ -2599,16 +2593,17 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: transparent;
   color: #25D366;
   font-family: 'Rubik', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  padding: 13px 22px;
+  padding: 11px 18px;
   border-radius: 6px;
   border: 1.5px solid #25D366;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
+  opacity: 0.82;
 }
 
 .index-hero-section .index-hero-btn-secondary:hover {
@@ -11105,6 +11100,26 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
 
+
+.index-hero-section .index-hero-card {
+  width: 48% !important;
+  max-width: 580px !important;
+  background: linear-gradient(145deg, rgba(12,22,48,0.97) 0%, rgba(7,15,32,0.99) 60%, rgba(4,10,24,1) 100%) !important;
+  border: 1px solid rgba(255,255,255,0.20) !important;
+  box-shadow: 0 28px 90px rgba(0,0,0,0.70), 0 8px 32px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(12px) !important;
+  gap: 14px !important;
+  padding: 36px 34px 28px !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  font-size: 2.95rem !important;
+  line-height: 1.12 !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  box-shadow: 0 8px 32px rgba(36,87,255,0.45), 0 2px 8px rgba(0,0,0,0.30) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
