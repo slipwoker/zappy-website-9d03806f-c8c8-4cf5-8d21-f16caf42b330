@@ -8901,14 +8901,8 @@ body .whatsapp-float:hover {
   align-self: flex-start !important;
 }
 
-/* AI-generated section */
-/* =============================================
-   FAMILIAR SECTION — "זה נשמע מוכר?"
-   Dark navy background, RTL, seamless hero follow
-   ============================================= */
-
 .familiar-section {
-  background: var(--secondary-color, #0A1628);
+  background: #FAFAF7;
   padding: 72px 20px 80px;
   font-family: system-ui, sans-serif;
   direction: rtl;
