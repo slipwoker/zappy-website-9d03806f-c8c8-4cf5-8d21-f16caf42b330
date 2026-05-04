@@ -11488,6 +11488,12 @@ html, body {
 .index-hero-section .index-hero-card {
   background: rgba(10, 22, 40, 0.15) !important;
 }
+
+.navbar .logo-link {
+  background-color: #D6EAF8 !important;
+  padding: 6px 14px !important;
+  border-radius: 6px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
