@@ -12291,6 +12291,24 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .index-hero-section .index-hero-h1 {
   color: #0D2B5E !important;
 }
+
+html {
+  overflow-y: scroll !important;
+  height: auto !important;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.nav-menu:not(.active) {
+  pointer-events: none;
+}
+
+.nav-menu.active ~ * {
+  pointer-events: none;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
