@@ -13336,6 +13336,178 @@ html, body {
 .index-hero-section .nhp-btn-whatsapp {
   color: #0B1F3B !important;
 }
+
+.index-hero-section .nhp-btn-whatsapp {
+  background: rgb(37, 211, 102) !important;
+  color: #ffffff !important;
+  border-radius: 50px !important;
+  padding: 14px 24px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: rgba(37, 211, 102, 0.45) 0px 4px 20px 0px !important;
+  gap: 10px !important;
+}
+
+.index-hero-section .index-hero-label {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-reassurance-sep {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-trust {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-card {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-subtitle {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-card * {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-label {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-subtitle {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-item {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-sep {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-differentiator span {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
+  color: #ffffff !important;
+}
+
+.index-hero-section span.index-hero-label {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) > span {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-h1 span {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-h1-accent {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-trust-pct {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-trust-label {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-trust-list li {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-check-icon {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-btn-whatsapp {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-h3 {
+  color: #ffffff !important;
+}
+
+.index-hero-section .index-hero-badge {
+  color: #ffffff !important;
+}
+
+.index-hero-section .nhp-btn-primary {
+  color: #ffffff !important;
+}
+
+.index-hero-section .nhp-h1-line1 {
+  color: #ffffff !important;
+}
+
+.index-hero-section .nhp-h1-line2 {
+  color: #ffffff !important;
+}
+
+.index-hero-section .nhp-h1 {
+  color: #ffffff !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
