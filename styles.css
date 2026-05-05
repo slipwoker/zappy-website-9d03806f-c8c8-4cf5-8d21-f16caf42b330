@@ -12714,6 +12714,153 @@ html, body {
   padding: 13px 26px !important;
   font-size: 0.92rem !important;
 }
+
+.index-hero-section .index-hero-btn-primary {
+  background: #FFFFFF !important;
+  background-image: none !important;
+  background-color: #FFFFFF !important;
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-label {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-reassurance-sep {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-trust {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-card {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-subtitle {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-card * {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-label {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-subtitle {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-item {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-sep {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-differentiator span {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section span.index-hero-label {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) > span {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-h1 span {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-h1-accent {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-trust-pct {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-trust-label {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-trust-list li {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-check-icon {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-btn-whatsapp {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-h3 {
+  color: #1A6E85 !important;
+}
+
+.index-hero-section .index-hero-badge {
+  color: #1A6E85 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
