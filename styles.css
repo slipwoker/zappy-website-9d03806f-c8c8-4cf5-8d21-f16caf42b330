@@ -12861,6 +12861,317 @@ html, body {
 .index-hero-section .index-hero-badge {
   color: #1A6E85 !important;
 }
+
+.index-hero-section .nhp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(26, 107, 255, 0.08);
+  border: 1px solid rgba(26, 107, 255, 0.22);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1A6BFF;
+  width: fit-content;
+  letter-spacing: 0.01em;
+}
+
+.index-hero-section .nhp-badge-dot {
+  width: 7px;
+  height: 7px;
+  background: #1A6BFF;
+  border-radius: 50%;
+  display: inline-block;
+  animation: nhp-pulse 2s ease-in-out infinite;
+}
+
+@keyframes nhp-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.index-hero-section .nhp-h1 {
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+.index-hero-section .nhp-h1-line1 {
+  color: #0B1F3B;
+  display: block;
+}
+
+.index-hero-section .nhp-h1-line2 {
+  color: #1A6BFF;
+  display: block;
+}
+
+.index-hero-section .nhp-subtitle {
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4A5A73;
+  margin: 0;
+  text-align: right;
+}
+
+.index-hero-section .nhp-pain {
+  font-size: 0.9rem;
+  color: #4A5A73;
+  margin: 0;
+  text-align: right;
+  padding: 12px 16px;
+  background: rgba(74, 90, 115, 0.06);
+  border-radius: 8px;
+  border-right: 3px solid rgba(26, 107, 255, 0.3);
+}
+
+.index-hero-section .nhp-trust-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.index-hero-section .nhp-trust-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #0B1F3B;
+  text-align: right;
+}
+
+.index-hero-section .nhp-check {
+  color: #1A6BFF;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.index-hero-section .nhp-cta-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.index-hero-section .nhp-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1A6BFF 100%);
+  color: #FFFFFF !important;
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 15px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(36, 87, 255, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.index-hero-section .nhp-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(36, 87, 255, 0.42);
+}
+
+.index-hero-section .nhp-btn-note {
+  font-size: 0.8rem;
+  color: #4A5A73;
+  margin: 0;
+  text-align: right;
+}
+
+.index-hero-section .nhp-btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(37, 211, 102, 0.1);
+  color: #1a8a47 !important;
+  border: 1.5px solid rgba(37, 211, 102, 0.5);
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.index-hero-section .nhp-btn-whatsapp:hover {
+  background: rgba(37, 211, 102, 0.18);
+  transform: translateY(-2px);
+}
+
+.index-hero-section .nhp-btn-whatsapp .fa-whatsapp {
+  font-size: 1.15rem;
+  color: #25D366;
+}
+
+.index-hero-section .index-hero-panel {
+  gap: 20px !important;
+}
+
+.index-hero-section .index-hero-label {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-reassurance-sep {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-subtitle {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card * {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-label {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-subtitle {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-item {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-sep {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-differentiator span {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section span.index-hero-label {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) > span {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-h1 span {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-h1-accent {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust-pct {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust-label {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust-list li {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-check-icon {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-btn-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-h3 {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-badge {
+  color: #FFFFFF !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
