@@ -11429,6 +11429,8 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .index-hero-section .index-hero-panel {
   background: #E8F8FB !important;
   box-shadow: 0 4px 24px rgba(75,184,212,0.12) !important;
+  min-height: 792px;
+  max-height: 792px;
 }
 
 .index-hero-section .index-hero-badge {
