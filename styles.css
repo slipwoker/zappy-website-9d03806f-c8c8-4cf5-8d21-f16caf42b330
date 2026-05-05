@@ -13939,6 +13939,341 @@ html, body {
 .index-hero-section .nhp-btn-whatsapp .fa-whatsapp {
   color: #FFFFFF !important;
 }
+
+.index-hero-section .nhp-h1 {
+  color: #0B2A5B !important;
+  font-size: 2.15rem !important;
+  font-weight: 800 !important;
+  line-height: 1.22 !important;
+  display: block !important;
+  margin: 0 !important;
+  text-align: right !important;
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif !important;
+}
+
+.index-hero-section .nhp-h1-line1 {
+  display: block !important;
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .nhp-h1-line2 {
+  display: block !important;
+  color: #0B2A5B !important;
+  margin-top: 6px !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+}
+
+.index-hero-section .nhp-h1-accent {
+  color: #1A6BFF !important;
+  font-weight: 800 !important;
+}
+
+.index-hero-section .nhp-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(255,255,255,0.18) !important;
+  border: 1px solid rgba(255,255,255,0.35) !important;
+  border-radius: 100px !important;
+  padding: 7px 18px !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  color: #FFFFFF !important;
+  width: fit-content !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.4 !important;
+}
+
+.index-hero-section .nhp-badge-dot {
+  width: 8px !important;
+  height: 8px !important;
+  background: #4AE08A !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+
+.index-hero-section .nhp-subtitle {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  line-height: 1.65 !important;
+  color: rgba(255,255,255,0.9) !important;
+  margin: 0 !important;
+  text-align: right !important;
+  border-inline-start: 3px solid rgba(255,255,255,0.45) !important;
+  padding-inline-start: 14px !important;
+  display: block !important;
+}
+
+.index-hero-section .nhp-pain {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  margin: 0 !important;
+  text-align: right !important;
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.25) !important;
+  border-radius: 8px !important;
+  padding: 11px 16px !important;
+  display: block !important;
+}
+
+.index-hero-section .nhp-authority {
+  font-size: 0.97rem !important;
+  font-weight: 500 !important;
+  color: rgba(255,255,255,0.92) !important;
+  margin: 0 !important;
+  text-align: right !important;
+  line-height: 1.6 !important;
+  font-style: italic !important;
+  display: block !important;
+}
+
+.index-hero-section .nhp-authority strong {
+  color: #FFFFFF !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+}
+
+.index-hero-section .nhp-trust {
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  color: rgba(255,255,255,0.82) !important;
+  margin: 0 !important;
+  text-align: right !important;
+  line-height: 1.7 !important;
+  border-inline-start: 2px solid rgba(255,255,255,0.3) !important;
+  padding-inline-start: 12px !important;
+  display: block !important;
+}
+
+.index-hero-section .nhp-cta-block {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+}
+
+.index-hero-section .nhp-btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #1A6BFF 0%, #0047D4 100%) !important;
+  color: #FFFFFF !important;
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif !important;
+  font-size: 0.97rem !important;
+  font-weight: 800 !important;
+  padding: 15px 28px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 24px rgba(26,107,255,0.45), 0 2px 8px rgba(0,0,0,0.15) !important;
+  white-space: normal !important;
+  text-align: center !important;
+  line-height: 1.35 !important;
+  width: 100% !important;
+}
+
+.index-hero-section .nhp-btn-note {
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  color: rgba(255,255,255,0.72) !important;
+  margin: 0 !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: #25D366 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  padding: 13px 24px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.35) !important;
+  white-space: nowrap !important;
+  width: fit-content !important;
+  align-self: flex-start !important;
+}
+
+.index-hero-section .index-hero-label {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-reassurance-sep {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-trust {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-card {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-subtitle {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-card * {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-label {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-subtitle {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-item {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-sep {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-differentiator span {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section span.index-hero-label {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) > span {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-h1 span {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-h1-accent {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-trust-pct {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-trust-label {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-trust-list li {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-check-icon {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-btn-whatsapp {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-h3 {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .index-hero-badge {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .nhp-btn-primary {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .nhp-h1-line1 {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .nhp-h1-line2 {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp i {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp .fa-whatsapp {
+  color: #0B2A5B !important;
+}
+
+.index-hero-section .nhp-h1 {
+  color: #0B2A5B !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
