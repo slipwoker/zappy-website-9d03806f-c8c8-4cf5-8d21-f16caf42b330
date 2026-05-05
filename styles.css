@@ -2421,11 +2421,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-hero-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
-  overflow: hidden;
+  overflow: visible;
   padding-bottom: 72px;
   direction: rtl;
   background-color: transparent;
