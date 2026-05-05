@@ -12309,6 +12309,16 @@ body {
 .nav-menu.active ~ * {
   pointer-events: none;
 }
+
+html, body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+body.nav-open {
+  overflow: hidden !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
