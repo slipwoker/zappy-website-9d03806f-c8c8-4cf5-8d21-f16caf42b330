@@ -13508,6 +13508,89 @@ html, body {
 .index-hero-section .nhp-h1 {
   color: #ffffff !important;
 }
+
+.index-hero-section .nhp-btn-whatsapp,
+.index-hero-section .nhp-btn-whatsapp:visited,
+.index-hero-section .nhp-btn-whatsapp:hover {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp i,
+.index-hero-section .nhp-btn-whatsapp .fa-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-label {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-subtitle {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-item {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-sep {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-differentiator span {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section span.index-hero-label {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) > span {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-h1 span {
+  color: #FFFFFF !important;
+}
+
+.index-hero-section .index-hero-trust-list li {
+  color: #FFFFFF !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
