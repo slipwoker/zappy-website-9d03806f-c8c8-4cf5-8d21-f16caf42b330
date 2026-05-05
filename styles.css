@@ -11627,6 +11627,10 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   border: none !important;
   border-radius: 0 !important;
 }
+
+.index-hero-section .index-hero-blob {
+  display: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
