@@ -2428,9 +2428,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   overflow: hidden;
   padding-bottom: 72px;
   direction: rtl;
-  background-color: #FFFFFF;
+  background-color: transparent;
   color: var(--text-dark);
-  background: #070F20;
+  background: transparent;
   padding: 0;
 }
 
@@ -2447,7 +2447,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  display: block;
+  display: none;
   filter: saturate(0.45) brightness(0.55);
 }
 
@@ -2457,6 +2457,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   z-index: 1;
   pointer-events: none;
   background-image: linear-gradient(to left, rgba(10,22,40,1.0) 0%, rgba(10,22,40,0.98) 45%, rgba(10,22,40,0.55) 65%, rgba(10,22,40,0.05) 100%);
+  display: none;
 }
 
 .index-hero-section .index-hero-container {
