@@ -11620,6 +11620,13 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   border: none !important;
   border-radius: 0 !important;
 }
+
+.index-hero-section .index-hero-panel {
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
