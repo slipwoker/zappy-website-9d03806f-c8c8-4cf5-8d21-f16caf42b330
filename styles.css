@@ -12708,6 +12708,12 @@ html, body {
 .index-hero-section .index-hero-h3 {
   color: #1A3C8B !important;
 }
+
+.index-hero-section .index-hero-btn-primary,
+.index-hero-section .index-hero-btn-whatsapp {
+  padding: 13px 26px !important;
+  font-size: 0.92rem !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
