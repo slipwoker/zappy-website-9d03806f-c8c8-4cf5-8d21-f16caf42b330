@@ -11613,6 +11613,8 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   height: 100%;
   overflow: hidden;
   border-radius: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .index-hero-section .index-hero-panel {
@@ -11620,12 +11622,13 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-img {
-  height: 528px;
+  height: 340px;
   width: 100%;
   object-fit: cover;
   object-position: center center !important;
   display: block;
   border-radius: 0;
+  align-self: center;
 }
 
 .index-hero-section .index-hero-panel {
