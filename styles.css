@@ -11622,7 +11622,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-img {
-  height: 340px;
+  height: 510px;
   width: 100%;
   object-fit: cover;
   object-position: center center !important;
@@ -12328,6 +12328,18 @@ body.nav-open {
 html, body {
   overflow-x: hidden !important;
   overflow-y: auto !important;
+}
+
+@media (max-width: 900px) {
+.index-hero-section .index-hero-img {
+  height: 450px !important;
+}
+}
+
+@media (max-width: 768px) {
+.index-hero-section .index-hero-img {
+  height: 330px !important;
+}
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
