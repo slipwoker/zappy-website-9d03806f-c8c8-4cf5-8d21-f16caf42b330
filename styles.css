@@ -2571,10 +2571,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: var(--primary);
   color: #ffffff;
   font-family: 'Rubik', sans-serif;
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  padding: 16px 30px;
+  padding: 13px 26px;
   border-radius: 6px;
   border: none;
   text-decoration: none;
@@ -11500,6 +11500,8 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   background: rgba(75,184,212,0.12) !important;
   color: #1A6E85 !important;
   border-color: #4BB8D4 !important;
+  padding: 13px 26px;
+  font-size: 0.92rem;
 }
 
 .index-hero-section .index-hero-label {
