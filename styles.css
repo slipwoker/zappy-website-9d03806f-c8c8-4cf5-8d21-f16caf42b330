@@ -2463,11 +2463,12 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 140px 32px 40px;
+  padding: 0px 32px 40px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   grid-template-columns: 1fr 1.5fr;
+  min-height: 100vh;
 }
 
 .index-hero-section .index-hero-card {
