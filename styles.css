@@ -2495,11 +2495,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #1A3C8B;
-  background: rgba(36, 87, 255, 0.12);
+  color: #1A6BFF;
+  background: rgba(26, 107, 255, 0.1);
   border: 1px solid rgba(36, 87, 255, 0.25);
   border-radius: 100px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   text-align: right;
   align-self: flex-start;
 }
