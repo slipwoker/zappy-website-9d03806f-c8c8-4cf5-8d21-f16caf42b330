@@ -12319,6 +12319,11 @@ html, body {
 body.nav-open {
   overflow: hidden !important;
 }
+
+html, body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
