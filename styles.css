@@ -2418,7 +2418,6 @@ html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li {
 html[dir="rtl"] .footer-contact .contact-icon { order: 0 !important; }
 html[dir="rtl"] .footer-contact .contact-text { order: 1 !important; }
 html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
-/* index-hero */
 .index-hero-section {
   position: relative;
   width: 100%;
@@ -2429,7 +2428,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   overflow: visible;
   padding-bottom: 72px;
   direction: rtl;
-  background-color: #0A1628;
+  background-color: #FFFFFF;
   color: var(--text-light);
 }
 
