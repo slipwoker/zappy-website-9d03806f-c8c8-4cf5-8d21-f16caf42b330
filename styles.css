@@ -11615,6 +11615,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   border-radius: 0;
   align-items: center;
   justify-content: center;
+  align-self: stretch;
 }
 
 .index-hero-section .index-hero-panel {
@@ -11622,13 +11623,14 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-img {
-  height: 510px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center center !important;
   display: block;
   border-radius: 0;
   align-self: center;
+  min-height: 792px;
 }
 
 .index-hero-section .index-hero-panel {
