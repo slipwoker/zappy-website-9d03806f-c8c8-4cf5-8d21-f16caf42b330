@@ -2470,7 +2470,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 0.6fr;
   min-height: 100vh;
 }
 
