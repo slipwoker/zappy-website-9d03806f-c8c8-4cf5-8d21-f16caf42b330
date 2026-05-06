@@ -144,9 +144,9 @@
   --accent: #F5A623;
   --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #979797;
+  --text-dark: #9a9a9a;
   --text-light: #FFFFFF;
-  --text-muted: #a3a3a3;
+  --text-muted: #a2a2a2;
   --border-light: #858890;
   --border-dark: #2457FF;
   --nav-bg: #FAFAF7;
@@ -187,8 +187,8 @@
   --accent-color: #F5A623;
   --background-color: #F0F4FF;
   --surface-color: #1A2A4A;
-  --text-color: #979797;
-  --text-secondary-color: #a3a3a3;
+  --text-color: #9a9a9a;
+  --text-secondary-color: #a2a2a2;
 }
 
 *,
@@ -738,9 +738,9 @@ hr {
   --accent: #F5A623;
   --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #979797;
+  --text-dark: #9a9a9a;
   --text-light: #FFFFFF;
-  --text-muted: #a3a3a3;
+  --text-muted: #a2a2a2;
   --border-light: #858890;
   --border-dark: #2457FF;
 }
@@ -979,9 +979,9 @@ hr {
   --accent: #F5A623;
   --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #979797;
+  --text-dark: #9a9a9a;
   --text-light: #FFFFFF;
-  --text-muted: #a3a3a3;
+  --text-muted: #a2a2a2;
   --border-light: #858890;
   --border-dark: #2457FF;
 }
@@ -2123,9 +2123,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   --accent: #F5A623;
   --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #979797;
+  --text-dark: #9a9a9a;
   --text-light: #FFFFFF;
-  --text-muted: #a3a3a3;
+  --text-muted: #a2a2a2;
   --border-light: #858890;
   --border-dark: #2457FF;
 
@@ -2486,7 +2486,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 20px;
-  color: #0B2A5B;
+  color: #0A1628;
 }
 
 .index-hero-section .index-hero-label {
@@ -2495,7 +2495,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #1A6BFF;
+  color: #2457FF;
   background: rgba(26, 107, 255, 0.1);
   border: 1px solid rgba(36, 87, 255, 0.25);
   border-radius: 100px;
@@ -2510,7 +2510,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.5px;
-  color: #0B2A5B;
+  color: #0A1628;
   text-align: right;
   margin: 0;
 }
@@ -2524,7 +2524,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.6;
-  color: #2E3A59;
+  color: #0A1628;
   text-align: right;
   margin: 0;
 }
@@ -2616,7 +2616,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #F5A623;
+  color: #976107;
   font-size: 1.1rem;
 }
 
@@ -10223,10 +10223,10 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 
 
 :root {
-  --text-dark: #979797;
-  --text-muted: #a3a3a3;
-  --text-color: #979797;
-  --text-secondary-color: #a3a3a3;
+  --text-dark: #9a9a9a;
+  --text-muted: #a2a2a2;
+  --text-color: #9a9a9a;
+  --text-secondary-color: #a2a2a2;
 }
 
 body {
@@ -11035,14 +11035,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .index-hero-section .index-hero-h1 {
   color: #2d3748 !important;
 }
-/* === BUTTON TEXT OVERRIDES START === */
-.btn-accent,
-.btn--accent,
-[class*="btn-accent"],
-[class*="btn--accent"] { color: #333333 !important; }
-.navbar .nav-cta-btn,
-.nav-cta-btn { color: #FFFFFF !important; }
-/* === BUTTON TEXT OVERRIDES END === */
+
 
 
 .index-hero-section .index-hero-card {
@@ -11298,7 +11291,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #1A6BFF !important;
+  color: #2457FF !important;
   font-weight: 600 !important;
 }
 
@@ -11439,7 +11432,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .index-hero-section .index-hero-badge {
   background: rgba(36, 87, 255, 0.12);
   border: 1px solid rgba(36, 87, 255, 0.25);
-  color: #1A3C8B;
+  color: #0A1628;
   font-weight: 600;
   padding: 8px 16px;
 }
@@ -11457,7 +11450,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #2E3A59;
+  color: #0A1628;
   border-inline-start-color: #4BB8D4 !important;
   border-inline-start: 3px solid rgba(36,87,255,0.4);
   font-weight: 500;
@@ -11484,7 +11477,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #1A3050 !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-check-icon {
@@ -11922,7 +11915,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-panel {
-  background-color: #ffffff !important;
+  background-color: #F0F4FF !important;
   border-radius: 18px !important;
 }
 
@@ -12124,21 +12117,21 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-badge {
   background: rgba(13,43,94,0.1) !important;
   border-color: rgba(13,43,94,0.25) !important;
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-badge-dot {
@@ -12151,15 +12144,15 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-check-icon {
@@ -12167,147 +12160,147 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-label {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0D2B5E !important;
+  color: #0A1628 !important;
 }
 
 html {
@@ -12364,28 +12357,28 @@ html, body {
 
 .index-hero-section .index-hero-badge {
   background: rgba(36, 87, 255, 0.12) !important;
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
   border: 1px solid rgba(36, 87, 255, 0.25) !important;
   font-weight: 600 !important;
   padding: 8px 16px !important;
 }
 
 .index-hero-section .index-hero-badge-dot {
-  background: #1A3C8B !important;
+  background: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
   line-height: 1.25 !important;
   letter-spacing: -0.5px !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #2E3A59 !important;
+  color: #0A1628 !important;
   font-weight: 500 !important;
   line-height: 1.6 !important;
 }
@@ -12397,7 +12390,7 @@ html, body {
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
   font-weight: 500 !important;
 }
 
@@ -12406,7 +12399,7 @@ html, body {
 }
 
 .index-hero-section .index-hero-btn-primary {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #1A6BFF 100%) !important;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1A4FFF 100%) !important;
   box-shadow: 0 10px 25px rgba(36, 87, 255, 0.35) !important;
   font-weight: 700 !important;
   padding: 16px 24px !important;
@@ -12418,295 +12411,295 @@ html, body {
   background: rgba(37, 211, 102, 0.15) !important;
   border: 1px solid rgba(37, 211, 102, 0.4) !important;
   font-weight: 600 !important;
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-label {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-label {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #1A3C8B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-primary,
@@ -12716,9 +12709,9 @@ html, body {
 }
 
 .index-hero-section .index-hero-btn-primary {
-  background: #FFFFFF !important;
+  background: #F0F4FF !important;
   background-image: none !important;
-  background-color: #FFFFFF !important;
+  background-color: #F0F4FF !important;
   color: #1A6E85 !important;
 }
 
@@ -12872,7 +12865,7 @@ html, body {
   padding: 6px 16px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #1A6BFF;
+  color: #2457FF;
   width: fit-content;
   letter-spacing: 0.01em;
 }
@@ -12880,7 +12873,7 @@ html, body {
 .index-hero-section .nhp-badge-dot {
   width: 7px;
   height: 7px;
-  background: #1A6BFF;
+  background: #2457FF;
   border-radius: 50%;
   display: inline-block;
   animation: nhp-pulse 2s ease-in-out infinite;
@@ -12905,12 +12898,12 @@ html, body {
 }
 
 .index-hero-section .nhp-h1-line1 {
-  color: #0B1F3B;
+  color: #0A1628;
   display: block;
 }
 
 .index-hero-section .nhp-h1-line2 {
-  color: #1A6BFF;
+  color: #2457FF;
   display: block;
 }
 
@@ -12918,14 +12911,14 @@ html, body {
   font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #4A5A73;
+  color: #0A1628;
   margin: 0;
   text-align: right;
 }
 
 .index-hero-section .nhp-pain {
   font-size: 0.9rem;
-  color: #4A5A73;
+  color: #0A1628;
   margin: 0;
   text-align: right;
   padding: 12px 16px;
@@ -12950,12 +12943,12 @@ html, body {
   gap: 10px;
   font-size: 0.92rem;
   font-weight: 500;
-  color: #0B1F3B;
+  color: #0A1628;
   text-align: right;
 }
 
 .index-hero-section .nhp-check {
-  color: #1A6BFF;
+  color: #2457FF;
   font-weight: 700;
   font-size: 1rem;
   flex-shrink: 0;
@@ -12972,7 +12965,7 @@ html, body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary-color) 0%, #1A6BFF 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1A4FFF 100%);
   color: #FFFFFF !important;
   font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif;
   font-size: 1rem;
@@ -12993,7 +12986,7 @@ html, body {
 
 .index-hero-section .nhp-btn-note {
   font-size: 0.8rem;
-  color: #4A5A73;
+  color: #0A1628;
   margin: 0;
   text-align: right;
 }
@@ -13174,167 +13167,167 @@ html, body {
 }
 
 .index-hero-section .nhp-h1-line1 {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-h1-line2 {
-  color: #1A6BFF !important;
+  color: #2457FF !important;
 }
 
 .index-hero-section .nhp-h1 {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-label {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-btn-primary {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp {
-  color: #0B1F3B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp {
@@ -13628,26 +13621,26 @@ html, body {
   font-size: 2.15rem;
   font-weight: 800;
   line-height: 1.22;
-  color: #0B2A5B;
+  color: #0A1628;
   margin: 0;
   text-align: right;
 }
 
 .index-hero-section .nhp-h1-line1 {
   display: block;
-  color: #0B2A5B;
+  color: #0A1628;
 }
 
 .index-hero-section .nhp-h1-line2 {
   display: block;
   margin-top: 6px;
-  color: #0B2A5B;
+  color: #0A1628;
   font-size: 1.75rem;
   font-weight: 700;
 }
 
 .index-hero-section .nhp-h1-accent {
-  color: #1A6BFF;
+  color: #2457FF;
 }
 
 .index-hero-section .nhp-subtitle {
@@ -13712,7 +13705,7 @@ html, body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1A6BFF 0%, #0047D4 100%);
+  background: linear-gradient(135deg, #1A4FFF 0%, #0031D4 100%);
   color: #FFFFFF;
   font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif;
   font-size: 0.97rem;
@@ -13941,7 +13934,7 @@ html, body {
 }
 
 .index-hero-section .nhp-h1 {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
   font-size: 2.15rem !important;
   font-weight: 800 !important;
   line-height: 1.22 !important;
@@ -13953,19 +13946,19 @@ html, body {
 
 .index-hero-section .nhp-h1-line1 {
   display: block !important;
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-h1-line2 {
   display: block !important;
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
   margin-top: 6px !important;
   font-size: 1.75rem !important;
   font-weight: 700 !important;
 }
 
 .index-hero-section .nhp-h1-accent {
-  color: #1A6BFF !important;
+  color: #2457FF !important;
   font-weight: 800 !important;
 }
 
@@ -14060,7 +14053,7 @@ html, body {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  background: linear-gradient(135deg, #1A6BFF 0%, #0047D4 100%) !important;
+  background: linear-gradient(135deg, #1A4FFF 0%, #0031D4 100%) !important;
   color: #FFFFFF !important;
   font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif !important;
   font-size: 0.97rem !important;
@@ -14104,175 +14097,175 @@ html, body {
 }
 
 .index-hero-section .index-hero-label {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-btn-primary {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-h1-line1 {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-h1-line2 {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp i {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp .fa-whatsapp {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-h1 {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-subtitle {
@@ -14281,7 +14274,7 @@ html, body {
 }
 
 .index-hero-section .nhp-pain {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
   background: rgba(36, 87, 255, 0.08) !important;
   border: 1px solid rgba(36, 87, 255, 0.25) !important;
   font-weight: 700 !important;
@@ -14292,7 +14285,7 @@ html, body {
 }
 
 .index-hero-section .nhp-authority strong {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-trust {
@@ -14303,7 +14296,7 @@ html, body {
 .index-hero-section .nhp-badge {
   background: rgba(36, 87, 255, 0.1) !important;
   border: 1px solid rgba(36, 87, 255, 0.3) !important;
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .nhp-badge-dot {
@@ -14521,7 +14514,7 @@ html, body {
 }
 
 .index-hero-section .nhp-subtitle {
-  color: #0B2A5B !important;
+  color: #0A1628 !important;
 }
 
 .index-hero-section .index-hero-panel {
@@ -14541,7 +14534,7 @@ html, body {
   padding: 7px 18px;
   font-size: 0.78rem;
   font-weight: 600;
-  color: #1A6BFF;
+  color: #2457FF;
   width: fit-content;
   letter-spacing: 0.03em;
   margin-bottom: 22px;
@@ -14550,7 +14543,7 @@ html, body {
 .index-hero-section .nhp-badge-dot {
   width: 7px;
   height: 7px;
-  background: #1A6BFF;
+  background: #2457FF;
   border-radius: 50%;
   display: inline-block;
   flex-shrink: 0;
@@ -14574,7 +14567,7 @@ html, body {
   font-size: 2.15rem;
   font-weight: 800;
   line-height: 1.2;
-  color: #0B1F3B;
+  color: #0A1628;
   letter-spacing: -0.03em;
 }
 
@@ -14583,13 +14576,13 @@ html, body {
   font-size: 1.65rem;
   font-weight: 600;
   line-height: 1.25;
-  color: #0B1F3B;
+  color: #0A1628;
   margin-top: 6px;
   letter-spacing: -0.02em;
 }
 
 .index-hero-section .nhp-h1-accent {
-  color: #1A6BFF;
+  color: #2457FF;
   font-weight: 700;
 }
 
@@ -14669,7 +14662,7 @@ html, body {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  background: linear-gradient(135deg, #1A6BFF 0%, #0047D4 100%) !important;
+  background: linear-gradient(135deg, #1A4FFF 0%, #0031D4 100%) !important;
   color: #ffffff !important;
   font-family: 'IBM Plex Sans Hebrew', 'Heebo', 'Assistant', sans-serif !important;
   font-size: 0.97rem !important;
@@ -14688,7 +14681,7 @@ html, body {
 .index-hero-section .nhp-btn-primary:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 10px 32px rgba(26, 107, 255, 0.50), 0 4px 12px rgba(0,0,0,0.18) !important;
-  background: linear-gradient(135deg, #2575FF 0%, #0052E8 100%) !important;
+  background: linear-gradient(135deg, #2558FF 0%, #0036E8 100%) !important;
 }
 
 .index-hero-section .nhp-btn-note {
@@ -15137,6 +15130,15 @@ html, body {
 .index-hero-section .nhp-btn-note {
   color: #FFFFFF !important;
 }
+/* === BUTTON TEXT OVERRIDES START === */
+.btn-accent,
+.btn--accent,
+[class*="btn-accent"],
+[class*="btn--accent"] { color: #333333 !important; }
+.navbar .nav-cta-btn,
+.nav-cta-btn { color: #FFFFFF !important; }
+/* === BUTTON TEXT OVERRIDES END === */
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
