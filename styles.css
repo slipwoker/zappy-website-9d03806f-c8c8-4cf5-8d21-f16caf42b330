@@ -2466,7 +2466,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 100%;
   max-width: 1200px !important;
   margin: 0 auto;
-  padding: 100px 32px 60px;
+  padding: 100px 32px 80px;
   display: grid;
   justify-content: unset;
   align-items: start;
@@ -11628,7 +11628,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-img {
-  height: 100%;
+  height: 420px;
   width: 100%;
   object-fit: cover;
   object-position: center center !important;
@@ -15217,6 +15217,14 @@ html, body {
   min-height: auto !important;
   padding: 100px 32px 60px !important;
   align-items: start !important;
+}
+
+.index-hero-section .index-hero-img {
+  height: 420px !important;
+}
+
+.index-hero-section .index-hero-container {
+  padding-bottom: 80px !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
