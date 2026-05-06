@@ -15291,6 +15291,66 @@ html, body {
   width: auto !important;
   display: inline-flex !important;
 }
+
+.index-hero-section .index-hero-panel {
+  background: transparent;
+}
+
+.index-hero-section .nhp-badge {
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.index-hero-section .nhp-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.index-hero-section .nhp-h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: right;
+}
+
+.index-hero-section .nhp-h1-line1, .index-hero-section .nhp-h1-line2 {
+  display: block;
+  color: #FFFFFF;
+}
+
+.index-hero-section .nhp-subtitle {
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: right;
+}
+
+.index-hero-section .nhp-pain {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.index-hero-section .nhp-btn-note {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.78rem;
+  margin-top: 8px;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
