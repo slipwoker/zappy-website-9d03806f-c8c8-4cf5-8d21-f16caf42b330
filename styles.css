@@ -2466,11 +2466,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 100%;
   max-width: 1200px !important;
   margin: 0 auto;
-  padding: 0px 32px 40px;
-  display: flex;
-  justify-content: center;
+  padding: 120px 32px 60px;
+  display: grid;
+  justify-content: unset;
   align-items: center;
-  grid-template-columns: 1fr 0.6fr;
+  grid-template-columns: 1fr 0.85fr;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -15203,6 +15203,14 @@ html, body {
 
 .index-hero-section .nhp-btn-whatsapp .fa-whatsapp {
   color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-container {
+  display: grid !important;
+  grid-template-columns: 1fr 0.85fr !important;
+  align-items: center !important;
+  padding: 120px 32px 60px !important;
+  justify-content: unset !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
