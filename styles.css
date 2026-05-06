@@ -15279,6 +15279,18 @@ html, body {
 .index-hero-section .index-hero-img {
   height: 400px !important;
 }
+
+.index-hero-section .nhp-cta-block p,
+.index-hero-section > div > div > p:has(.nhp-btn-whatsapp) {
+  width: fit-content !important;
+  display: inline-block !important;
+}
+
+.index-hero-section .nhp-btn-primary,
+.index-hero-section .nhp-btn-whatsapp {
+  width: auto !important;
+  display: inline-flex !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
