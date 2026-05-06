@@ -11628,14 +11628,15 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-img {
-  height: 420px;
+  height: auto;
   width: 100%;
-  object-fit: cover;
-  object-position: center center !important;
+  object-fit: contain;
+  object-position: center center;
   display: block;
   border-radius: 0;
   align-self: center;
   min-height: 792px;
+  max-height: 600px;
 }
 
 .index-hero-section .index-hero-panel {
