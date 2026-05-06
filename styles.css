@@ -15139,6 +15139,70 @@ html, body {
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
 
+
+.index-hero-section p.nhp-authority strong {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-label {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-subtitle {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-item {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-sep {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-differentiator span {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) > span {
+  color: #1A1A1A !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp .fa-whatsapp {
+  color: #1A1A1A !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
