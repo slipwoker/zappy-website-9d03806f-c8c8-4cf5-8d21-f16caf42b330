@@ -15287,6 +15287,42 @@ html, body {
 .index-hero-section .index-hero-container {
   grid-template-columns: 0.27fr 1.55fr !important;
 }
+
+.index-hero-section .nhp-h1 {
+  font-size: 2.1rem !important;
+}
+
+.index-hero-section .nhp-h1 .nhp-h1-line1 {
+  font-size: 2.1rem !important;
+}
+
+.index-hero-section .nhp-h1 .nhp-h1-line2 {
+  font-size: 1.7rem !important;
+}
+
+.index-hero-section .nhp-subtitle {
+  font-size: 1.12rem !important;
+}
+
+.index-hero-section .nhp-pain {
+  font-size: 1.06rem !important;
+}
+
+.index-hero-section .nhp-badge {
+  font-size: 0.95rem !important;
+}
+
+.index-hero-section .nhp-btn-primary {
+  font-size: 1.12rem !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp {
+  font-size: 1.1rem !important;
+}
+
+.index-hero-section .nhp-btn-note {
+  font-size: 0.9rem !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
