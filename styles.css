@@ -15261,19 +15261,6 @@ html, body {
   max-height: 440px !important;
   object-fit: cover !important;
 }
-
-.index-hero-section {
-  padding: 122px 24px 70px !important;
-}
-
-.index-hero-section .index-hero-panel {
-  padding: 36px 34px 34px !important;
-  gap: 18px !important;
-}
-
-.index-hero-section .index-hero-container {
-  gap: 42px !important;
-}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
