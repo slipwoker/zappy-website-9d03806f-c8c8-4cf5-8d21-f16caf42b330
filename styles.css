@@ -2470,7 +2470,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: grid;
   justify-content: unset;
   align-items: stretch;
-  grid-template-columns: 0.36fr 1.25fr !important;
+  grid-template-columns: 0.27fr 1.55fr !important;
   min-height: auto;
   box-sizing: border-box;
 }
@@ -15282,6 +15282,10 @@ html, body {
 
 .index-hero-section .index-hero-container {
   grid-template-columns: 1fr 0.64fr !important;
+}
+
+.index-hero-section .index-hero-container {
+  grid-template-columns: 0.27fr 1.55fr !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
