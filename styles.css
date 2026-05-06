@@ -2470,7 +2470,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: grid;
   justify-content: unset;
   align-items: stretch;
-  grid-template-columns: 1fr 0.85fr;
+  grid-template-columns: 1fr 0.64fr;
   min-height: auto;
   box-sizing: border-box;
 }
@@ -15278,6 +15278,10 @@ html, body {
 
 .index-hero-section .index-hero-img {
   height: 400px !important;
+}
+
+.index-hero-section .index-hero-container {
+  grid-template-columns: 1fr 0.64fr !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
