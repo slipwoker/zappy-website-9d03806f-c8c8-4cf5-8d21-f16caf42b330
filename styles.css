@@ -15226,6 +15226,38 @@ html, body {
 .index-hero-section .index-hero-container {
   padding-bottom: 80px !important;
 }
+
+.index-hero-section .index-hero-image-wrap {
+  max-height: 460px !important;
+  align-self: start !important;
+}
+
+.index-hero-section .index-hero-img {
+  height: 420px !important;
+  max-height: 420px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.index-hero-section {
+  padding-bottom: 80px !important;
+}
+
+.index-hero-section .index-hero-container {
+  align-items: start !important;
+}
+
+.index-hero-section .index-hero-image-wrap {
+  max-height: 500px !important;
+  overflow: hidden !important;
+  align-self: start !important;
+}
+
+.index-hero-section [data-hero-background="true"], .index-hero-section [data-hero-bg="true"] {
+  height: 440px !important;
+  max-height: 440px !important;
+  object-fit: cover !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
