@@ -11895,9 +11895,10 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 
 @media (max-width: 900px) {
 .index-hero-section .index-hero-container {
-  grid-template-columns: 1fr !important;
+  grid-template-columns: 1fr;
   min-height: unset !important;
   padding-top: 70px !important;
+  gap: 0;
 }
 
 .index-hero-section .index-hero-image-wrap {
@@ -12347,6 +12348,7 @@ html, body {
 @media (max-width: 768px) {
 .index-hero-section .index-hero-img {
   height: 330px !important;
+  display: none;
 }
 }
 
@@ -15410,6 +15412,7 @@ html, body {
 .index-hero-section .index-hero-image-wrap {
   order: -1 !important;
   width: 100% !important;
+  display: none;
 }
 
 .index-hero-section .index-hero-img {
@@ -15449,6 +15452,54 @@ html, body {
   font-size: 0.78rem !important;
   line-height: 1.5 !important;
   margin-top: 6px !important;
+}
+}
+
+@media (max-width: 768px) {
+.index-hero-section .index-hero-image-wrap {
+  display: none !important;
+}
+
+.index-hero-section .index-hero-container {
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+}
+
+.index-hero-section .nhp-cta-block > div {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+}
+
+.index-hero-section .nhp-btn-primary,
+  .index-hero-section .nhp-btn-whatsapp {
+  width: 100% !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+}
+
+.index-hero-section .index-hero-panel {
+  padding: 28px 20px !important;
+}
+}
+
+@media (max-width: 768px) {
+.index-hero-section .nhp-cta-inner {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  gap: 10px !important;
+}
+
+.index-hero-section .nhp-cta-inner .nhp-btn-primary,
+  .index-hero-section .nhp-cta-inner .nhp-btn-whatsapp {
+  width: 100% !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  display: flex !important;
 }
 }
 /* mobile-submenu-overflow-fix */
