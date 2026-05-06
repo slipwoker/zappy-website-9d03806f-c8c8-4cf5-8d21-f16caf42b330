@@ -15259,6 +15259,10 @@ html, body {
   max-height: 440px !important;
   object-fit: cover !important;
 }
+
+.navbar .nav-menu a {
+  font-size: 1.15rem !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
