@@ -2425,7 +2425,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
-  overflow: visible;
+  overflow: hidden;
   padding-bottom: 72px;
   direction: rtl;
   background-color: transparent;
@@ -2464,7 +2464,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 800px !important;
+  max-width: 1200px !important;
   margin: 0 auto;
   padding: 0px 32px 40px;
   display: flex;
@@ -2472,6 +2472,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   align-items: center;
   grid-template-columns: 1fr 0.6fr;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .index-hero-section .index-hero-card {
