@@ -2470,7 +2470,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: grid;
   justify-content: unset;
   align-items: stretch;
-  grid-template-columns: 0.27fr 1.55fr !important;
+  grid-template-columns: 0.75fr 1.1fr;
   min-height: auto;
   box-sizing: border-box;
 }
@@ -2492,7 +2492,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-hero-section .index-hero-label {
   display: inline-block;
-  font-size: 0.94rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2507,7 +2507,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-hero-section .index-hero-h1 {
   font-family: 'Rubik', sans-serif;
-  font-size: 3.7rem;
+  font-size: 2.95rem;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.5px;
@@ -2522,7 +2522,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-hero-section .index-hero-subtitle {
   font-family: 'Rubik', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.6;
   color: #0A1628;
@@ -2551,7 +2551,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-trust strong {
-  font-size: 1.1rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #0A1628;
   line-height: 1.5;
@@ -2572,7 +2572,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: var(--primary);
   color: #ffffff;
   font-family: 'Rubik', sans-serif;
-  font-size: 1.15rem;
+  font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   padding: 13px 26px;
@@ -2597,7 +2597,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: transparent;
   color: #25D366;
   font-family: 'Rubik', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.88rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   padding: 11px 18px;
@@ -2632,7 +2632,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #0A1628;
   white-space: nowrap;
@@ -11628,7 +11628,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-img {
-  height: 370px;
+  height: 680px;
   width: 100%;
   object-fit: contain;
   object-position: center center;
@@ -15278,50 +15278,6 @@ html, body {
 
 .index-hero-section .index-hero-img {
   height: 400px !important;
-}
-
-.index-hero-section .index-hero-container {
-  grid-template-columns: 1fr 0.64fr !important;
-}
-
-.index-hero-section .index-hero-container {
-  grid-template-columns: 0.27fr 1.55fr !important;
-}
-
-.index-hero-section .nhp-h1 {
-  font-size: 2.1rem !important;
-}
-
-.index-hero-section .nhp-h1 .nhp-h1-line1 {
-  font-size: 2.1rem !important;
-}
-
-.index-hero-section .nhp-h1 .nhp-h1-line2 {
-  font-size: 1.7rem !important;
-}
-
-.index-hero-section .nhp-subtitle {
-  font-size: 1.12rem !important;
-}
-
-.index-hero-section .nhp-pain {
-  font-size: 1.06rem !important;
-}
-
-.index-hero-section .nhp-badge {
-  font-size: 0.95rem !important;
-}
-
-.index-hero-section .nhp-btn-primary {
-  font-size: 1.12rem !important;
-}
-
-.index-hero-section .nhp-btn-whatsapp {
-  font-size: 1.1rem !important;
-}
-
-.index-hero-section .nhp-btn-note {
-  font-size: 0.9rem !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
