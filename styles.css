@@ -2542,7 +2542,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: rgba(255,255,255,0.85);
+  color: #0A1628;
   font-size: 1rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -2552,7 +2552,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-hero-section .index-hero-trust strong {
   font-size: 0.88rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.90);
+  color: #0A1628;
   line-height: 1.5;
 }
 
@@ -2627,13 +2627,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   flex-wrap: wrap;
   gap: 6px 4px;
   padding-top: 4px;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(10,22,40,0.15);
 }
 
 .index-hero-section .index-hero-reassurance-item {
   font-size: 0.8rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.75);
+  color: #0A1628;
   white-space: nowrap;
 }
 
