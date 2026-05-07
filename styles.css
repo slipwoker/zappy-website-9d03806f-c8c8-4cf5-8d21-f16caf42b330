@@ -2482,19 +2482,19 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: linear-gradient(145deg, #EEF3FB 0%, #E4ECF8 100%);
   border: 1px solid rgba(13, 43, 94, 0.08);
   border-radius: 16px;
-  padding: 40px 36px;
+  padding: 32px 28px;
   box-shadow: 0 20px 50px rgba(13, 43, 94, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
   color: #0A1628;
 }
 
 .index-hero-section .index-hero-label {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #2457FF;
   background: rgba(26, 107, 255, 0.1);
@@ -2507,10 +2507,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-hero-section .index-hero-h1 {
   font-family: 'Rubik', sans-serif;
-  font-size: 2.95rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.5px;
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
   color: #0A1628;
   text-align: right;
   margin: 0;
@@ -2522,10 +2522,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-hero-section .index-hero-subtitle {
   font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.6;
-  color: #0A1628;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #F5A623;
   text-align: right;
   margin: 0;
 }
@@ -2534,11 +2534,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 8px;
+  gap: 7px;
   background: rgba(13, 43, 94, 0.05);
   border: 1px solid rgba(13, 43, 94, 0.1);
   border-radius: 8px;
-  padding: 14px 16px;
+  padding: 12px 14px;
   text-align: right;
 }
 
@@ -2551,17 +2551,16 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-trust strong {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: #0A1628;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-/* ── CTAs ── */
 .index-hero-section .index-hero-ctas {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -2572,17 +2571,17 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: var(--primary);
   color: #ffffff;
   font-family: 'Rubik', sans-serif;
-  font-size: 0.92rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   letter-spacing: 0.01em;
-  padding: 13px 26px;
-  border-radius: 6px;
+  padding: 15px 30px;
+  border-radius: 8px;
   border: none;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
-  box-shadow: 0 8px 32px rgba(36,87,255,0.45), 0 2px 8px rgba(0,0,0,0.30);
+  box-shadow: 0 10px 36px rgba(36,87,255,0.50), 0 3px 10px rgba(0,0,0,0.22);
 }
 
 .index-hero-section .index-hero-btn-primary:hover {
@@ -2595,19 +2594,19 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   align-items: center;
   gap: 8px;
   background: transparent;
-  color: #25D366;
+  color: #1aaa55;
   font-family: 'Rubik', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 500;
   letter-spacing: 0.01em;
-  padding: 11px 18px;
-  border-radius: 6px;
-  border: 1.5px solid #25D366;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(37,211,102,0.55);
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
-  opacity: 0.82;
+  opacity: 0.75;
 }
 
 .index-hero-section .index-hero-btn-secondary:hover {
@@ -2632,9 +2631,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  font-size: 0.8rem;
+  font-size: 0.83rem;
   font-weight: 500;
-  color: #0A1628;
+  color: #4A6080;
   white-space: nowrap;
 }
 
