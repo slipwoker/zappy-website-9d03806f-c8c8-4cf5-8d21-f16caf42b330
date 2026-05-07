@@ -2466,7 +2466,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 100%;
   max-width: 1200px !important;
   margin: 0 auto;
-  padding: 40px 32px 80px;
+  padding: 40px 32px 60px;
   display: grid;
   justify-content: unset;
   align-items: stretch;
