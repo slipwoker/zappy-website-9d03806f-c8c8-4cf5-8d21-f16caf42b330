@@ -17579,6 +17579,35 @@ html, body {
 .navbar .nav-menu .nav-menu-cta-link:hover {
   opacity: 0.85;
 }
+
+.index-hero-section .index-hero-image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 26px;
+  background: linear-gradient(160deg, rgba(10,22,40,0.06) 0%, rgba(10,22,40,0.0) 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.index-hero-section .index-hero-image-wrap:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 58px rgba(10,22,40,0.17) !important;
+}
+
+@media (max-width: 900px) {
+.index-hero-section .index-hero-img {
+  height: 340px !important;
+  min-height: unset !important;
+}
+}
+
+@media (max-width: 768px) {
+.index-hero-section .index-hero-img {
+  height: 260px !important;
+  min-height: unset !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
