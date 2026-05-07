@@ -17565,6 +17565,20 @@ html, body {
 .index-hero-section .nhp-subtitle {
   color: #000000 !important;
 }
+
+.navbar .nav-menu a {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+.navbar .nav-menu a:hover {
+  color: var(--nav-text-hover) !important;
+  opacity: 0.85;
+}
+
+.navbar .nav-menu .nav-menu-cta-link:hover {
+  opacity: 0.85;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
