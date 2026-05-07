@@ -16510,6 +16510,15 @@ html, body {
 .contact-contact-intro-section .contact-card-action--whatsapp {
   font-weight: 700 !important;
 }
+
+.contact-contact-intro-section .contact-intro-title,
+.contact-contact-intro-section .contact-intro-title-line1,
+.contact-contact-intro-section .contact-intro-title-line2,
+.contact-contact-intro-section .contact-intro-subtitle,
+.contact-contact-intro-section .contact-intro-trust,
+.contact-contact-intro-section .contact-intro-label {
+  color: #1a1a2e !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
