@@ -16283,6 +16283,90 @@ html, body {
 .index-hero-section .nhp-h1-line1 {
   color: #000000 !important;
 }
+
+.navbar {
+  padding: 0 !important;
+  border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+}
+
+.navbar .nav-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 32px !important;
+  min-height: unset !important;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.navbar .nav-right-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 32px !important;
+}
+
+.navbar .nav-brand .logo-link span:first-child {
+  font-size: 1.65rem !important;
+}
+
+.navbar .nav-brand .logo-link span:last-child {
+  font-size: 0.68rem !important;
+}
+
+.navbar .nav-menu {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 6px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar .nav-menu li a {
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: var(--nav-text) !important;
+  text-decoration: none !important;
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  transition: color 0.18s ease, background 0.18s ease !important;
+  white-space: nowrap !important;
+}
+
+.navbar .nav-menu li a:hover {
+  color: var(--nav-text-hover) !important;
+  background: rgba(36,87,255,0.06) !important;
+}
+
+.navbar .nav-menu li.nav-menu-cta-item {
+  margin-inline-start: 8px !important;
+}
+
+.navbar .nav-menu li.nav-menu-cta-item a.nav-menu-cta-link {
+  background-color: var(--primary) !important;
+  color: #ffffff !important;
+  font-size: 0.93rem !important;
+  font-weight: 700 !important;
+  padding: 10px 22px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 10px rgba(36,87,255,0.18) !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, background 0.2s ease !important;
+}
+
+.navbar .nav-menu li.nav-menu-cta-item a.nav-menu-cta-link:hover {
+  background-color: var(--primary) !important;
+  box-shadow: 0 6px 20px rgba(36,87,255,0.30) !important;
+  transform: translateY(-1px) !important;
+  color: #ffffff !important;
+}
+
+.navbar .nav-cta-container {
+  display: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
