@@ -12914,14 +12914,14 @@ html, body {
   font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #0A1628;
+  color: rgba(255,255,255,0.88) !important;
   margin: 0;
   text-align: right;
 }
 
 .index-hero-section .nhp-pain {
   font-size: 0.9rem;
-  color: #0A1628;
+  color: #0A1628 !important;
   margin: 0;
   text-align: right;
   padding: 12px 16px;
@@ -12989,7 +12989,7 @@ html, body {
 
 .index-hero-section .nhp-btn-note {
   font-size: 0.8rem;
-  color: #0A1628;
+  color: rgba(255,255,255,0.72) !important;
   margin: 0;
   text-align: right;
 }
