@@ -11896,7 +11896,8 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   grid-template-columns: 1fr;
   min-height: unset !important;
   padding-top: 70px !important;
-  gap: 0;
+  gap: 24px;
+  padding: 80px 16px 48px;
 }
 
 .index-hero-section .index-hero-image-wrap {
@@ -12339,7 +12340,7 @@ html, body {
 
 @media (max-width: 900px) {
 .index-hero-section .index-hero-img {
-  height: 450px !important;
+  height: 260px;
 }
 }
 
