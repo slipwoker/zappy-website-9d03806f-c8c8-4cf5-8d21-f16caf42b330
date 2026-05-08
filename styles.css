@@ -18692,6 +18692,64 @@ body > main > .index-hero-section {
   --text-dark: #1F2937 !important;
   --text-color: #1F2937 !important;
 }
+
+#index-hero-section .hero-clean__h1 {
+  color: #0F172A;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -1px;
+}
+
+#index-hero-section .hero-clean__subtitle {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 500;
+  color: #475569;
+  max-width: 46ch;
+}
+
+#index-hero-section .hero-clean__trust {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+#index-hero-section .hero-clean__btn-primary {
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: #FFFFFF;
+}
+
+#index-hero-section .hero-clean__btn-whatsapp {
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 10px;
+  background: #25A853;
+  color: #FFFFFF;
+}
+
+#index-hero-section .hero-clean__note {
+  font-size: 0.88rem;
+  color: #64748B;
+}
+
+#index-hero-section .hero-clean__orgs {
+  font-size: 0.88rem;
+  color: #64748B;
+  opacity: 0.9;
+}
+
+#index-hero-section .hero-clean__pain {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #64748B;
+  margin: 0;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
