@@ -2466,11 +2466,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 100%;
   max-width: 1200px !important;
   margin: 0 auto;
-  padding: 40px 32px 60px;
+  padding: 28px 32px 40px;
   display: grid;
   justify-content: unset;
   align-items: stretch;
-  grid-template-columns: 0.56fr 1.1fr;
+  grid-template-columns: 0.68fr 1fr;
   min-height: auto;
   box-sizing: border-box;
 }
@@ -2482,35 +2482,35 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: linear-gradient(145deg, #EEF3FB 0%, #E4ECF8 100%);
   border: 1px solid rgba(13, 43, 94, 0.08);
   border-radius: 16px;
-  padding: 32px 28px;
+  padding: 26px 26px;
   box-shadow: 0 20px 50px rgba(13, 43, 94, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 11px;
   color: #0A1628;
 }
 
 .index-hero-section .index-hero-label {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.70rem;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
   color: #2457FF;
   background: rgba(26, 107, 255, 0.1);
   border: 1px solid rgba(36, 87, 255, 0.25);
   border-radius: 100px;
-  padding: 6px 14px;
+  padding: 4px 13px;
   text-align: right;
   align-self: flex-start;
 }
 
 .index-hero-section .index-hero-h1 {
   font-family: 'Rubik', sans-serif;
-  font-size: 3.75rem;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -1px;
+  font-size: 4.3rem;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
   color: #000000;
   text-align: right;
   margin: 0;
@@ -2522,10 +2522,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-hero-section .index-hero-subtitle {
   font-family: 'Rubik', sans-serif;
-  font-size: 1.08rem;
-  font-weight: 600;
+  font-size: 1.18rem;
+  font-weight: 700;
   line-height: 1.5;
-  color: #000000;
+  color: #0A1628;
   text-align: right;
   margin: 0;
 }
@@ -2535,10 +2535,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   flex-direction: row;
   align-items: flex-start;
   gap: 7px;
-  background: rgba(13, 43, 94, 0.05);
-  border: 1px solid rgba(13, 43, 94, 0.1);
+  background: rgba(13, 43, 94, 0.07);
+  border: 1px solid rgba(13, 43, 94, 0.14);
   border-radius: 8px;
-  padding: 12px 14px;
+  padding: 13px 16px;
   text-align: right;
 }
 
@@ -2551,8 +2551,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-trust strong {
-  font-size: 0.92rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 800;
   color: #0A1628;
   line-height: 1.55;
 }
@@ -2571,10 +2571,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: var(--primary);
   color: #ffffff;
   font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
+  font-size: 1.08rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  padding: 15px 30px;
+  padding: 15px 36px;
   border-radius: 8px;
   border: none;
   text-decoration: none;
@@ -2582,6 +2582,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
   box-shadow: 0 10px 36px rgba(36,87,255,0.50), 0 3px 10px rgba(0,0,0,0.22);
+  min-height: 52px;
 }
 
 .index-hero-section .index-hero-btn-primary:hover {
@@ -2596,17 +2597,18 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background: transparent;
   color: #1aaa55;
   font-family: 'Rubik', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   letter-spacing: 0.01em;
-  padding: 10px 16px;
+  padding: 13px 24px;
   border-radius: 8px;
   border: 1.5px solid rgba(37,211,102,0.55);
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
-  opacity: 0.75;
+  opacity: 1;
+  min-height: 52px;
 }
 
 .index-hero-section .index-hero-btn-secondary:hover {
