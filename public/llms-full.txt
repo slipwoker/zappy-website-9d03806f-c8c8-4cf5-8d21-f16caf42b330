@@ -2,13 +2,13 @@
 
 Ariel Software Development is a one-person expert consultancy specializing in Microsoft Access systems with over 25 years of hands-on experience. The brand identity is built around being the trusted 'rescue expert' — the professional who steps in when systems fail, developers disappear, or legacy databases become liabilities. The tone is direct, results-driven, and confidence-inspiring, emphasizing that in 90% of cases, systems can be fixed without rebuilding from scratch. The business has a proven track record with real-world deployments including Yad Vashem, school networks, safety management systems, and equestrian associations — projecting deep credibility and enterprise-level expertise.
 
-Source: https://ariel-pituch-tochna.zappy5.app
+Source: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com
 
 ---
 
 ## מציל מערכות Access כשאחרים מוותרים — אריאל פיתוח תוכנה
 
-URL: https://ariel-pituch-tochna.zappy5.app
+URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com
 Description: מערכת Access קרסה? מפתח נעלם? ב־90% מהמקרים אפשר לתקן בלי לבנות מחדש. מומחה עם 25 שנה מציל מסדי נתונים ומחזיר עסקים לפעילות מלאה.
 
 מציל מערכות Access כשאחרים מוותרים — אריאל פיתוח תוכנה
@@ -51,9 +51,12 @@ Description: מערכת Access קרסה? מפתח נעלם? ב־90% מהמקרי
 
 
 
-יד ושם
-נשר
-פקר פלדה
+
+ניסיון בעבודה עם:
+
+
+יד ושם  ·  נשר מפעלי מלט  ·  פקר פלדה  ·  רשת צביה ונועם
+
 
 
 
@@ -234,7 +237,7 @@ Description: מערכת Access קרסה? מפתח נעלם? ב־90% מהמקרי
 
 ## כל פתרון Access במקום אחד — אריאל פיתוח תוכנה
 
-URL: https://ariel-pituch-tochna.zappy5.app/services
+URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/services
 Description: תיקון תקלות, שדרוג מסד נתונים Access ל-SQL Server, מעבר לגרסת 64 ביט ושיפור ביצועים — פתרונות מקצועיים מהירים שמחזירים את המערכת שלך לעבוד בשיא הכוח.
 
 כל פתרון Access במקום אחד — אריאל פיתוח תוכנה
@@ -779,7 +782,7 @@ Access איטי שלוקח דקות לפתוח דוח או שאילתה — זו
 
 ## 25 שנה, יד ושם ועוד — אריאל פיתוח תוכנה
 
-URL: https://ariel-pituch-tochna.zappy5.app/experience
+URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/experience
 Description: מערכות שפותחו עבור יד ושם, רשתות בתי ספר, ניהול בטיחות ואיגודי רכיבה — ניסיון אמיתי בפרויקטים מורכבים שמדבר בעד עצמו. גלה למה עסקים בוחרים במומחה Access בעל רקורד מוכח.
 
 25 שנה, יד ושם ועוד — אריאל פיתוח תוכנה
@@ -1226,7 +1229,7 @@ Description: מערכות שפותחו עבור יד ושם, רשתות בתי �
 
 ## שלח פרטים ותקבל תשובה עוד היום — אריאל פיתוח תוכנה
 
-URL: https://ariel-pituch-tochna.zappy5.app/contact
+URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/contact
 Description: מסד הנתונים שלך לא עובד? אל תחכה — צור קשר עכשיו לאבחון מהיר. מומחה Access זמין לתיקון תקלות, שדרוג ותמיכה שוטפת לעסקים קטנים וגדולים כאחד.
 
 שלח פרטים ותקבל תשובה עוד היום — אריאל פיתוח תוכנה
@@ -1598,7 +1601,7 @@ Description: מסד הנתונים שלך לא עובד? אל תחכה — צו�
 
 ## מדיניות פרטיות
 
-URL: https://ariel-pituch-tochna.zappy5.app/privacy
+URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -1769,7 +1772,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 ## הצהרת נגישות
 
-URL: https://ariel-pituch-tochna.zappy5.app/accessibility
+URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -1949,7 +1952,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 ## תנאי שימוש
 
-URL: https://ariel-pituch-tochna.zappy5.app/terms
+URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש

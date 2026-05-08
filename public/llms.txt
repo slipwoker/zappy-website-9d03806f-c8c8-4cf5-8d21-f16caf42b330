@@ -7,33 +7,33 @@
 ## Pages
 
 ### בית
-https://ariel-pituch-tochna.zappy5.app
+https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com
 מערכת Access קרסה? מפתח נעלם? ב־90% מהמקרים אפשר לתקן בלי לבנות מחדש. מומחה עם 25 שנה מציל מסדי נתונים ומחזיר עסקים לפעילות מלאה.
 
 ### שירותים
-https://ariel-pituch-tochna.zappy5.app/services
+https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/services
 תיקון תקלות, שדרוג מסד נתונים Access ל-SQL Server, מעבר לגרסת 64 ביט ושיפור ביצועים — פתרונות מקצועיים מהירים שמחזירים את המערכת שלך לעבוד בשיא הכוח.
 
 ### ניסיון
-https://ariel-pituch-tochna.zappy5.app/experience
+https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/experience
 מערכות שפותחו עבור יד ושם, רשתות בתי ספר, ניהול בטיחות ואיגודי רכיבה — ניסיון אמיתי בפרויקטים מורכבים שמדבר בעד עצמו. גלה למה עסקים בוחרים במומחה Access בעל רקורד מוכח.
 
 ### צור קשר
-https://ariel-pituch-tochna.zappy5.app/contact
+https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/contact
 מסד הנתונים שלך לא עובד? אל תחכה — צור קשר עכשיו לאבחון מהיר. מומחה Access זמין לתיקון תקלות, שדרוג ותמיכה שוטפת לעסקים קטנים וגדולים כאחד.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://ariel-pituch-tochna.zappy5.app/privacy
+https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://ariel-pituch-tochna.zappy5.app/terms
+https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://ariel-pituch-tochna.zappy5.app/accessibility
+https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -46,8 +46,8 @@ Information about WCAG compliance and accessibility features.
 - Address: קרני יהודה 135/17, ירושלים, 97293, ישראל
 
 ### Contact form
-- URL: https://ariel-pituch-tochna.zappy5.app/contact
-- Endpoint: https://ariel-pituch-tochna.zappy5.app/api/email/contact-form
+- URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/contact
+- Endpoint: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
@@ -77,6 +77,6 @@ Ariel Software Development is a one-person expert consultancy specializing in Mi
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://ariel-pituch-tochna.zappy5.app/sitemap.xml
-- Robots: https://ariel-pituch-tochna.zappy5.app/robots.txt
-- Flattened page text (for LLMs): https://ariel-pituch-tochna.zappy5.app/llms-full.txt
+- Sitemap (XML): https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/sitemap.xml
+- Robots: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/robots.txt
+- Flattened page text (for LLMs): https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/llms-full.txt
