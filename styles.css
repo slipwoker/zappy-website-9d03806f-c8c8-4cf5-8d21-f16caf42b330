@@ -2466,14 +2466,14 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 100%;
   max-width: 860px !important;
   margin: 0 auto;
-  padding: 16px 24px 20px;
+  padding: 16px 8px 20px;
   display: grid;
   justify-content: unset;
   align-items: center;
   grid-template-columns: 1.1fr 0.9fr;
   min-height: auto;
   box-sizing: border-box;
-  gap: 36px;
+  gap: 8px;
 }
 
 .index-hero-section .index-hero-card {
