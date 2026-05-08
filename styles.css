@@ -23529,6 +23529,91 @@ body {
 .index-cta-section .index-cta-heading {
   color: #CBD5E1 !important;
 }
+
+.navbar .nav-menu-cta-link,
+.navbar .nav-menu .nav-menu-cta-item a,
+.navbar li.nav-menu-cta-item > a {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+  border-radius: 6px !important;
+  padding: 8px 18px !important;
+  font-weight: 600 !important;
+}
+
+.navbar .nav-menu-cta-link:hover,
+.navbar .nav-menu .nav-menu-cta-item a:hover,
+.navbar li.nav-menu-cta-item > a:hover {
+  background: #1D4ED8 !important;
+  color: var(--surface-color) !important;
+}
+
+:root {
+  --bg-light: var(--background-color) !important;
+  --bg-section: var(--surface-color) !important;
+  --surface-color: var(--surface-color) !important;
+  --background-color: var(--background-color) !important;
+}
+
+.navbar .nav-brand a span,
+.navbar .logo-link span {
+  color: var(--text-color) !important;
+}
+
+.navbar {
+  border-bottom: 1px solid #CBD5E1 !important;
+}
+
+.navbar .nav-cta-btn {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-menu li a {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-menu li.nav-menu-cta-item a.nav-menu-cta-link {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-menu li a:not(.nav-menu-cta-link) {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-menu-cta-item a {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-menu a {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-links a {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-brand a {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-brand span {
+  color: var(--surface-color) !important;
+}
+
+.navbar .logo-link {
+  color: var(--surface-color) !important;
+}
+
+.navbar .logo-link span {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-menu .nav-menu-cta-link {
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-right-group .nav-menu a {
+  color: var(--surface-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
