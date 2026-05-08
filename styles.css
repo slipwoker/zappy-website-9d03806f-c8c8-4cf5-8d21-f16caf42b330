@@ -2431,7 +2431,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background-color: transparent;
   color: var(--text-dark);
   background: transparent;
-  padding: 60px 0 32px;
+  padding: 100px 24px 60px;
 }
 
 /* ── Background Image ── */
@@ -2464,16 +2464,16 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 860px !important;
+  max-width: 1140px !important;
   margin: 0 auto;
-  padding: 16px 24px 20px;
+  padding: 20px 32px 40px !important;
   display: grid;
   justify-content: unset;
   align-items: center;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr 1.2fr;
   min-height: auto;
   box-sizing: border-box;
-  gap: 36px;
+  gap: 24px;
 }
 
 .index-hero-section .index-hero-card {
@@ -11428,7 +11428,8 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   max-height: 792px;
   border: 1px solid rgba(13, 43, 94, 0.08);
   border-radius: 16px;
-  gap: 20px;
+  gap: 16px;
+  padding: 20px 24px 20px;
 }
 
 .index-hero-section .index-hero-badge {
