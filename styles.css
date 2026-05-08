@@ -21270,6 +21270,644 @@ body {
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
 
+
+.navbar {
+  background: var(--background-color) !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: none !important;
+}
+
+.navbar .nav-menu a,
+.navbar .nav-menu li a {
+  color: #334155 !important;
+  font-weight: 500 !important;
+}
+
+.navbar .nav-menu a:hover,
+.navbar .nav-menu li a:hover {
+  color: var(--accent-color) !important;
+}
+
+.navbar .nav-menu .nav-menu-cta-link {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  padding: 8px 18px !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+.navbar .nav-menu .nav-menu-cta-link:hover {
+  background: #1D4ED8 !important;
+  color: var(--surface-color) !important;
+}
+
+.navbar .nav-brand a,
+.navbar .nav-brand span,
+.navbar .logo-link,
+.navbar .logo-link span {
+  color: var(--text-color) !important;
+  font-weight: 800 !important;
+}
+
+.navbar .nav-menu li a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li.nav-menu-cta-item a.nav-menu-cta-link {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li a:not(.nav-menu-cta-link) {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu-cta-item a {
+  color: #334155 !important;
+}
+
+.navbar .nav-links a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand span {
+  color: #334155 !important;
+}
+
+.navbar .logo-link span {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu a {
+  color: var(--text-color) !important;
+}
+
+.navbar .nav-cta-btn {
+  color: var(--text-color) !important;
+}
+
+.navbar .nav-menu-cta-link {
+  color: var(--text-color) !important;
+}.familiar-section {
+  background: var(--surface-color) !important;
+  background-image: none !important;
+}
+
+.how-it-works-section {
+  background: var(--background-color) !important;
+  background-image: none !important;
+}
+
+.testi-section {
+  background: var(--surface-color) !important;
+  background-image: none !important;
+}
+
+.index-problems-section {
+  background: var(--background-color) !important;
+  background-image: none !important;
+}
+
+.index-services-section {
+  background: var(--surface-color) !important;
+  background-image: none !important;
+}
+
+.index-case-studies-section {
+  background: var(--surface-color) !important;
+  background-image: none !important;
+}
+
+.index-cta-section {
+  background: var(--text-color) !important;
+  background-image: none !important;
+}
+
+.site-footer {
+  background: var(--text-color) !important;
+  background-image: none !important;
+}
+
+.index-hero-section {
+  background: var(--background-color) !important;
+  background-image: none !important;
+}
+
+.testi-letters-section {
+  background: var(--background-color) !important;
+  background-image: none !important;
+}
+
+#index-hero-section .hero-clean__img-col::after {
+  content: '';
+  display: none !important;
+}
+
+#index-hero-section .hero-clean__badge {
+  background: rgba(37,99,235,0.05) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+  color: var(--text-color) !important;
+}
+
+#index-hero-section .hero-clean__btn-primary {
+  background: var(--accent-color) !important;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.18) !important;
+}
+
+#index-hero-section .hero-clean__btn-primary:hover {
+  background: #1D4ED8 !important;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.24) !important;
+}
+
+#index-hero-section .hero-clean__btn-whatsapp {
+  background: #16A34A !important;
+}
+
+#index-hero-section .hero-clean__btn-whatsapp:hover {
+  background: #15803D !important;
+}
+
+#index-hero-section .hero-clean__orgs-wrap {
+  border-top: 1px solid #E2E8F0 !important;
+}
+
+#index-hero-section .hero-clean__h1-accent {
+  color: var(--accent-color) !important;
+}
+
+.familiar-section .familiar-callout {
+  background: rgba(37,99,235,0.04) !important;
+  border: 1px solid rgba(37,99,235,0.12) !important;
+  border-radius: 10px !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  background: var(--accent-color) !important;
+  box-shadow: none !important;
+}
+
+.familiar-section .familiar-cta-btn:hover {
+  background: #1D4ED8 !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: var(--text-secondary-color) !important;
+}
+
+.familiar-section .familiar-benefit-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 4px rgba(15,23,42,0.04) !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn {
+  background: var(--accent-color) !important;
+  box-shadow: none !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn:hover {
+  background: #1D4ED8 !important;
+}
+
+.how-it-works-section .how-it-works-step-number {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+  box-shadow: none !important;
+}
+
+.testi-section .testi-card {
+  box-shadow: 0 1px 4px rgba(15,23,42,0.06) !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.testi-section .testi-star {
+  color: var(--accent-color) !important;
+}
+
+.testi-section .testi-letters-section {
+  background: var(--background-color) !important;
+  background-image: none !important;
+}
+
+.index-problems-section .index-problems-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 4px rgba(15,23,42,0.05) !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  color: var(--accent-color) !important;
+  background: rgba(37,99,235,0.06) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+}
+
+.index-services-section .index-services-principle {
+  background: rgba(37,99,235,0.04) !important;
+  border: 1px solid rgba(37,99,235,0.12) !important;
+  border-radius: 10px !important;
+}
+
+.index-services-section .index-services-row-icon {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-label,
+.index-services-section .index-services-process-badge {
+  color: var(--accent-color) !important;
+  background: rgba(37,99,235,0.06) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: var(--accent-color) !important;
+  background: rgba(37,99,235,0.06) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  background: rgba(37,99,235,0.06) !important;
+  color: var(--accent-color) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  color: var(--accent-color) !important;
+  background: rgba(37,99,235,0.06) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  background: var(--accent-color) !important;
+  box-shadow: none !important;
+}
+
+.index-cta-section .index-cta-btn-primary:hover {
+  background: #1D4ED8 !important;
+}
+
+.index-cta-section .index-cta-btn-secondary {
+  background: transparent !important;
+  border: 1.5px solid rgba(255,255,255,0.25) !important;
+  color: var(--background-color) !important;
+}
+
+.index-cta-section .index-cta-btn-secondary:hover {
+  background: rgba(255,255,255,0.08) !important;
+}
+
+.site-footer .social-link {
+  color: #94A3B8 !important;
+}
+
+.familiar-section .familiar-title {
+  color: var(--text-secondary-color) !important;
+}
+
+.familiar-section .familiar-subtitle {
+  color: var(--text-secondary-color) !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: var(--text-secondary-color) !important;
+}
+
+.familiar-section .familiar-callout-text {
+  color: var(--text-secondary-color) !important;
+}
+
+.familiar-section .familiar-transition {
+  color: var(--text-secondary-color) !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: var(--text-secondary-color) !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: var(--text-secondary-color) !important;
+}
+
+.familiar-section .familiar-footnote {
+  color: var(--text-secondary-color) !important;
+}
+
+.familiar-section .familiar-callout-icon {
+  color: var(--text-secondary-color) !important;
+}
+
+.how-it-works-section .how-it-works-title {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-title {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-desc {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-reinforcement-text {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-note {
+  color: var(--surface-color) !important;
+}
+
+.testi-section .testi-main-title {
+  color: var(--accent-color) !important;
+}
+
+.testi-section .testi-subtitle {
+  color: var(--accent-color) !important;
+}
+
+.testi-section .testi-text p {
+  color: var(--accent-color) !important;
+}
+
+.testi-section .testi-name {
+  color: var(--accent-color) !important;
+}
+
+.testi-section .testi-role {
+  color: var(--accent-color) !important;
+}
+
+.testi-section .testi-letters-title {
+  color: var(--accent-color) !important;
+}
+
+.testi-section .testi-letters-subtitle {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-icon-wrap {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-title {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-subtitle {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-summary-text {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-heading {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-lead {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-title {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-label {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-process-sub {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-step-title {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-step-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-process-badge {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-icon svg {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle strong {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section h2.index-services-heading {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section p.index-services-lead {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section h3.index-services-row-title {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section p.index-services-row-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle-text {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome i {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome span {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  color: var(--accent-color) !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  color: var(--background-color) !important;
+}
+
+.index-cta-section .index-cta-heading {
+  color: var(--background-color) !important;
+}
+
+.index-cta-section .index-cta-subtext {
+  color: var(--background-color) !important;
+}
+
+.index-cta-section .index-cta-reassurance {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-list a {
+  color: #94A3B8 !important;
+}
+
+.site-footer .contact-list li {
+  color: #94A3B8 !important;
+}
+
+.site-footer .contact-list span {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-legal a {
+  color: #94A3B8 !important;
+}
+
+.site-footer .copyright p {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-description {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-bottom a {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-bottom p {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-bottom span:not(.separator) {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-legal .separator {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-heading {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-tagline {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-copyright {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-links a {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-contact a {
+  color: #94A3B8 !important;
+}
+
+.site-footer .contact-text {
+  color: #94A3B8 !important;
+}
+
+.site-footer .contact-text a {
+  color: #94A3B8 !important;
+}
+
+.site-footer .nav-brand a {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-brand-name {
+  color: #94A3B8 !important;
+}
+
+.site-footer .footer-divider {
+  color: #94A3B8 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
