@@ -142,11 +142,11 @@
 --primary: #2457FF;
   --secondary: #0A1628;
   --accent: #F5A623;
-  --bg-light: #FFFFFF;
+  --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #9f9f9f;
+  --text-dark: #9a9a9a;
   --text-light: #FFFFFF;
-  --text-muted: #a4a4a4;
+  --text-muted: #a2a2a2;
   --border-light: #858890;
   --border-dark: #2457FF;
   --nav-bg: #FAFAF7;
@@ -185,10 +185,10 @@
   --primary-color: #2457FF;
   --secondary-color: #0A1628;
   --accent-color: #F5A623;
-  --background-color: #FFFFFF;
+  --background-color: #F0F4FF;
   --surface-color: #1A2A4A;
-  --text-color: #9f9f9f;
-  --text-secondary-color: #a4a4a4;
+  --text-color: #9a9a9a;
+  --text-secondary-color: #a2a2a2;
 }
 
 *,
@@ -736,11 +736,11 @@ hr {
   --primary: #2457FF;
   --secondary: #0A1628;
   --accent: #F5A623;
-  --bg-light: #FFFFFF;
+  --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #9f9f9f;
+  --text-dark: #9a9a9a;
   --text-light: #FFFFFF;
-  --text-muted: #a4a4a4;
+  --text-muted: #a2a2a2;
   --border-light: #858890;
   --border-dark: #2457FF;
 }
@@ -977,11 +977,11 @@ hr {
   --primary: #2457FF;
   --secondary: #0A1628;
   --accent: #F5A623;
-  --bg-light: #FFFFFF;
+  --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #9f9f9f;
+  --text-dark: #9a9a9a;
   --text-light: #FFFFFF;
-  --text-muted: #a4a4a4;
+  --text-muted: #a2a2a2;
   --border-light: #858890;
   --border-dark: #2457FF;
 }
@@ -2121,11 +2121,11 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   --primary: #2457FF;
   --secondary: #0A1628;
   --accent: #F5A623;
-  --bg-light: #FFFFFF;
+  --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #9f9f9f;
+  --text-dark: #9a9a9a;
   --text-light: #FFFFFF;
-  --text-muted: #a4a4a4;
+  --text-muted: #a2a2a2;
   --border-light: #858890;
   --border-dark: #2457FF;
 
@@ -2588,7 +2588,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-btn-primary:hover {
-  background: #2457FF;
+  background: #1a46e0;
   box-shadow: 0 6px 18px rgba(36,87,255,0.30);
 }
 
@@ -2620,7 +2620,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #a16707;
+  color: #976107;
   font-size: 1.1rem;
 }
 
@@ -10226,10 +10226,10 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 
 
 :root {
-  --text-dark: #9f9f9f;
-  --text-muted: #a4a4a4;
-  --text-color: #9f9f9f;
-  --text-secondary-color: #a4a4a4;
+  --text-dark: #9a9a9a;
+  --text-muted: #a2a2a2;
+  --text-color: #9a9a9a;
+  --text-secondary-color: #a2a2a2;
 }
 
 body {
@@ -14688,7 +14688,7 @@ html, body {
 .index-hero-section .nhp-btn-primary:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 10px 32px rgba(26, 107, 255, 0.50), 0 4px 12px rgba(0,0,0,0.18) !important;
-  background: linear-gradient(135deg, #2457FF 0%, #0036E8 100%) !important;
+  background: linear-gradient(135deg, #2558FF 0%, #0036E8 100%) !important;
 }
 
 .index-hero-section .nhp-btn-note {
@@ -15137,7 +15137,14 @@ html, body {
 .index-hero-section .nhp-btn-note {
   color: #FFFFFF !important;
 }
-
+/* === BUTTON TEXT OVERRIDES START === */
+.btn-accent,
+.btn--accent,
+[class*="btn-accent"],
+[class*="btn--accent"] { color: #333333 !important; }
+.navbar .nav-cta-btn,
+.nav-cta-btn { color: #FFFFFF !important; }
+/* === BUTTON TEXT OVERRIDES END === */
 
 
 .index-hero-section p.nhp-authority strong {
@@ -16429,7 +16436,7 @@ html, body {
   flex-direction: column !important;
   align-items: flex-start !important;
   transition: transform 0.22s ease, box-shadow 0.22s ease !important;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .contact-contact-intro-section .contact-card:hover {
@@ -17041,7 +17048,7 @@ html, body {
 }
 
 .index-hero-section .nhp-btn-primary:hover {
-  background: #FFFFFF !important;
+  background: #f5f5f5 !important;
   color: #1A6E85 !important;
   box-shadow: 0 8px 24px rgba(0,0,0,0.18) !important;
 }
@@ -17771,7 +17778,7 @@ html, body {
   font-size: 31px !important;
   font-weight: 600 !important;
   line-height: 1.28 !important;
-  color: #0A1628 !important;
+  color: #1E2E42 !important;
   margin-top: 8px !important;
   letter-spacing: -0.01em !important;
 }
@@ -18377,15 +18384,6 @@ html, body {
 .index-hero-section .nhp-col-empty {
   background: transparent !important;
 }
-/* === BUTTON TEXT OVERRIDES START === */
-.btn-accent,
-.btn--accent,
-[class*="btn-accent"],
-[class*="btn--accent"] { color: #333333 !important; }
-.navbar .nav-cta-btn,
-.nav-cta-btn { color: #FFFFFF !important; }
-/* === BUTTON TEXT OVERRIDES END === */
-
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
