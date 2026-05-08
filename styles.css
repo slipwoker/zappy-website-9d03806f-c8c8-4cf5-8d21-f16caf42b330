@@ -24685,6 +24685,145 @@ body > .whatsapp-float {
   background: #1D4ED8 !important;
   color: var(--surface-color) !important;
 }
+
+.navbar,
+.navbar.scrolled,
+.navbar.sticky,
+.navbar.fixed,
+.navbar.active,
+.navbar.dark,
+.navbar.light,
+.navbar.transparent,
+.navbar.is-sticky,
+.navbar.is-fixed,
+.navbar.nav-scrolled,
+.navbar.header--scrolled,
+.navbar[class*="scrolled"],
+.navbar[class*="sticky"],
+.navbar[class*="dark"] {
+  background: rgba(255,255,255,0.97) !important;
+  background-color: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(15,23,42,0.06) !important;
+  color: #334155 !important;
+  box-shadow: none !important;
+}
+
+.navbar .nav-menu a,
+.navbar .nav-menu li a,
+.navbar .nav-menu > li > a,
+.nav-menu a,
+.nav-menu li a,
+.navbar .nav-menu-cta-link {
+  color: #334155 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.navbar .nav-menu a:hover,
+.navbar .nav-menu a:focus,
+.navbar .nav-menu a:active,
+.navbar .nav-menu li a:hover,
+.navbar .nav-menu li a:focus,
+.navbar .nav-menu li a:active,
+.navbar .nav-menu > li > a:hover,
+.navbar .nav-menu > li > a:focus,
+.nav-menu a:hover,
+.nav-menu a:focus,
+.navbar .nav-menu-cta-link:hover,
+.navbar .nav-menu-cta-link:focus {
+  color: var(--accent-color) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.navbar::before,
+.navbar::after {
+  content: '';
+  background: transparent !important;
+  background-color: transparent !important;
+  display: none !important;
+}
+
+.navbar .nav-cta-btn {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li.nav-menu-cta-item a.nav-menu-cta-link {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li a:not(.nav-menu-cta-link) {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu-cta-item a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu-cta-link {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu a {
+  color: #334155 !important;
+}
+
+.navbar .nav-links a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand span {
+  color: #334155 !important;
+}
+
+.navbar .logo-link {
+  color: #334155 !important;
+}
+
+.navbar .logo-link span {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu .nav-menu-cta-link {
+  color: #334155 !important;
+}
+
+.navbar .nav-right-group .nav-menu a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu .nav-menu-cta-item a {
+  color: #334155 !important;
+}
+
+.navbar li.nav-menu-cta-item > a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand a span {
+  color: #334155 !important;
+}
+
+.nav-menu > li > a {
+  color: #334155 !important;
+}
+
+.nav-menu > .nav-item > a {
+  color: #334155 !important;
+}
+
+.nav-menu .nav-menu-cta-link {
+  color: #334155 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
