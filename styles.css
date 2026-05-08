@@ -19053,6 +19053,97 @@ body > main > .index-hero-section {
   text-align: center !important;
 }
 }
+
+#index-hero-section .hero-clean__inner {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+#index-hero-section .hero-clean__h1 {
+  font-size: 3.9rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.6px !important;
+  line-height: 1.16 !important;
+}
+
+#index-hero-section .hero-clean__h1-accent {
+  color: #1E4ED8 !important;
+}
+
+#index-hero-section .hero-clean__subtitle {
+  font-size: 1.24rem !important;
+  line-height: 1.9 !important;
+  color: #111827 !important;
+  margin-top: 8px !important;
+}
+
+#index-hero-section .hero-clean__text-col {
+  max-width: 560px !important;
+  gap: 22px !important;
+}
+
+#index-hero-section .hero-clean__trust,
+#index-hero-section .hero-clean__pain {
+  color: #4B5563 !important;
+}
+
+#index-hero-section .hero-clean__note {
+  color: #4B5563 !important;
+}
+
+#index-hero-section .hero-clean__orgs {
+  color: rgba(30,42,60,0.72) !important;
+}
+
+#index-hero-section .hero-clean__orgs-label {
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  color: rgba(30,42,60,0.52) !important;
+  letter-spacing: 0.08em !important;
+}
+
+#index-hero-section .hero-clean__orgs-wrap {
+  border-top: 1px solid rgba(30,46,66,0.08) !important;
+  padding-top: 16px !important;
+}
+
+#index-hero-section .hero-clean__btn-primary {
+  box-shadow: 0 10px 24px rgba(30,78,216,0.18) !important;
+}
+
+#index-hero-section .hero-clean__btn-primary:hover {
+  box-shadow: 0 12px 28px rgba(30,78,216,0.26) !important;
+  transform: translateY(-1px) !important;
+}
+
+#index-hero-section .hero-clean__btn-whatsapp {
+  background: #1F9A4B !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+#index-hero-section .hero-clean__btn-whatsapp:hover {
+  background: #187d3d !important;
+  transform: translateY(-1px) !important;
+}
+
+#index-hero-section .hero-clean__img {
+  filter: saturate(0.82) !important;
+}
+
+#index-hero-section .hero-clean__img-col {
+  position: relative !important;
+}
+
+#index-hero-section .hero-clean__img-col::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.06));
+  border-radius: 18px;
+  pointer-events: none;
+  z-index: 1;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
