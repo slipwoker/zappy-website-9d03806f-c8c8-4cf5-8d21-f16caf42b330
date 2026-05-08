@@ -2512,13 +2512,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -1.5px;
-  color: #000000;
+  color: var(--secondary) !important;
   text-align: right;
   margin: 0;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #2457FF;
+  color: var(--secondary) !important;
 }
 
 .index-hero-section .index-hero-subtitle {
@@ -11452,9 +11452,9 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0A1628;
+  color: var(--text-dark) !important;
   border-inline-start-color: #4BB8D4 !important;
-  border-inline-start: 3px solid rgba(36,87,255,0.4);
+  border-inline-start: 3px solid var(--primary);
   font-weight: 500;
   line-height: 1.6;
 }
@@ -11467,11 +11467,11 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: var(--secondary-color) !important;
+  color: var(--secondary) !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #1A6E85 !important;
+  color: var(--text-dark) !important;
 }
 
 .index-hero-section .index-hero-trust-divider {
@@ -11479,7 +11479,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0A1628 !important;
+  color: var(--secondary) !important;
 }
 
 .index-hero-section .index-hero-check-icon {
@@ -12917,14 +12917,14 @@ html, body {
   font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #FFFFFF !important;
+  color: var(--text-dark) !important;
   margin: 0;
   text-align: right;
 }
 
 .index-hero-section .nhp-pain {
   font-size: 0.9rem;
-  color: #FFFFFF !important;
+  color: var(--text-dark) !important;
   margin: 0;
   text-align: right;
   padding: 12px 16px;
@@ -12992,7 +12992,7 @@ html, body {
 
 .index-hero-section .nhp-btn-note {
   font-size: 0.8rem;
-  color: #FFFFFF !important;
+  color: var(--text-dark) !important;
   margin: 0;
   text-align: right;
 }
@@ -16773,7 +16773,7 @@ html, body {
 }
 
 .index-hero-section .nhp-h1, .index-hero-section .nhp-h1 * {
-  color: #000000 !important;
+  color: var(--secondary) !important;
 }
 
 .index-hero-section .nhp-subtitle {
