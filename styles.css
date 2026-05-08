@@ -24556,6 +24556,33 @@ body > .whatsapp-float {
   margin-top: 18px;
 }
 }
+
+.navbar {
+  background: var(--surface-color) !important;
+  background-color: var(--surface-color) !important;
+  background-image: none !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04) !important;
+  backdrop-filter: blur(10px) !important;
+  opacity: 1 !important;
+}
+
+.navbar.scrolled,
+.navbar.sticky,
+.navbar.fixed,
+.navbar.is-scrolled,
+.navbar.nav-scrolled,
+.navbar.header-scrolled,
+.navbar.affix,
+.navbar.pinned,
+.navbar[class*="scrolled"],
+.navbar[class*="sticky"] {
+  background: var(--surface-color) !important;
+  background-color: var(--surface-color) !important;
+  background-image: none !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
