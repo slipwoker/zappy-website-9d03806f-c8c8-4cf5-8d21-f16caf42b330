@@ -24824,6 +24824,59 @@ body > .whatsapp-float {
 .nav-menu .nav-menu-cta-link {
   color: #334155 !important;
 }
+
+#index-hero-section .hero-clean__btn-primary,
+#index-hero-section .hero-clean__btn-primary:link,
+#index-hero-section .hero-clean__btn-primary:visited,
+#index-hero-section .hero-clean__btn-primary:active,
+#index-hero-section .hero-clean__btn-primary:focus,
+#index-hero-section .hero-clean__btn-primary:focus-visible {
+  background: var(--accent-color) !important;
+  background-image: none !important;
+  background-color: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+  border: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  mix-blend-mode: normal !important;
+  text-decoration: none !important;
+  text-shadow: none !important;
+  padding: 13px 28px !important;
+  min-height: 50px !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 24px rgba(37,99,235,0.40), 0 3px 8px rgba(37,99,235,0.18) !important;
+  transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  position: relative !important;
+  z-index: 2 !important;
+  isolation: isolate !important;
+  pointer-events: auto !important;
+  transform: none !important;
+}
+
+#index-hero-section .hero-clean__btn-primary:hover {
+  background: #1D4ED8 !important;
+  background-color: #1D4ED8 !important;
+  background-image: none !important;
+  color: var(--surface-color) !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  text-decoration: none !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 14px 32px rgba(37,99,235,0.50), 0 4px 12px rgba(37,99,235,0.22) !important;
+}
+
+#index-hero-section .hero-clean__btn-whatsapp {
+  box-shadow: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
