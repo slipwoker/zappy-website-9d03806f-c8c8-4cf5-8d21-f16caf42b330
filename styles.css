@@ -140,15 +140,15 @@
 
 :root {
 --primary: #2457FF;
-  --secondary: #0A1628;
+  --secondary: #1A3A7A;
   --accent: #F5A623;
-  --bg-light: #F0F4FF;
-  --bg-dark: #070F20;
-  --text-dark: #9a9a9a;
-  --text-light: #FFFFFF;
-  --text-muted: #a2a2a2;
-  --border-light: #858890;
-  --border-dark: #2457FF;
+  --bg-light: #FFFFFF;
+  --bg-dark: #F0F4FF;
+  --text-dark: #1A3A7A;
+  --text-light: #1A3A7A;
+  --text-muted: #5A6A8A;
+  --border-light: #7d828f;
+  --border-dark: #7b859b;
   --nav-bg: #FAFAF7;
   --nav-text: #1F2933;
   --nav-text-hover: #2457FF;
@@ -183,12 +183,12 @@
   --gradient-light-section: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
   --gradient-overlay-light: linear-gradient(180deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.95) 100%);
   --primary-color: #2457FF;
-  --secondary-color: #0A1628;
+  --secondary-color: #1A3A7A;
   --accent-color: #F5A623;
-  --background-color: #F0F4FF;
-  --surface-color: #1A2A4A;
-  --text-color: #9a9a9a;
-  --text-secondary-color: #a2a2a2;
+  --background-color: #FFFFFF;
+  --surface-color: #F5F8FF;
+  --text-color: #1A3A7A;
+  --text-secondary-color: #5A6A8A;
 }
 
 *,
@@ -459,8 +459,8 @@ hr {
 }
 
 .btn-dark:hover {
-  background: #0A1628;
-  border-color: #0A1628;
+  background: #1A3A7A;
+  border-color: #1A3A7A;
   color: var(--text-light);
 }
 
@@ -734,15 +734,15 @@ hr {
   --nav-text: #1F2933;
   --nav-text-hover: #2457FF;
   --primary: #2457FF;
-  --secondary: #0A1628;
+  --secondary: #1A3A7A;
   --accent: #F5A623;
-  --bg-light: #F0F4FF;
-  --bg-dark: #070F20;
-  --text-dark: #9a9a9a;
-  --text-light: #FFFFFF;
-  --text-muted: #a2a2a2;
-  --border-light: #858890;
-  --border-dark: #2457FF;
+  --bg-light: #FFFFFF;
+  --bg-dark: #F0F4FF;
+  --text-dark: #1A3A7A;
+  --text-light: #1A3A7A;
+  --text-muted: #5A6A8A;
+  --border-light: #7d828f;
+  --border-dark: #7b859b;
 }
 
 .navbar {
@@ -975,15 +975,15 @@ hr {
   --nav-text: #1F2933;
   --nav-text-hover: #2457FF;
   --primary: #2457FF;
-  --secondary: #0A1628;
+  --secondary: #1A3A7A;
   --accent: #F5A623;
-  --bg-light: #F0F4FF;
-  --bg-dark: #070F20;
-  --text-dark: #9a9a9a;
-  --text-light: #FFFFFF;
-  --text-muted: #a2a2a2;
-  --border-light: #858890;
-  --border-dark: #2457FF;
+  --bg-light: #FFFFFF;
+  --bg-dark: #F0F4FF;
+  --text-dark: #1A3A7A;
+  --text-light: #1A3A7A;
+  --text-muted: #5A6A8A;
+  --border-light: #7d828f;
+  --border-dark: #7b859b;
 }
 
 .navbar {
@@ -2119,15 +2119,15 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 /* Footer Styles */
 .site-footer {
   --primary: #2457FF;
-  --secondary: #0A1628;
+  --secondary: #1A3A7A;
   --accent: #F5A623;
-  --bg-light: #F0F4FF;
-  --bg-dark: #070F20;
-  --text-dark: #9a9a9a;
-  --text-light: #FFFFFF;
-  --text-muted: #a2a2a2;
-  --border-light: #858890;
-  --border-dark: #2457FF;
+  --bg-light: #FFFFFF;
+  --bg-dark: #F0F4FF;
+  --text-dark: #1A3A7A;
+  --text-light: #1A3A7A;
+  --text-muted: #5A6A8A;
+  --border-light: #7d828f;
+  --border-dark: #7b859b;
 
   background-color: var(--bg-dark);
   color: var(--text-light);
@@ -2489,7 +2489,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 11px;
-  color: #0A1628;
+  color: #1A3A7A;
 }
 
 .index-hero-section .index-hero-label {
@@ -2527,7 +2527,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-size: 1.18rem;
   font-weight: 700;
   line-height: 1.5;
-  color: #0A1628;
+  color: #1A3A7A;
   text-align: right;
   margin: 0;
 }
@@ -2545,7 +2545,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0A1628;
+  color: #1A3A7A;
   font-size: 1rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -2555,7 +2555,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-hero-section .index-hero-trust strong {
   font-size: 1rem;
   font-weight: 800;
-  color: #0A1628;
+  color: #1A3A7A;
   line-height: 1.55;
 }
 
@@ -2588,7 +2588,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-btn-primary:hover {
-  background: #1a46e0;
+  background: #2457FF;
   box-shadow: 0 6px 18px rgba(36,87,255,0.30);
 }
 
@@ -2620,7 +2620,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #976107;
+  color: #a16707;
   font-size: 1.1rem;
 }
 
@@ -3072,7 +3072,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.3;
-  color: #0A1628;
+  color: #1A3A7A;
   margin: 0 0 16px 0;
   letter-spacing: -0.01em;
 }
@@ -3080,7 +3080,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-services-section .index-services-lead {
   font-size: 1rem;
   line-height: 1.7;
-  color: #0A1628;
+  color: #1A3A7A;
   margin: 0 0 36px 0;
   max-width: 540px;
 }
@@ -3131,7 +3131,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-services-section .index-services-row-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #0A1628;
+  color: #1A3A7A;
   margin: 0 0 6px 0;
   line-height: 1.4;
 }
@@ -3139,7 +3139,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-services-section .index-services-row-desc {
   font-size: 1rem;
   line-height: 1.7;
-  color: #0A1628;
+  color: #1A3A7A;
   margin: 0;
 }
 
@@ -3175,7 +3175,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-services-section .index-services-process-sub {
   font-size: 0.875rem;
-  color: #0A1628;
+  color: #1A3A7A;
   margin: 0;
   line-height: 1.6;
 }
@@ -3221,13 +3221,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-services-section .index-services-step-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #0A1628;
+  color: #1A3A7A;
   line-height: 1.3;
 }
 
 .index-services-section .index-services-step-desc {
   font-size: 0.8rem;
-  color: #0A1628;
+  color: #1A3A7A;
   line-height: 1.5;
 }
 
@@ -4502,7 +4502,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .services-benefits-section {
   position: relative;
   overflow: visible;
-  background-color: #0A1628;
+  background-color: #1A3A7A;
   background-image:
     radial-gradient(ellipse at 10% 80%, rgba(36,87,255,0.07) 0%, transparent 55%),
     radial-gradient(ellipse at 90% 20%, rgba(47,163,107,0.06) 0%, transparent 50%),
@@ -7200,7 +7200,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 /* contact-faq */
 .contact-faq-section {
-  background-color: #0A1628;
+  background-color: #1A3A7A;
   background-image:
     radial-gradient(ellipse at 10% 80%, rgba(36,87,255,0.07) 0%, transparent 55%),
     radial-gradient(ellipse at 90% 20%, rgba(47,163,107,0.06) 0%, transparent 50%),
@@ -7903,7 +7903,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 /* Basic Accessibility Enhancements */
 :root {
-  --accessibility-focus: #0A1628;
+  --accessibility-focus: #1A3A7A;
 }
 
 /* Skip link styles */
@@ -8027,9 +8027,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 #mic-access-tool-general-button svg line,
 #mic-access-tool-general-button svg polyline,
 #mic-access-tool-general-button svg g {
-  fill: #0A1628 !important;
-  stroke: #0A1628 !important;
-  color: #0A1628 !important;
+  fill: #1A3A7A !important;
+  stroke: #1A3A7A !important;
+  color: #1A3A7A !important;
 }
 
 /* Target images if the icon is an img instead of SVG */
@@ -8050,7 +8050,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .mic-access-tool-box-header,
 div[id*="mic-access-tool-box"] header,
 div[id*="mic-access-tool-box"] .header {
-  background: #0A1628 !important;
+  background: #1A3A7A !important;
   color: white !important;
 }
 
@@ -8077,8 +8077,8 @@ div[id*="mic-access-tool-box"] .header * {
 #mic-access-tool-box button:hover,
 div[id*="mic-access-tool-box"] button.active,
 div[id*="mic-access-tool-box"] button:hover {
-  border-color: #0A1628 !important;
-  color: #0A1628 !important;
+  border-color: #1A3A7A !important;
+  color: #1A3A7A !important;
   background-color: rgba(31, 41, 51, 0.1) !important;
 }
 
@@ -8087,7 +8087,7 @@ div[id*="mic-access-tool-box"] button:hover {
 #mic-access-tool-box button[title*="Reset"],
 #mic-access-tool-box [class*="reset"],
 div[id*="mic-access-tool-box"] button[class*="reset"] {
-  background: #0A1628 !important;
+  background: #1A3A7A !important;
   color: white !important;
 }
 
@@ -8170,7 +8170,7 @@ body .whatsapp-float:hover {
 }
 
 .index-services-section {
-  background: linear-gradient(160deg, #0E1F38 0%, var(--text-color) 100%) !important;
+  background: linear-gradient(160deg, #1E428A 0%, var(--text-color) 100%) !important;
   color: var(--text-light) !important;
   position: relative;
 }
@@ -8238,7 +8238,7 @@ body .whatsapp-float:hover {
 }
 
 .index-cta-section {
-  background: linear-gradient(135deg, var(--text-color) 0%, #112645 50%, var(--text-color) 100%) !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #204898 50%, var(--text-color) 100%) !important;
   position: relative;
 }
 
@@ -8277,7 +8277,7 @@ body .whatsapp-float:hover {
 }
 
 .site-footer .footer-tagline {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-bottom {
@@ -8290,7 +8290,7 @@ body .whatsapp-float:hover {
 }
 
 .site-footer .footer-legal a {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .social-link {
@@ -8543,7 +8543,7 @@ body .whatsapp-float:hover {
 }
 
 .index-case-studies-section .case-credibility-strip {
-  background: linear-gradient(135deg, #0E1F38, var(--text-color)) !important;
+  background: linear-gradient(135deg, #1E428A, var(--text-color)) !important;
   border-radius: 16px !important;
   border: 1px solid rgba(24,87,214,0.3) !important;
   box-shadow: 0 8px 40px rgba(10,22,40,0.3) !important;
@@ -8604,7 +8604,7 @@ body .whatsapp-float:hover {
 }
 
 .index-cta-section .index-cta-reassurance {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .navbar .nav-cta-btn {
@@ -9170,7 +9170,7 @@ body .whatsapp-float:hover {
 .how-it-works-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: var(--secondary-color, #0A1628);
+  color: var(--secondary-color, #1A3A7A);
   margin: 0 0 14px 0;
   line-height: 1.2;
   letter-spacing: -0.5px;
@@ -9256,7 +9256,7 @@ body .whatsapp-float:hover {
 .how-it-works-card-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--secondary-color, #0A1628);
+  color: var(--secondary-color, #1A3A7A);
   margin: 0 0 8px 0;
   line-height: 1.3;
   width: 100%;
@@ -9287,7 +9287,7 @@ body .whatsapp-float:hover {
 
 /* ---- Reinforcement Bar ---- */
 .how-it-works-reinforcement {
-  background: linear-gradient(135deg, var(--secondary-color, #0A1628) 0%, #152F55 100%);
+  background: linear-gradient(135deg, var(--secondary-color, #0A1628) 0%, #2450A8 100%);
   border-radius: 14px;
   padding: 24px 32px;
   display: flex;
@@ -9507,7 +9507,7 @@ body .whatsapp-float:hover {
 .testi-main-title {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 800;
-  color: var(--secondary-color, #0A1628);
+  color: var(--secondary-color, #1A3A7A);
   margin: 0 0 14px;
   line-height: 1.25;
   letter-spacing: -0.5px;
@@ -9595,7 +9595,7 @@ body .whatsapp-float:hover {
 
 .testi-text p {
   font-size: 0.97rem;
-  color: #0A1628;
+  color: #1A3A7A;
   line-height: 1.75;
   margin: 0;
   font-style: normal;
@@ -9648,7 +9648,7 @@ body .whatsapp-float:hover {
 .testi-name {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--secondary-color, #0A1628);
+  color: var(--secondary-color, #1A3A7A);
   line-height: 1.2;
 }
 
@@ -9671,7 +9671,7 @@ body .whatsapp-float:hover {
 .testi-letters-title {
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 800;
-  color: var(--secondary-color, #0A1628);
+  color: var(--secondary-color, #1A3A7A);
   margin: 0 0 12px;
   line-height: 1.3;
 }
@@ -9886,66 +9886,66 @@ body .whatsapp-float:hover {
 
 .index-services-section .index-services-heading,
 .index-services-section h2.index-services-heading {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-lead,
 .index-services-section p.index-services-lead {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-row-title,
 .index-services-section h3.index-services-row-title {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-row-desc,
 .index-services-section p.index-services-row-desc {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-lead {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-row-title {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-row-desc {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-process-sub {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-step-title {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-step-desc {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-process-badge {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-row-icon svg {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-principle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-principle strong {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section .index-services-step-num {
@@ -9953,7 +9953,7 @@ body .whatsapp-float:hover {
 }
 
 .index-services-section .index-services-heading {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-services-section {
@@ -10047,7 +10047,7 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 .familiar-section p,
 .familiar-section span,
 .familiar-section li {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section {
@@ -10061,7 +10061,7 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 .index-cta-section h2,
 .index-cta-section p,
 .index-cta-section span {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section .index-cta-btn-primary {
@@ -10069,19 +10069,19 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 }
 
 .index-cta-section .index-cta-btn-secondary {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section .index-cta-subtext {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section .index-cta-reassurance {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section .index-cta-heading {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer {
@@ -10102,83 +10102,83 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 .site-footer span,
 .site-footer li,
 .site-footer a {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .contact-list a {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .contact-list li {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .contact-list span {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-legal a {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .copyright p {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-description {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-bottom a {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-bottom p {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-bottom span:not(.separator) {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-legal .separator {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer p {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer span {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer li {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer a {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer h3 {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-heading {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-tagline {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .footer-copyright {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .site-footer .social-link {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section *,
@@ -10188,7 +10188,7 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 .index-cta-section .index-cta-heading,
 .index-cta-section .index-cta-subtext,
 .index-cta-section .index-cta-reassurance {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section .index-cta-btn-primary {
@@ -10196,40 +10196,40 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 }
 
 .index-cta-section .index-cta-btn-secondary {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section .index-cta-heading {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section .index-cta-subtext {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section .index-cta-reassurance {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section h2 {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section p {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 .index-cta-section span {
-  color: #4d76ff !important;
+  color: #2457FF !important;
 }
 
 
 
 :root {
-  --text-dark: #9a9a9a;
-  --text-muted: #a2a2a2;
-  --text-color: #9a9a9a;
-  --text-secondary-color: #a2a2a2;
+  --text-dark: #1A3A7A;
+  --text-muted: #5A6A8A;
+  --text-color: #1A3A7A;
+  --text-secondary-color: #5A6A8A;
 }
 
 body {
@@ -11435,7 +11435,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 .index-hero-section .index-hero-badge {
   background: rgba(36, 87, 255, 0.12);
   border: 1px solid rgba(36, 87, 255, 0.25);
-  color: #0A1628;
+  color: #1A3A7A;
   font-weight: 600;
   padding: 8px 16px;
 }
@@ -11453,7 +11453,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0A1628;
+  color: #1A3A7A;
   border-inline-start-color: #4BB8D4 !important;
   border-inline-start: 3px solid rgba(36,87,255,0.4);
   font-weight: 500;
@@ -11480,7 +11480,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-check-icon {
@@ -12123,21 +12123,21 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-badge {
   background: rgba(13,43,94,0.1) !important;
   border-color: rgba(13,43,94,0.25) !important;
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-badge-dot {
@@ -12150,15 +12150,15 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-check-icon {
@@ -12166,147 +12166,147 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 
 .index-hero-section .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 html {
@@ -12364,28 +12364,28 @@ html, body {
 
 .index-hero-section .index-hero-badge {
   background: rgba(36, 87, 255, 0.12) !important;
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
   border: 1px solid rgba(36, 87, 255, 0.25) !important;
   font-weight: 600 !important;
   padding: 8px 16px !important;
 }
 
 .index-hero-section .index-hero-badge-dot {
-  background: #0A1628 !important;
+  background: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
   line-height: 1.25 !important;
   letter-spacing: -0.5px !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
   font-weight: 500 !important;
   line-height: 1.6 !important;
 }
@@ -12397,7 +12397,7 @@ html, body {
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
   font-weight: 500 !important;
 }
 
@@ -12418,295 +12418,295 @@ html, body {
   background: rgba(37, 211, 102, 0.15) !important;
   border: 1px solid rgba(37, 211, 102, 0.4) !important;
   font-weight: 600 !important;
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-primary,
@@ -12905,7 +12905,7 @@ html, body {
 }
 
 .index-hero-section .nhp-h1-line1 {
-  color: #0A1628;
+  color: #1A3A7A;
   display: block;
 }
 
@@ -12950,7 +12950,7 @@ html, body {
   gap: 10px;
   font-size: 0.92rem;
   font-weight: 500;
-  color: #0A1628;
+  color: #1A3A7A;
   text-align: right;
 }
 
@@ -13174,7 +13174,7 @@ html, body {
 }
 
 .index-hero-section .nhp-h1-line1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-h1-line2 {
@@ -13182,159 +13182,159 @@ html, body {
 }
 
 .index-hero-section .nhp-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-btn-primary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp {
@@ -13628,20 +13628,20 @@ html, body {
   font-size: 2.15rem;
   font-weight: 800;
   line-height: 1.22;
-  color: #0A1628;
+  color: #1A3A7A;
   margin: 0;
   text-align: right;
 }
 
 .index-hero-section .nhp-h1-line1 {
   display: block;
-  color: #0A1628;
+  color: #1A3A7A;
 }
 
 .index-hero-section .nhp-h1-line2 {
   display: block;
   margin-top: 6px;
-  color: #0A1628;
+  color: #1A3A7A;
   font-size: 1.75rem;
   font-weight: 700;
 }
@@ -13941,7 +13941,7 @@ html, body {
 }
 
 .index-hero-section .nhp-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
   font-size: 2.15rem !important;
   font-weight: 800 !important;
   line-height: 1.22 !important;
@@ -13953,12 +13953,12 @@ html, body {
 
 .index-hero-section .nhp-h1-line1 {
   display: block !important;
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-h1-line2 {
   display: block !important;
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
   margin-top: 6px !important;
   font-size: 1.75rem !important;
   font-weight: 700 !important;
@@ -14104,175 +14104,175 @@ html, body {
 }
 
 .index-hero-section .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-primary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust strong {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card * {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-item {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-reassurance-sep {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-differentiator span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section span.index-hero-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-differentiator span:nth-child(2) > span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1 span {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h1-accent {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-pct {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-label {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-trust-list li {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-check-icon {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-btn-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-h3 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-badge {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-btn-primary {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-h1-line1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-h1-line2 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp i {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-btn-whatsapp .fa-whatsapp {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-h1 {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-subtitle {
@@ -14281,7 +14281,7 @@ html, body {
 }
 
 .index-hero-section .nhp-pain {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
   background: rgba(36, 87, 255, 0.08) !important;
   border: 1px solid rgba(36, 87, 255, 0.25) !important;
   font-weight: 700 !important;
@@ -14292,7 +14292,7 @@ html, body {
 }
 
 .index-hero-section .nhp-authority strong {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-trust {
@@ -14303,7 +14303,7 @@ html, body {
 .index-hero-section .nhp-badge {
   background: rgba(36, 87, 255, 0.1) !important;
   border: 1px solid rgba(36, 87, 255, 0.3) !important;
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .nhp-badge-dot {
@@ -14521,7 +14521,7 @@ html, body {
 }
 
 .index-hero-section .nhp-subtitle {
-  color: #0A1628 !important;
+  color: #1A3A7A !important;
 }
 
 .index-hero-section .index-hero-panel {
@@ -14574,7 +14574,7 @@ html, body {
   font-size: 2.15rem;
   font-weight: 800;
   line-height: 1.2;
-  color: #0A1628;
+  color: #1A3A7A;
   letter-spacing: -0.03em;
 }
 
@@ -14583,7 +14583,7 @@ html, body {
   font-size: 1.65rem;
   font-weight: 600;
   line-height: 1.25;
-  color: #0A1628;
+  color: #1A3A7A;
   margin-top: 6px;
   letter-spacing: -0.02em;
 }
@@ -14688,7 +14688,7 @@ html, body {
 .index-hero-section .nhp-btn-primary:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 10px 32px rgba(26, 107, 255, 0.50), 0 4px 12px rgba(0,0,0,0.18) !important;
-  background: linear-gradient(135deg, #2558FF 0%, #0036E8 100%) !important;
+  background: linear-gradient(135deg, #2457FF 0%, #0036E8 100%) !important;
 }
 
 .index-hero-section .nhp-btn-note {
@@ -15137,14 +15137,7 @@ html, body {
 .index-hero-section .nhp-btn-note {
   color: #FFFFFF !important;
 }
-/* === BUTTON TEXT OVERRIDES START === */
-.btn-accent,
-.btn--accent,
-[class*="btn-accent"],
-[class*="btn--accent"] { color: #333333 !important; }
-.navbar .nav-cta-btn,
-.nav-cta-btn { color: #FFFFFF !important; }
-/* === BUTTON TEXT OVERRIDES END === */
+
 
 
 .index-hero-section p.nhp-authority strong {
@@ -16436,7 +16429,7 @@ html, body {
   flex-direction: column !important;
   align-items: flex-start !important;
   transition: transform 0.22s ease, box-shadow 0.22s ease !important;
-  background: #ffffff;
+  background: #FFFFFF;
 }
 
 .contact-contact-intro-section .contact-card:hover {
@@ -17048,7 +17041,7 @@ html, body {
 }
 
 .index-hero-section .nhp-btn-primary:hover {
-  background: #f5f5f5 !important;
+  background: #FFFFFF !important;
   color: #1A6E85 !important;
   box-shadow: 0 8px 24px rgba(0,0,0,0.18) !important;
 }
@@ -17778,7 +17771,7 @@ html, body {
   font-size: 31px !important;
   font-weight: 600 !important;
   line-height: 1.28 !important;
-  color: #1E2E42 !important;
+  color: #1A3A7A !important;
   margin-top: 8px !important;
   letter-spacing: -0.01em !important;
 }
@@ -18384,6 +18377,15 @@ html, body {
 .index-hero-section .nhp-col-empty {
   background: transparent !important;
 }
+/* === BUTTON TEXT OVERRIDES START === */
+.btn-accent,
+.btn--accent,
+[class*="btn-accent"],
+[class*="btn--accent"] { color: #333333 !important; }
+.navbar .nav-cta-btn,
+.nav-cta-btn { color: #FFFFFF !important; }
+/* === BUTTON TEXT OVERRIDES END === */
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
