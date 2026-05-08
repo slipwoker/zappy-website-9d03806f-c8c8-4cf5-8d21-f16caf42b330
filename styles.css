@@ -24544,6 +24544,18 @@ body > .whatsapp-float {
   letter-spacing: 0.08em;
   margin-top: 2px;
 }
+
+#index-hero-section .hero-clean__badge {
+  direction: rtl;
+  text-align: right;
+  margin-top: 28px;
+}
+
+@media (max-width: 768px) {
+#index-hero-section .hero-clean__badge {
+  margin-top: 18px;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
