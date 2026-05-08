@@ -144,9 +144,9 @@
   --accent: #F5A623;
   --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #9a9a9a;
+  --text-dark: #9fa9b7;
   --text-light: #FFFFFF;
-  --text-muted: #a2a2a2;
+  --text-muted: #98a2b0;
   --border-light: #858890;
   --border-dark: #2457FF;
   --nav-bg: #FAFAF7;
@@ -187,8 +187,8 @@
   --accent-color: #F5A623;
   --background-color: #F0F4FF;
   --surface-color: #1A2A4A;
-  --text-color: #9a9a9a;
-  --text-secondary-color: #a2a2a2;
+  --text-color: #9fa9b7;
+  --text-secondary-color: #98a2b0;
 }
 
 *,
@@ -738,9 +738,9 @@ hr {
   --accent: #F5A623;
   --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #9a9a9a;
+  --text-dark: #9fa9b7;
   --text-light: #FFFFFF;
-  --text-muted: #a2a2a2;
+  --text-muted: #98a2b0;
   --border-light: #858890;
   --border-dark: #2457FF;
 }
@@ -979,9 +979,9 @@ hr {
   --accent: #F5A623;
   --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #9a9a9a;
+  --text-dark: #9fa9b7;
   --text-light: #FFFFFF;
-  --text-muted: #a2a2a2;
+  --text-muted: #98a2b0;
   --border-light: #858890;
   --border-dark: #2457FF;
 }
@@ -2123,9 +2123,9 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   --accent: #F5A623;
   --bg-light: #F0F4FF;
   --bg-dark: #070F20;
-  --text-dark: #9a9a9a;
+  --text-dark: #9fa9b7;
   --text-light: #FFFFFF;
-  --text-muted: #a2a2a2;
+  --text-muted: #98a2b0;
   --border-light: #858890;
   --border-dark: #2457FF;
 
@@ -2425,13 +2425,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
-  overflow: hidden;
+  overflow: visible;
   padding-bottom: 72px;
   direction: rtl;
-  background-color: #E0F0FF !important;
+  background-color: #F8FAFF !important;
   color: var(--text-dark);
-  background: #E0F0FF !important;
-  padding: 0;
+  background: #F8FAFF !important;
+  padding: 40px 24px !important;
   opacity: 1;
 }
 
@@ -2465,23 +2465,23 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 1180px !important;
+  max-width: 1120px !important;
   margin: 0 auto;
   padding: 48px 32px;
   display: grid;
   justify-content: unset;
   align-items: center;
-  grid-template-columns: 0.68fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   min-height: auto;
   box-sizing: border-box;
-  gap: 32px;
+  gap: 28px;
 }
 
 .index-hero-section .index-hero-card {
   width: 100%;
   min-width: 320px;
   max-width: 100%;
-  background: #E0F0FF;
+  background: #F8FAFF;
   border: none;
   border-radius: 18px;
   padding: 26px 26px;
@@ -2489,7 +2489,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   flex-direction: column;
   gap: 11px;
-  color: #0A1628;
+  color: var(--text-dark);
 }
 
 .index-hero-section .index-hero-label {
@@ -2513,7 +2513,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 900;
   line-height: 1.08;
   letter-spacing: -1.5px;
-  color: #000000;
+  color: var(--text-dark);
   text-align: right;
   margin: 0;
 }
@@ -2527,7 +2527,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-size: 1.18rem;
   font-weight: 700;
   line-height: 1.5;
-  color: #0A1628;
+  color: var(--text-dark);
   text-align: right;
   margin: 0;
 }
@@ -2545,7 +2545,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-hero-section .index-hero-trust-icon {
-  color: #0A1628;
+  color: var(--text-dark);
   font-size: 1rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -2555,7 +2555,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-hero-section .index-hero-trust strong {
   font-size: 1rem;
   font-weight: 800;
-  color: #0A1628;
+  color: var(--text-dark);
   line-height: 1.55;
 }
 
@@ -10226,10 +10226,10 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 
 
 :root {
-  --text-dark: #9a9a9a;
-  --text-muted: #a2a2a2;
-  --text-color: #9a9a9a;
-  --text-secondary-color: #a2a2a2;
+  --text-dark: #9fa9b7;
+  --text-muted: #98a2b0;
+  --text-color: #9fa9b7;
+  --text-secondary-color: #98a2b0;
 }
 
 body {
@@ -11623,6 +11623,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   align-items: center;
   justify-content: center;
   align-self: stretch;
+  max-width: 520px;
 }
 
 .index-hero-section .index-hero-panel {
@@ -14688,7 +14689,7 @@ html, body {
 .index-hero-section .nhp-btn-primary:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 10px 32px rgba(26, 107, 255, 0.50), 0 4px 12px rgba(0,0,0,0.18) !important;
-  background: linear-gradient(135deg, #2558FF 0%, #0036E8 100%) !important;
+  background: linear-gradient(135deg, #2457FF 0%, #0036E8 100%) !important;
 }
 
 .index-hero-section .nhp-btn-note {
@@ -15137,14 +15138,7 @@ html, body {
 .index-hero-section .nhp-btn-note {
   color: #FFFFFF !important;
 }
-/* === BUTTON TEXT OVERRIDES START === */
-.btn-accent,
-.btn--accent,
-[class*="btn-accent"],
-[class*="btn--accent"] { color: #333333 !important; }
-.navbar .nav-cta-btn,
-.nav-cta-btn { color: #FFFFFF !important; }
-/* === BUTTON TEXT OVERRIDES END === */
+
 
 
 .index-hero-section p.nhp-authority strong {
@@ -15318,7 +15312,7 @@ html, body {
 .index-hero-section .nhp-badge-dot {
   width: 8px;
   height: 8px;
-  background: #FFFFFF;
+  background: #F0F4FF;
   border-radius: 50%;
   display: inline-block;
 }
@@ -16436,7 +16430,7 @@ html, body {
   flex-direction: column !important;
   align-items: flex-start !important;
   transition: transform 0.22s ease, box-shadow 0.22s ease !important;
-  background: #ffffff;
+  background: #F0F4FF;
 }
 
 .contact-contact-intro-section .contact-card:hover {
@@ -17042,13 +17036,13 @@ html, body {
 }
 
 .index-hero-section .nhp-btn-primary {
-  background: #FFFFFF !important;
+  background: #F0F4FF !important;
   color: #1A6E85 !important;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
 }
 
 .index-hero-section .nhp-btn-primary:hover {
-  background: #f5f5f5 !important;
+  background: #F0F4FF !important;
   color: #1A6E85 !important;
   box-shadow: 0 8px 24px rgba(0,0,0,0.18) !important;
 }
@@ -17778,7 +17772,7 @@ html, body {
   font-size: 31px !important;
   font-weight: 600 !important;
   line-height: 1.28 !important;
-  color: #1E2E42 !important;
+  color: #0A1628 !important;
   margin-top: 8px !important;
   letter-spacing: -0.01em !important;
 }
@@ -18334,18 +18328,18 @@ html, body {
 .index-hero-section,
 .index-hero-section .index-hero-container,
 .index-hero-section .index-hero-panel {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+  background: #F0F4FF !important;
+  background-color: #F0F4FF !important;
 }
 
 main > .index-hero-section {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+  background: #F0F4FF !important;
+  background-color: #F0F4FF !important;
 }
 
 body > main {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+  background: #F0F4FF !important;
+  background-color: #F0F4FF !important;
 }
 
 .index-hero-section .nhp-h1 {
@@ -18665,19 +18659,33 @@ body > main {
 
 main > .index-hero-section,
 body > main > .index-hero-section {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+  background: #F0F4FF !important;
+  background-color: #F0F4FF !important;
 }
 
 .index-hero-section {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+  background: #F0F4FF !important;
+  background-color: #F0F4FF !important;
   background-image: none !important;
   opacity: 1 !important;
   mix-blend-mode: normal !important;
   backdrop-filter: none !important;
   filter: none !important;
   background-blend-mode: normal !important;
+}
+/* === BUTTON TEXT OVERRIDES START === */
+.btn-accent,
+.btn--accent,
+[class*="btn-accent"],
+[class*="btn--accent"] { color: #333333 !important; }
+.navbar .nav-cta-btn,
+.nav-cta-btn { color: #FFFFFF !important; }
+/* === BUTTON TEXT OVERRIDES END === */
+
+
+:root {
+  --text-dark: #1F2937 !important;
+  --text-color: #1F2937 !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
