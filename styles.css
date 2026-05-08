@@ -2431,7 +2431,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background-color: transparent !important;
   color: var(--text-dark);
   background: linear-gradient(180deg, #F8FAFF 0%, #F4F7FF 100%) !important;
-  padding: 84px 24px 108px !important;
+  padding: 48px 24px 56px !important;
   opacity: 1;
 }
 
@@ -2467,7 +2467,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 100%;
   max-width: 1120px !important;
   margin: 0 auto;
-  padding: 32px 24px;
+  padding: 16px 24px;
   display: grid;
   justify-content: unset;
   align-items: center;
