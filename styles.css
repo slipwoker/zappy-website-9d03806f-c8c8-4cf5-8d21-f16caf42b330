@@ -19449,6 +19449,83 @@ body > main > .index-hero-section {
   color: var(--primary-color) !important;
   font-weight: 700 !important;
 }
+
+#index-hero-section .hero-clean__h1 {
+  line-height: 1.12 !important;
+  letter-spacing: -0.8px !important;
+  margin-top: 7px !important;
+  max-width: 480px !important;
+}
+
+#index-hero-section .hero-clean__text-col {
+  gap: 12px !important;
+}
+
+#index-hero-section .hero-clean__subtitle {
+  margin-top: 2px !important;
+  line-height: 1.75 !important;
+}
+
+#index-hero-section .hero-clean__trust {
+  margin-top: 0px !important;
+  margin-bottom: 2px !important;
+}
+
+#index-hero-section .hero-clean__pain {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+#index-hero-section .hero-clean__buttons {
+  margin-top: 6px !important;
+  gap: 10px !important;
+}
+
+#index-hero-section .hero-clean__clients-list {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#index-hero-section .hero-clean__clients-item {
+  font-weight: 550 !important;
+  opacity: 0.88 !important;
+  line-height: 1.55 !important;
+  letter-spacing: 0.01em !important;
+  margin-bottom: 2px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+#index-hero-section .hero-clean__clients-check {
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 14px !important;
+  font-size: 0.78rem !important;
+}
+
+#index-hero-section .hero-clean__clients-label {
+  opacity: 0.70 !important;
+  font-size: 0.67rem !important;
+  letter-spacing: 0.09em !important;
+}
+
+#index-hero-section .hero-clean__img {
+  height: 410px !important;
+}
+
+#index-hero-section .hero-clean__btn-whatsapp {
+  background: #1FA855 !important;
+  color: #ffffff !important;
+}
+
+#index-hero-section .hero-clean__btn-whatsapp:hover {
+  background: #188C47 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
