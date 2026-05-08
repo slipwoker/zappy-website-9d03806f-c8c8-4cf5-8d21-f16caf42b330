@@ -25230,6 +25230,324 @@ body > .whatsapp-float {
 .navbar .nav-menu a {
   color: #334155 !important;
 }
+
+.index-hero-section .index-hero-btn-primary,
+.index-hero-section a.index-hero-btn-primary {
+  background: var(--accent-color) !important;
+  background-image: none !important;
+  color: var(--surface-color) !important;
+  border: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-decoration: none !important;
+  padding: 13px 28px !important;
+  min-height: 50px !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 24px rgba(37,99,235,0.22) !important;
+}
+
+.index-hero-section .index-hero-btn-primary:hover,
+.index-hero-section a.index-hero-btn-primary:hover {
+  background: #1D4ED8 !important;
+  background-image: none !important;
+  color: var(--surface-color) !important;
+  box-shadow: 0 12px 28px rgba(37,99,235,0.30) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.index-hero-section .index-hero-label {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-reassurance-item {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-btn-secondary {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-trust strong {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-trust-icon {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-btn-secondary .fa-whatsapp {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-reassurance-sep {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-ctas a.index-hero-btn-secondary {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary i {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-ctas .index-hero-btn-secondary .fa-whatsapp {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-trust {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-card {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-card * {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-label {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-item {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-reassurance-sep {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-differentiator span {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-card .index-hero-btn-secondary .fa-whatsapp {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section span.index-hero-label {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-differentiator span:nth-child(2) > span {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-h1 span {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-h1-accent {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-trust-pct {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-trust-label {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-trust-list li {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-check-icon {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-btn-whatsapp {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-h3 {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .index-hero-badge {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-pain {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-btn-primary {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-btn-note {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-h1-line1 {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-h1-line2 {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-h1 {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp i {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp .fa-whatsapp {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-h1-accent {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-badge {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-authority {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-authority strong {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-trust {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section p.nhp-authority strong {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-pain::before {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-h1 .nhp-h1-line1 {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-h1 .nhp-h1-line2 {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-btn-whatsapp * {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-h1 * {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-trust-line {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-trust-pill {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-cta-block p {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-cta-inner ~ p {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-trust-pills .nhp-trust-pill {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-h1-line3 {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-cta-secondary-note {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-trust-orgs {
+  color: var(--surface-color) !important;
+}
+
+.index-hero-section .nhp-micro-proof {
+  color: var(--surface-color) !important;
+}
+
+#index-hero-section .hero-clean__btn-primary,
+#index-hero-section a.hero-clean__btn-primary {
+  background: var(--accent-color) !important;
+  background-image: none !important;
+  color: var(--surface-color) !important;
+  border: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-decoration: none !important;
+  padding: 13px 28px !important;
+  min-height: 50px !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 24px rgba(37,99,235,0.22) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease !important;
+}
+
+#index-hero-section .hero-clean__btn-primary:hover,
+#index-hero-section a.hero-clean__btn-primary:hover {
+  background: #1D4ED8 !important;
+  background-image: none !important;
+  color: var(--surface-color) !important;
+  box-shadow: 0 12px 28px rgba(37,99,235,0.30) !important;
+  transform: translateY(-1px) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
