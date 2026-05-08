@@ -21908,6 +21908,211 @@ body {
 .site-footer .footer-divider {
   color: #94A3B8 !important;
 }
+
+.familiar-section,
+.how-it-works-section,
+.index-services-section,
+.index-case-studies-section,
+.services-intro-section,
+.services-capabilities-section,
+.services-process-section,
+.experience-portfolio-section,
+.experience-trust-section,
+.contact-contact-form-section,
+.contact-reassurance-section {
+  background: var(--surface-color) !important;
+}
+
+.testi-section,
+.index-problems-section,
+.services-benefits-section,
+.experience-profile-section,
+.experience-stats-section,
+.contact-contact-intro-section,
+.contact-faq-section {
+  background: var(--background-color) !important;
+}
+
+.site-footer {
+  background: var(--text-color) !important;
+  background-color: var(--text-color) !important;
+}
+
+.site-footer .footer-main {
+  background: var(--text-color) !important;
+}
+
+.site-footer .footer-tagline,
+.site-footer p,
+.site-footer span,
+.site-footer li {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-heading {
+  color: #E2E8F0 !important;
+}
+
+.site-footer .footer-links a,
+.site-footer .footer-contact a,
+.site-footer .footer-copyright,
+.site-footer .contact-text a,
+.site-footer .contact-text {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-contact a:hover,
+.site-footer .social-link:hover {
+  color: #60A5FA !important;
+}
+
+.site-footer .social-link {
+  color: #E2E8F0 !important;
+}
+
+.site-footer .footer-bottom {
+  background: rgba(0,0,0,0.25) !important;
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.site-footer .footer-legal a,
+.site-footer .footer-bottom-inner a {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-legal a:hover,
+.site-footer .footer-bottom-inner a:hover {
+  color: #60A5FA !important;
+}
+
+.site-footer .footer-divider {
+  color: rgba(255,255,255,0.2) !important;
+}
+
+.site-footer .zappy-attribution {
+  color: #94A3B8 !important;
+}
+
+.site-footer .zappy-attribution:hover {
+  color: #60A5FA !important;
+}
+
+.site-footer .contact-icon {
+  color: #60A5FA !important;
+}
+
+.site-footer .contact-list a {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .contact-list li {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .contact-list span {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-legal a {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .copyright p {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-description {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-bottom a {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-bottom p {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-bottom span:not(.separator) {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-legal .separator {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-heading {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-copyright {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .social-link {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-links a {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-contact a {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .contact-text {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .contact-text a {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .nav-brand a {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-brand-name {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-divider {
+  color: #CBD5E1 !important;
+}
+
+.site-footer span {
+  color: #CBD5E1 !important;
+}
+
+.site-footer li {
+  color: #CBD5E1 !important;
+}
+
+.site-footer a {
+  color: #CBD5E1 !important;
+}
+
+.site-footer h3 {
+  color: #CBD5E1 !important;
+}
+
+.site-footer .footer-tagline {
+  color: #CBD5E1 !important;
+}
+
+.site-footer div {
+  color: #CBD5E1 !important;
+}
+
+.site-footer h4 {
+  color: #CBD5E1 !important;
+}
+
+.site-footer p {
+  color: #CBD5E1 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
