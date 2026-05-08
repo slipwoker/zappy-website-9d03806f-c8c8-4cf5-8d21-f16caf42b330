@@ -24583,6 +24583,108 @@ body > .whatsapp-float {
   border-bottom: 1px solid #E2E8F0 !important;
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04) !important;
 }
+
+.familiar-section .familiar-cta-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-cta-btn:hover {
+  background: #1D4ED8 !important;
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn:hover {
+  background: #1D4ED8 !important;
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-title {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-callout-text {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-transition {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-footnote {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-callout-icon {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-title {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-title {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-desc {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-reinforcement-text {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-note {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-step-number {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-badge {
+  color: var(--surface-color) !important;
+}
+
+#index-hero-section .hero-clean__btn-primary {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+#index-hero-section .hero-clean__btn-primary:hover {
+  background: #1D4ED8 !important;
+  color: var(--surface-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
