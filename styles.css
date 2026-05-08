@@ -22113,6 +22113,466 @@ body {
 .site-footer p {
   color: #CBD5E1 !important;
 }
+
+.familiar-section .familiar-benefit-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.testi-section .testi-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.index-problems-section .index-problems-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.how-it-works-section .how-it-works-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.index-case-studies-section .case-tile {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.how-it-works-section .how-it-works-connector {
+  background: #E2E8F0 !important;
+}
+
+.index-services-section .index-services-connector {
+  background: #E2E8F0 !important;
+}
+
+.index-case-studies-section .credibility-sep {
+  background: #E2E8F0 !important;
+}
+
+.services-intro-section .services-intro-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.services-benefits-section .services-benefit-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.services-process-section .services-process-step {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.services-process-section .services-process-principle-inner {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.services-closing-cta-section .services-cta-panel {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 20px rgba(15,23,42,0.08) !important;
+}
+
+.experience-portfolio-section .experience-portfolio-card,
+.experience-portfolio-section .experience-portfolio-featured {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.experience-stats-section .experience-stat-item {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.experience-trust-section .experience-trust-col {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.experience-trust-section .experience-trust-closing-inner {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.contact-contact-intro-section .contact-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.contact-contact-form-section .contact-guidance-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.contact-faq-section .contact-faq-item {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.contact-reassurance-section .contact-reassurance-panel {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 20px rgba(15,23,42,0.08) !important;
+}
+
+.contact-contact-form-section .contact-form input,
+.contact-contact-form-section .contact-form textarea,
+.contact-contact-form-section .contact-form select {
+  border: 1px solid #E2E8F0 !important;
+  background: var(--surface-color) !important;
+  color: var(--text-color) !important;
+}
+
+.contact-contact-form-section .contact-form input:focus,
+.contact-contact-form-section .contact-form textarea:focus {
+  border-color: var(--accent-color) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.10) !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-cta-btn:hover {
+  background: #1D4ED8 !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn:hover {
+  background: #1D4ED8 !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-summary-cta:hover {
+  background: #1D4ED8 !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-btn-primary:hover {
+  background: #1D4ED8 !important;
+}
+
+.experience-portfolio-section .experience-portfolio-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.experience-portfolio-section .experience-portfolio-btn:hover {
+  background: #1D4ED8 !important;
+}
+
+.contact-faq-section .contact-faq-cta-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.contact-faq-section .contact-faq-cta-btn:hover {
+  background: #1D4ED8 !important;
+}
+
+.services-benefits-section .services-benefits-cta-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.services-benefits-section .services-benefits-cta-btn:hover {
+  background: #1D4ED8 !important;
+}
+
+.services-closing-cta-section .services-btn-primary {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.services-closing-cta-section .services-btn-primary:hover {
+  background: #1D4ED8 !important;
+}
+
+.services-closing-cta-section .services-btn-outline {
+  background: transparent !important;
+  border: 1.5px solid var(--accent-color) !important;
+  color: var(--accent-color) !important;
+}
+
+.services-closing-cta-section .services-btn-outline:hover {
+  background: #EFF6FF !important;
+}
+
+.experience-profile-section .btn-primary-profile {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.experience-profile-section .btn-primary-profile:hover {
+  background: #1D4ED8 !important;
+}
+
+.experience-profile-section .btn-ghost-profile {
+  background: transparent !important;
+  border: 1.5px solid var(--accent-color) !important;
+  color: var(--accent-color) !important;
+}
+
+.experience-profile-section .btn-ghost-profile:hover {
+  background: #EFF6FF !important;
+}
+
+.contact-reassurance-section .contact-reassurance-btn-primary {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.contact-reassurance-section .contact-reassurance-btn-primary:hover {
+  background: #1D4ED8 !important;
+}
+
+.services-intro-section .services-intro-eyebrow,
+.services-capabilities-section .services-capabilities-label,
+.services-benefits-section .services-benefits-label,
+.services-process-section .services-process-label {
+  color: var(--accent-color) !important;
+  background: rgba(37,99,235,0.07) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+}
+
+.experience-portfolio-section .experience-portfolio-eyebrow,
+.experience-trust-section .experience-trust-eyebrow {
+  color: var(--accent-color) !important;
+  background: rgba(37,99,235,0.07) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+}
+
+.contact-contact-intro-section .contact-intro-label,
+.contact-faq-section .contact-faq-label {
+  color: var(--accent-color) !important;
+  background: rgba(37,99,235,0.07) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+}
+
+.index-problems-section .index-problems-eyebrow,
+.index-case-studies-section .case-studies-eyebrow {
+  color: var(--accent-color) !important;
+  background: rgba(37,99,235,0.07) !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+}
+
+.familiar-section .familiar-title {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-callout-text {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-transition {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-footnote {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-callout-icon {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-title {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-title {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-desc {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-reinforcement-text {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-note {
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-step-number {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-icon-wrap {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-title {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-summary-text {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-btn-secondary {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-heading {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-subtext {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-reassurance {
+  color: var(--surface-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-title {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-title-line1 {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-title-line2 {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-subtitle {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-trust {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome i {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome span {
+  color: var(--accent-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
