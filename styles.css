@@ -25792,6 +25792,15 @@ body > .whatsapp-float {
   white-space: normal !important;
 }
 }
+
+#index-hero-section .hero-clean__trust {
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+}
+
+#index-hero-section .hero-clean__pain {
+  font-size: 0.92rem !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
