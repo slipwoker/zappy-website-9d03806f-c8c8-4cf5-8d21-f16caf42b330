@@ -22889,6 +22889,646 @@ body, html {
 .site-footer .contact-icon {
   color: #E2E8F0 !important;
 }
+
+:root {
+  --text-dark: var(--text-color);
+  --text-muted: #64748B;
+  --text-secondary-color: #64748B;
+  --text-body: #334155;
+  --surface-color: var(--surface-color);
+  --bg-light: #F8FAFC;
+  --background-color: var(--background-color);
+}
+
+body {
+  color: #334155;
+}
+
+.familiar-section,
+.how-it-works-section {
+  background-color: var(--background-color) !important;
+}
+
+.testi-section {
+  background-color: #F8FAFC !important;
+}
+
+.index-problems-section {
+  background-color: var(--background-color) !important;
+}
+
+.index-services-section {
+  background-color: var(--surface-color) !important;
+}
+
+.index-case-studies-section {
+  background-color: #F8FAFC !important;
+}
+
+.index-cta-section {
+  background: var(--text-color) !important;
+  background-image: none !important;
+}
+
+#index-hero-section .hero-clean__trust,
+#index-hero-section .hero-clean__pain,
+#index-hero-section .hero-clean__note {
+  color: #64748B !important;
+}
+
+#index-hero-section .hero-clean__subtitle {
+  color: #334155 !important;
+}
+
+#index-hero-section .hero-clean__h1 {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-title {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-subtitle {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: #334155 !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: #EF4444 !important;
+}
+
+.familiar-section .familiar-callout-text {
+  color: #334155 !important;
+}
+
+.familiar-section .familiar-transition {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-benefit-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-cta-btn:hover {
+  background: #1D4ED8 !important;
+}
+
+.familiar-section .familiar-footnote {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-title {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-subtitle {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.how-it-works-section .how-it-works-card-title {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-desc {
+  color: #334155 !important;
+}
+
+.how-it-works-section .how-it-works-step-number {
+  color: var(--accent-color) !important;
+}
+
+.how-it-works-section .how-it-works-badge {
+  background: #D1FAE5 !important;
+  color: #065F46 !important;
+  border: 1px solid #A7F3D0 !important;
+}
+
+.how-it-works-section .how-it-works-reinforcement-text {
+  color: #334155 !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn:hover {
+  background: #1D4ED8 !important;
+}
+
+.how-it-works-section .how-it-works-cta-note {
+  color: #64748B !important;
+}
+
+.testi-section .testi-main-title {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-subtitle {
+  color: #64748B !important;
+}
+
+.testi-section .testi-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.testi-section .testi-text p {
+  color: #334155 !important;
+}
+
+.testi-section .testi-name {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-role {
+  color: #64748B !important;
+}
+
+.testi-section .testi-star {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-letters-title {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-letters-subtitle {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-title {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-subtitle {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-card {
+  background: var(--surface-color) !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-card-content p {
+  color: #334155 !important;
+}
+
+.index-problems-section .index-problems-summary-inner {
+  background: #EFF6FF !important;
+  border: 1px solid #BFDBFE !important;
+}
+
+.index-problems-section .index-problems-summary-text {
+  color: #1E40AF !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-label {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-heading {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-lead {
+  color: #334155 !important;
+}
+
+.index-services-section .index-services-row-title {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-row-desc {
+  color: #64748B !important;
+}
+
+.index-services-section .index-services-process-badge {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-process-sub {
+  color: #64748B !important;
+}
+
+.index-services-section .index-services-step-title {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-step-desc {
+  color: #64748B !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: var(--accent-color) !important;
+  background: #EFF6FF !important;
+  border: 1px solid #BFDBFE !important;
+}
+
+.index-services-section .index-services-principle {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: #64748B !important;
+}
+
+.index-case-studies-section .case-tile {
+  border: 1px solid #E2E8F0 !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  background: #EFF6FF !important;
+  color: #1E40AF !important;
+  border: 1px solid #BFDBFE !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: #64748B !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: #64748B !important;
+}
+
+.index-cta-section {
+  background: var(--text-color) !important;
+  background-image: none !important;
+}
+
+.index-cta-section .index-cta-heading {
+  color: var(--background-color) !important;
+}
+
+.index-cta-section .index-cta-subtext {
+  color: #CBD5E1 !important;
+}
+
+.index-cta-section .index-cta-reassurance {
+  color: #94A3B8 !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-btn-primary:hover {
+  background: #1D4ED8 !important;
+}
+
+.index-cta-section .index-cta-btn-secondary {
+  background: transparent !important;
+  color: #F8FAFC !important;
+  border: 1px solid rgba(255,255,255,0.25) !important;
+}
+
+.index-cta-section .index-cta-btn-secondary:hover {
+  background: rgba(255,255,255,0.08) !important;
+  color: #60A5FA !important;
+}
+
+.familiar-section .familiar-subtitle {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-callout-text {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-transition {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-footnote {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-callout-icon {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  color: var(--text-color) !important;
+}
+
+.familiar-section .familiar-title {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-subtitle {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-title {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-desc {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-reinforcement-text {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-note {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-step-number {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-title {
+  color: #64748B !important;
+}
+
+.testi-section .testi-subtitle {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-text p {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-name {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-role {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-star {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-letters-title {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-letters-subtitle {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-main-title {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-icon-wrap {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-title {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-subtitle {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-summary-text {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: var(--accent-color) !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-heading {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-lead {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-title {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-process-sub {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-step-title {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-step-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-process-badge {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-icon svg {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle strong {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section h2.index-services-heading {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section p.index-services-lead {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section h3.index-services-row-title {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section p.index-services-row-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle-text {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-icon {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-label {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome i {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome span {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  color: var(--text-color) !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  color: var(--background-color) !important;
+}
+
+.index-cta-section .index-cta-btn-secondary {
+  color: var(--background-color) !important;
+}
+
+.index-cta-section .index-cta-subtext {
+  color: var(--background-color) !important;
+}
+
+.index-cta-section .index-cta-reassurance {
+  color: var(--background-color) !important;
+}
+
+.index-cta-section .index-cta-heading {
+  color: #CBD5E1 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
