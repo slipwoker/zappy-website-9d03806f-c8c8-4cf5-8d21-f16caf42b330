@@ -2478,7 +2478,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   grid-template-columns: 1.1fr 0.9fr;
   min-height: auto;
   box-sizing: border-box;
-  gap: 8px;
+  gap: 24px;
 }
 
 .index-hero-section .index-hero-card {
@@ -2499,7 +2499,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-hero-section .index-hero-label {
   display: inline-block;
   font-size: 0.70rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.10em;
   text-transform: uppercase;
   color: #2563EB;
@@ -2515,8 +2515,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-family: 'Rubik', sans-serif;
   font-size: 2.3rem;
   font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -1px;
+  line-height: 1.12;
+  letter-spacing: -0.6px;
   color: var(--text-dark);
   text-align: right;
   margin: 0;
@@ -2529,7 +2529,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 .index-hero-section .index-hero-subtitle {
   font-family: 'Rubik', sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.4;
   color: var(--text-dark);
   text-align: right;
@@ -2578,7 +2578,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   color: #ffffff;
   font-family: 'Rubik', sans-serif;
   font-size: 0.97rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.01em;
   padding: 11px 28px;
   border-radius: 8px;
@@ -2587,7 +2587,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   cursor: pointer;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
-  box-shadow: 0 10px 36px rgba(36,87,255,0.50), 0 3px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 8px 22px rgba(37,99,235,0.22);
   min-height: 44px;
 }
 
