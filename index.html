@@ -224,77 +224,205 @@
     <meta name="twitter:title" content="מציל מערכות Access כשאחרים מוותרים — אריאל פיתוח תוכנה">
     <meta name="twitter:description" content="מערכת Access קרסה? מפתח נעלם? ב־90% מהמקרים אפשר לתקן בלי לבנות מחדש. מומחה עם 25 שנה מציל מסדי נתונים ומחזיר עסקים לפעילות מלאה.">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com#organization","name":"אריאל פיתוח תוכנה","url":"https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com","description":"Ariel Software Development is a one-person expert consultancy specializing in Microsoft Access systems with over 25 years of hands-on experience. The brand identity is built around being the trusted 'rescue expert' — the professional who steps in when systems fail, developers disappear, or legacy databases become liabilities. The tone is direct, results-driven, and confidence-inspiring, emphasizing that in 90% of cases, systems can be fixed without rebuilding from scratch. The business has a proven track record with real-world deployments including Yad Vashem, school networks, safety management systems, and equestrian associations — projecting deep credibility and enterprise-level expertise.","address":{"@type":"PostalAddress","streetAddress":"קרני יהודה 135/17, ירושלים, 97293, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"5870844@gmail.com","telephone":"0523845555"}]},{"@type":"WebSite","@id":"https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com#website","url":"https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com","name":"אריאל פיתוח תוכנה","publisher":{"@id":"https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com#organization"}}]}</script>
-    <meta property="og:type" content="website"> <meta property="og:locale" content="he_IL">     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Favicons --> <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"> <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"> <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png"> <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png"> <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"> <!-- Cookie Consent --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css"> <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script> <!-- Mickidum Accessibility Toolbar --> <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script> <style data-zappy-section-v2-css="true">/* Hero Section — Clean, light, no gradients, no glow, no blobs */
-.index-hero-section {
-  position: relative;
-  background: #F8FAFF !important;
-  background-color: #F8FAFF !important;
-  color: var(--text-dark);
-  padding: 48px 24px 48px;
-  overflow: visible;
+    <meta property="og:type" content="website"> <meta property="og:locale" content="he_IL">     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Favicons --> <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"> <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"> <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png"> <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png"> <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"> <!-- Cookie Consent --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css"> <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script> <!-- Mickidum Accessibility Toolbar --> <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script> <style data-zappy-section-v2-css="true">/* ═══════════════════════════════════════════
+   HERO-CLEAN — brand new, zero legacy styles
+   ═══════════════════════════════════════════ */
+.hero-clean {
+  background: #F8FAFF;
+  padding: 72px 24px 80px;
   direction: rtl;
 }
-.index-hero-section .index-hero-container {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
+.hero-clean__inner {
+  max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.05fr;
-  gap: 48px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
   align-items: center;
-  direction: rtl;
 }
-.index-hero-section .index-hero-panel {
-  background: transparent;
-  border-radius: 0;
-  padding: 44px 40px 40px;
-  box-shadow: none;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  position: relative;
-  overflow: visible;
+/* ── Image column (left) ── */
+.hero-clean__img-col {
+  order: 0;
 }
-.index-hero-section .index-hero-image-wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.index-hero-section .index-hero-img {
-  display: block;
+.hero-clean__img {
   width: 100%;
-  height: 510px;
+  height: 500px;
   object-fit: cover;
   border-radius: 18px;
+  display: block;
+  box-shadow: 0 8px 32px rgba(10,22,40,0.11);
 }
-/* ── RESPONSIVE ── */
+/* ── Text column (right) ── */
+.hero-clean__text-col {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 520px;
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+}
+/* Badge */
+.hero-clean__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(36,87,255,0.08);
+  border: 1px solid rgba(36,87,255,0.22);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #0A1628;
+  width: fit-content;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+/* H1 */
+.hero-clean__h1 {
+  margin: 0;
+  padding: 0;
+  color: #1F2937;
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+.hero-clean__h1 span {
+  display: block;
+}
+.hero-clean__h1-accent {
+  color: #2457FF;
+}
+/* Subtitle */
+.hero-clean__subtitle {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4B5563;
+}
+/* Trust line */
+.hero-clean__trust {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6B7280;
+}
+/* Buttons */
+.hero-clean__buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.hero-clean__btn-primary {
+  background: #2457FF;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 13px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(36,87,255,0.25);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.hero-clean__btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(36,87,255,0.35);
+  transform: translateY(-1px);
+}
+.hero-clean__btn-whatsapp {
+  background: #25A853;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 13px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.hero-clean__btn-whatsapp:hover {
+  background: #1e9447;
+  transform: translateY(-1px);
+}
+/* Screenshot note */
+.hero-clean__note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #9CA3AF;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: flex-end;
+}
+/* Orgs */
+.hero-clean__orgs-label {
+  margin: 0 0 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(50,65,88,0.45);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.hero-clean__orgs {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(40,55,75,0.55);
+  line-height: 1.6;
+}
+.hero-clean__orgs-wrap {
+  border-top: 1px solid rgba(30,46,66,0.09);
+  padding-top: 14px;
+}
+/* ── Responsive ── */
 @media (max-width: 900px) {
-  .index-hero-section .index-hero-container {
+  .hero-clean__inner {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
-  .index-hero-section .index-hero-image-wrap {
+  .hero-clean__img-col {
     order: -1;
   }
-  .index-hero-section .index-hero-img {
-    height: 450px;
+  .hero-clean__img {
+    height: 300px;
+  }
+  .hero-clean__text-col {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .hero-clean__h1 {
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 768px) {
-  .index-hero-section {
-    padding: 100px 16px 60px;
+  .hero-clean {
+    padding: 90px 16px 56px;
   }
-  .index-hero-section .index-hero-container {
-    gap: 24px;
+  .hero-clean__inner {
+    gap: 20px;
   }
-  .index-hero-section .index-hero-panel {
-    padding: 28px 22px 28px;
-    gap: 18px;
+  .hero-clean__h1 {
+    font-size: 1.9rem;
   }
-  .index-hero-section .index-hero-img {
-    height: 330px;
+  .hero-clean__img {
+    height: 240px;
+  }
+  .hero-clean__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-clean__btn-primary,
+  .hero-clean__btn-whatsapp {
+    justify-content: center;
   }
 }</style>
     <link rel="stylesheet" href="/styles.css">
