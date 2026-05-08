@@ -24945,6 +24945,291 @@ body > .whatsapp-float {
 .familiar-section .familiar-pain-icon {
   color: var(--surface-color) !important;
 }
+
+.navbar,
+.navbar.scrolled,
+.navbar.sticky,
+.navbar.fixed,
+.navbar.dark,
+.navbar[class*="scrolled"],
+.navbar[class*="sticky"],
+.navbar[class*="fixed"] {
+  background: rgba(255,255,255,0.97) !important;
+  background-color: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(15,23,42,0.06) !important;
+  color: #334155 !important;
+  box-shadow: none !important;
+}
+
+.navbar .nav-menu a,
+.navbar .nav-menu li a,
+.navbar.scrolled .nav-menu a,
+.navbar.sticky .nav-menu a,
+.navbar.fixed .nav-menu a,
+.navbar.dark .nav-menu a {
+  color: #334155 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.navbar .nav-menu a:hover,
+.navbar .nav-menu li a:hover,
+.navbar.scrolled .nav-menu a:hover,
+.navbar.sticky .nav-menu a:hover,
+.navbar.fixed .nav-menu a:hover,
+.navbar.dark .nav-menu a:hover {
+  color: var(--accent-color) !important;
+  background: transparent !important;
+}
+
+.navbar .nav-brand a,
+.navbar .nav-brand span,
+.navbar.scrolled .nav-brand a,
+.navbar.dark .nav-brand a {
+  color: #334155 !important;
+}
+
+.navbar::before,
+.navbar::after,
+.navbar.scrolled::before,
+.navbar.scrolled::after {
+  content: '';
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  opacity: 0 !important;
+}
+
+.navbar .nav-cta-btn {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li.nav-menu-cta-item a.nav-menu-cta-link {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li a:not(.nav-menu-cta-link) {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu-cta-item a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu-cta-link {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu a {
+  color: #334155 !important;
+}
+
+.navbar .nav-links a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand span {
+  color: #334155 !important;
+}
+
+.navbar .logo-link {
+  color: #334155 !important;
+}
+
+.navbar .logo-link span {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu .nav-menu-cta-link {
+  color: #334155 !important;
+}
+
+.navbar .nav-right-group .nav-menu a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu .nav-menu-cta-item a {
+  color: #334155 !important;
+}
+
+.navbar li.nav-menu-cta-item > a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand a span {
+  color: #334155 !important;
+}
+
+.navbar.scrolled {
+  color: #334155 !important;
+}
+
+.navbar.sticky {
+  color: #334155 !important;
+}
+
+.navbar.fixed {
+  color: #334155 !important;
+}
+
+.navbar.active {
+  color: #334155 !important;
+}
+
+.navbar.dark {
+  color: #334155 !important;
+}
+
+.navbar.light {
+  color: #334155 !important;
+}
+
+.navbar.transparent {
+  color: #334155 !important;
+}
+
+.navbar.is-sticky {
+  color: #334155 !important;
+}
+
+.navbar.is-fixed {
+  color: #334155 !important;
+}
+
+.navbar.nav-scrolled {
+  color: #334155 !important;
+}
+
+.navbar.header--scrolled {
+  color: #334155 !important;
+}
+
+.navbar[class*="scrolled"] {
+  color: #334155 !important;
+}
+
+.navbar[class*="sticky"] {
+  color: #334155 !important;
+}
+
+.navbar[class*="dark"] {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu > li > a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu a,
+.navbar .nav-menu li a {
+  color: #334155 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.navbar .nav-menu a:hover,
+.navbar .nav-menu li a:hover {
+  color: var(--accent-color) !important;
+  background: transparent !important;
+}
+
+.navbar .nav-brand a,
+.navbar .nav-brand span {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li.nav-menu-cta-item a.nav-menu-cta-link {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu li a:not(.nav-menu-cta-link) {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu-cta-item a {
+  color: #334155 !important;
+}
+
+.navbar .nav-links a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand span {
+  color: #334155 !important;
+}
+
+.navbar .logo-link span {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu .nav-menu-cta-link {
+  color: #334155 !important;
+}
+
+.navbar .nav-right-group .nav-menu a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu .nav-menu-cta-item a {
+  color: #334155 !important;
+}
+
+.navbar li.nav-menu-cta-item > a {
+  color: #334155 !important;
+}
+
+.navbar .nav-brand a span {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu > li > a {
+  color: #334155 !important;
+}
+
+.navbar.scrolled .nav-menu a {
+  color: #334155 !important;
+}
+
+.navbar.sticky .nav-menu a {
+  color: #334155 !important;
+}
+
+.navbar.fixed .nav-menu a {
+  color: #334155 !important;
+}
+
+.navbar.dark .nav-menu a {
+  color: #334155 !important;
+}
+
+.navbar.scrolled .nav-brand a {
+  color: #334155 !important;
+}
+
+.navbar.dark .nav-brand a {
+  color: #334155 !important;
+}
+
+.navbar .nav-menu a {
+  color: #334155 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
