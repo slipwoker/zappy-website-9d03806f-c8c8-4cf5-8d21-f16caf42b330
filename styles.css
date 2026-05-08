@@ -2431,7 +2431,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   background-color: transparent;
   color: var(--text-dark);
   background: transparent;
-  padding: 80px 0 40px;
+  padding: 60px 0 32px;
 }
 
 /* ── Background Image ── */
@@ -2464,16 +2464,16 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 960px !important;
+  max-width: 860px !important;
   margin: 0 auto;
-  padding: 20px 24px 28px;
+  padding: 16px 24px 20px;
   display: grid;
   justify-content: unset;
-  align-items: stretch;
-  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  grid-template-columns: 1.1fr 0.9fr;
   min-height: auto;
   box-sizing: border-box;
-  gap: 24px;
+  gap: 36px;
 }
 
 .index-hero-section .index-hero-card {
@@ -2508,10 +2508,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-hero-section .index-hero-h1 {
   font-family: 'Rubik', sans-serif;
-  font-size: 4.75rem;
+  font-size: 4.2rem;
   font-weight: 900;
   line-height: 1.05;
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
   color: #000000;
   text-align: right;
   margin: 0;
