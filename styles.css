@@ -2428,9 +2428,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   overflow: hidden;
   padding-bottom: 72px;
   direction: rtl;
-  background-color: #ffffff !important;
+  background-color: #E0F0FF !important;
   color: var(--text-dark);
-  background: #ffffff !important;
+  background: #E0F0FF !important;
   padding: 0;
   opacity: 1;
 }
@@ -2481,7 +2481,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   width: 100%;
   min-width: 320px;
   max-width: 100%;
-  background: #ffffff;
+  background: #E0F0FF;
   border: none;
   border-radius: 18px;
   padding: 26px 26px;
