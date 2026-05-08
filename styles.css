@@ -19154,6 +19154,66 @@ body > main > .index-hero-section {
   height: 200px;
 }
 }
+
+#index-hero-section .hero-clean__inner {
+  gap: 18px;
+}
+
+#index-hero-section .hero-clean__img {
+  height: 360px;
+  border-radius: 12px;
+}
+
+#index-hero-section .hero-clean__h1 {
+  font-size: 3rem;
+  line-height: 1.08;
+  margin-bottom: 10px;
+}
+
+#index-hero-section .hero-clean__subtitle {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+
+#index-hero-section .hero-clean__trust {
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+#index-hero-section .hero-clean__pain {
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+#index-hero-section .hero-clean__btn-primary,
+#index-hero-section .hero-clean__btn-whatsapp {
+  padding: 10px 20px;
+  min-height: 44px;
+}
+
+#index-hero-section .hero-clean__buttons {
+  gap: 10px;
+}
+
+#index-hero-section .hero-clean__note {
+  font-size: 0.74rem;
+  margin-top: 6px;
+}
+
+#index-hero-section .hero-clean__orgs-wrap {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#index-hero-section .hero-clean__orgs-label {
+  font-size: 0.62rem;
+}
+
+#index-hero-section .hero-clean__orgs {
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
