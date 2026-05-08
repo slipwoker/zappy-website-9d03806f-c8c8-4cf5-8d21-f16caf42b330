@@ -24488,7 +24488,63 @@ body {
 /* === BUTTON TEXT OVERRIDES START === */
 .navbar .nav-cta-btn,
 .nav-cta-btn { color: #FFFFFF !important; }
-/* === BUTTON TEXT OVERRIDES END === *//* mobile-submenu-overflow-fix */
+/* === BUTTON TEXT OVERRIDES END === */:root {
+  --radius-sm: 4px;
+  --radius-badge: 4px;
+  --radius-btn: 6px;
+  --radius-input: 6px;
+  --radius-card: 12px;
+  --radius-img: 12px;
+  --shadow-subtle: 0 2px 8px rgba(30,41,59,0.06);
+  --shadow-card: 0 4px 20px rgba(30,41,59,0.08);
+  --shadow-elevated: 0 12px 40px rgba(30,41,59,0.12);
+  --shadow-btn-hover: 0 4px 12px rgba(37,99,235,0.22);
+}
+
+.site-footer .whatsapp-cta-fixed,
+.site-footer .whatsapp-float,
+body > .whatsapp-cta-fixed,
+body > .whatsapp-float {
+  background: #25D366;
+  color: var(--surface-color);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-elevated);
+  transition: var(--transition-hover);
+  z-index: 9999;
+}
+
+.navbar .nav-brand .logo-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.navbar .nav-brand .logo-link span:first-child {
+  font-family: 'David Libre', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.navbar .nav-brand .logo-link span:last-child {
+  font-family: 'Assistant', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--primary);
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+}
+/* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
   .nav-menu .sub-menu.mobile-expanded,
