@@ -25751,6 +25751,47 @@ body > .whatsapp-float {
 #index-hero-section .hero-clean__h1 span {
   white-space: nowrap;
 }
+
+#index-hero-section .hero-clean__inner {
+  grid-template-columns: 44fr 56fr;
+  gap: 28px;
+}
+
+#index-hero-section .hero-clean__h1 {
+  font-size: 2.85rem !important;
+  line-height: 1.11 !important;
+  letter-spacing: -0.3px !important;
+  white-space: normal !important;
+}
+
+#index-hero-section .hero-clean__h1 span {
+  display: block !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 900px) {
+#index-hero-section .hero-clean__inner {
+  grid-template-columns: 1fr;
+}
+
+#index-hero-section .hero-clean__h1 {
+  font-size: 2.2rem !important;
+}
+
+#index-hero-section .hero-clean__h1 span {
+  white-space: normal !important;
+}
+}
+
+@media (max-width: 768px) {
+#index-hero-section .hero-clean__h1 {
+  font-size: 1.85rem !important;
+}
+
+#index-hero-section .hero-clean__h1 span {
+  white-space: normal !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
