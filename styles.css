@@ -2428,10 +2428,11 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   overflow: hidden;
   padding-bottom: 72px;
   direction: rtl;
-  background-color: transparent;
+  background-color: #ffffff !important;
   color: var(--text-dark);
-  background: transparent;
+  background: #ffffff !important;
   padding: 0;
+  opacity: 1;
 }
 
 /* ── Background Image ── */
@@ -18660,6 +18661,23 @@ body > main {
 
 .index-hero-section .nhp-subtitle {
   color: #4A6080 !important;
+}
+
+main > .index-hero-section,
+body > main > .index-hero-section {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+.index-hero-section {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  background-blend-mode: normal !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
