@@ -26066,6 +26066,16 @@ body > .whatsapp-float {
 .contact-contact-intro-section .contact-card-action--whatsapp {
   color: #25D366 !important;
 }
+
+.experience-portfolio-section, .experience-stats-section, .experience-trust-section {
+  font-family: 'Rubik', sans-serif;
+}
+
+.experience-portfolio-section h2, .experience-portfolio-section h3, .experience-portfolio-section p,
+.experience-stats-section h3, .experience-stats-section p,
+.experience-trust-section h2, .experience-trust-section h3, .experience-trust-section p {
+  font-family: 'Rubik', sans-serif;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
