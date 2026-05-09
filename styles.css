@@ -28165,6 +28165,8 @@ html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li {
   gap: 4px 6px !important;
 }
 }
+/* Batch: Fix email address direction in footer - show left to right so numbers appear before @gmail.com */
+.nf__links a[href^="mailto:"] { direction: ltr; unicode-bidi: embed; display: inline-flex; align-items: center; gap: 8px; }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
