@@ -28168,52 +28168,69 @@ html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li {
 /* Batch: Fix email address direction in footer - show left to right so numbers appear before @gmail.com */
 .nf__links a[href^="mailto:"] { direction: ltr; unicode-bidi: embed; display: inline-flex; align-items: center; gap: 8px; }
 
-#index-hero-section .hero-clean__inner {
-  gap: 48px;
-  align-items: center;
+footer.nf {
+  direction: rtl !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: static !important;
 }
 
-#index-hero-section .hero-clean__img {
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(15,23,42,0.10);
-  filter: none !important;
-  display: block;
-  position: static;
+footer.nf .nf__wrap {
+  max-width: 1180px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 48px 24px 0 !important;
+  box-sizing: border-box !important;
+  position: static !important;
+  transform: none !important;
+  right: auto !important;
+  left: auto !important;
 }
 
-#index-hero-section .hero-clean__img-col {
-  order: 0;
-  position: relative;
+footer.nf .nf__grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 48px !important;
+  align-items: start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: static !important;
+  transform: none !important;
+  right: auto !important;
+  left: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-#index-hero-section .hero-clean__text-col {
-  gap: 14px;
+footer.nf .nf__col-brand,
+footer.nf .nf__col-nav,
+footer.nf .nf__col-contact {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: static !important;
+  transform: none !important;
+  right: auto !important;
+  left: auto !important;
+  margin: 0 !important;
+  text-align: right !important;
 }
 
-@media (max-width: 900px) {
-#index-hero-section .hero-clean__inner {
-  grid-template-columns: 1fr;
-  gap: 24px;
+footer.nf .nf__bottom {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: 32px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid var(--border-dark, rgba(255,255,255,0.10)) !important;
 }
 
-#index-hero-section .hero-clean__img-col {
-  order: -1;
-}
-
-#index-hero-section .hero-clean__img {
-  height: 280px;
-  object-position: 50% 20%;
-}
-}
-
-@media (max-width: 768px) {
-#index-hero-section .hero-clean__img {
-  height: 260px;
-  object-position: 50% 15%;
-}
+footer.nf .nf__bottom-inner {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
