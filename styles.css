@@ -28460,6 +28460,44 @@ footer.nf .nf__legal a {
 footer.nf .nf__col-title {
   color: #CBD5E1 !important;
 }
+
+footer.nf .nf__col-title {
+  color: var(--surface-color) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+footer.nf .nf__brand-desc {
+  color: var(--surface-color) !important;
+}
+
+footer.nf .nf__links a {
+  color: var(--surface-color) !important;
+}
+
+footer.nf .nf__links li a {
+  color: var(--surface-color) !important;
+}
+
+footer.nf .nf__links a i {
+  color: var(--surface-color) !important;
+}
+
+footer.nf .nf__links li a i {
+  color: var(--surface-color) !important;
+}
+
+footer.nf .nf__bottom-inner {
+  color: var(--surface-color) !important;
+}
+
+footer.nf .nf__copy {
+  color: var(--surface-color) !important;
+}
+
+footer.nf .nf__legal a {
+  color: var(--surface-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
