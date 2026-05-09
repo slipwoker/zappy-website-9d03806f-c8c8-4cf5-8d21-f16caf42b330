@@ -2135,7 +2135,7 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 
 URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/about-us
 
-אודות                                                                                             אריאל   פיתוח תוכנה      - שירותים
+אודות                                                                         אריאל   פיתוח תוכנה      - שירותים
 - ניסיון
 - צור קשר
 - אודות
@@ -2147,6 +2147,20 @@ URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/about-us
 
 
 This page is ready for your content.
+
+
+
+
+
+
+אודות
+
+# אני אריאל — מומחה לשיקום מערכות Access
+
+
+מעל 25 שנה אני מאבחן, מייצב ומתקן מערכות Access עסקיות — כשאחרים כבר ויתרו.
+
+צור קשר
 
 
 
