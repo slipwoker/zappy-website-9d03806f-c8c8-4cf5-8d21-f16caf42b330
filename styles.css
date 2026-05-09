@@ -28167,54 +28167,6 @@ html[dir="rtl"] .site-footer .footer-col:nth-child(3) .footer-contact li {
 }
 /* Batch: Fix email address direction in footer - show left to right so numbers appear before @gmail.com */
 .nf__links a[href^="mailto:"] { direction: ltr; unicode-bidi: embed; display: inline-flex; align-items: center; gap: 8px; }
-
-#index-hero-section .hero-clean__inner {
-  gap: 48px;
-  align-items: center;
-}
-
-#index-hero-section .hero-clean__img {
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(15,23,42,0.10);
-  filter: none !important;
-  display: block;
-  position: static;
-}
-
-#index-hero-section .hero-clean__img-col {
-  order: 0;
-  position: relative;
-}
-
-#index-hero-section .hero-clean__text-col {
-  gap: 14px;
-}
-
-@media (max-width: 900px) {
-#index-hero-section .hero-clean__inner {
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-#index-hero-section .hero-clean__img-col {
-  order: -1;
-}
-
-#index-hero-section .hero-clean__img {
-  height: 280px;
-  object-position: 50% 20%;
-}
-}
-
-@media (max-width: 768px) {
-#index-hero-section .hero-clean__img {
-  height: 260px;
-  object-position: 50% 15%;
-}
-}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
