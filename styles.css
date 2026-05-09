@@ -28395,6 +28395,71 @@ footer.nf .nf__legal a {
 footer.nf .nf__legal a:hover {
   color: var(--accent-color) !important;
 }
+
+footer.nf {
+  background-color: var(--text-color) !important;
+}
+
+footer.nf .nf__col-title {
+  color: var(--background-color) !important;
+  font-weight: 700 !important;
+}
+
+footer.nf .nf__links a,
+footer.nf .nf__brand-desc {
+  color: #CBD5E1 !important;
+  transition: color 0.2s ease;
+}
+
+footer.nf .nf__links a:hover {
+  color: var(--surface-color) !important;
+}
+
+footer.nf .nf__copy,
+footer.nf .nf__legal a {
+  color: #94A3B8 !important;
+  font-size: 0.82rem !important;
+}
+
+footer.nf .nf__legal a:hover {
+  color: #CBD5E1 !important;
+}
+
+footer.nf .nf__brand-desc {
+  color: var(--background-color) !important;
+}
+
+footer.nf .nf__links a {
+  color: var(--background-color) !important;
+}
+
+footer.nf .nf__links li a {
+  color: var(--background-color) !important;
+}
+
+footer.nf .nf__links a i {
+  color: var(--background-color) !important;
+}
+
+footer.nf .nf__links li a i {
+  color: var(--background-color) !important;
+}
+
+footer.nf .nf__bottom-inner {
+  color: var(--background-color) !important;
+}
+
+footer.nf .nf__copy {
+  color: var(--background-color) !important;
+}
+
+footer.nf .nf__legal a {
+  color: var(--background-color) !important;
+}
+
+footer.nf .nf__col-title {
+  color: #CBD5E1 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
