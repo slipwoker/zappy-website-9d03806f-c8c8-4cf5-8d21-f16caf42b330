@@ -690,134 +690,174 @@
 
 
     </main> <style id="nf-styles">
-/* ── NEW FOOTER — namespace: nf ── */
+/* ── FOOTER — namespace: nf ── */
 .nf {
   background: #0F172A;
   color: #F1F5F9;
   font-family: 'Rubik', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 0.875rem;
+  line-height: 1.65;
   direction: rtl;
-  padding: 52px 0 0;
+  padding: 48px 0 0;
 }
-.nf * { box-sizing: border-box; margin: 0; padding: 0; }
-.nf a { color: #CBD5E1; text-decoration: none; transition: color 0.18s ease; }
-.nf a:hover { color: #FFFFFF; }
+.nf *, .nf *::before, .nf *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.nf a {
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.nf a:hover {
+  color: #FFFFFF;
+}
 
-/* Container */
+/* Wrap */
 .nf__wrap {
-  max-width: 1100px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 28px;
 }
 
-/* Grid — 3 equal columns */
+/* 3-column grid */
 .nf__grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 40px 48px;
-  padding-bottom: 44px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 32px 40px;
+  padding-bottom: 40px;
+  align-items: start;
 }
 
-/* Column 1 — Brand */
+/* Col 1 — Brand */
 .nf__brand-logo {
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 .nf__brand-logo img {
-  height: 38px;
+  height: 36px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 .nf__brand-desc {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #94A3B8;
-  line-height: 1.65;
-  max-width: 260px;
+  line-height: 1.6;
+  max-width: 240px;
 }
 
-/* Column 2 & 3 — Nav + Contact */
+/* Col headings */
 .nf__col-title {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #F1F5F9;
-  margin-bottom: 14px;
-  opacity: 0.55;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94A3B8;
+  margin-bottom: 12px;
 }
+
+/* Links list */
 .nf__links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 9px;
 }
 .nf__links li a {
   color: #CBD5E1;
-  font-size: 0.88rem;
-  display: inline-flex;
+  font-size: 0.85rem;
+  display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
+  line-height: 1.4;
 }
-.nf__links li a:hover { color: #FFFFFF; }
+.nf__links li a:hover {
+  color: #FFFFFF;
+}
 .nf__links li a i {
-  width: 14px;
-  font-size: 0.78rem;
-  color: #64748B;
+  font-size: 0.8rem;
+  color: #94A3B8;
   flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+  line-height: 1;
+  position: relative;
+  top: 0;
 }
 
 /* Bottom bar */
 .nf__bottom {
-  border-top: 1px solid rgba(255,255,255,0.07);
-  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 0;
 }
 .nf__bottom-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 .nf__copy {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: #475569;
 }
 .nf__legal {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 .nf__legal a {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: #475569;
 }
-.nf__legal a:hover { color: #CBD5E1; }
+.nf__legal a:hover {
+  color: #94A3B8;
+}
 
-/* Responsive — mobile */
-@media (max-width: 720px) {
-  .nf { padding: 40px 0 0; }
+/* Mobile */
+@media (max-width: 680px) {
+  .nf {
+    padding: 36px 0 0;
+  }
   .nf__grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
     text-align: center;
-    padding-bottom: 36px;
+    padding-bottom: 32px;
   }
-  .nf__brand-logo { margin-left: auto; margin-right: auto; }
-  .nf__brand-desc { max-width: 100%; }
-  .nf__links { align-items: center; }
-  .nf__bottom-inner { flex-direction: column; align-items: center; gap: 8px; text-align: center; }
-  .nf__legal { justify-content: center; }
+  .nf__brand-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nf__brand-desc {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nf__links {
+    align-items: center;
+  }
+  .nf__links li a {
+    justify-content: center;
+  }
+  .nf__bottom-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+  .nf__legal {
+    justify-content: center;
+  }
 }
 </style>
 
 <footer class="nf" dir="rtl" aria-label="Footer">
   <div class="nf__wrap">
 
-    <!-- Grid -->
     <div class="nf__grid">
 
-      <!-- עמודה 1: מותג -->
       <div class="nf__col-brand">
         <a href="/" class="nf__brand-logo" aria-label="אריאל פיתוח תוכנה">
           <img src="/assets/logo.webp" alt="אריאל פיתוח תוכנה" data-element-type="image" data-element-id="img-1778358244483-1r295lybz" data-zappy-footer-image="true">
@@ -825,7 +865,6 @@
         <p class="nf__brand-desc">מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות.</p>
       </div>
 
-      <!-- עמודה 2: ניווט -->
       <div class="nf__col-nav">
         <p class="nf__col-title">ניווט מהיר</p>
         <ul class="nf__links">
@@ -836,7 +875,6 @@
         </ul>
       </div>
 
-      <!-- עמודה 3: יצירת קשר -->
       <div class="nf__col-contact">
         <p class="nf__col-title">יצירת קשר</p>
         <ul class="nf__links">
@@ -859,17 +897,16 @@
             </a>
           </li>
           <li>
-            <a href="https://wa.me/972523845555" aria-label="WhatsApp" style="">
-              <i class="fab fa-whatsapp" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-8wav6bgct" data-icon-type="fontawesome" style="cursor: pointer;"></i>
+            <a href="https://wa.me/972523845555" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-8wav6bgct" data-icon-type="fontawesome"></i>
               WhatsApp
             </a>
           </li>
         </ul>
       </div>
 
-    </div><!-- /grid -->
+    </div>
 
-    <!-- Bottom bar -->
     <div class="nf__bottom">
       <div class="nf__bottom-inner">
         <p class="nf__copy">© 2026 אריאל פיתוח תוכנה. כל הזכויות שמורות.</p>
