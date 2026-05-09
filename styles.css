@@ -25801,6 +25801,10 @@ body > .whatsapp-float {
 #index-hero-section .hero-clean__pain {
   font-size: 0.92rem !important;
 }
+
+#index-hero-section .hero-clean__img {
+  height: 490px;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
