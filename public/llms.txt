@@ -22,6 +22,9 @@ https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/experience
 https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/contact
 מסד הנתונים שלך לא עובד? אל תחכה — צור קשר עכשיו לאבחון מהיר. מומחה Access זמין לתיקון תקלות, שדרוג ותמיכה שוטפת לעסקים קטנים וגדולים כאחד.
 
+### Page
+https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/about-us
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -51,11 +54,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
+  - `name` (text)
+  - `email` (email)
   - `phone` (tel)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 

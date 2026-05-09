@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/about-us</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/privacy</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
