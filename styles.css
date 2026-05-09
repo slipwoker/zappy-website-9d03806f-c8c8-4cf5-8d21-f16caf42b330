@@ -28498,6 +28498,10 @@ footer.nf .nf__copy {
 footer.nf .nf__legal a {
   color: var(--surface-color) !important;
 }
+
+#index-hero-section .hero-clean__img {
+  filter: saturate(0.95);
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
