@@ -25826,6 +25826,147 @@ body > .whatsapp-float {
   letter-spacing: 0px !important;
 }
 }
+
+.contact-faq-section .contact-faq-question {
+  color: var(--text-dark) !important;
+}
+
+.contact-faq-section .contact-faq-answer p {
+  color: var(--text-muted) !important;
+}
+
+.contact-faq-section .contact-faq-subtitle {
+  color: var(--text-muted) !important;
+}
+
+.contact-faq-section .contact-faq-title {
+  color: var(--text-dark) !important;
+}
+
+.contact-contact-intro-section .contact-card-icon-wrap--whatsapp {
+  background: rgba(37, 211, 102, 0.12) !important;
+  color: #25D366 !important;
+}
+
+.contact-contact-intro-section .contact-card-action--whatsapp {
+  background: #25D366 !important;
+  color: var(--surface-color) !important;
+  border: none !important;
+}
+
+.contact-contact-intro-section .contact-card-action--whatsapp:hover {
+  background: #1fbe5a !important;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.30) !important;
+  color: var(--surface-color) !important;
+}
+
+.contact-reassurance-section .contact-reassurance-btn-whatsapp {
+  background: transparent !important;
+  color: #25D366 !important;
+  border: 2px solid #25D366 !important;
+}
+
+.contact-reassurance-section .contact-reassurance-btn-whatsapp:hover {
+  background: #25D366 !important;
+  color: var(--surface-color) !important;
+  border-color: #25D366 !important;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25) !important;
+}
+
+.contact-contact-form-section .contact-alt-whatsapp {
+  background: #25D366 !important;
+  color: var(--surface-color) !important;
+  border-color: #25D366 !important;
+}
+
+.contact-contact-form-section .contact-alt-whatsapp:hover {
+  background: #1fbe5a !important;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.28) !important;
+  color: var(--surface-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-title {
+  color: var(--text-dark) !important;
+}
+
+.contact-contact-intro-section .contact-card-title {
+  color: var(--text-dark) !important;
+}
+
+.contact-contact-intro-section .contact-card-desc {
+  color: var(--text-muted) !important;
+}
+
+.contact-contact-intro-section .contact-intro-subtitle {
+  color: var(--text-muted) !important;
+}
+
+.contact-contact-intro-section .contact-card-note {
+  color: var(--text-muted) !important;
+}
+
+.contact-contact-intro-section .contact-intro-trust {
+  color: var(--text-muted) !important;
+}
+
+.contact-contact-intro-section .contact-card-action--email:hover {
+  background: rgba(37, 99, 235, 0.07) !important;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15) !important;
+  color: var(--accent) !important;
+}
+
+.contact-contact-intro-section .contact-card-note::before {
+  content: '';
+  background: var(--border-light) !important;
+}
+
+.contact-faq-section .contact-faq-cta-btn {
+  color: var(--text-dark) !important;
+}
+
+.contact-faq-section .contact-faq-label {
+  color: var(--text-dark) !important;
+}
+
+.contact-contact-intro-section .contact-intro-title {
+  color: #25D366 !important;
+}
+
+.contact-contact-intro-section .contact-intro-title-line1 {
+  color: #25D366 !important;
+}
+
+.contact-contact-intro-section .contact-intro-title-line2 {
+  color: #25D366 !important;
+}
+
+.contact-contact-intro-section .contact-intro-subtitle {
+  color: #25D366 !important;
+}
+
+.contact-contact-intro-section .contact-intro-trust {
+  color: #25D366 !important;
+}
+
+.contact-contact-intro-section .contact-intro-label {
+  color: #25D366 !important;
+}
+
+.contact-reassurance-section .contact-reassurance-btn-primary {
+  color: #25D366 !important;
+}
+
+.contact-contact-form-section .contact-form input {
+  color: var(--surface-color) !important;
+}
+
+.contact-contact-form-section .contact-form textarea {
+  color: var(--surface-color) !important;
+}
+
+.contact-contact-form-section .contact-form select {
+  color: var(--surface-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
