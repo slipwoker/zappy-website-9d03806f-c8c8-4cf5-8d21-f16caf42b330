@@ -26706,6 +26706,210 @@ body > .whatsapp-float {
     font-size: 1rem;
   }
 }
+
+/* AI-generated section */
+/* =============================================
+   Experience Section — Real Systems
+   ============================================= */
+
+.exp-section {
+  background-color: var(--background-color, #F1F5F9);
+  padding: 96px 24px;
+  direction: rtl;
+  font-family: system-ui, sans-serif;
+}
+
+/* Container */
+.exp-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+.exp-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.exp-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--secondary-color, #0F172A);
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.exp-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  color: var(--text-secondary-color, #5a687d);
+  margin: 0;
+  line-height: 1.6;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+/* ---- Grid ---- */
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 72px;
+}
+
+/* ---- Card ---- */
+.exp-card {
+  background-color: var(--surface-color, #FFFFFF);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 14px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.exp-card:hover {
+  box-shadow: 0 8px 28px rgba(37, 99, 235, 0.10);
+  transform: translateY(-3px);
+}
+
+/* Icon wrapper */
+.exp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: rgba(37, 99, 235, 0.08);
+  border-radius: 50%;
+  margin-bottom: 24px;
+  color: var(--primary-color, #2563EB);
+}
+
+.exp-icon svg {
+  display: block;
+}
+
+/* Card title */
+.exp-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--secondary-color, #0F172A);
+  margin: 0 0 12px 0;
+  line-height: 1.35;
+}
+
+/* Card text */
+.exp-card-text {
+  font-size: 0.9375rem;
+  color: var(--text-secondary-color, #5a687d);
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ---- Footer CTA ---- */
+.exp-footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.exp-closing-text {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-weight: 500;
+  color: var(--secondary-color, #0F172A);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.exp-cta-btn {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(135deg, #1557E8 0%, #1040AA 100%));
+  color: #FFFFFF;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 40px;
+  border-radius: 8px;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.exp-cta-btn:hover,
+.exp-cta-btn:focus-visible {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.28);
+}
+
+.exp-cta-btn:focus-visible {
+  outline: 3px solid var(--primary-color, #2563EB);
+  outline-offset: 3px;
+}
+
+.exp-cta-btn:active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* =============================================
+   Responsive — Tablet
+   ============================================= */
+@media (max-width: 900px) {
+  .exp-section {
+    padding: 72px 20px;
+  }
+
+  .exp-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 56px;
+  }
+
+  .exp-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+/* =============================================
+   Responsive — Mobile
+   ============================================= */
+@media (max-width: 580px) {
+  .exp-section {
+    padding: 56px 16px;
+  }
+
+  .exp-header {
+    margin-bottom: 44px;
+  }
+
+  .exp-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .exp-card {
+    padding: 32px 24px;
+  }
+
+  .exp-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .exp-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 18px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
