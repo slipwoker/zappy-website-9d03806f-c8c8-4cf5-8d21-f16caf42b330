@@ -27449,6 +27449,336 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Rubik', sans-serif; font-weight: 700; }
 .site-footer .footer-contact span {
   color: var(--background-color) !important;
 }
+
+.site-footer,
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+  content: '';
+  box-sizing: border-box;
+}
+
+.site-footer {
+  background: var(--text-color) !important;
+  background-image: none !important;
+  color: var(--background-color) !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  direction: rtl !important;
+}
+
+.site-footer h3,
+.site-footer .footer-heading {
+  color: var(--background-color) !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  margin-bottom: 16px !important;
+}
+
+.site-footer .footer-tagline {
+  color: #94A3B8 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.65 !important;
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.site-footer .footer-links a,
+.site-footer .footer-links li,
+.site-footer .footer-links {
+  color: #CBD5E1 !important;
+  font-family: 'Rubik', sans-serif !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+  transition: color 0.18s ease !important;
+}
+
+.site-footer .footer-links a:hover {
+  color: var(--surface-color) !important;
+  opacity: 1 !important;
+}
+
+.site-footer .footer-contact li,
+.site-footer .footer-contact a,
+.site-footer .footer-contact span,
+.site-footer .contact-text,
+.site-footer .contact-icon {
+  color: #94A3B8 !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 0.9rem !important;
+  text-decoration: none !important;
+  transition: color 0.18s ease !important;
+}
+
+.site-footer .footer-contact a:hover {
+  color: var(--surface-color) !important;
+  opacity: 1 !important;
+}
+
+.site-footer .contact-icon i {
+  color: #64748B !important;
+  font-size: 0.85rem !important;
+}
+
+.site-footer .social-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  color: #94A3B8 !important;
+  font-size: 0.82rem !important;
+  text-decoration: none !important;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease !important;
+  box-shadow: none !important;
+}
+
+.site-footer .social-link:hover {
+  background: rgba(37,99,235,0.18) !important;
+  color: var(--surface-color) !important;
+  border-color: rgba(37,99,235,0.35) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+.site-footer .footer-bottom {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.site-footer .footer-copyright,
+.site-footer .footer-copyright p,
+.site-footer .copyright p {
+  color: #64748B !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 0.82rem !important;
+}
+
+.site-footer .footer-legal a,
+.site-footer .footer-bottom a {
+  color: #94A3B8 !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 0.82rem !important;
+  text-decoration: none !important;
+  transition: color 0.18s ease !important;
+}
+
+.site-footer .footer-legal a:hover,
+.site-footer .footer-bottom a:hover {
+  color: var(--surface-color) !important;
+  opacity: 1 !important;
+}
+
+.site-footer .footer-legal,
+.site-footer .footer-bottom p,
+.site-footer .footer-bottom span {
+  color: #64748B !important;
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.site-footer .footer-divider,
+.site-footer .separator,
+.site-footer .footer-legal .separator {
+  color: #334155 !important;
+}
+
+.site-footer p,
+.site-footer li,
+.site-footer span:not(.separator):not(.footer-divider):not(.contact-icon) {
+  color: inherit !important;
+  font-family: 'Rubik', sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+.site-footer a {
+  text-decoration: none !important;
+  transition: color 0.18s ease !important;
+  opacity: 1 !important;
+}
+
+.site-footer a:hover {
+  opacity: 1 !important;
+}
+
+html[dir="rtl"] .site-footer .footer-contact li {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  justify-content: flex-start !important;
+}
+
+.site-footer .contact-list a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-list li {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-list span {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-legal a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .copyright p {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-description {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom p {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom span:not(.separator) {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-legal .separator {
+  color: var(--background-color) !important;
+}
+
+.site-footer p {
+  color: var(--background-color) !important;
+}
+
+.site-footer span {
+  color: var(--background-color) !important;
+}
+
+.site-footer li {
+  color: var(--background-color) !important;
+}
+
+.site-footer a {
+  color: var(--background-color) !important;
+}
+
+.site-footer h3 {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-heading {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-tagline {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-copyright {
+  color: var(--background-color) !important;
+}
+
+.site-footer .social-link {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-links a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-contact a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-text {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-text a {
+  color: var(--background-color) !important;
+}
+
+.site-footer div {
+  color: var(--background-color) !important;
+}
+
+.site-footer h4 {
+  color: var(--background-color) !important;
+}
+
+.site-footer .nav-brand a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-brand-name {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-divider {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom-inner a {
+  color: var(--background-color) !important;
+}
+
+.site-footer .zappy-attribution {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-icon {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-contact li {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom span {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom .footer-legal a {
+  color: var(--background-color) !important;
+}
+
+.site-footer span:not(.contact-icon) {
+  color: var(--background-color) !important;
+}
+
+.site-footer .contact-icon i {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-legal .footer-divider {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-contact span {
+  color: var(--background-color) !important;
+}
+
+.site-footer span:not(.footer-divider):not(.contact-icon):not(.social-link) {
+  color: var(--background-color) !important;
+}
+
+.site-footer span.footer-divider {
+  color: var(--background-color) !important;
+}
+
+.site-footer .footer-bottom span:not(.footer-divider) {
+  color: var(--background-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
