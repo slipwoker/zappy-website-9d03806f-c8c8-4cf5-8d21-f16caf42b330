@@ -27779,6 +27779,132 @@ html[dir="rtl"] .site-footer .footer-contact li {
 .site-footer .footer-bottom span:not(.footer-divider) {
   color: var(--background-color) !important;
 }
+/* Batch: Footer clean rebuild — dark #0F172A background, clean text hierarchy, no gradients, no overlays, no #4a7eee, minimal social icons */
+/* ═══════════════════════════════════════════════════════════
+   FOOTER CLEAN REBUILD — Single Authoritative Source
+   High-specificity selectors win the cascade without !important
+   ═══════════════════════════════════════════════════════════ */
+
+/* 1. ROOT — background reset, kill all gradients */
+html body footer.site-footer,
+html body .site-footer,
+html body .footer-main {
+  background: #0F172A;
+  background-image: none;
+  color: #F1F5F9;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* 2. SECONDARY TEXT — paragraphs, list items, spans, tagline */
+html body .site-footer p,
+html body .site-footer li,
+html body .site-footer .footer-tagline,
+html body .site-footer .contact-text,
+html body .site-footer .footer-contact li {
+  color: #94A3B8;
+}
+
+/* 3. HEADINGS — clear hierarchy */
+html body .site-footer h2,
+html body .site-footer h3,
+html body .site-footer h4,
+html body .site-footer .footer-heading {
+  color: #F1F5F9;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  margin-bottom: 1rem;
+}
+
+/* 4. ALL LINKS — clean muted slate */
+html body .site-footer a,
+html body .site-footer .footer-links a,
+html body .site-footer .footer-contact a,
+html body .site-footer .footer-legal a,
+html body .site-footer .footer-bottom a,
+html body .site-footer .zappy-attribution {
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: color 0.18s ease;
+  opacity: 1;
+}
+
+/* 5. LINK HOVER — white */
+html body .site-footer a:hover,
+html body .site-footer .footer-links a:hover,
+html body .site-footer .footer-contact a:hover,
+html body .site-footer .footer-legal a:hover,
+html body .site-footer .footer-bottom a:hover {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+/* 6. FOOTER BOTTOM — transparent, clean border only, no overlay */
+html body .site-footer .footer-bottom {
+  background: transparent;
+  background-image: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 1.3rem 0;
+}
+
+/* 7. FOOTER BOTTOM COPYRIGHT / DIVIDER */
+html body .site-footer .footer-copyright,
+html body .site-footer .footer-bottom p,
+html body .site-footer .footer-divider {
+  color: #64748B;
+}
+
+/* 8. FOOTER BOTTOM LEGAL LINKS */
+html body .site-footer .footer-bottom .footer-legal a,
+html body .site-footer .footer-bottom-inner a {
+  color: #94A3B8;
+}
+
+html body .site-footer .footer-bottom .footer-legal a:hover,
+html body .site-footer .footer-bottom-inner a:hover {
+  color: #FFFFFF;
+}
+
+/* 9. SOCIAL ICONS — minimal, no glow, no bright blue */
+html body .site-footer .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #94A3B8;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  box-shadow: none;
+}
+
+html body .site-footer .social-link:hover {
+  background: rgba(37,99,235,0.18);
+  border-color: rgba(37,99,235,0.35);
+  color: #FFFFFF;
+  opacity: 1;
+  box-shadow: none;
+}
+
+/* 10. CONTACT ICON */
+html body .site-footer .contact-icon {
+  color: #64748B;
+}
+
+/* 11. RTL CONTACT LIST */
+html[dir='rtl'] body .site-footer .footer-contact li,
+html[dir='rtl'] body .site-footer .footer-col:nth-child(3) .footer-contact li {
+  flex-direction: row;
+  justify-content: flex-start;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
