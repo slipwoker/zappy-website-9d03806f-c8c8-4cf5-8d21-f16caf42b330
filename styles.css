@@ -29385,6 +29385,14 @@ html, body {
 .contact-contact-form-section .contact-form select {
   color: var(--text-dark) !important;
 }
+
+.site-footer ~ a.whatsapp-cta-fixed,
+body > a.whatsapp-cta-fixed {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
