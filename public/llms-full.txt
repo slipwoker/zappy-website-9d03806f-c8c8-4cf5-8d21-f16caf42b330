@@ -833,11 +833,6 @@ Access איטי שלוקח דקות לפתוח דוח או שאילתה — זו
 
 
 
-
-
-
-
-
 ניווט מהיר
 
 
@@ -1340,11 +1335,6 @@ Microsoft Access Expert
 
 
 
-
-
-
-
-
 ניווט מהיר
 
 
@@ -1772,11 +1762,6 @@ Microsoft Access Expert
 
 
 
-
-
-
-
-
 ניווט מהיר
 
 
@@ -1998,11 +1983,6 @@ Microsoft Access Expert
 
 
 מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות.
-
-
-
-
-
 
 
 
@@ -2238,11 +2218,6 @@ Microsoft Access Expert
 
 
 מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות.
-
-
-
-
-
 
 
 
@@ -2497,11 +2472,6 @@ Microsoft Access Expert
 
 
 מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות.
-
-
-
-
-
 
 
 
