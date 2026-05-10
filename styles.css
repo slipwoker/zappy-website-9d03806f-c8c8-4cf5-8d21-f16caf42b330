@@ -29393,6 +29393,8 @@ body > a.whatsapp-cta-fixed {
   opacity: 1 !important;
   pointer-events: auto !important;
 }
+/* Batch: Style the whatsapp-float button to appear as a fixed floating WhatsApp button on mobile */
+body .whatsapp-float { position: fixed !important; bottom: 24px !important; left: 24px !important; z-index: 9999 !important; display: flex !important; align-items: center !important; gap: 8px !important; background: #25D366 !important; color: #ffffff !important; font-size: 0.93rem !important; font-weight: 600 !important; padding: 12px 20px !important; border-radius: 50px !important; text-decoration: none !important; box-shadow: 0 4px 16px rgba(37,211,102,0.40) !important; } body .whatsapp-float i { font-size: 1.2rem !important; } @media (min-width: 769px) { body .whatsapp-float { display: none !important; } }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
