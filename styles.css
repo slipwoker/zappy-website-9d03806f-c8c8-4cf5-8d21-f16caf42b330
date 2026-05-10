@@ -18764,7 +18764,6 @@ body > main > .index-hero-section {
   margin-right: 0;
   margin-left: 0;
   max-width: 100%;
-  margin-top: -50px;
 }
 
 @media (max-width: 900px) {
@@ -29414,10 +29413,6 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
   margin-top: 16px !important;
   display: block !important;
   flex-shrink: 0 !important;
-}
-
-#index-hero-section .hero-clean__text-col {
-  margin-top: -20px;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
