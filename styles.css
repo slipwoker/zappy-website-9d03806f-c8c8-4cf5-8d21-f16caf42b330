@@ -3760,7 +3760,6 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   }
 }
 
-/* index-cta */
 .index-cta-section {
   background-color: var(--bg-dark);
   color: var(--text-light);
@@ -3768,6 +3767,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   position: relative;
   direction: rtl;
   text-align: center;
+  background: linear-gradient(135deg, var(--text-color) 0%, #182645 50%, var(--text-color) 100%) !important;
+  background-image: linear-gradient(135deg, var(--text-color) 0%, #182645 50%, var(--text-color) 100%) !important;
 }
 
 .index-cta-section .index-cta-container {
@@ -3798,7 +3799,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-family: 'Rubik', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--text-light);
+  color: #CBD5E1 !important;
   opacity: 0.85;
   margin: 0;
   max-width: 580px;
@@ -3844,7 +3845,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   align-items: center;
   gap: 8px;
   background: transparent;
-  color: var(--text-light);
+  color: #ffffff !important;
   padding: 14px 28px;
   border-radius: 6px;
   font-family: 'Rubik', sans-serif;
@@ -3852,7 +3853,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 600;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 2px solid var(--border-dark);
+  border: 2px solid rgba(255,255,255,0.4) !important;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
 }
@@ -3866,7 +3867,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-family: 'Rubik', sans-serif;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: var(--text-light);
+  color: #94A3B8 !important;
   opacity: 0.6;
   margin: 0;
   display: flex;
@@ -10056,7 +10057,7 @@ section { background: linear-gradient(rgb(208, 216, 232) 0%, rgb(196, 206, 223) 
 .index-cta-section h2,
 .index-cta-section p,
 .index-cta-section span {
-  color: #4a7eee !important;
+  color: #F1F5F9 !important;
 }
 
 .index-cta-section .index-cta-btn-primary {
