@@ -28801,6 +28801,26 @@ footer.nf .nf__legal a {
 .navbar.dark .nav-brand a {
   color: var(--text-color) !important;
 }
+
+@media (max-width: 768px) {
+#index-hero-section .hero-clean__text-col {
+  overflow: visible !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#index-hero-section .hero-clean__inner {
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+#index-hero-section .hero-clean__subtitle,
+  #index-hero-section .hero-clean__trust {
+  overflow: visible !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
