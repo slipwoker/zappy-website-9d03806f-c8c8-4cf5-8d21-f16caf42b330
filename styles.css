@@ -29415,11 +29415,8 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
   flex-shrink: 0 !important;
 }
 
-#index-hero-section .hero-clean__inner {
-  align-items: start;
-}
-
 #index-hero-section .hero-clean__text-col {
+  align-self: start;
   padding-top: 24px;
 }
 /* mobile-submenu-overflow-fix */
