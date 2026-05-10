@@ -28936,6 +28936,28 @@ html, body {
   letter-spacing: -0.3px;
 }
 }
+
+.services-capabilities-section .services-cap-image-wrapper {
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(15,23,42,0.07), 0 16px 40px rgba(15,23,42,0.10);
+}
+
+.services-capabilities-section .services-cap-main-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 22px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+.services-capabilities-section .services-cap-main-image {
+  height: 260px;
+  object-position: center 20%;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
