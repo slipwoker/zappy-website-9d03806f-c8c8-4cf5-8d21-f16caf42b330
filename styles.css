@@ -28821,6 +28821,10 @@ footer.nf .nf__legal a {
   word-break: break-word !important;
 }
 }
+
+html, body {
+  overflow-x: clip;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
