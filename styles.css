@@ -2476,7 +2476,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   padding: 2px 24px;
   display: grid;
   justify-content: unset;
-  align-items: center;
+  align-items: start;
   grid-template-columns: 1.1fr 0.9fr;
   min-height: auto;
   box-sizing: border-box;
