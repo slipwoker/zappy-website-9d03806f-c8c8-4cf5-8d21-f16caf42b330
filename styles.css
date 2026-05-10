@@ -29399,6 +29399,21 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 .familiar-section .familiar-callout-text strong {
   color: var(--primary) !important;
 }
+
+#index-hero-section .hero-clean__img-col {
+  display: flex;
+  flex-direction: column;
+}
+
+#index-hero-section .hero-clean__logos-banner {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-top: 16px !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
