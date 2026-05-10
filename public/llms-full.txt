@@ -28,7 +28,7 @@ Microsoft Access Expert
 - צור קשר
 
 
-
+קבל אבחון ראשוני ←
 
 
 
@@ -331,7 +331,7 @@ Microsoft Access Expert
 - צור קשר
 
 
-
+קבל אבחון ראשוני ←
 
 
 
@@ -934,7 +934,7 @@ Microsoft Access Expert
 - צור קשר
 
 
-
+קבל אבחון ראשוני ←
 
 
 
@@ -1505,7 +1505,7 @@ Microsoft Access Expert
 - צור קשר
 
 
-
+קבל אבחון ראשוני ←
 
 
 
@@ -1921,7 +1921,7 @@ Microsoft Access Expert
 - צור קשר
 
 
-
+קבל אבחון ראשוני ←
 
 
 
@@ -2149,7 +2149,7 @@ Microsoft Access Expert
 - צור קשר
 
 
-
+קבל אבחון ראשוני ←
 
 
 
@@ -2386,7 +2386,7 @@ Microsoft Access Expert
 - צור קשר
 
 
-
+קבל אבחון ראשוני ←
 
 
 
@@ -2606,10 +2606,10 @@ Microsoft Access Expert
 
 ## אודות אריאל — מומחה Microsoft Access עם 25+ שנות ניסיון
 
-URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/about-us
+URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/about
 Description: אריאל — מפתח עצמאי עם מעל 25 שנות ניסיון בתיקון, ייצוב ושיפור מערכות Microsoft Access. גישת אבחון ותיקון ממוקד, שמירה על מה שעובד, תקשורת ישירה ומהירה.
 
-אודות אריאל — מומחה Microsoft Access עם 25+ שנות ניסיון
+אודות
 
 
 אריאל שוסהיים
@@ -2626,7 +2626,7 @@ Microsoft Access Expert
 - צור קשר
 
 
-
+קבל אבחון ראשוני ←
 
 
 
