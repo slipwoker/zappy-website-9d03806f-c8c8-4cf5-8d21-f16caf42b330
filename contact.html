@@ -899,12 +899,36 @@
             </label>
           </div>
 
-          <button type="submit" class="contact-submit-btn">
-            <i class="fas fa-paper-plane" aria-hidden="true"></i>
-            שלחו פנייה
+          <button type="button" class="contact-submit-btn" id="contact-whatsapp-submit">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            שלחו פנייה בוואטסאפ
           </button>
 
         </form>
+
+        <script>
+        document.getElementById('contact-whatsapp-submit').addEventListener('click', function() {
+          var name = document.getElementById('contact-name').value.trim();
+          var email = document.getElementById('contact-email').value.trim();
+          var phone = document.getElementById('contact-phone').value.trim();
+          var message = document.getElementById('contact-message').value.trim();
+          var consent = document.querySelector('.privacy-consent-checkbox').checked;
+
+          if (!name) { alert('נא למלא שם מלא'); return; }
+          if (!email) { alert('נא למלא כתובת אימייל'); return; }
+          if (!message) { alert('נא לתאר את הבעיה'); return; }
+          if (!consent) { alert('נא לאשר את תנאי השימוש ומדיניות הפרטיות'); return; }
+
+          var text = 'שלום אריאל, אני פונה דרך האתר:\n\n';
+          text += 'שם: ' + name + '\n';
+          text += 'אימייל: ' + email + '\n';
+          if (phone) text += 'טלפון: ' + phone + '\n';
+          text += '\nתיאור הבעיה:\n' + message;
+
+          var url = 'https://wa.me/972523845555?text=' + encodeURIComponent(text);
+          window.open(url, '_blank');
+        });
+        </script>
       </div>
 
       <!-- Guidance Column -->
