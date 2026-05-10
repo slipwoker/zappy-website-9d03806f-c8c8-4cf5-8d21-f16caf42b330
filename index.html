@@ -392,12 +392,15 @@
   .hero-clean__h1 { font-size: 2.2rem; }
 }
 @media (max-width: 768px) {
-  .hero-clean { padding: 82px 16px 44px; }
-  .hero-clean__inner { gap: 16px; }
-  .hero-clean__h1 { font-size: 1.85rem; }
-  .hero-clean__img { height: 220px; }
-  .hero-clean__buttons { flex-direction: column; align-items: stretch; }
-  .hero-clean__btn-primary, .hero-clean__btn-whatsapp { justify-content: center; }
+  .hero-clean { padding: 72px 20px 32px; overflow: hidden; }
+  .hero-clean__inner { gap: 18px; }
+  .hero-clean__h1 { font-size: clamp(1.55rem, 7vw, 1.9rem); line-height: 1.22; letter-spacing: -0.3px; max-width: 100%; overflow-wrap: break-word; word-break: keep-all; }
+  .hero-clean__subtitle, .hero-clean__trust, .hero-clean__badge { max-width: 100%; overflow-wrap: break-word; }
+  .hero-clean__badge { display: inline-flex; flex-wrap: wrap; justify-content: center; line-height: 1.4; font-size: 0.66rem; padding: 8px 14px; white-space: normal; }
+  .hero-clean__img { height: 220px; display: block; }
+  .hero-clean__buttons { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-clean__btn-primary, .hero-clean__btn-whatsapp { width: 100%; justify-content: center; min-height: 50px; font-size: 0.92rem; padding: 14px 18px; box-sizing: border-box; }
+  .hero-clean__img-col, .hero-clean__text-col, .hero-clean__inner { box-sizing: border-box; max-width: 100%; }
 }</style>
     <link rel="stylesheet" href="/styles.css">
 
