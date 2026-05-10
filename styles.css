@@ -18764,6 +18764,7 @@ body > main > .index-hero-section {
   margin-right: 0;
   margin-left: 0;
   max-width: 100%;
+  margin-top: -50px;
 }
 
 @media (max-width: 900px) {
