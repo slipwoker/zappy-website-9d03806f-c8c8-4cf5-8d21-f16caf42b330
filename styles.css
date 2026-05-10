@@ -29364,6 +29364,27 @@ html, body {
   display: none !important;
 }
 }
+
+.contact-contact-form-section textarea#contact-message,
+.contact-contact-form-section .contact-form textarea {
+  color: var(--text-dark) !important;
+  background-color: var(--surface-color) !important;
+}
+
+.contact-contact-form-section .contact-form input[type="text"],
+.contact-contact-form-section .contact-form input[type="email"],
+.contact-contact-form-section .contact-form input[type="tel"] {
+  color: var(--text-dark) !important;
+  background-color: var(--surface-color) !important;
+}
+
+.contact-contact-form-section .contact-form input {
+  color: var(--text-dark) !important;
+}
+
+.contact-contact-form-section .contact-form select {
+  color: var(--text-dark) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
