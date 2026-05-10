@@ -28825,6 +28825,64 @@ footer.nf .nf__legal a {
 html, body {
   overflow-x: clip;
 }
+
+@media (max-width: 768px) {
+html,
+  body {
+  overflow-x: clip;
+}
+}
+
+@media (max-width: 768px) {
+#index-hero-section .hero-clean__inner {
+  gap: 18px !important;
+}
+
+#index-hero-section .hero-clean__h1 {
+  font-size: clamp(1.55rem, 7vw, 1.9rem) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.3px !important;
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+  word-break: keep-all !important;
+}
+
+#index-hero-section .hero-clean__subtitle,
+  #index-hero-section .hero-clean__trust,
+  #index-hero-section .hero-clean__badge {
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+}
+
+#index-hero-section .hero-clean__badge {
+  display: inline-flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  line-height: 1.4 !important;
+  font-size: 0.66rem !important;
+  padding: 8px 14px !important;
+}
+
+#index-hero-section .hero-clean__img {
+  height: 220px !important;
+}
+
+#index-hero-section .hero-clean__buttons {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 12px !important;
+}
+
+#index-hero-section .hero-clean__btn-primary,
+  #index-hero-section .hero-clean__btn-whatsapp {
+  width: 100% !important;
+  justify-content: center !important;
+  min-height: 50px !important;
+  font-size: 0.92rem !important;
+  padding: 14px 18px !important;
+  box-sizing: border-box !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
