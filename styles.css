@@ -29434,6 +29434,15 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 #index-hero-section .hero-clean__subtitle {
   line-height: 1.6;
 }
+
+#index-hero-section .hero-clean__subtitle {
+  font-weight: 500;
+}
+
+#index-hero-section .hero-clean__pain {
+  font-weight: 500;
+  color: var(--text-muted);
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
