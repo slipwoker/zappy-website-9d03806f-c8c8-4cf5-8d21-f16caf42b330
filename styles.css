@@ -29443,6 +29443,23 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
   font-weight: 500;
   color: var(--text-muted);
 }
+
+#index-hero-section .hero-clean__buttons {
+  flex-wrap: nowrap !important;
+}
+
+#index-hero-section .hero-clean__btn-primary,
+#index-hero-section .hero-clean__btn-whatsapp {
+  white-space: nowrap !important;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+#index-hero-section .hero-clean__buttons {
+  flex-wrap: wrap !important;
+  flex-direction: column !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
