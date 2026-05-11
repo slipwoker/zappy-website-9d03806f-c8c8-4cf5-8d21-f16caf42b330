@@ -29422,6 +29422,18 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 #index-hero-section .hero-clean__text-col {
   padding-top: 12px;
 }
+
+#index-hero-section .hero-clean__inner {
+  align-items: start;
+}
+
+#index-hero-section .hero-clean__text-col {
+  padding-top: 10px;
+}
+
+#index-hero-section .hero-clean__subtitle {
+  line-height: 1.6;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
