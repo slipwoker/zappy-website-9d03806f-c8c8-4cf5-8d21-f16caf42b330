@@ -29460,6 +29460,38 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
   flex-direction: column !important;
 }
 }
+
+#index-hero-section .hero-clean__img-col [data-zappy-zoom-wrapper="true"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 200px !important;
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+#index-hero-section .hero-clean__img-col [data-zappy-zoom-wrapper="true"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: 220px !important;
+}
+
+#index-hero-section .hero-clean__img-col .hero-clean__img {
+  width: 100% !important;
+  height: 240px !important;
+  max-width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 12px !important;
+}
+
+#index-hero-section .hero-clean__img-col {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
