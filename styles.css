@@ -29460,6 +29460,34 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
   flex-direction: column !important;
 }
 }
+
+@media (max-width: 768px) {
+#index-hero-section .hero-clean__img-col {
+  overflow: visible !important;
+}
+
+#index-hero-section .hero-clean__img-col [data-zappy-zoom-wrapper="true"] {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+#index-hero-section .hero-clean__img {
+  height: auto !important;
+  min-height: 180px;
+  max-height: 320px;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+#index-hero-section .hero-clean__logos-banner {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  overflow: visible !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
