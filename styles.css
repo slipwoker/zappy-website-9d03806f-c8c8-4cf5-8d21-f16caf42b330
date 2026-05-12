@@ -29658,6 +29658,314 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
   }
 }
 
+
+/* AI-generated section */
+/* =============================================
+   UPDATE NOTICE SECTION
+   ============================================= */
+
+.upd-update-notice {
+  background-color: var(--background-color, #F1F5F9);
+  padding: 80px 20px 100px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upd-container {
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* --- Badge --- */
+.upd-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color, #2563EB);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  letter-spacing: 0.02em;
+}
+
+.upd-badge-icon {
+  font-size: 1rem;
+}
+
+/* --- Main Title --- */
+.upd-title {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  color: var(--secondary-color, #0F172A);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+/* --- Subtitle --- */
+.upd-subtitle {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 500;
+  color: var(--primary-color, #2563EB);
+  margin: 0 0 28px;
+}
+
+/* --- Description --- */
+.upd-description {
+  font-size: 1.05rem;
+  color: var(--text-secondary-color, #5a687d);
+  line-height: 1.85;
+  max-width: 620px;
+  margin: 0 auto 40px;
+}
+
+/* --- Divider --- */
+.upd-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-primary, linear-gradient(135deg, #1557E8 0%, #1040AA 100%));
+  border-radius: 4px;
+  margin: 0 auto 44px;
+}
+
+/* --- Grid Title --- */
+.upd-grid-title {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-color, #0F172A);
+  margin: 0 0 24px;
+  opacity: 0.75;
+  letter-spacing: 0.01em;
+}
+
+/* --- Pages Grid --- */
+.upd-pages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 52px;
+  text-align: right;
+}
+
+/* --- Page Card --- */
+.upd-page-card {
+  background-color: var(--surface-color, #FFFFFF);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  border-radius: 14px;
+  padding: 26px 22px 22px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.upd-page-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-primary, linear-gradient(135deg, #1557E8 0%, #1040AA 100%));
+  border-radius: 0 14px 14px 0;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.upd-page-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(37, 99, 235, 0.14);
+  border-color: rgba(37, 99, 235, 0.4);
+}
+
+.upd-page-card:hover::before {
+  opacity: 1;
+}
+
+.upd-page-card:focus-visible {
+  outline: 3px solid var(--primary-color, #2563EB);
+  outline-offset: 3px;
+}
+
+/* --- Card Icon --- */
+.upd-card-icon {
+  font-size: 1.9rem;
+  line-height: 1;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* --- Card Name --- */
+.upd-card-name {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-color, #0F172A);
+  display: block;
+}
+
+/* --- Card URL --- */
+.upd-card-url {
+  font-size: 0.8rem;
+  color: var(--text-secondary-color, #5a687d);
+  font-family: monospace;
+  background-color: rgba(37, 99, 235, 0.07);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+/* --- Card Arrow --- */
+.upd-card-arrow {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  font-size: 1.1rem;
+  color: var(--primary-color, #2563EB);
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.upd-page-card:hover .upd-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- CTA Wrap --- */
+.upd-cta-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+/* --- CTA Button --- */
+.upd-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-primary, linear-gradient(135deg, #1557E8 0%, #1040AA 100%));
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: 'Rubik', system-ui, sans-serif;
+  padding: 16px 40px;
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.upd-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(37, 99, 235, 0.45);
+  opacity: 0.93;
+}
+
+.upd-cta-btn:focus-visible {
+  outline: 3px solid var(--primary-color, #2563EB);
+  outline-offset: 4px;
+}
+
+/* =============================================
+   RESPONSIVE — TABLET
+   ============================================= */
+@media (max-width: 768px) {
+  .upd-update-notice {
+    padding: 60px 16px 80px;
+  }
+
+  .upd-pages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .upd-title {
+    font-size: 2.2rem;
+  }
+
+  .upd-description {
+    font-size: 1rem;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE
+   ============================================= */
+@media (max-width: 480px) {
+  .upd-update-notice {
+    padding: 48px 14px 64px;
+    align-items: flex-start;
+  }
+
+  .upd-pages-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .upd-page-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 20px;
+    gap: 14px;
+  }
+
+  .upd-card-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .upd-page-card::before {
+    width: 100%;
+    height: 4px;
+    top: 0;
+    right: 0;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .upd-card-arrow {
+    position: static;
+    margin-right: auto;
+    opacity: 1;
+    transform: none;
+    font-size: 1rem;
+  }
+
+  .upd-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+  }
+
+  .upd-title {
+    font-size: 1.9rem;
+  }
+
+  .upd-badge {
+    font-size: 0.82rem;
+    padding: 7px 16px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
