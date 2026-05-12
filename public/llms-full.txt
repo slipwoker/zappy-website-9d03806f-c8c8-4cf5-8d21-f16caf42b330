@@ -2,13 +2,13 @@
 
 Ariel Software Development is a one-person expert consultancy specializing in Microsoft Access systems with over 25 years of hands-on experience. The brand identity is built around being the trusted 'rescue expert' — the professional who steps in when systems fail, developers disappear, or legacy databases become liabilities. The tone is direct, results-driven, and confidence-inspiring, emphasizing that in 90% of cases, systems can be fixed without rebuilding from scratch. The business has a proven track record with real-world deployments including Yad Vashem, school networks, safety management systems, and equestrian associations — projecting deep credibility and enterprise-level expertise.
 
-Source: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com
+Source: https://www.ariel10.net
 
 ---
 
 ## מומחה Microsoft Access | תיקון, שדרוג וייצוב מערכות
 
-URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com
+URL: https://www.ariel10.net
 Description: מערכת Access קורסת או איטית? מומחה עם 25+ שנות ניסיון מתקן ומייצב מסדי נתונים בלי לבנות מחדש. שירות מרחוק · אבחון ראשוני ללא עלות · תגובה תוך 24 שעות.
 
 מומחה Microsoft Access | תיקון, שדרוג וייצוב מערכות
@@ -203,7 +203,7 @@ Description: מערכת Access קורסת או איטית? מומחה עם 25+ �
 
 ## שירותי Access — תיקון תקלות, שדרוג ושיפור ביצועים | אריאל פיתוח תוכנה
 
-URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/services
+URL: https://www.ariel10.net/services
 Description: תיקון קבצי Access פגומים, שדרוג ל-64 ביט, מעבר ל-SQL Server, שיפור ביצועים ואוטומציה עם Excel. פתרונות ממוקדים שמחזירים את המערכת לעבוד — בלי לבנות מחדש.
 
 שירותי Access — תיקון תקלות, שדרוג ושיפור ביצועים | אריאל פיתוח תוכנה
@@ -753,7 +753,7 @@ Access איטי שלוקח דקות לפתוח דוח או שאילתה — זו
 
 ## 25+ שנות ניסיון ב-Access | יד ושם, רשתות חינוך ועוד
 
-URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/experience
+URL: https://www.ariel10.net/experience
 Description: ניסיון מוכח: מערכות עבור יד ושם, רשתות בתי ספר, ניהול בטיחות ואגודות רכיבה. 100+ מערכות פעילות, 90% מהמקרים נפתרים ללא בנייה מחדש.
 
 25+ שנות ניסיון ב-Access | יד ושם, רשתות חינוך ועוד
@@ -1271,7 +1271,7 @@ Description: ניסיון מוכח: מערכות עבור יד ושם, רשתו�
 
 ## צור קשר — אבחון ראשוני ללא עלות | אריאל פיתוח תוכנה
 
-URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/contact
+URL: https://www.ariel10.net/contact
 Description: מערכת Access עושה בעיות? צרו קשר לאבחון מהיר ללא עלות. טלפון: 0523845555 | WhatsApp | אימייל. מענה תוך 24 שעות, שירות מרחוק לכל הארץ.
 
 צור קשר — אבחון ראשוני ללא עלות | אריאל פיתוח תוכנה
@@ -1649,7 +1649,7 @@ ariel@ariel10.net
 
 ## מדיניות פרטיות
 
-URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/privacy
+URL: https://www.ariel10.net/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -1824,7 +1824,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 ## הצהרת נגישות
 
-URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/accessibility
+URL: https://www.ariel10.net/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -2008,7 +2008,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 ## תנאי שימוש
 
-URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/terms
+URL: https://www.ariel10.net/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
@@ -2211,7 +2211,7 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 
 ## אודות אריאל שוסהיים — מומחה Microsoft Access עם 25+ שנות ניסיון
 
-URL: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/about
+URL: https://www.ariel10.net/about
 Description: אריאל — מפתח עצמאי עם מעל 25 שנות ניסיון בתיקון, ייצוב ושיפור מערכות Microsoft Access. גישת אבחון ותיקון ממוקד, שמירה על מה שעובד, תקשורת ישירה ומהירה.
 
 אודות אריאל שוסהיים — מומחה Microsoft Access עם 25+ שנות ניסיון                                                                               אריאל שוסהיים   Microsoft Access Expert        - שירותים

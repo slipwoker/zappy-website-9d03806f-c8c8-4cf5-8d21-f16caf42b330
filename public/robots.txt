@@ -50,4 +50,4 @@ Allow: /
 User-agent: MistralAI-User
 Allow: /
 
-Sitemap: https://zappy-site-9d03806f-c8c8-4cf5-8d21.onrender.com/sitemap.xml
+Sitemap: https://www.ariel10.net/sitemap.xml
