@@ -46,6 +46,10 @@ https://www.ariel10.net/blog/improve-system-performance
 https://www.ariel10.net/blog/cloud-sql-migration-checklist
 מאמר שמסביר אילו בדיקות חשוב לבצע לפני מעבר של מערכת ותיקה לענן או ל-SQL, כדי להימנע מתקלות, עיכובים וסיכונים עסקיים.
 
+### תוכנה לניהול בטיחות - אריאל פיתוח תוכנה
+https://www.ariel10.net/safety-software
+אריאל פיתוח תוכנה - תוכנה לניהול בטיחות - אריאל פיתוח תוכנה
+
 ## Legal & Policy
 
 ### Privacy Policy
