@@ -414,12 +414,499 @@ GA4_PLACEHOLDER_END --> <!-- Cookie Consent --> <link rel="stylesheet" href="htt
 </head>
 <body>
  <nav class="navbar" dir="rtl"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" data-phone="0523845555" aria-label="Call"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-right-group"> <div class="nav-brand"> <a href="/" class="logo-link nav-logo-link"> <span class="nav-logo-name">אריאל שוסהיים</span> <span class="nav-logo-sub">Microsoft Access Expert</span> </a> </div> <ul class="nav-menu" id="navMenu"> <li><a href="/services">שירותים</a></li> <li><a href="/experience">ניסיון מקצועי</a></li> <li><a href="/about">אודות</a></li> <li class="nav-cta-item"><a href="/contact" class="nav-cta-pill">צור קשר</a></li><li><a href="/blog" class="nav-cta-pill">מאמרים</a></li> </ul> </div> <div class="nav-cta-container"><a href="/contact" class="navbar-cta-btn">קבל אבחון ראשוני ←</a></div> </div> </nav> <script> // Navbar Mobile Menu Toggle and Contrast Fix (function() { // Use 'load' event instead of 'DOMContentLoaded' to ensure we run AFTER all other scripts window.addEventListener('load', function() { // FIX MOBILE BUTTON CONTRAST // Detect navbar background color and apply contrasting color to mobile buttons const navbar = document.querySelector('.navbar, nav, header'); if (!navbar) { console.log('[Navbar] Navbar element not found'); return; } // DECLARE VARIABLES EARLY to avoid Temporal Dead Zone errors // These are used in multiple places below let mobileToggle = document.getElementById('mobileToggle') || document.querySelector('.mobile-toggle') || document.querySelector('.hamburger') || document.querySelector('.hamburger-menu') || document.querySelector('.menu-toggle') || document.querySelector('.burger-menu') || document.querySelector('[aria-label="Menu"]') || document.querySelector('[aria-label="תפריט"]'); const phoneBtn = document.querySelector('.phone-header-btn'); const computedStyle = window.getComputedStyle(navbar); let bgColor = computedStyle.backgroundColor; console.log('[Navbar] Initial navbar background:', bgColor); // Check if background is transparent or rgba with 0 alpha const isTransparent = bgColor === 'transparent' || bgColor === 'rgba(0, 0, 0, 0)' || (bgColor.startsWith('rgba') && bgColor.includes(', 0)')); if (isTransparent) { // Check for background-image or gradient const bgImage = computedStyle.backgroundImage; if (bgImage && bgImage !== 'none') { console.log('[Navbar] Navbar has background image/gradient, using dark text'); bgColor = 'rgb(240, 240, 240)'; // Assume light background } else { // Transparent navbar - check body background const bodyBg = window.getComputedStyle(document.body).backgroundColor; console.log('[Navbar] Navbar transparent, using body background:', bodyBg); bgColor = bodyBg; } } // Calculate luminance to determine if background is light or dark const rgb = bgColor.match(/\d+/g); if (rgb && rgb.length >= 3) { const r = parseInt(rgb[0]); const g = parseInt(rgb[1]); const b = parseInt(rgb[2]); const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255; // Mobile button colors are set by Claude's AI-generated CSS (same as .nav-menu a) // No dynamic color overrides needed - colors come from the generated navbar CSS console.log('[Navbar] Mobile button colors preserved from Claude CSS (luminance:', luminance.toFixed(2) + ')'); // FIX ICON SIZES - Ensure SVGs are properly sized and visible // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES const criticalCSS = document.createElement('style'); criticalCSS.id = 'zappy-mobile-nav-fix'; const htmlLang = document.documentElement.lang || 'en'; const htmlDir = document.documentElement.dir || 'ltr'; // Check both dir attribute AND lang for RTL detection // dir="rtl" is the most reliable indicator const isRTL = htmlDir === 'rtl' || htmlLang === 'he' || htmlLang === 'ar'; criticalCSS.textContent = ` /* Hide mobile buttons on desktop, show only on mobile */ @media (min-width: 769px) { .mobile-toggle, .phone-header-btn { display: none !important; } } /* Show and position mobile buttons correctly on mobile */ @media (max-width: 768px) { .mobile-toggle, .phone-header-btn { position: absolute !important; top: 50% !important; transform: translateY(-50%) !important; z-index: 1001 !important; display: flex !important; align-items: center !important; justify-content: center !important; width: 36px !important; height: 36px !important; border-radius: 50% !important; border: none !important; cursor: pointer !important; padding: 6px !important; background: none !important; color: var(--nav-text, var(--text-dark)) !important; } /* LTR positioning (default): hamburger LEFT, phone RIGHT */ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .mobile-toggle, html[dir="ltr"] .mobile-toggle { left: 12px !important; right: auto !important; } html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .phone-header-btn, html[dir="ltr"] .phone-header-btn { right: 12px !important; left: auto !important; } /* RTL positioning: hamburger RIGHT, phone LEFT */ html[dir="rtl"] .mobile-toggle, html[lang="he"] .mobile-toggle, html[lang="ar"] .mobile-toggle { right: 12px !important; left: auto !important; } html[dir="rtl"] .phone-header-btn, html[lang="he"] .phone-header-btn, html[lang="ar"] .phone-header-btn { left: 12px !important; right: auto !important; } /* CRITICAL: Ensure nav-container has min-height on mobile */ /* All children are positioned absolutely/fixed on mobile, so height:auto collapses to 0 */ .nav-container { min-height: 70px !important; position: relative !important; } /* Ensure SVG icons are properly sized and inherit color */ .mobile-toggle svg, .phone-header-btn svg { width: 24px !important; height: 24px !important; /* Don't force display - let JavaScript control hamburger/close toggle */ } /* Reset nav-cta-container on mobile - remove desktop box-shadow/padding */ /* that creates a visible ghost box when CTA button is hidden */ .nav-cta-container { box-shadow: none !important; padding: 0 !important; } /* Hide nav-cta-container entirely on mobile when there's no lang-switcher */ /* (only the CTA button is inside, and it's hidden on mobile) */ .nav-cta-container:not(:has(.lang-switcher)) { display: none !important; } /* CRITICAL: Prevent hero image fade gradient from bleeding over headline text */ /* The .image-fade-gradient has bottom: -30px (extends below parent) */ /* On mobile stacked layout, this overlaps the h1 text below the image */ .hero-image-column { overflow: hidden !important; } .image-fade-gradient { bottom: 0 !important; } /* Hide desktop language switcher on mobile - hamburger menu handles it */ /* High specificity to override stored CSS */ .lang-switcher, .nav-cta-container .lang-switcher, .nav-container .lang-switcher, .navbar .lang-switcher, .navbar .nav-cta-container .lang-switcher { display: none !important; } } `; // Remove existing fix if present and inject new one const existing = document.getElementById('zappy-mobile-nav-fix'); if (existing) existing.remove(); document.head.appendChild(criticalCSS); console.log('[Navbar] Critical CSS injected for mobile nav positioning'); // ONLY apply inline positioning styles on mobile viewport // On desktop, the CSS handles hiding these buttons with display: none // Inline styles were breaking desktop layout by overriding CSS const isMobileViewport = window.innerWidth <= 768; if (mobileToggle) { // Icon sizing applies to all viewports for consistency const hamburgerIcon = mobileToggle.querySelector('.hamburger-icon'); const closeIcon = mobileToggle.querySelector('.close-icon'); if (hamburgerIcon) { hamburgerIcon.style.setProperty('width', '24px', 'important'); hamburgerIcon.style.setProperty('height', '24px', 'important'); hamburgerIcon.style.setProperty('display', 'block', 'important'); // Show hamburger by default } if (closeIcon) { closeIcon.style.setProperty('width', '24px', 'important'); closeIcon.style.setProperty('height', '24px', 'important'); closeIcon.style.setProperty('display', 'none', 'important'); // Hide close icon by default } // ONLY set positioning inline styles on mobile if (isMobileViewport) { mobileToggle.style.setProperty('position', 'absolute', 'important'); mobileToggle.style.setProperty('top', '50%', 'important'); mobileToggle.style.setProperty('transform', 'translateY(-50%)', 'important'); mobileToggle.style.setProperty('z-index', '1001', 'important'); // Clear any inline left/right so CSS can take over based on html[dir] mobileToggle.style.removeProperty('left'); mobileToggle.style.removeProperty('right'); console.log('[Navbar] Mobile toggle positioning applied (mobile viewport)'); } else { // On desktop, clear any positioning styles to let CSS handle it mobileToggle.style.removeProperty('position'); mobileToggle.style.removeProperty('top'); mobileToggle.style.removeProperty('transform'); mobileToggle.style.removeProperty('z-index'); mobileToggle.style.removeProperty('left'); mobileToggle.style.removeProperty('right'); console.log('[Navbar] Desktop viewport - cleared mobile toggle inline positioning'); } } if (phoneBtn) { // Icon sizing applies to all viewports const phoneIcon = phoneBtn.querySelector('svg'); if (phoneIcon) { phoneIcon.style.width = '24px'; phoneIcon.style.height = '24px'; phoneIcon.setAttribute('width', '24'); phoneIcon.setAttribute('height', '24'); } // ONLY set positioning inline styles on mobile if (isMobileViewport) { phoneBtn.style.setProperty('position', 'absolute', 'important'); phoneBtn.style.setProperty('top', '50%', 'important'); phoneBtn.style.setProperty('transform', 'translateY(-50%)', 'important'); phoneBtn.style.setProperty('z-index', '1001', 'important'); // Clear any inline left/right so CSS can take over based on html[dir] phoneBtn.style.removeProperty('left'); phoneBtn.style.removeProperty('right'); console.log('[Navbar] Phone button positioning applied (mobile viewport)'); } else { // On desktop, clear any positioning styles to let CSS handle it phoneBtn.style.removeProperty('position'); phoneBtn.style.removeProperty('top'); phoneBtn.style.removeProperty('transform'); phoneBtn.style.removeProperty('z-index'); phoneBtn.style.removeProperty('left'); phoneBtn.style.removeProperty('right'); console.log('[Navbar] Desktop viewport - cleared phone button inline positioning'); } } } else { console.log('[Navbar] Could not parse background color:', bgColor); } // MOBILE MENU TOGGLE // Re-query in case DOM changed (mobileToggle already declared at top of function) mobileToggle = document.getElementById('mobileToggle') || document.querySelector('.mobile-toggle') || document.querySelector('.hamburger') || document.querySelector('.hamburger-menu') || document.querySelector('.menu-toggle') || document.querySelector('.burger-menu') || document.querySelector('[aria-label="Menu"]') || document.querySelector('[aria-label="תפריט"]'); // EXPANDED SEARCH: Find nav menu by ID or class const navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu') || document.querySelector('.nav-links') || document.querySelector('nav ul:not(.submenu)'); if (!mobileToggle || !navMenu) { console.log('[Navbar] Mobile toggle or menu not found:', { toggle: !!mobileToggle, menu: !!navMenu }); return; } // Ensure navMenu has ID for CSS targeting if (!navMenu.id) { navMenu.id = 'navMenu'; } console.log('[Navbar] Initializing mobile menu...'); // Remove any existing event listeners by cloning the button const newToggle = mobileToggle.cloneNode(true); mobileToggle.parentNode.replaceChild(newToggle, mobileToggle); // Toggle menu on button click - use newToggle now newToggle.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); const hamburgerIcon = this.querySelector('.hamburger-icon'); const closeIcon = this.querySelector('.close-icon'); const isActive = navMenu.classList.contains('active'); if (isActive) { // Close menu navMenu.classList.remove('active'); if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important'); if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important'); document.body.style.overflow = ''; console.log('[Navbar] Menu closed'); } else { // Open menu navMenu.classList.add('active'); if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'none', 'important'); if (closeIcon) closeIcon.style.setProperty('display', 'block', 'important'); document.body.style.overflow = 'hidden'; console.log('[Navbar] Menu opened'); } }); // Close menu when clicking nav links (but NOT dropdown toggles) const navLinks = navMenu.querySelectorAll('a'); navLinks.forEach(function(link) { link.addEventListener('click', function() { // Don't close if it's a dropdown child (unless it's a real navigation link) if (this.getAttribute('href') === '#') return; const hamburgerIcon = newToggle.querySelector('.hamburger-icon'); const closeIcon = newToggle.querySelector('.close-icon'); navMenu.classList.remove('active'); if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important'); if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important'); document.body.style.overflow = ''; console.log('[Navbar] Menu closed (link clicked)'); }); }); // DROPDOWN MENU TOGGLE (for mobile and touch devices) var dropdownToggles = navMenu.querySelectorAll('.dropdown-toggle'); dropdownToggles.forEach(function(toggle) { toggle.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); var parent = this.closest('.nav-dropdown'); if (!parent) return; // Close other open dropdowns at the same level var siblings = parent.parentNode.querySelectorAll('.nav-dropdown.open'); siblings.forEach(function(sib) { if (sib !== parent) sib.classList.remove('open'); }); parent.classList.toggle('open'); console.log('[Navbar] Dropdown toggled:', parent.classList.contains('open') ? 'open' : 'closed'); }); }); // Close dropdowns when clicking outside document.addEventListener('click', function(e) { if (!e.target.closest('.nav-dropdown')) { var openDropdowns = document.querySelectorAll('.nav-dropdown.open'); openDropdowns.forEach(function(dd) { dd.classList.remove('open'); }); } }); console.log('[Navbar] Dropdown handlers initialized for ' + dropdownToggles.length + ' dropdowns'); // Phone button functionality (phoneBtn already declared at top of function) if (phoneBtn) { phoneBtn.addEventListener('click', function() { // Get phone number from placeholder in page or use default const phoneLinks = document.querySelectorAll('a[href^="tel:"]'); const phoneNumber = phoneLinks.length > 0 ? phoneLinks[0].getAttribute('href').replace('tel:', '') : '0523845555'; window.location.href = 'tel:' + phoneNumber; console.log('[Navbar] Phone button clicked'); }); } console.log('[Navbar] Mobile menu initialized successfully'); // === WHATSAPP BUTTON VISIBILITY FIX === // Ensure WhatsApp floating button is hidden on desktop and visible on mobile // IMPORTANT: Only target the floating button by its class, NOT generic wa.me links const handleWhatsAppVisibility = function() { const whatsappBtn = document.querySelector('.whatsapp-float'); if (whatsappBtn) { const isDesktop = window.innerWidth >= 769; if (isDesktop) { whatsappBtn.style.setProperty('display', 'none', 'important'); whatsappBtn.style.setProperty('visibility', 'hidden', 'important'); whatsappBtn.style.setProperty('opacity', '0', 'important'); whatsappBtn.style.setProperty('pointer-events', 'none', 'important'); console.log('[WhatsApp] Button hidden on desktop'); } else { whatsappBtn.style.removeProperty('display'); whatsappBtn.style.removeProperty('visibility'); whatsappBtn.style.removeProperty('opacity'); whatsappBtn.style.removeProperty('pointer-events'); console.log('[WhatsApp] Button visible on mobile'); } } }; // Run on load handleWhatsAppVisibility(); // Run on resize with debouncing let resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(handleWhatsAppVisibility, 100); }); }); })(); </script> <main>
-      <section id="layout-1778825967319" class="py-16 md:py-24 bg-white layout-section zappy-removable" data-zappy-component="true" style="width: 100%; padding: 60px 0;">
-        <div class="container mx-auto px-4 md:px-8 text-center">
-          <h1 class="text-3xl md:text-4xl font-bold mb-4">מאמרים</h1>
-          <p class="text-gray-600 text-lg">This page is ready for your content.</p>
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://ariel10.net/blog#blog",
+  "name": "מאמרים מקצועיים על Microsoft Access",
+  "description": "טיפים, פתרונות, שיפורי ביצועים, תיקון תקלות והמלצות מקצועיות ב-Microsoft Access מתוך 25+ שנות ניסיון.",
+  "url": "https://ariel10.net/blog",
+  "inLanguage": "he",
+  "publisher": {"@id": "https://ariel10.net/#business"},
+  "author": {"@id": "https://ariel10.net/#person"},
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "למה מערכת Access נהיית איטית ואיך מתקנים את זה",
+      "description": "הסיבות הנפוצות לאיטיות ב-Access וכיצד לאבחן ולתקן אותן — בלי לבנות מחדש.",
+      "datePublished": "2025-01-10",
+      "author": {"@id": "https://ariel10.net/#person"},
+      "url": "https://ariel10.net/blog"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "איך לשפר ביצועים במסדי נתונים של Access",
+      "description": "טכניקות מתקדמות לשיפור מהירות ויציבות מסדי נתונים ב-Microsoft Access.",
+      "datePublished": "2025-01-20",
+      "author": {"@id": "https://ariel10.net/#person"},
+      "url": "https://ariel10.net/blog"
+    }
+  ]
+}
+</script>
+
+<!-- ═══ BLOG HERO ═══ -->
+<section class="blog-hero" aria-labelledby="blog-h1">
+  <div class="blog-hero__inner">
+    <span class="blog-hero__badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+      מאמרים מקצועיים
+    </span>
+    <h1 id="blog-h1" class="blog-hero__h1">
+      מאמרים מקצועיים על<br>
+      <span class="blog-hero__h1-accent">Microsoft Access</span>
+    </h1>
+    <p class="blog-hero__subtitle">
+      טיפים, פתרונות, שיפורי ביצועים, תיקון תקלות והמלצות מקצועיות<br class="blog-hero__br">
+      מתוך ניסיון אמיתי של שנים.
+    </p>
+    <div class="blog-hero__cta-row">
+      <a href="/contact" class="blog-hero__btn">
+        צור קשר
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+      </a>
+      <span class="blog-hero__meta">אריאל שוסהיים · 25+ שנות ניסיון</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOG GRID ═══ -->
+<section class="blog-grid-section" aria-label="רשימת מאמרים">
+  <div class="blog-grid-section__inner">
+    <div class="blog-grid">
+
+      <!-- Card 1 -->
+      <article class="blog-card" itemscope="" itemtype="https://schema.org/BlogPosting">
+        <div class="blog-card__top">
+          <span class="blog-card__cat">ביצועים</span>
         </div>
-      </section>
+        <div class="blog-card__body">
+          <h2 class="blog-card__title" itemprop="headline">למה מערכת Access נהיית איטית ואיך מתקנים את זה</h2>
+          <p class="blog-card__excerpt" itemprop="description">מסד הנתונים שלך מאט? הסיבות הנפוצות הן טבלאות לא ממוינות, Queries לא יעילות ו-Bloat מצטבר. כך מאבחנים ומתקנים — בלי לבנות מחדש.</p>
+          <div class="blog-card__footer">
+            <div class="blog-card__info">
+              <time class="blog-card__date" datetime="2025-01-10" itemprop="datePublished">10 בינואר 2025</time>
+              <span class="blog-card__dot" aria-hidden="true">·</span>
+              <span class="blog-card__read">5 דק' קריאה</span>
+            </div>
+            <a href="/contact" class="blog-card__btn" aria-label="קרא עוד על: למה מערכת Access נהיית איטית">
+              קרא עוד
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="blog-card" itemscope="" itemtype="https://schema.org/BlogPosting">
+        <div class="blog-card__top">
+          <span class="blog-card__cat">אופטימיזציה</span>
+        </div>
+        <div class="blog-card__body">
+          <h2 class="blog-card__title" itemprop="headline">איך לשפר ביצועים במסדי נתונים של Access</h2>
+          <p class="blog-card__excerpt" itemprop="description">Indexing נכון, Compact &amp; Repair, ניהול Linked Tables ואופטימיזציה של Queries — הדרך לקבל Access מהיר ויציב לאורך שנים.</p>
+          <div class="blog-card__footer">
+            <div class="blog-card__info">
+              <time class="blog-card__date" datetime="2025-01-20" itemprop="datePublished">20 בינואר 2025</time>
+              <span class="blog-card__dot" aria-hidden="true">·</span>
+              <span class="blog-card__read">6 דק' קריאה</span>
+            </div>
+            <a href="/contact" class="blog-card__btn" aria-label="קרא עוד על: שיפור ביצועים ב-Access">
+              קרא עוד
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="blog-card" itemscope="" itemtype="https://schema.org/BlogPosting">
+        <div class="blog-card__top">
+          <span class="blog-card__cat">פיתוח</span>
+        </div>
+        <div class="blog-card__body">
+          <h2 class="blog-card__title" itemprop="headline">טעויות נפוצות בפיתוח Access שעולות ביוקר</h2>
+          <p class="blog-card__excerpt" itemprop="description">מבנה טבלאות לקוי, תלות ב-Queries מקוננים, ו-VBA ללא טיפול בשגיאות — הטעויות הקלאסיות שמובילות לקריסות ואיך להימנע מהן.</p>
+          <div class="blog-card__footer">
+            <div class="blog-card__info">
+              <time class="blog-card__date" datetime="2025-02-03" itemprop="datePublished">3 בפברואר 2025</time>
+              <span class="blog-card__dot" aria-hidden="true">·</span>
+              <span class="blog-card__read">7 דק' קריאה</span>
+            </div>
+            <a href="/contact" class="blog-card__btn" aria-label="קרא עוד על: טעויות נפוצות בפיתוח Access">
+              קרא עוד
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="blog-card" itemscope="" itemtype="https://schema.org/BlogPosting">
+        <div class="blog-card__top">
+          <span class="blog-card__cat">ארכיטקטורה</span>
+        </div>
+        <div class="blog-card__body">
+          <h2 class="blog-card__title" itemprop="headline">מתי צריך לפצל קובץ Access — Frontend ו-Backend</h2>
+          <p class="blog-card__excerpt" itemprop="description">כשמספר המשתמשים גדל או הנתונים מתנפחים, פיצול ל-Frontend ו-Backend הוא הפתרון הנכון. איך עושים את זה נכון בלי לאבד נתונים.</p>
+          <div class="blog-card__footer">
+            <div class="blog-card__info">
+              <time class="blog-card__date" datetime="2025-02-15" itemprop="datePublished">15 בפברואר 2025</time>
+              <span class="blog-card__dot" aria-hidden="true">·</span>
+              <span class="blog-card__read">5 דק' קריאה</span>
+            </div>
+            <a href="/contact" class="blog-card__btn" aria-label="קרא עוד על: פיצול קובץ Access">
+              קרא עוד
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="blog-card" itemscope="" itemtype="https://schema.org/BlogPosting">
+        <div class="blog-card__top">
+          <span class="blog-card__cat">יציבות</span>
+        </div>
+        <div class="blog-card__body">
+          <h2 class="blog-card__title" itemprop="headline">איך למנוע קריסות ב-Access — המדריך המעשי</h2>
+          <p class="blog-card__excerpt" itemprop="description">קריסות ב-Access נגרמות לרוב מגידול בלתי מבוקר של הקובץ, חיבורים פגומים ו-VBA עם דליפות זיכרון. טיפים מעשיים למניעה ולגיבוי נכון.</p>
+          <div class="blog-card__footer">
+            <div class="blog-card__info">
+              <time class="blog-card__date" datetime="2025-03-02" itemprop="datePublished">2 במרץ 2025</time>
+              <span class="blog-card__dot" aria-hidden="true">·</span>
+              <span class="blog-card__read">6 דק' קריאה</span>
+            </div>
+            <a href="/contact" class="blog-card__btn" aria-label="קרא עוד על: מניעת קריסות ב-Access">
+              קרא עוד
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="blog-card" itemscope="" itemtype="https://schema.org/BlogPosting">
+        <div class="blog-card__top">
+          <span class="blog-card__cat">שדרוג</span>
+        </div>
+        <div class="blog-card__body">
+          <h2 class="blog-card__title" itemprop="headline">שדרוג מערכות Access ישנות — מה חשוב לדעת לפני</h2>
+          <p class="blog-card__excerpt" itemprop="description">שדרוג Access 2003 ו-2007 לגרסאות מודרניות, ניהול תאימות לאחור, ומתי כדאי לשקול מיגרציה ל-SQL Server — מניסיון אמיתי בשטח.</p>
+          <div class="blog-card__footer">
+            <div class="blog-card__info">
+              <time class="blog-card__date" datetime="2025-03-18" itemprop="datePublished">18 במרץ 2025</time>
+              <span class="blog-card__dot" aria-hidden="true">·</span>
+              <span class="blog-card__read">8 דק' קריאה</span>
+            </div>
+            <a href="/contact" class="blog-card__btn" aria-label="קרא עוד על: שדרוג מערכות Access ישנות">
+              קרא עוד
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /.blog-grid -->
+  </div><!-- /.blog-grid-section__inner -->
+</section>
+
+<!-- ═══ BLOG CTA STRIP ═══ -->
+<section class="blog-cta-strip" aria-label="קריאה לפעולה">
+  <div class="blog-cta-strip__inner">
+    <p class="blog-cta-strip__text">יש לך שאלה ספציפית על מערכת ה-Access שלך?</p>
+    <a href="/contact" class="blog-cta-strip__btn">קבל ייעוץ ראשוני ←</a>
+  </div>
+</section>
+
+<style>
+/* ═══════════════════════════════════════════
+   BLOG PAGE — STANDALONE STYLES
+   Scoped fully — does not touch any existing CSS
+═══════════════════════════════════════════ */
+
+/* ── HERO ── */
+.blog-hero {
+  background: var(--bg-light);
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  padding: 80px 24px 72px;
+  direction: rtl;
+  text-align: right;
+}
+.blog-hero__inner {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+.blog-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(37,99,235,0.05);
+  border: 1px solid rgba(37,99,235,0.15);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.03em;
+}
+.blog-hero__h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.9rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.4px;
+  color: var(--text-dark);
+}
+.blog-hero__h1-accent {
+  color: var(--primary);
+}
+.blog-hero__subtitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: var(--text-muted);
+  max-width: 580px;
+}
+.blog-hero__br { display: inline; }
+.blog-hero__cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.blog-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.93rem;
+  font-weight: 700;
+  padding: 12px 26px;
+  min-height: 46px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.18);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.blog-hero__btn:hover {
+  box-shadow: 0 10px 26px rgba(37,99,235,0.28);
+  transform: translateY(-1px);
+}
+.blog-hero__meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ── GRID SECTION ── */
+.blog-grid-section {
+  background: #ffffff;
+  padding: 72px 24px 80px;
+  direction: rtl;
+}
+.blog-grid-section__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ── CARD ── */
+.blog-card {
+  background: #ffffff;
+  border: 1px solid rgba(15,23,42,0.08);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.22s ease, transform 0.18s ease, border-color 0.18s ease;
+  box-shadow: 0 2px 10px rgba(15,23,42,0.04);
+  text-align: right;
+}
+.blog-card:hover {
+  box-shadow: 0 8px 32px rgba(15,23,42,0.10);
+  transform: translateY(-3px);
+  border-color: rgba(37,99,235,0.15);
+}
+.blog-card__top {
+  padding: 18px 22px 0;
+}
+.blog-card__cat {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(37,99,235,0.06);
+  border-radius: 6px;
+  padding: 3px 9px;
+}
+.blog-card__body {
+  padding: 14px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.blog-card__title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text-dark);
+  letter-spacing: -0.1px;
+}
+.blog-card__excerpt {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  flex: 1;
+}
+.blog-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(15,23,42,0.06);
+  margin-top: 4px;
+}
+.blog-card__info {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.blog-card__date,
+.blog-card__read {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.blog-card__dot {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+.blog-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: gap 0.15s ease;
+}
+.blog-card__btn:hover {
+  gap: 8px;
+  text-decoration: underline;
+}
+
+/* ── CTA STRIP ── */
+.blog-cta-strip {
+  background: var(--bg-light);
+  border-top: 1px solid rgba(15,23,42,0.06);
+  padding: 44px 24px;
+  direction: rtl;
+}
+.blog-cta-strip__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.blog-cta-strip__text {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.blog-cta-strip__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 12px 26px;
+  min-height: 46px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(37,99,235,0.18);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.blog-cta-strip__btn:hover {
+  box-shadow: 0 10px 26px rgba(37,99,235,0.28);
+  transform: translateY(-1px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+@media (max-width: 640px) {
+  .blog-hero {
+    padding: 64px 20px 52px;
+  }
+  .blog-hero__h1 {
+    font-size: 1.9rem;
+  }
+  .blog-hero__subtitle {
+    font-size: 0.95rem;
+  }
+  .blog-hero__br { display: none; }
+  .blog-hero__cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .blog-hero__btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .blog-grid-section {
+    padding: 52px 16px 60px;
+  }
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .blog-cta-strip__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .blog-cta-strip__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>
+
     </main> 
 
 
