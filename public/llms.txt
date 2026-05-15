@@ -35,6 +35,7 @@ https://www.ariel10.net/blog\performance
 
 ### Access איטי
 https://www.ariel10.net/access-slow
+מערכת Access איטית? הסיבות הנפוצות לבעיות ביצועים ב-Microsoft Access ואיך משפרים מהירות ויציבות בלי לבנות הכל מחדש.
 
 ## Legal & Policy
 
