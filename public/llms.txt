@@ -30,6 +30,9 @@ https://www.ariel10.net/about
 https://www.ariel10.net/blog
 מאמרים מקצועיים על Microsoft Access — טיפים, פתרונות, שיפורי ביצועים, תיקון תקלות והמלצות מתוך 25+ שנות ניסיון אמיתי.
 
+### Page
+https://www.ariel10.net/blog/access-slow
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -59,11 +62,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
+  - `name` (text)
+  - `email` (email)
   - `phone` (tel)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 
