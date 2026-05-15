@@ -31,7 +31,7 @@ https://www.ariel10.net/blog
 מאמרים מקצועיים על Microsoft Access — טיפים, פתרונות, שיפורי ביצועים, תיקון תקלות והמלצות מתוך 25+ שנות ניסיון אמיתי.
 
 ### שיפור ביצועים
-https://www.ariel10.net/performance-improvement
+https://www.ariel10.net/blog\performance
 
 ### Access איטי
 https://www.ariel10.net/access-slow

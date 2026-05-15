@@ -2762,7 +2762,7 @@ Indexing נכון, Compact & Repair, ניהול Linked Tables ואופטימיז
 
 ## שיפור ביצועים
 
-URL: https://www.ariel10.net/performance-improvement
+URL: https://www.ariel10.net/blog\performance
 
 שיפור ביצועים
 
