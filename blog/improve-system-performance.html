@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>איך משפרים ביצועים במערכת קיימת בלי להשבית את העבודה</title>
+    <meta name="description" content="מאמר שמציג גישה מדורגת לשיפור ביצועים במערכת קיימת, תוך שמירה על רציפות עסקית ומינימום הפרעה למשתמשים.">
+    <meta name="keywords" content="">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '9d03806f-c8c8-4cf5-8d21-f16caf42b330',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <meta property="og:title" content="איך משפרים ביצועים במערכת קיימת בלי להשבית את העבודה">
+    <meta property="og:description" content="מאמר שמציג גישה מדורגת לשיפור ביצועים במערכת קיימת, תוך שמירה על רציפות עסקית ומינימום הפרעה למשתמשים.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="איך משפרים ביצועים במערכת קיימת בלי להשבית את העבודה">
+    <meta name="twitter:description" content="מאמר שמציג גישה מדורגת לשיפור ביצועים במערכת קיימת, תוך שמירה על רציפות עסקית ומינימום הפרעה למשתמשים.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.ariel10.net#organization","name":"אריאל פיתוח תוכנה","url":"https://www.ariel10.net","description":"Ariel Software Development is a one-person expert consultancy specializing in Microsoft Access systems with over 25 years of hands-on experience. The brand identity is built around being the trusted 'rescue expert' — the professional who steps in when systems fail, developers disappear, or legacy databases become liabilities. The tone is direct, results-driven, and confidence-inspiring, emphasizing that in 90% of cases, systems can be fixed without rebuilding from scratch. The business has a proven track record with real-world deployments including Yad Vashem, school networks, safety management systems, and equestrian associations — projecting deep credibility and enterprise-level expertise.","address":{"@type":"PostalAddress","streetAddress":"קרני יהודה 135/17, ירושלים, 97293, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"ariel@ariel10.net","telephone":"0523845555"}]},{"@type":"WebSite","@id":"https://www.ariel10.net#website","url":"https://www.ariel10.net","name":"אריאל פיתוח תוכנה","publisher":{"@id":"https://www.ariel10.net#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ariel10.net"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.ariel10.net/blog"},{"@type":"ListItem","position":3,"name":"Improve System Performance","item":"https://www.ariel10.net/blog/improve-system-performance"}]},{"@type":"Article","@id":"https://www.ariel10.net/blog/improve-system-performance#article","headline":"איך משפרים ביצועים במערכת קיימת בלי להשבית את העבודה","url":"https://www.ariel10.net/blog/improve-system-performance","mainEntityOfPage":"https://www.ariel10.net/blog/improve-system-performance","publisher":{"@id":"https://www.ariel10.net#organization"},"author":{"@type":"Person","name":"אריאל פיתוח תוכנה"},"description":"מאמר שמציג גישה מדורגת לשיפור ביצועים במערכת קיימת, תוך שמירה על רציפות עסקית ומינימום הפרעה למשתמשים."}]}</script>
+    <link rel="canonical" href="https://ariel10.net/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ariel10.net/#business",
+      "name": "אריאל פיתוח תוכנה",
+      "alternateName": "Ariel Software Development",
+      "description": "מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות. שירות מרחוק, אבחון ראשוני ללא עלות, תגובה תוך 24 שעות.",
+      "url": "https://ariel10.net",
+      "telephone": "+972523845555",
+      "email": "ariel@ariel10.net",
+      "foundingDate": "2000",
+      "priceRange": "$",
+      "currenciesAccepted": "ILS",
+      "paymentAccepted": "Cash, Bank Transfer",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Israel"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "קרני יהודה 135/17",
+        "addressLocality": "ירושלים",
+        "addressRegion": "ירושלים",
+        "postalCode": "97293",
+        "addressCountry": "IL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.7683,
+        "longitude": 35.2137
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "serviceType": "Microsoft Access Database Development, Repair and Optimization",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "שירותי Microsoft Access",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "תיקון תקלות קריטיות ב-Access"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שדרוג מערכות Access לגרסאות חדשות"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שיפור ביצועים ואופטימיזציה"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "מיגרציה ל-SQL Server"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "אוטומציה עם Excel"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "תחזוקה שוטפת ותמיכה"}}
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/%D7%90%D7%A8%D7%99%D7%90%D7%9C-%D7%A9%D7%95%D7%A1%D7%94%D7%99%D7%99%D7%9D-8954506/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ariel10.net/#person",
+      "name": "אריאל שוסהיים",
+      "alternateName": "Ariel Shusheim",
+      "jobTitle": "Microsoft Access Expert",
+      "description": "מומחה Microsoft Access עם 25+ שנות ניסיון בתיקון, ייצוב ושדרוג מערכות קיימות.",
+      "url": "https://ariel10.net",
+      "email": "ariel@ariel10.net",
+      "telephone": "+972523845555",
+      "worksFor": {"@id": "https://ariel10.net/#business"},
+      "knowsAbout": ["Microsoft Access", "VBA", "SQL Server", "Microsoft Excel", "Database Optimization", "Legacy System Migration"],
+      "sameAs": [
+        "https://www.linkedin.com/in/%D7%90%D7%A8%D7%99%D7%90%D7%9C-%D7%A9%D7%95%D7%A1%D7%94%D7%99%D7%99%D7%9D-8954506/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ariel10.net/#website",
+      "url": "https://ariel10.net",
+      "name": "אריאל פיתוח תוכנה — מומחה Microsoft Access",
+      "description": "מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות. 25+ שנות ניסיון.",
+      "inLanguage": "he",
+      "publisher": {"@id": "https://ariel10.net/#business"}
+    }
+  ]
+}
+</script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript> <!-- Favicons --> <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"> <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"> <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png"> <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png"> <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"> <!-- Performance: preconnect to external domains --> <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+ <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+ <link rel="preconnect" href="https://cdn.jsdelivr.net">
+ <!-- Preload hero image for LCP performance -->
+ <link rel="preload" as="image" href="/assets/site-index-hero-image-1-adjust-1778395750169-u3hsfm.webp?v=1778395752258" type="image/webp" fetchpriority="high"> <!-- Google Ads tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-1018170941"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-1018170941');
+</script>
+
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID to activate -->
+<!-- GA4_PLACEHOLDER_START
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+GA4_PLACEHOLDER_END --> <!-- Cookie Consent --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css"> <script defer="" src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script> <!-- Mickidum Accessibility Toolbar --> <script defer="" src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script> <style data-zappy-section-v2-css="true">/* ═══════════════════════════════════════════ HERO-CLEAN ═══════════════════════════════════════════ */ .hero-clean { background: var(--bg-light); border-bottom: 1px solid rgba(15,23,42,0.06); padding: 64px 24px 64px; direction: rtl; } .hero-clean__inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: center; } .hero-clean__img-col { order: 0; position: relative; } .hero-clean__img { width: 100%; height: 430px; object-fit: cover; border-radius: 14px; display: block; box-shadow: 0 10px 28px rgba(15,23,42,0.09); filter: saturate(0.9); position: relative; } .hero-clean__text-col { order: 1; display: flex; flex-direction: column; gap: 10px; max-width: 100%; text-align: right; margin-right: 0; margin-left: 0; } .hero-clean__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(36,87,255,0.04); border: 1px solid rgba(36,87,255,0.13); border-radius: 100px; padding: 4px 12px; font-size: 0.70rem; font-weight: 600; color: var(--text-dark); width: fit-content; letter-spacing: 0.04em; white-space: nowrap; } .hero-clean__h1 { margin: 0; padding: 0; color: var(--text-dark); font-size: 3.45rem; font-weight: 800; line-height: 1.10; letter-spacing: -0.5px; } .hero-clean__h1 span { display: block; } .hero-clean__h1-accent { color: var(--primary); } .hero-clean__subtitle { margin: 0; font-size: 1.05rem; font-weight: 600; line-height: 1.8; color: var(--text-dark); } .hero-clean__trust { margin: 0; font-size: 0.84rem; font-weight: 500; color: var(--text-muted); } .hero-clean__pain { margin: 0; font-size: 0.86rem; line-height: 1.6; color: var(--text-muted); } .hero-clean__buttons { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 2px; } .hero-clean__btn-primary { background: var(--primary); color: #ffffff; font-size: 0.93rem; font-weight: 700; padding: 12px 24px; min-height: 48px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; box-shadow: 0 8px 20px rgba(30,78,216,0.16); transition: box-shadow 0.2s ease, transform 0.15s ease; } .hero-clean__btn-primary:hover { box-shadow: 0 10px 26px rgba(30,78,216,0.26); transform: translateY(-1px); } .hero-clean__btn-whatsapp { background: #1F9A4B; color: #ffffff; border: none; font-size: 0.93rem; font-weight: 600; padding: 12px 24px; min-height: 48px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; transition: background 0.2s ease, transform 0.15s ease; } .hero-clean__btn-whatsapp:hover { background: #17863f; transform: translateY(-1px); } .hero-clean__note { margin: 0; font-size: 0.79rem; color: var(--text-muted); display: flex; align-items: center; gap: 5px; justify-content: flex-end; } .hero-clean__orgs-wrap { border-top: 1px solid rgba(30,46,66,0.08); padding-top: 8px; margin-top: 4px; } .hero-clean__orgs-label { margin: 0 0 2px; font-size: 0.68rem; font-weight: 700; color: rgba(30,42,60,0.50); letter-spacing: 0.08em; text-transform: uppercase; } .hero-clean__orgs { margin: 0; font-size: 0.83rem; font-weight: 500; color: rgba(30,42,60,0.72); line-height: 1.55; } @media (max-width: 900px) { .hero-clean__inner { grid-template-columns: 1fr; gap: 18px; } .hero-clean__img-col { order: -1; } .hero-clean__img { height: 280px; } .hero-clean__text-col { max-width: 100%; } .hero-clean__h1 { font-size: 2.2rem; } } @media (max-width: 768px) { .hero-clean { padding: 72px 20px 32px; overflow: hidden; } .hero-clean__inner { gap: 18px; } .hero-clean__h1 { font-size: clamp(1.55rem, 7vw, 1.9rem); line-height: 1.22; letter-spacing: -0.3px; max-width: 100%; overflow-wrap: break-word; word-break: keep-all; } .hero-clean__subtitle, .hero-clean__trust, .hero-clean__badge { max-width: 100%; overflow-wrap: break-word; } .hero-clean__badge { display: inline-flex; flex-wrap: wrap; justify-content: center; line-height: 1.4; font-size: 0.66rem; padding: 8px 14px; white-space: normal; } .hero-clean__img { height: 220px; display: block; } .hero-clean__buttons { flex-direction: column; align-items: stretch; gap: 12px; } .hero-clean__btn-primary, .hero-clean__btn-whatsapp { width: 100%; justify-content: center; min-height: 50px; font-size: 0.92rem; padding: 14px 18px; box-sizing: border-box; } .hero-clean__img-col, .hero-clean__text-col, .hero-clean__inner { box-sizing: border-box; max-width: 100%; } }</style> <style>
+      /* Dropdown sub-menu styles */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 400;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style>
+          <style id="zappy-cta-mobile-style">
+            /* Hide CTA list item on desktop (tablets and up) */
+            @media (min-width: 769px) {
+              .nav-cta-item-mobile {
+                display: none !important;
+              }
+            }
+            /* Show CTA list item on mobile */
+            @media (max-width: 768px) {
+              .nav-cta-item-mobile {
+                display: list-item !important;
+              }
+            }
+          </style>
+        
+          <style id="zappy-nested-menu-style">
+            /* Desktop only: vertically center nav items */
+            @media (min-width: 769px) {
+              .nav-menu,
+              #navMenu {
+                align-items: center !important;
+              }
+            }
+            
+            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+            }
+            
+            /* Desktop: show submenu on Menu Group hover */
+            li:has(.menu-group-title):hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when hovering */
+            }
+            
+            /* Hide menu items marked as hidden (overrides hover states) */
+            .zappy-hidden-menu-item,
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
+              display: none !important;
+              opacity: 0 !important;
+              visibility: hidden !important;
+              pointer-events: none !important;
+            }
+            
+            /* Keep submenu visible when hovering over the submenu itself */
+            .sub-menu:hover {
+              opacity: 1 !important;
+              visibility: visible !important;
+              pointer-events: auto !important;
+            }
+            
+            /* Nested dropdown menu styles - using more specific selectors */
+            .nav-menu .sub-menu,
+            nav .sub-menu,
+            .navbar .sub-menu {
+              display: block !important; /* Ensure submenu is in the DOM */
+              position: absolute !important;
+              top: 100%;
+              left: 0;
+              right: auto;
+              min-width: 200px;
+              background: white;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              border-radius: 8px;
+              padding: 8px 0;
+              margin-top: 0px; /* Remove gap to prevent hover loss */
+              opacity: 0 !important;
+              visibility: hidden !important;
+              transform: translateY(-10px);
+              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+              z-index: 1000;
+              list-style: none;
+              pointer-events: none; /* Prevent interaction when hidden */
+            }
+            
+            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            [dir="rtl"] .nav-menu .sub-menu,
+            [dir="rtl"] nav .sub-menu,
+            [dir="rtl"] .navbar .sub-menu,
+            html[lang="he"] .nav-menu .sub-menu,
+            html[lang="he"] nav .sub-menu,
+            html[lang="he"] .navbar .sub-menu,
+            html[lang="ar"] .nav-menu .sub-menu,
+            html[lang="ar"] nav .sub-menu,
+            html[lang="ar"] .navbar .sub-menu {
+              left: auto;
+              right: 0;
+            }
+            
+            /* Show submenu on parent hover - more specific selectors */
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when visible */
+            }
+            
+            /* Parent item must be relatively positioned */
+            .nav-menu li:has(.sub-menu),
+            nav li:has(.sub-menu),
+            .navbar li:has(.sub-menu) {
+              position: relative;
+            }
+            
+            /* Style for submenu items */
+            .sub-menu li {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            
+            .sub-menu a,
+            .sub-menu .menu-group-title {
+              display: block !important;
+              padding: 10px 12px !important;
+              color: #333 !important;
+              font-weight: 600 !important;
+              text-decoration: none;
+              transition: background-color 0.2s;
+              white-space: nowrap;
+              cursor: default;
+            }
+            
+            .sub-menu a:hover {
+              background-color: #f5f5f5;
+            }
+            
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+              background-color: transparent !important;
+            }
+            
+            /* On mobile, show nested menus as expandable accordion */
+            @media (max-width: 768px) {
+              /* Mobile submenu styling */
+              .nav-menu .sub-menu,
+              nav .sub-menu,
+              .navbar .sub-menu {
+                position: static !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: transparent !important;
+                margin-top: 0 !important;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+                padding: 0 !important;
+                border-radius: 0 !important;
+              }
+              
+              /* Expanded state — no internal scroll; parent navMenu scrolls */
+              .sub-menu.mobile-expanded {
+                max-height: none !important;
+                overflow-y: visible !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding: 8px 0 8px 16px !important;
+              }
+              
+              /* RTL padding adjustment */
+              [dir="rtl"] .sub-menu.mobile-expanded,
+              html[lang="he"] .sub-menu.mobile-expanded,
+              html[lang="ar"] .sub-menu.mobile-expanded {
+                padding: 8px 16px 8px 0 !important;
+              }
+              
+              /* Disable hover behavior on mobile */
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+              }
+              
+              /* Enable visibility for expanded submenus */
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+              }
+              
+              .sub-menu a {
+                padding: 10px 0 !important;
+                display: block !important;
+                font-size: 14px !important;
+                white-space: normal !important;
+              }
+              
+              .sub-menu a:hover {
+                background-color: transparent !important;
+              }
+              
+              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
+              .nav-menu li:has(.sub-menu),
+              nav li:has(.sub-menu),
+              .navbar li:has(.sub-menu) {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+                position: relative !important;
+                min-height: 44px !important;
+              }
+              
+              /* Parent link - takes full width since toggle is absolute (not a flex child) */
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                flex: 1 !important;
+                min-width: 0 !important;
+              }
+              
+              /* Normalize menu-group-title in mobile nav to match link alignment */
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                padding: 0 !important;
+                line-height: inherit !important;
+              }
+              
+              /* Submenu takes full width below parent */
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
+                flex-basis: 100% !important;
+                width: 100% !important;
+              }
+              
+              /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
+                display: none !important;
+                visibility: hidden !important;
+              }
+              
+              /* Toggle arrow button - flex child that stretches to match nav-link height */
+              .mobile-submenu-toggle {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 44px !important;
+                height: auto !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                position: static !important;
+                flex-shrink: 0 !important;
+                align-self: stretch !important;
+                z-index: 2 !important;
+                -webkit-tap-highlight-color: transparent;
+              }
+              
+              .mobile-submenu-toggle::after {
+                content: '' !important;
+                display: block !important;
+                width: 0 !important;
+                height: 0 !important;
+                border-left: 6px solid transparent !important;
+                border-right: 6px solid transparent !important;
+                border-top: 7px solid currentColor !important;
+                transition: transform 0.3s ease !important;
+              }
+              
+              /* Rotate arrow when expanded */
+              .mobile-submenu-toggle.expanded::after {
+                transform: rotate(180deg) !important;
+              }
+            }
+            
+            /* Hide toggle button on desktop */
+            @media (min-width: 769px) {
+              .mobile-submenu-toggle {
+                display: none !important;
+              }
+            }
+          </style>
+          
+          <script id="zappy-mobile-menu-script">
+            // Mobile menu toggle for nested submenus (including Menu Groups)
+            // Uses separate toggle button - link navigates, arrow toggles submenu
+            (function() {
+              function initMobileMenuToggles() {
+                // Only run on mobile
+                if (window.innerWidth > 768) {
+                  // Remove any toggle buttons on desktop
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
+                    menu.classList.remove('mobile-expanded');
+                  });
+                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  return;
+                }
+                
+                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
+                
+                // Find all parent menu items (items with .sub-menu)
+                const menuItemsWithSubmenus = document.querySelectorAll(
+                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
+                );
+                
+                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
+                
+                menuItemsWithSubmenus.forEach(function(li) {
+                  // Skip if already has toggle button
+                  if (li.querySelector('.mobile-submenu-toggle')) {
+                    return;
+                  }
+                  
+                  const submenu = li.querySelector('.sub-menu');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
+                  
+                  if (!submenu || !parentLink) return;
+                  
+                  // Create toggle button
+                  const toggleBtn = document.createElement('button');
+                  toggleBtn.className = 'mobile-submenu-toggle';
+                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+                  toggleBtn.setAttribute('type', 'button');
+
+                  // Insert toggle button after the link
+                  parentLink.insertAdjacentElement('afterend', toggleBtn);
+                  
+                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
+                  
+                  // Handle toggle button click - only toggles submenu
+                  toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isExpanded = submenu.classList.contains('mobile-expanded');
+                    
+                    // Close all other submenus first
+                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+                      if (menu !== submenu) {
+                        menu.classList.remove('mobile-expanded');
+                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
+                        if (otherToggle) otherToggle.classList.remove('expanded');
+                      }
+                    });
+                    
+                    // Toggle this submenu
+                    submenu.classList.toggle('mobile-expanded');
+                    toggleBtn.classList.toggle('expanded');
+                    
+                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
+                  });
+                  
+                  // Parent link navigates normally - no preventDefault
+                });
+              }
+              
+              // Initialize on DOM load
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
+              } else {
+                initMobileMenuToggles();
+              }
+              
+              // Re-initialize on window resize (but use debounce to avoid too many calls)
+              let resizeTimer;
+              window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(initMobileMenuToggles, 250);
+              });
+              
+              // Also initialize when mobile menu becomes visible
+              // This handles cases where the mobile menu is hidden initially
+              const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const target = mutation.target;
+                    if (target.classList.contains('active') || target.style.display !== 'none') {
+                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
+                      setTimeout(initMobileMenuToggles, 100);
+                    }
+                  }
+                });
+              });
+              
+              // Observe mobile menu containers
+              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
+              mobileMenus.forEach(function(menu) {
+                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+              });
+            })();
+          </script>
+        
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    
+    
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="איך משפרים ביצועים במערכת קיימת בלי להשבית את העבודה">
+    <meta property="og:locale" content="he_IL">
+    <!-- Twitter Card Meta Tags -->
+    
+    
+    
+    
+    <meta name="twitter:image:alt" content="איך משפרים ביצועים במערכת קיימת בלי להשבית את העבודה"><style id="zappy-ai-page-styles">.blog-improve-system-performance-blog-article-section {
+  background: #FFFFFF;
+  color: var(--text-dark);
+  padding: 120px 16px 60px;
+  direction: rtl;
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+  position: relative;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-container {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Back Link */
+.blog-improve-system-performance-blog-article-section .back-to-blog {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: color 0.2s ease, gap 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.blog-improve-system-performance-blog-article-section .back-to-blog:hover {
+  color: var(--accent);
+  gap: 10px;
+}
+
+.blog-improve-system-performance-blog-article-section .back-to-blog--bottom {
+  display: inline-flex;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* Social Share Bar */
+.blog-improve-system-performance-blog-article-section .social-share-bar {
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 12px 0;
+}
+
+.blog-improve-system-performance-blog-article-section .share-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-inline-end: 4px;
+}
+
+.blog-improve-system-performance-blog-article-section .share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.blog-improve-system-performance-blog-article-section .share-btn:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.blog-improve-system-performance-blog-article-section .share-btn svg {
+  display: block;
+}
+
+/* Hero Image */
+.blog-improve-system-performance-blog-article-section .bips-hero-image {
+  margin: 24px 0 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(30, 41, 59, 0.08);
+  line-height: 0;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Article Header */
+.blog-improve-system-performance-blog-article-section .bips-article-header {
+  margin-bottom: 32px;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-title {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+  text-align: right;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-meta svg {
+  vertical-align: middle;
+  margin-inline-end: 4px;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.blog-improve-system-performance-blog-article-section .bips-date,
+.blog-improve-system-performance-blog-article-section .bips-read-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-divider {
+  color: var(--border-light);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-category {
+  background: #EFF6FF;
+  color: var(--primary);
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #DBEAFE;
+}
+
+/* Article Body */
+.blog-improve-system-performance-blog-article-section .bips-article-body {
+  color: var(--text-dark);
+  text-align: right;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-article-body p {
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-article-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 36px 0 14px;
+  line-height: 1.3;
+  text-align: right;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.blog-improve-system-performance-blog-article-section .bips-article-body ul {
+  margin: 16px 0 24px;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-article-body ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+  line-height: 1.7;
+  color: var(--text-dark);
+  text-align: right;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-article-body ul li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-article-body ul li strong {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+/* Inline CTA */
+.blog-improve-system-performance-blog-article-section .bips-cta-inline {
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  border: 1px solid #BFDBFE;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 40px 0 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-cta-inline p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-cta-inline .btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-cta-inline .btn-primary:hover {
+  background: #1a46e0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(36, 87, 255, 0.3);
+}
+
+/* Floating WhatsApp */
+.blog-improve-system-performance-blog-article-section .bips-whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  inset-inline-start: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-whatsapp-float:hover {
+  background: #1ebe5d;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.5);
+}
+
+.blog-improve-system-performance-blog-article-section .bips-whatsapp-float svg {
+  flex-shrink: 0;
+}
+
+.blog-improve-system-performance-blog-article-section .bips-whatsapp-label {
+  white-space: nowrap;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .blog-improve-system-performance-blog-article-section {
+    padding: 100px 16px 48px;
+  }
+
+  .blog-improve-system-performance-blog-article-section .bips-container {
+    padding: 0;
+  }
+
+  .blog-improve-system-performance-blog-article-section .bips-title {
+    font-size: 1.6rem;
+  }
+
+  .blog-improve-system-performance-blog-article-section .bips-meta {
+    gap: 8px;
+  }
+
+  .blog-improve-system-performance-blog-article-section .bips-hero-image {
+    margin: 16px 0 24px;
+    border-radius: 8px;
+  }
+
+  .blog-improve-system-performance-blog-article-section .bips-article-body h2 {
+    font-size: 1.25rem;
+    margin: 28px 0 12px;
+  }
+
+  .blog-improve-system-performance-blog-article-section .bips-cta-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px;
+    gap: 16px;
+  }
+
+  .blog-improve-system-performance-blog-article-section .bips-cta-inline .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .blog-improve-system-performance-blog-article-section .bips-whatsapp-float {
+    bottom: 16px;
+    inset-inline-start: 12px;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+  }
+
+  .blog-improve-system-performance-blog-article-section .bips-whatsapp-label {
+    display: none;
+  }
+
+  .blog-improve-system-performance-blog-article-section .social-share-bar {
+    gap: 8px;
+  }
+}</style>
+    <link rel="stylesheet" href="/styles.css">
+
+    <style id="zappy-widget-visibility">
+      html[dir="rtl"] .whatsapp-float { right: 20px !important; left: auto !important; }
+      html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
+      html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
+      html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="ltr"] ._access-icon,
+      html:not([dir]) #mic-access-tool-general-button, html:not([dir]) .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool #mic-access-tool-general-button,
+      html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
+      @media (max-width: 768px) { .whatsapp-float { display: flex !important; } }
+      @media (min-width: 769px) { .whatsapp-float { display: flex !important; } }
+      @media (max-width: 768px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
+      }
+      @media (min-width: 769px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
+      }
+    </style>
+</head>
+<body>
+ <nav class="navbar" dir="rtl"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" data-phone="0523845555" aria-label="Call"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-right-group"> <div class="nav-brand"> <a href="/" class="logo-link nav-logo-link"> <span class="nav-logo-name">אריאל שוסהיים</span> <span class="nav-logo-sub">Microsoft Access Expert</span> </a> </div> <ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/experience">ניסיון מקצועי</a></li><li><a href="/about">אודות</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li><a href="/blog" class="nav-link">בלוג</a><ul class="sub-menu"><li><a href="/blog/fix-access-vs-rebuild" class="nav-link">תיקון Access</a></li><li><a href="/blog/operational-risk-signs" class="nav-link">סיכון תפעולי</a></li><li><a href="/blog/improve-system-performance" class="nav-link">שיפור ביצועים</a></li><li><a href="/blog/cloud-sql-migration-checklist" class="nav-link">מעבר לענן</a></li></ul></li></ul> </div> <div class="nav-cta-container"><a href="/contact" class="navbar-cta-btn">קבל אבחון ראשוני ←</a></div> </div> </nav> <script> // Navbar Mobile Menu Toggle and Contrast Fix (function() { // Use 'load' event instead of 'DOMContentLoaded' to ensure we run AFTER all other scripts window.addEventListener('load', function() { // FIX MOBILE BUTTON CONTRAST // Detect navbar background color and apply contrasting color to mobile buttons const navbar = document.querySelector('.navbar, nav, header'); if (!navbar) { console.log('[Navbar] Navbar element not found'); return; } // DECLARE VARIABLES EARLY to avoid Temporal Dead Zone errors // These are used in multiple places below let mobileToggle = document.getElementById('mobileToggle') || document.querySelector('.mobile-toggle') || document.querySelector('.hamburger') || document.querySelector('.hamburger-menu') || document.querySelector('.menu-toggle') || document.querySelector('.burger-menu') || document.querySelector('[aria-label="Menu"]') || document.querySelector('[aria-label="תפריט"]'); const phoneBtn = document.querySelector('.phone-header-btn'); const computedStyle = window.getComputedStyle(navbar); let bgColor = computedStyle.backgroundColor; console.log('[Navbar] Initial navbar background:', bgColor); // Check if background is transparent or rgba with 0 alpha const isTransparent = bgColor === 'transparent' || bgColor === 'rgba(0, 0, 0, 0)' || (bgColor.startsWith('rgba') && bgColor.includes(', 0)')); if (isTransparent) { // Check for background-image or gradient const bgImage = computedStyle.backgroundImage; if (bgImage && bgImage !== 'none') { console.log('[Navbar] Navbar has background image/gradient, using dark text'); bgColor = 'rgb(240, 240, 240)'; // Assume light background } else { // Transparent navbar - check body background const bodyBg = window.getComputedStyle(document.body).backgroundColor; console.log('[Navbar] Navbar transparent, using body background:', bodyBg); bgColor = bodyBg; } } // Calculate luminance to determine if background is light or dark const rgb = bgColor.match(/\d+/g); if (rgb && rgb.length >= 3) { const r = parseInt(rgb[0]); const g = parseInt(rgb[1]); const b = parseInt(rgb[2]); const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255; // Mobile button colors are set by Claude's AI-generated CSS (same as .nav-menu a) // No dynamic color overrides needed - colors come from the generated navbar CSS console.log('[Navbar] Mobile button colors preserved from Claude CSS (luminance:', luminance.toFixed(2) + ')'); // FIX ICON SIZES - Ensure SVGs are properly sized and visible // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES const criticalCSS = document.createElement('style'); criticalCSS.id = 'zappy-mobile-nav-fix'; const htmlLang = document.documentElement.lang || 'en'; const htmlDir = document.documentElement.dir || 'ltr'; // Check both dir attribute AND lang for RTL detection // dir="rtl" is the most reliable indicator const isRTL = htmlDir === 'rtl' || htmlLang === 'he' || htmlLang === 'ar'; criticalCSS.textContent = ` /* Hide mobile buttons on desktop, show only on mobile */ @media (min-width: 769px) { .mobile-toggle, .phone-header-btn { display: none !important; } } /* Show and position mobile buttons correctly on mobile */ @media (max-width: 768px) { .mobile-toggle, .phone-header-btn { position: absolute !important; top: 50% !important; transform: translateY(-50%) !important; z-index: 1001 !important; display: flex !important; align-items: center !important; justify-content: center !important; width: 36px !important; height: 36px !important; border-radius: 50% !important; border: none !important; cursor: pointer !important; padding: 6px !important; background: none !important; color: var(--nav-text, var(--text-dark)) !important; } /* LTR positioning (default): hamburger LEFT, phone RIGHT */ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .mobile-toggle, html[dir="ltr"] .mobile-toggle { left: 12px !important; right: auto !important; } html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .phone-header-btn, html[dir="ltr"] .phone-header-btn { right: 12px !important; left: auto !important; } /* RTL positioning: hamburger RIGHT, phone LEFT */ html[dir="rtl"] .mobile-toggle, html[lang="he"] .mobile-toggle, html[lang="ar"] .mobile-toggle { right: 12px !important; left: auto !important; } html[dir="rtl"] .phone-header-btn, html[lang="he"] .phone-header-btn, html[lang="ar"] .phone-header-btn { left: 12px !important; right: auto !important; } /* CRITICAL: Ensure nav-container has min-height on mobile */ /* All children are positioned absolutely/fixed on mobile, so height:auto collapses to 0 */ .nav-container { min-height: 70px !important; position: relative !important; } /* Ensure SVG icons are properly sized and inherit color */ .mobile-toggle svg, .phone-header-btn svg { width: 24px !important; height: 24px !important; /* Don't force display - let JavaScript control hamburger/close toggle */ } /* Reset nav-cta-container on mobile - remove desktop box-shadow/padding */ /* that creates a visible ghost box when CTA button is hidden */ .nav-cta-container { box-shadow: none !important; padding: 0 !important; } /* Hide nav-cta-container entirely on mobile when there's no lang-switcher */ /* (only the CTA button is inside, and it's hidden on mobile) */ .nav-cta-container:not(:has(.lang-switcher)) { display: none !important; } /* CRITICAL: Prevent hero image fade gradient from bleeding over headline text */ /* The .image-fade-gradient has bottom: -30px (extends below parent) */ /* On mobile stacked layout, this overlaps the h1 text below the image */ .hero-image-column { overflow: hidden !important; } .image-fade-gradient { bottom: 0 !important; } /* Hide desktop language switcher on mobile - hamburger menu handles it */ /* High specificity to override stored CSS */ .lang-switcher, .nav-cta-container .lang-switcher, .nav-container .lang-switcher, .navbar .lang-switcher, .navbar .nav-cta-container .lang-switcher { display: none !important; } } `; // Remove existing fix if present and inject new one const existing = document.getElementById('zappy-mobile-nav-fix'); if (existing) existing.remove(); document.head.appendChild(criticalCSS); console.log('[Navbar] Critical CSS injected for mobile nav positioning'); // ONLY apply inline positioning styles on mobile viewport // On desktop, the CSS handles hiding these buttons with display: none // Inline styles were breaking desktop layout by overriding CSS const isMobileViewport = window.innerWidth <= 768; if (mobileToggle) { // Icon sizing applies to all viewports for consistency const hamburgerIcon = mobileToggle.querySelector('.hamburger-icon'); const closeIcon = mobileToggle.querySelector('.close-icon'); if (hamburgerIcon) { hamburgerIcon.style.setProperty('width', '24px', 'important'); hamburgerIcon.style.setProperty('height', '24px', 'important'); hamburgerIcon.style.setProperty('display', 'block', 'important'); // Show hamburger by default } if (closeIcon) { closeIcon.style.setProperty('width', '24px', 'important'); closeIcon.style.setProperty('height', '24px', 'important'); closeIcon.style.setProperty('display', 'none', 'important'); // Hide close icon by default } // ONLY set positioning inline styles on mobile if (isMobileViewport) { mobileToggle.style.setProperty('position', 'absolute', 'important'); mobileToggle.style.setProperty('top', '50%', 'important'); mobileToggle.style.setProperty('transform', 'translateY(-50%)', 'important'); mobileToggle.style.setProperty('z-index', '1001', 'important'); // Clear any inline left/right so CSS can take over based on html[dir] mobileToggle.style.removeProperty('left'); mobileToggle.style.removeProperty('right'); console.log('[Navbar] Mobile toggle positioning applied (mobile viewport)'); } else { // On desktop, clear any positioning styles to let CSS handle it mobileToggle.style.removeProperty('position'); mobileToggle.style.removeProperty('top'); mobileToggle.style.removeProperty('transform'); mobileToggle.style.removeProperty('z-index'); mobileToggle.style.removeProperty('left'); mobileToggle.style.removeProperty('right'); console.log('[Navbar] Desktop viewport - cleared mobile toggle inline positioning'); } } if (phoneBtn) { // Icon sizing applies to all viewports const phoneIcon = phoneBtn.querySelector('svg'); if (phoneIcon) { phoneIcon.style.width = '24px'; phoneIcon.style.height = '24px'; phoneIcon.setAttribute('width', '24'); phoneIcon.setAttribute('height', '24'); } // ONLY set positioning inline styles on mobile if (isMobileViewport) { phoneBtn.style.setProperty('position', 'absolute', 'important'); phoneBtn.style.setProperty('top', '50%', 'important'); phoneBtn.style.setProperty('transform', 'translateY(-50%)', 'important'); phoneBtn.style.setProperty('z-index', '1001', 'important'); // Clear any inline left/right so CSS can take over based on html[dir] phoneBtn.style.removeProperty('left'); phoneBtn.style.removeProperty('right'); console.log('[Navbar] Phone button positioning applied (mobile viewport)'); } else { // On desktop, clear any positioning styles to let CSS handle it phoneBtn.style.removeProperty('position'); phoneBtn.style.removeProperty('top'); phoneBtn.style.removeProperty('transform'); phoneBtn.style.removeProperty('z-index'); phoneBtn.style.removeProperty('left'); phoneBtn.style.removeProperty('right'); console.log('[Navbar] Desktop viewport - cleared phone button inline positioning'); } } } else { console.log('[Navbar] Could not parse background color:', bgColor); } // MOBILE MENU TOGGLE // Re-query in case DOM changed (mobileToggle already declared at top of function) mobileToggle = document.getElementById('mobileToggle') || document.querySelector('.mobile-toggle') || document.querySelector('.hamburger') || document.querySelector('.hamburger-menu') || document.querySelector('.menu-toggle') || document.querySelector('.burger-menu') || document.querySelector('[aria-label="Menu"]') || document.querySelector('[aria-label="תפריט"]'); // EXPANDED SEARCH: Find nav menu by ID or class const navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu') || document.querySelector('.nav-links') || document.querySelector('nav ul:not(.submenu)'); if (!mobileToggle || !navMenu) { console.log('[Navbar] Mobile toggle or menu not found:', { toggle: !!mobileToggle, menu: !!navMenu }); return; } // Ensure navMenu has ID for CSS targeting if (!navMenu.id) { navMenu.id = 'navMenu'; } console.log('[Navbar] Initializing mobile menu...'); // Remove any existing event listeners by cloning the button const newToggle = mobileToggle.cloneNode(true); mobileToggle.parentNode.replaceChild(newToggle, mobileToggle); // Toggle menu on button click - use newToggle now newToggle.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); const hamburgerIcon = this.querySelector('.hamburger-icon'); const closeIcon = this.querySelector('.close-icon'); const isActive = navMenu.classList.contains('active'); if (isActive) { // Close menu navMenu.classList.remove('active'); if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important'); if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important'); document.body.style.overflow = ''; console.log('[Navbar] Menu closed'); } else { // Open menu navMenu.classList.add('active'); if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'none', 'important'); if (closeIcon) closeIcon.style.setProperty('display', 'block', 'important'); document.body.style.overflow = 'hidden'; console.log('[Navbar] Menu opened'); } }); // Close menu when clicking nav links (but NOT dropdown toggles) const navLinks = navMenu.querySelectorAll('a'); navLinks.forEach(function(link) { link.addEventListener('click', function() { // Don't close if it's a dropdown child (unless it's a real navigation link) if (this.getAttribute('href') === '#') return; const hamburgerIcon = newToggle.querySelector('.hamburger-icon'); const closeIcon = newToggle.querySelector('.close-icon'); navMenu.classList.remove('active'); if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important'); if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important'); document.body.style.overflow = ''; console.log('[Navbar] Menu closed (link clicked)'); }); }); // DROPDOWN MENU TOGGLE (for mobile and touch devices) var dropdownToggles = navMenu.querySelectorAll('.dropdown-toggle'); dropdownToggles.forEach(function(toggle) { toggle.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); var parent = this.closest('.nav-dropdown'); if (!parent) return; // Close other open dropdowns at the same level var siblings = parent.parentNode.querySelectorAll('.nav-dropdown.open'); siblings.forEach(function(sib) { if (sib !== parent) sib.classList.remove('open'); }); parent.classList.toggle('open'); console.log('[Navbar] Dropdown toggled:', parent.classList.contains('open') ? 'open' : 'closed'); }); }); // Close dropdowns when clicking outside document.addEventListener('click', function(e) { if (!e.target.closest('.nav-dropdown')) { var openDropdowns = document.querySelectorAll('.nav-dropdown.open'); openDropdowns.forEach(function(dd) { dd.classList.remove('open'); }); } }); console.log('[Navbar] Dropdown handlers initialized for ' + dropdownToggles.length + ' dropdowns'); // Phone button functionality (phoneBtn already declared at top of function) if (phoneBtn) { phoneBtn.addEventListener('click', function() { // Get phone number from placeholder in page or use default const phoneLinks = document.querySelectorAll('a[href^="tel:"]'); const phoneNumber = phoneLinks.length > 0 ? phoneLinks[0].getAttribute('href').replace('tel:', '') : '0523845555'; window.location.href = 'tel:' + phoneNumber; console.log('[Navbar] Phone button clicked'); }); } console.log('[Navbar] Mobile menu initialized successfully'); // === WHATSAPP BUTTON VISIBILITY FIX === // Ensure WhatsApp floating button is hidden on desktop and visible on mobile // IMPORTANT: Only target the floating button by its class, NOT generic wa.me links const handleWhatsAppVisibility = function() { const whatsappBtn = document.querySelector('.whatsapp-float'); if (whatsappBtn) { const isDesktop = window.innerWidth >= 769; if (isDesktop) { whatsappBtn.style.setProperty('display', 'none', 'important'); whatsappBtn.style.setProperty('visibility', 'hidden', 'important'); whatsappBtn.style.setProperty('opacity', '0', 'important'); whatsappBtn.style.setProperty('pointer-events', 'none', 'important'); console.log('[WhatsApp] Button hidden on desktop'); } else { whatsappBtn.style.removeProperty('display'); whatsappBtn.style.removeProperty('visibility'); whatsappBtn.style.removeProperty('opacity'); whatsappBtn.style.removeProperty('pointer-events'); console.log('[WhatsApp] Button visible on mobile'); } } }; // Run on load handleWhatsAppVisibility(); // Run on resize with debouncing let resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(handleWhatsAppVisibility, 100); }); }); })(); </script> <main class="blog-page ai-generated-page"><section class="blog-improve-system-performance-blog-article-section" data-layout-spec="איך משפרים ביצועים במערכת קיימת בלי להשבית את העבודה-blog-article" dir="rtl">
+  <div class="bips-container">
+
+    <!-- Back Link -->
+    <a href="/blog" class="back-to-blog">→ חזרה לבלוג</a>
+
+    <!-- Social Share Bar Top -->
+    <div class="social-share-bar" style="display:flex;align-items:center;gap:12px;margin:20px 0;">
+      <span class="share-label">שתף:</span>
+      <button class="share-btn share-copy" title="העתק קישור" aria-label="העתק קישור">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+      </button>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=PAGE_URL" target="_blank" rel="noopener noreferrer" class="share-btn share-linkedin" title="שתף בלינקדאין" aria-label="שתף בלינקדאין">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      <a href="https://twitter.com/intent/tweet?url=PAGE_URL" target="_blank" rel="noopener noreferrer" class="share-btn share-twitter" title="שתף בטוויטר" aria-label="שתף בטוויטר">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=PAGE_URL" target="_blank" rel="noopener noreferrer" class="share-btn share-facebook" title="שתף בפייסבוק" aria-label="שתף בפייסבוק">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+      </a>
+      <a href="https://wa.me/?text=PAGE_URL" target="_blank" rel="noopener noreferrer" class="share-btn share-whatsapp" title="שתף בווטסאפ" aria-label="שתף בווטסאפ">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.564 4.14 1.547 5.873L.057 23.859a.5.5 0 0 0 .614.614l6.041-1.49A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.516-5.17-1.414l-.37-.22-3.828.944.962-3.748-.242-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+      </a>
+    </div>
+
+    <!-- Hero Image -->
+    <figure class="bips-hero-image">
+      <img data-context="A professional tech workspace showing a Microsoft Access database running on a Windows desktop, with performance graphs and system monitoring tools visible on screen. Clean, organized office environment suggesting expert database optimization work. Warm lighting, credible and calm atmosphere, suitable for a veteran software consultant." width="1200" height="500" src="/assets/section-blog-article-blog-improve-system-performance-blog-article-image-1.webp" alt="שיפור ביצועים במערכת Access קיימת ללא הפסקת עבודה">
+    </figure>
+
+    <!-- Article Header -->
+    <header class="bips-article-header">
+      <h1 class="bips-title">איך משפרים ביצועים במערכת קיימת בלי להשבית את העבודה</h1>
+      <div class="bips-meta">
+        <span class="bips-date">
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          15 בינואר 2025
+        </span>
+        <span class="bips-divider" aria-hidden="true">·</span>
+        <span class="bips-read-time">
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          6 דקות קריאה
+        </span>
+        <span class="bips-divider" aria-hidden="true">·</span>
+        <span class="bips-category">ביצועים ואופטימיזציה</span>
+      </div>
+    </header>
+
+    <!-- Article Body -->
+    <article class="bips-article-body">
+
+      <p>אחת השאלות הנפוצות שאני שומע מלקוחות היא: "המערכת שלנו איטית, אבל אנחנו לא יכולים להרשות לעצמנו להפסיק את העבודה לשבוע שלם." זה חשש לגיטימי לחלוטין. בארגונים שבהם המערכת רצה 8–10 שעות ביום, כל שעת השבתה שווה כסף אמיתי. הבשורה הטובה: ב-90% מהמקרים, שיפור ביצועים משמעותי אפשרי בלי להשבית דבר.</p>
+
+      <h2>למה מערכות Access מאטות עם הזמן?</h2>
+      <p>מסד נתונים של Microsoft Access שנבנה לפני חמש שנים ועבד מצוין — יכול להפוך לסיוט ביצועים כשנפח הנתונים גדל, מספר המשתמשים עולה, או כשנוספים טפסים ושאילתות לא מאופטמות. הסיבות הנפוצות ביותר לאיטיות הן: שאילתות שאינן ממנפות אינדקסים, טפסים שטוענים רשומות מיותרות, קבצי MDB/ACCDB מקוטעים, וחיבורים לרשת שאינם מוגדרים נכון.</p>
+      <p>ברוב המקרים, המערכת עצמה אינה הבעיה — הבעיה היא שהיא לא עברה תחזוקה שוטפת. בדיוק כמו מנוע רכב שצריך החלפת שמן, גם מסד נתונים צריך כוונון תקופתי.</p>
+
+      <h2>שלב ראשון: אבחון לפני כל שינוי</h2>
+      <p>לפני שמתחילים לגעת בכל דבר, חשוב לאבחן את נקודות הכאב האמיתיות. אני משתמש בכלים מובנים של Access כמו Performance Analyzer ו-Query Profiler, לצד בדיקות ידניות של זמני ריצה. לרוב, 20% מהשאילתות הן אחראיות ל-80% מהאיטיות — ואלה הן שיש לטפל בהן ראשונות.</p>
+      <p>חשוב לתעד את המצב הנוכחי לפני כל שינוי: זמני טעינה, מספר רשומות, גרסאות Office, ותצורת הרשת. כך ניתן למדוד בדיוק את ההשפעה של כל שיפור.</p>
+
+      <h2>אופטימיזציה בזמן אמת — בלי להפסיק את העבודה</h2>
+      <p>הטכניקה המועדפת עליי היא עבודה בשכבות. במקום לסגור את המערכת ולבצע שדרוג מסיבי, אני מבצע שינויים קטנים ומדידים בזמן שהמערכת פועלת:</p>
+      <ul>
+        <li><strong>הוספת אינדקסים לשדות מחושבים:</strong> ניתן לבצע ברקע, ללא השפעה על המשתמשים הפעילים.</li>
+        <li><strong>פיצול שאילתות כבדות:</strong> שאילתה אחת שמחשבת 50,000 רשומות יכולה להפוך לשתי שאילתות קלות יותר.</li>
+        <li><strong>דחיסה ותיקון (Compact &amp; Repair):</strong> מבוצעת בשעות הלילה או בסוף יום העבודה — לוקחת פחות מדקה ומשפרת ביצועים מיידית.</li>
+        <li><strong>מעבר לנתונים מקושרים:</strong> הפרדת הנתונים מהממשק מאפשרת עדכון הממשק בלי לגעת בנתונים.</li>
+      </ul>
+
+      <h2>מתי כן צריך חלון תחזוקה?</h2>
+      <p>יש מקרים שבהם שינוי מבני גדול — כמו שינוי מבנה טבלה, הוספת עמודה לטבלה עם מיליוני רשומות, או שינוי קשרי יחסים — דורש חלון תחזוקה קצר. במקרים כאלה, אני ממליץ לתכנן את החלון בסוף שבוע או בשעות הלילה, ולוודא שיש גיבוי מלא לפני כל שינוי. בדרך כלל מדובר בשעה עד שלוש שעות — לא שבוע.</p>
+
+      <h2>תוצאות אמיתיות מהשטח</h2>
+      <p>במערכת ניהול ציוד שפיתחתי עבור ארגון בטיחות, זמן טעינת הדוחות ירד מ-45 שניות ל-4 שניות — בלי שינוי שורת קוד אחת בלוגיקה העסקית, ובלי השבתת המערכת. הכל בוצע דרך אופטימיזציה של שאילתות ואינדקסים. במקרה אחר, מערכת בית ספר שהאטה בצורה קריטית לאחר שנוספו 3,000 תלמידים — שוחזרה לביצועים מלאים תוך יום עבודה אחד.</p>
+      <p>המסר שאני רוצה להעביר הוא פשוט: מערכת איטית אינה בהכרח מערכת שצריך לזרוק. לפני שמתחילים לדבר על פיתוח מחדש, שווה להשקיע כמה שעות באבחון מקצועי. לרוב, הפתרון קרוב הרבה יותר ממה שנדמה.</p>
+
+      <div class="bips-cta-inline">
+        <p>רוצים לבדוק אם המערכת שלכם ניתנת לשיפור ביצועים?</p>
+        <a href="/contact" class="btn-primary">צרו קשר לאבחון ראשוני</a>
+      </div>
+
+    </article>
+
+    <!-- Social Share Bar Bottom -->
+    <div class="social-share-bar" style="display:flex;align-items:center;gap:12px;margin:20px 0;">
+      <span class="share-label">שתף:</span>
+      <button class="share-btn share-copy" title="העתק קישור" aria-label="העתק קישור">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+      </button>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=PAGE_URL" target="_blank" rel="noopener noreferrer" class="share-btn share-linkedin" title="שתף בלינקדאין" aria-label="שתף בלינקדאין">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      <a href="https://twitter.com/intent/tweet?url=PAGE_URL" target="_blank" rel="noopener noreferrer" class="share-btn share-twitter" title="שתף בטוויטר" aria-label="שתף בטוויטר">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=PAGE_URL" target="_blank" rel="noopener noreferrer" class="share-btn share-facebook" title="שתף בפייסבוק" aria-label="שתף בפייסבוק">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+      </a>
+      <a href="https://wa.me/?text=PAGE_URL" target="_blank" rel="noopener noreferrer" class="share-btn share-whatsapp" title="שתף בווטסאפ" aria-label="שתף בווטסאפ">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.564 4.14 1.547 5.873L.057 23.859a.5.5 0 0 0 .614.614l6.041-1.49A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.516-5.17-1.414l-.37-.22-3.828.944.962-3.748-.242-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+      </a>
+    </div>
+
+    <!-- Back Link Bottom -->
+    <a href="/blog" class="back-to-blog back-to-blog--bottom">→ חזרה לבלוג</a>
+
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" class="bips-whatsapp-float" aria-label="פתח שיחה בווטסאפ">
+    <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.564 4.14 1.547 5.873L.057 23.859a.5.5 0 0 0 .614.614l6.041-1.49A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.655-.516-5.17-1.414l-.37-.22-3.828.944.962-3.748-.242-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+    <span class="bips-whatsapp-label">שלח הודעה</span>
+  </a>
+
+</section></main> 
+
+
+
+<footer class="nf" dir="rtl" aria-label="Footer"> <div class="nf__wrap"> <div class="nf__grid"> <div class="nf__col-brand"> <a href="/" class="nf__brand-logo" aria-label="אריאל פיתוח תוכנה"> <img src="/assets/logo.webp" alt="אריאל פיתוח תוכנה" data-element-type="image" data-element-id="img-1778358244483-1r295lybz" data-zappy-footer-image="true" > </a> <p class="nf__brand-desc">מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות.</p> </div> <div class="nf__col-nav"> <p class="nf__col-title">ניווט מהיר</p> <ul class="nf__links"> <li><a href="/services">שירותים</a></li> <li><a href="/experience">ניסיון מקצועי</a></li> <li><a href="/about">אודות</a></li> <li><a href="/contact">צור קשר</a></li> </ul> </div> <div class="nf__col-contact"> <p class="nf__col-title">יצירת קשר</p> <ul class="nf__links"> <li> <a href="tel:0523845555"> <i class="fas fa-phone" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-yu2dss4h0" data-icon-type="fontawesome"></i> 0523845555 </a> </li> <li> <a href="mailto:ariel@ariel10.net" > <i class="fas fa-envelope" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-ajbzcdc06" data-icon-type="fontawesome" style="cursor: pointer;"></i> ariel@ariel10.net </a> </li> <li> <a href="https://maps.google.com/?q=קרני+יהודה+135/17+ירושלים" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:flex-start;gap:inherit"> <i class="fas fa-map-marker-alt" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-g2mz8i2t9" data-icon-type="fontawesome"></i>קרני יהודה 135/17, ירושלים, 97293, ישראל</a> </li> <li> <a href="https://wa.me/972523845555" aria-label="WhatsApp"> <i class="fab fa-whatsapp" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-8wav6bgct" data-icon-type="fontawesome"></i> WhatsApp </a> </li> <li> <a href="https://www.linkedin.com/in/%D7%90%D7%A8%D7%99%D7%90%D7%9C-%D7%A9%D7%95%D7%A1%D7%94%D7%99%D7%99%D7%9D-8954506/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" > <i class="fab fa-linkedin" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778398679013-a0ywdv1bm" data-icon-type="fontawesome" style="cursor: pointer;"></i> LinkedIn </a> </li> </ul> </div> </div> <div class="nf__bottom"> <div class="nf__bottom-inner"> <p class="nf__copy">© 2000–2025 אריאל פיתוח תוכנה. כל הזכויות שמורות.</p> <nav class="nf__legal" aria-label="קישורים משפטיים"> <a href="/privacy">מדיניות פרטיות</a> <a href="/terms">תנאי שימוש</a> <a href="/accessibility">הצהרת נגישות</a> </nav> </div> </div> </div> </footer> <a href="https://wa.me/972523845555?text=שלום, הגעתי מהאתר שלך ואני מעוניין לברר" class="whatsapp-cta-fixed" aria-label="WhatsApp" style="display: flex !important; align-items: center !important; gap: 10px !important; padding: 14px 24px !important; font-size: 16px !important; font-weight: 700 !important; border-radius: 50px !important; background-color: #25D366 !important; color: #ffffff !important; text-decoration: none !important; position: fixed !important; bottom: 28px !important; left: 28px !important; z-index: 9999 !important; box-shadow: 0 4px 20px rgba(37,211,102,0.45) !important;"> <i class="fa-brands fa-whatsapp" style="font-size: 26px !important; color: #ffffff !important; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', FontAwesome !important; font-weight: 400 !important; font-style: normal !important; display: inline-block !important; line-height: 1 !important; -webkit-font-smoothing: antialiased !important;"></i> <span style="font-family: 'Heebo', sans-serif; white-space: nowrap; color: #ffffff !important;">וואטסאפ</span> </a> <div data-integration="accessibility:toolbar"></div> 
+<script id="zappy-share-script">
+(function() {
+  function getShareUrl() {
+    // Priority 1: Check for deployed site URL meta tag (set by Zappy when site is published)
+    var siteUrl = document.querySelector('meta[name="zappy-site-url"]');
+    if (siteUrl && siteUrl.content) {
+      var basePath = window.location.pathname;
+      var pageParam = new URLSearchParams(window.location.search).get('page');
+      var pagePath = pageParam || basePath;
+      if (pagePath.startsWith('/api/website/preview')) pagePath = '/';
+      return siteUrl.content.replace(/\/$/, '') + pagePath;
+    }
+    var c = document.querySelector('link[rel="canonical"]');
+    if (c && c.href && !c.href.includes('localhost') && !c.href.includes('preview')) return c.href;
+    var m = document.querySelector('meta[property="og:url"]');
+    if (m && m.content && !m.content.includes('localhost') && !m.content.includes('preview')) return m.content;
+    var isPreview = window.location.href.includes('preview') || window.location.href.includes('localhost') || window.location.href.includes('auth_token');
+    if (isPreview) return null;
+    return window.location.origin + window.location.pathname;
+  }
+  function setShareHref(selectors, href, isDisabled) {
+    selectors.forEach(function(sel) {
+      document.querySelectorAll(sel).forEach(function(el) {
+        if (isDisabled) {
+          el.style.opacity = '0.5';
+          el.style.cursor = 'not-allowed';
+          el.title = 'Share links will work after publishing';
+          el.onclick = function(e) { e.preventDefault(); };
+        } else {
+          el.href = href;
+        }
+      });
+    });
+  }
+  // Normalize share bars to ensure all 5 icons are present
+  function normalizeShareBars() {
+    var shareBars = document.querySelectorAll('.social-share-bar');
+    if (shareBars.length === 0) return;
+    // Define all required share icons with their SVG
+    var shareIcons = {
+      copy: { selectors: ['.share-copy', 'button[title="Copy link"]', 'a[title="Copy link"]'], 
+        html: '<a href="#" class="share-copy" title="Copy link" style="color:#666;display:flex;align-items:center;cursor:pointer;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></a>' },
+      linkedin: { selectors: ['.share-linkedin', 'a[title="LinkedIn"]'], 
+        html: '<a href="#" class="share-linkedin" target="_blank" title="LinkedIn" style="color:#0a66c2!important;display:flex;align-items:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>' },
+      twitter: { selectors: ['.share-twitter', 'a[title="Twitter"]', 'a[title="Twitter/X"]', 'a[title="X"]'], 
+        html: '<a href="#" class="share-twitter" target="_blank" title="X" style="color:#000!important;display:flex;align-items:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>' },
+      facebook: { selectors: ['.share-facebook', 'a[title="Facebook"]'], 
+        html: '<a href="#" class="share-facebook" target="_blank" title="Facebook" style="color:#1877f2!important;display:flex;align-items:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>' },
+      whatsapp: { selectors: ['.share-whatsapp', 'a[title="WhatsApp"]'], 
+        html: '<a href="#" class="share-whatsapp" target="_blank" title="WhatsApp" style="color:#25d366!important;display:flex;align-items:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>' }
+    };
+    // Order of icons (right to left for RTL, so we add in this order)
+    var iconOrder = ['copy', 'linkedin', 'twitter', 'facebook', 'whatsapp'];
+    shareBars.forEach(function(bar) {
+      iconOrder.forEach(function(iconKey) {
+        var icon = shareIcons[iconKey];
+        var exists = icon.selectors.some(function(sel) { return bar.querySelector(sel); });
+        if (!exists) {
+          // Find the label span and insert after it
+          var label = bar.querySelector('span');
+          if (label) {
+            label.insertAdjacentHTML('afterend', icon.html);
+          } else {
+            bar.insertAdjacentHTML('afterbegin', icon.html);
+          }
+        }
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    // First normalize the share bars to ensure all icons exist
+    normalizeShareBars();
+    var url = getShareUrl();
+    var title = document.title;
+    var isDisabled = !url;
+    if (isDisabled) console.log('[Zappy] Share links disabled in preview mode - will work after publishing');
+    // WhatsApp
+    setShareHref(['.share-whatsapp', 'a[title="WhatsApp"]', 'a[title="whatsapp"]'], 
+      url ? 'https://wa.me/?text=' + encodeURIComponent(title + ' ' + url) : '#', isDisabled);
+    // Facebook
+    setShareHref(['.share-facebook', 'a[title="Facebook"]', 'a[title="facebook"]'], 
+      url ? 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) : '#', isDisabled);
+    // Twitter/X
+    setShareHref(['.share-twitter', 'a[title="Twitter"]', 'a[title="Twitter/X"]', 'a[title="X"]'], 
+      url ? 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(title) : '#', isDisabled);
+    // LinkedIn
+    setShareHref(['.share-linkedin', 'a[title="LinkedIn"]', 'a[title="linkedin"]'], 
+      url ? 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title) : '#', isDisabled);
+    // Copy link button
+    ['.share-copy', 'button[title="Copy link"]', 'button[title="copy"]', 'a[title="Copy link"]'].forEach(function(sel) {
+      document.querySelectorAll(sel).forEach(function(el) {
+        if (isDisabled) {
+          el.style.opacity = '0.5';
+          el.style.cursor = 'not-allowed';
+          el.title = 'Copy link will work after publishing';
+          el.onclick = function(e) { e.preventDefault(); };
+        } else {
+          el.onclick = function(e) {
+            e.preventDefault();
+            navigator.clipboard.writeText(url).then(function() {
+              var orig = el.innerHTML;
+              el.innerHTML = '✓';
+              setTimeout(function() { el.innerHTML = orig; }, 1500);
+            });
+          };
+        }
+      });
+    });
+  });
+})();
+</script>
+    <script src="/script.js"></script>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
+    })();
+    </script>
+</body>
+</html>

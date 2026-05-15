@@ -26,6 +26,26 @@ https://www.ariel10.net/about
 https://www.ariel10.net/contact
 מערכת Access עושה בעיות? צרו קשר לאבחון מהיר ללא עלות. טלפון: 0523845555 | WhatsApp | אימייל. מענה תוך 24 שעות, שירות מרחוק לכל הארץ.
 
+### בלוג מקצועי - אריאל פיתוח תוכנה
+https://www.ariel10.net/blog
+אריאל פיתוח תוכנה - בלוג מקצועי - אריאל פיתוח תוכנה
+
+### תיקון Access
+https://www.ariel10.net/blog/fix-access-vs-rebuild
+מאמר שמסביר איך להחליט בין תיקון מערכת Access קיימת לבין פיתוח מחדש, ומהם השיקולים העסקיים, הטכניים והתפעוליים.
+
+### סיכון תפעולי
+https://www.ariel10.net/blog/operational-risk-signs
+מאמר שמציג סימני אזהרה מוקדמים למערכת עסקית לא יציבה, ומה כדאי לבדוק לפני שהתקלה הופכת להשבתה.
+
+### שיפור ביצועים
+https://www.ariel10.net/blog/improve-system-performance
+מאמר שמציג גישה מדורגת לשיפור ביצועים במערכת קיימת, תוך שמירה על רציפות עסקית ומינימום הפרעה למשתמשים.
+
+### מעבר לענן
+https://www.ariel10.net/blog/cloud-sql-migration-checklist
+מאמר שמסביר אילו בדיקות חשוב לבצע לפני מעבר של מערכת ותיקה לענן או ל-SQL, כדי להימנע מתקלות, עיכובים וסיכונים עסקיים.
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -55,11 +75,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text)
-  - `email` (email)
+  - `name` (text, required)
+  - `email` (email, required)
   - `phone` (tel)
-  - `message` (textarea)
-  - `privacy_consent` (checkbox)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
