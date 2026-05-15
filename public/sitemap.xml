@@ -31,24 +31,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ariel10.net/blog</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ariel10.net/blog\performance</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ariel10.net/access-slow</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.ariel10.net/privacy</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>

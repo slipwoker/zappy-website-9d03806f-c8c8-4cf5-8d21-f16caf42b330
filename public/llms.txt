@@ -26,17 +26,6 @@ https://www.ariel10.net/contact
 https://www.ariel10.net/about
 אריאל — מפתח עצמאי עם מעל 25 שנות ניסיון בתיקון, ייצוב ושיפור מערכות Microsoft Access. גישת אבחון ותיקון ממוקד, שמירה על מה שעובד, תקשורת ישירה ומהירה.
 
-### מאמרים
-https://www.ariel10.net/blog
-מאמרים מקצועיים על Microsoft Access — טיפים, פתרונות, שיפורי ביצועים, תיקון תקלות והמלצות מתוך 25+ שנות ניסיון אמיתי.
-
-### שיפור ביצועים
-https://www.ariel10.net/blog\performance
-
-### Access איטי
-https://www.ariel10.net/access-slow
-מערכת Access איטית? הסיבות הנפוצות לבעיות ביצועים ב-Microsoft Access ואיך משפרים מהירות ויציבות בלי לבנות הכל מחדש.
-
 ## Legal & Policy
 
 ### Privacy Policy
@@ -69,7 +58,7 @@ Information about WCAG compliance and accessibility features.
   - `name` (text, required)
   - `email` (email, required)
   - `phone` (tel)
-  - `message` (textarea, required)
+  - `message` (textarea)
   - `privacy_consent` (checkbox, required)
 
 ---
