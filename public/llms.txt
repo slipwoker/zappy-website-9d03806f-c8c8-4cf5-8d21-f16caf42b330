@@ -33,8 +33,8 @@ https://www.ariel10.net/blog
 ### Page
 https://www.ariel10.net/blog/access-slow
 
-### Page
-https://www.ariel10.net/slow-access
+### Access איטי
+https://www.ariel10.net/access-slow
 
 ## Legal & Policy
 
@@ -65,11 +65,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text)
-  - `email` (email)
+  - `name` (text, required)
+  - `email` (email, required)
   - `phone` (tel)
-  - `message` (textarea)
-  - `privacy_consent` (checkbox)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
