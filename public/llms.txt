@@ -50,6 +50,10 @@ https://www.ariel10.net/blog/cloud-sql-migration-checklist
 https://www.ariel10.net/safety-software
 אריאל פיתוח תוכנה - תוכנה לניהול בטיחות - אריאל פיתוח תוכנה
 
+### תוכנה לניהול ספרייה - אריאל פיתוח תוכנה
+https://www.ariel10.net/library-software
+אריאל פיתוח תוכנה - תוכנה לניהול ספרייה - אריאל פיתוח תוכנה
+
 ## Legal & Policy
 
 ### Privacy Policy

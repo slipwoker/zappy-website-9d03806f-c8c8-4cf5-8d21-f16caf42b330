@@ -1,0 +1,3055 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>תוכנה לניהול ספרייה - אריאל פיתוח תוכנה</title>
+    <meta name="description" content="אריאל פיתוח תוכנה - תוכנה לניהול ספרייה - אריאל פיתוח תוכנה">
+    <meta name="keywords" content="">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '9d03806f-c8c8-4cf5-8d21-f16caf42b330',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <meta property="og:title" content="תוכנה לניהול ספרייה - אריאל פיתוח תוכנה">
+    <meta property="og:description" content="אריאל פיתוח תוכנה - תוכנה לניהול ספרייה - אריאל פיתוח תוכנה">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="תוכנה לניהול ספרייה - אריאל פיתוח תוכנה">
+    <meta name="twitter:description" content="אריאל פיתוח תוכנה - תוכנה לניהול ספרייה - אריאל פיתוח תוכנה">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.ariel10.net#organization","name":"אריאל פיתוח תוכנה","url":"https://www.ariel10.net","description":"Ariel Software Development is a one-person expert consultancy specializing in Microsoft Access systems with over 25 years of hands-on experience. The brand identity is built around being the trusted 'rescue expert' — the professional who steps in when systems fail, developers disappear, or legacy databases become liabilities. The tone is direct, results-driven, and confidence-inspiring, emphasizing that in 90% of cases, systems can be fixed without rebuilding from scratch. The business has a proven track record with real-world deployments including Yad Vashem, school networks, safety management systems, and equestrian associations — projecting deep credibility and enterprise-level expertise.","address":{"@type":"PostalAddress","streetAddress":"קרני יהודה 135/17, ירושלים, 97293, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"ariel@ariel10.net","telephone":"0523845555"}]},{"@type":"WebSite","@id":"https://www.ariel10.net#website","url":"https://www.ariel10.net","name":"אריאל פיתוח תוכנה","publisher":{"@id":"https://www.ariel10.net#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ariel10.net"},{"@type":"ListItem","position":2,"name":"Library Software","item":"https://www.ariel10.net/library-software"}]}]}</script>
+    <link rel="canonical" href="https://ariel10.net/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ariel10.net/#business",
+      "name": "אריאל פיתוח תוכנה",
+      "alternateName": "Ariel Software Development",
+      "description": "מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות. שירות מרחוק, אבחון ראשוני ללא עלות, תגובה תוך 24 שעות.",
+      "url": "https://ariel10.net",
+      "telephone": "+972523845555",
+      "email": "ariel@ariel10.net",
+      "foundingDate": "2000",
+      "priceRange": "$",
+      "currenciesAccepted": "ILS",
+      "paymentAccepted": "Cash, Bank Transfer",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Israel"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "קרני יהודה 135/17",
+        "addressLocality": "ירושלים",
+        "addressRegion": "ירושלים",
+        "postalCode": "97293",
+        "addressCountry": "IL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.7683,
+        "longitude": 35.2137
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "serviceType": "Microsoft Access Database Development, Repair and Optimization",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "שירותי Microsoft Access",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "תיקון תקלות קריטיות ב-Access"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שדרוג מערכות Access לגרסאות חדשות"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "שיפור ביצועים ואופטימיזציה"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "מיגרציה ל-SQL Server"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "אוטומציה עם Excel"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "תחזוקה שוטפת ותמיכה"}}
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/%D7%90%D7%A8%D7%99%D7%90%D7%9C-%D7%A9%D7%95%D7%A1%D7%94%D7%99%D7%99%D7%9D-8954506/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ariel10.net/#person",
+      "name": "אריאל שוסהיים",
+      "alternateName": "Ariel Shusheim",
+      "jobTitle": "Microsoft Access Expert",
+      "description": "מומחה Microsoft Access עם 25+ שנות ניסיון בתיקון, ייצוב ושדרוג מערכות קיימות.",
+      "url": "https://ariel10.net",
+      "email": "ariel@ariel10.net",
+      "telephone": "+972523845555",
+      "worksFor": {"@id": "https://ariel10.net/#business"},
+      "knowsAbout": ["Microsoft Access", "VBA", "SQL Server", "Microsoft Excel", "Database Optimization", "Legacy System Migration"],
+      "sameAs": [
+        "https://www.linkedin.com/in/%D7%90%D7%A8%D7%99%D7%90%D7%9C-%D7%A9%D7%95%D7%A1%D7%94%D7%99%D7%99%D7%9D-8954506/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ariel10.net/#website",
+      "url": "https://ariel10.net",
+      "name": "אריאל פיתוח תוכנה — מומחה Microsoft Access",
+      "description": "מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות. 25+ שנות ניסיון.",
+      "inLanguage": "he",
+      "publisher": {"@id": "https://ariel10.net/#business"}
+    }
+  ]
+}
+</script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript> <!-- Favicons --> <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"> <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"> <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png"> <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png"> <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"> <!-- Performance: preconnect to external domains --> <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+ <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+ <link rel="preconnect" href="https://cdn.jsdelivr.net">
+ <!-- Preload hero image for LCP performance -->
+ <link rel="preload" as="image" href="/assets/site-index-hero-image-1-adjust-1778395750169-u3hsfm.webp?v=1778395752258" type="image/webp" fetchpriority="high"> <!-- Google Ads tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-1018170941"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-1018170941');
+</script>
+
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID to activate -->
+<!-- GA4_PLACEHOLDER_START
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+GA4_PLACEHOLDER_END --> <!-- Cookie Consent --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css"> <script defer="" src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script> <!-- Mickidum Accessibility Toolbar --> <script defer="" src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script> <style data-zappy-section-v2-css="true">/* ═══════════════════════════════════════════ HERO-CLEAN ═══════════════════════════════════════════ */ .hero-clean { background: var(--bg-light); border-bottom: 1px solid rgba(15,23,42,0.06); padding: 64px 24px 64px; direction: rtl; } .hero-clean__inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: center; } .hero-clean__img-col { order: 0; position: relative; } .hero-clean__img { width: 100%; height: 430px; object-fit: cover; border-radius: 14px; display: block; box-shadow: 0 10px 28px rgba(15,23,42,0.09); filter: saturate(0.9); position: relative; } .hero-clean__text-col { order: 1; display: flex; flex-direction: column; gap: 10px; max-width: 100%; text-align: right; margin-right: 0; margin-left: 0; } .hero-clean__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(36,87,255,0.04); border: 1px solid rgba(36,87,255,0.13); border-radius: 100px; padding: 4px 12px; font-size: 0.70rem; font-weight: 600; color: var(--text-dark); width: fit-content; letter-spacing: 0.04em; white-space: nowrap; } .hero-clean__h1 { margin: 0; padding: 0; color: var(--text-dark); font-size: 3.45rem; font-weight: 800; line-height: 1.10; letter-spacing: -0.5px; } .hero-clean__h1 span { display: block; } .hero-clean__h1-accent { color: var(--primary); } .hero-clean__subtitle { margin: 0; font-size: 1.05rem; font-weight: 600; line-height: 1.8; color: var(--text-dark); } .hero-clean__trust { margin: 0; font-size: 0.84rem; font-weight: 500; color: var(--text-muted); } .hero-clean__pain { margin: 0; font-size: 0.86rem; line-height: 1.6; color: var(--text-muted); } .hero-clean__buttons { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 2px; } .hero-clean__btn-primary { background: var(--primary); color: #ffffff; font-size: 0.93rem; font-weight: 700; padding: 12px 24px; min-height: 48px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; box-shadow: 0 8px 20px rgba(30,78,216,0.16); transition: box-shadow 0.2s ease, transform 0.15s ease; } .hero-clean__btn-primary:hover { box-shadow: 0 10px 26px rgba(30,78,216,0.26); transform: translateY(-1px); } .hero-clean__btn-whatsapp { background: #1F9A4B; color: #ffffff; border: none; font-size: 0.93rem; font-weight: 600; padding: 12px 24px; min-height: 48px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; transition: background 0.2s ease, transform 0.15s ease; } .hero-clean__btn-whatsapp:hover { background: #17863f; transform: translateY(-1px); } .hero-clean__note { margin: 0; font-size: 0.79rem; color: var(--text-muted); display: flex; align-items: center; gap: 5px; justify-content: flex-end; } .hero-clean__orgs-wrap { border-top: 1px solid rgba(30,46,66,0.08); padding-top: 8px; margin-top: 4px; } .hero-clean__orgs-label { margin: 0 0 2px; font-size: 0.68rem; font-weight: 700; color: rgba(30,42,60,0.50); letter-spacing: 0.08em; text-transform: uppercase; } .hero-clean__orgs { margin: 0; font-size: 0.83rem; font-weight: 500; color: rgba(30,42,60,0.72); line-height: 1.55; } @media (max-width: 900px) { .hero-clean__inner { grid-template-columns: 1fr; gap: 18px; } .hero-clean__img-col { order: -1; } .hero-clean__img { height: 280px; } .hero-clean__text-col { max-width: 100%; } .hero-clean__h1 { font-size: 2.2rem; } } @media (max-width: 768px) { .hero-clean { padding: 72px 20px 32px; overflow: hidden; } .hero-clean__inner { gap: 18px; } .hero-clean__h1 { font-size: clamp(1.55rem, 7vw, 1.9rem); line-height: 1.22; letter-spacing: -0.3px; max-width: 100%; overflow-wrap: break-word; word-break: keep-all; } .hero-clean__subtitle, .hero-clean__trust, .hero-clean__badge { max-width: 100%; overflow-wrap: break-word; } .hero-clean__badge { display: inline-flex; flex-wrap: wrap; justify-content: center; line-height: 1.4; font-size: 0.66rem; padding: 8px 14px; white-space: normal; } .hero-clean__img { height: 220px; display: block; } .hero-clean__buttons { flex-direction: column; align-items: stretch; gap: 12px; } .hero-clean__btn-primary, .hero-clean__btn-whatsapp { width: 100%; justify-content: center; min-height: 50px; font-size: 0.92rem; padding: 14px 18px; box-sizing: border-box; } .hero-clean__img-col, .hero-clean__text-col, .hero-clean__inner { box-sizing: border-box; max-width: 100%; } }</style> <style>
+      /* Dropdown sub-menu styles */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 400;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style>
+          <style id="zappy-cta-mobile-style">
+            /* Hide CTA list item on desktop (tablets and up) */
+            @media (min-width: 769px) {
+              .nav-cta-item-mobile {
+                display: none !important;
+              }
+            }
+            /* Show CTA list item on mobile */
+            @media (max-width: 768px) {
+              .nav-cta-item-mobile {
+                display: list-item !important;
+              }
+            }
+          </style>
+        
+          <style id="zappy-nested-menu-style">
+            /* Desktop only: vertically center nav items */
+            @media (min-width: 769px) {
+              .nav-menu,
+              #navMenu {
+                align-items: center !important;
+              }
+            }
+            
+            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+            }
+            
+            /* Desktop: show submenu on Menu Group hover */
+            li:has(.menu-group-title):hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when hovering */
+            }
+            
+            /* Hide menu items marked as hidden (overrides hover states) */
+            .zappy-hidden-menu-item,
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
+              display: none !important;
+              opacity: 0 !important;
+              visibility: hidden !important;
+              pointer-events: none !important;
+            }
+            
+            /* Keep submenu visible when hovering over the submenu itself */
+            .sub-menu:hover {
+              opacity: 1 !important;
+              visibility: visible !important;
+              pointer-events: auto !important;
+            }
+            
+            /* Nested dropdown menu styles - using more specific selectors */
+            .nav-menu .sub-menu,
+            nav .sub-menu,
+            .navbar .sub-menu {
+              display: block !important; /* Ensure submenu is in the DOM */
+              position: absolute !important;
+              top: 100%;
+              left: 0;
+              right: auto;
+              min-width: 200px;
+              background: white;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              border-radius: 8px;
+              padding: 8px 0;
+              margin-top: 0px; /* Remove gap to prevent hover loss */
+              opacity: 0 !important;
+              visibility: hidden !important;
+              transform: translateY(-10px);
+              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+              z-index: 1000;
+              list-style: none;
+              pointer-events: none; /* Prevent interaction when hidden */
+            }
+            
+            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            [dir="rtl"] .nav-menu .sub-menu,
+            [dir="rtl"] nav .sub-menu,
+            [dir="rtl"] .navbar .sub-menu,
+            html[lang="he"] .nav-menu .sub-menu,
+            html[lang="he"] nav .sub-menu,
+            html[lang="he"] .navbar .sub-menu,
+            html[lang="ar"] .nav-menu .sub-menu,
+            html[lang="ar"] nav .sub-menu,
+            html[lang="ar"] .navbar .sub-menu {
+              left: auto;
+              right: 0;
+            }
+            
+            /* Show submenu on parent hover - more specific selectors */
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when visible */
+            }
+            
+            /* Parent item must be relatively positioned */
+            .nav-menu li:has(.sub-menu),
+            nav li:has(.sub-menu),
+            .navbar li:has(.sub-menu) {
+              position: relative;
+            }
+            
+            /* Style for submenu items */
+            .sub-menu li {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            
+            .sub-menu a,
+            .sub-menu .menu-group-title {
+              display: block !important;
+              padding: 10px 12px !important;
+              color: #333 !important;
+              font-weight: 600 !important;
+              text-decoration: none;
+              transition: background-color 0.2s;
+              white-space: nowrap;
+              cursor: default;
+            }
+            
+            .sub-menu a:hover {
+              background-color: #f5f5f5;
+            }
+            
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+              background-color: transparent !important;
+            }
+            
+            /* On mobile, show nested menus as expandable accordion */
+            @media (max-width: 768px) {
+              /* Mobile submenu styling */
+              .nav-menu .sub-menu,
+              nav .sub-menu,
+              .navbar .sub-menu {
+                position: static !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: transparent !important;
+                margin-top: 0 !important;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+                padding: 0 !important;
+                border-radius: 0 !important;
+              }
+              
+              /* Expanded state — no internal scroll; parent navMenu scrolls */
+              .sub-menu.mobile-expanded {
+                max-height: none !important;
+                overflow-y: visible !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding: 8px 0 8px 16px !important;
+              }
+              
+              /* RTL padding adjustment */
+              [dir="rtl"] .sub-menu.mobile-expanded,
+              html[lang="he"] .sub-menu.mobile-expanded,
+              html[lang="ar"] .sub-menu.mobile-expanded {
+                padding: 8px 16px 8px 0 !important;
+              }
+              
+              /* Disable hover behavior on mobile */
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+              }
+              
+              /* Enable visibility for expanded submenus */
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+              }
+              
+              .sub-menu a {
+                padding: 10px 0 !important;
+                display: block !important;
+                font-size: 14px !important;
+                white-space: normal !important;
+              }
+              
+              .sub-menu a:hover {
+                background-color: transparent !important;
+              }
+              
+              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
+              .nav-menu li:has(.sub-menu),
+              nav li:has(.sub-menu),
+              .navbar li:has(.sub-menu) {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+                position: relative !important;
+                min-height: 44px !important;
+              }
+              
+              /* Parent link - takes full width since toggle is absolute (not a flex child) */
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                flex: 1 !important;
+                min-width: 0 !important;
+              }
+              
+              /* Normalize menu-group-title in mobile nav to match link alignment */
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                padding: 0 !important;
+                line-height: inherit !important;
+              }
+              
+              /* Submenu takes full width below parent */
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
+                flex-basis: 100% !important;
+                width: 100% !important;
+              }
+              
+              /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
+                display: none !important;
+                visibility: hidden !important;
+              }
+              
+              /* Toggle arrow button - flex child that stretches to match nav-link height */
+              .mobile-submenu-toggle {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 44px !important;
+                height: auto !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                position: static !important;
+                flex-shrink: 0 !important;
+                align-self: stretch !important;
+                z-index: 2 !important;
+                -webkit-tap-highlight-color: transparent;
+              }
+              
+              .mobile-submenu-toggle::after {
+                content: '' !important;
+                display: block !important;
+                width: 0 !important;
+                height: 0 !important;
+                border-left: 6px solid transparent !important;
+                border-right: 6px solid transparent !important;
+                border-top: 7px solid currentColor !important;
+                transition: transform 0.3s ease !important;
+              }
+              
+              /* Rotate arrow when expanded */
+              .mobile-submenu-toggle.expanded::after {
+                transform: rotate(180deg) !important;
+              }
+            }
+            
+            /* Hide toggle button on desktop */
+            @media (min-width: 769px) {
+              .mobile-submenu-toggle {
+                display: none !important;
+              }
+            }
+          </style>
+          
+          <script id="zappy-mobile-menu-script">
+            // Mobile menu toggle for nested submenus (including Menu Groups)
+            // Uses separate toggle button - link navigates, arrow toggles submenu
+            (function() {
+              function initMobileMenuToggles() {
+                // Only run on mobile
+                if (window.innerWidth > 768) {
+                  // Remove any toggle buttons on desktop
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
+                    menu.classList.remove('mobile-expanded');
+                  });
+                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  return;
+                }
+                
+                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
+                
+                // Find all parent menu items (items with .sub-menu)
+                const menuItemsWithSubmenus = document.querySelectorAll(
+                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
+                );
+                
+                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
+                
+                menuItemsWithSubmenus.forEach(function(li) {
+                  // Skip if already has toggle button
+                  if (li.querySelector('.mobile-submenu-toggle')) {
+                    return;
+                  }
+                  
+                  const submenu = li.querySelector('.sub-menu');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
+                  
+                  if (!submenu || !parentLink) return;
+                  
+                  // Create toggle button
+                  const toggleBtn = document.createElement('button');
+                  toggleBtn.className = 'mobile-submenu-toggle';
+                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+                  toggleBtn.setAttribute('type', 'button');
+
+                  // Insert toggle button after the link
+                  parentLink.insertAdjacentElement('afterend', toggleBtn);
+                  
+                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
+                  
+                  // Handle toggle button click - only toggles submenu
+                  toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isExpanded = submenu.classList.contains('mobile-expanded');
+                    
+                    // Close all other submenus first
+                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+                      if (menu !== submenu) {
+                        menu.classList.remove('mobile-expanded');
+                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
+                        if (otherToggle) otherToggle.classList.remove('expanded');
+                      }
+                    });
+                    
+                    // Toggle this submenu
+                    submenu.classList.toggle('mobile-expanded');
+                    toggleBtn.classList.toggle('expanded');
+                    
+                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
+                  });
+                  
+                  // Parent link navigates normally - no preventDefault
+                });
+              }
+              
+              // Initialize on DOM load
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
+              } else {
+                initMobileMenuToggles();
+              }
+              
+              // Re-initialize on window resize (but use debounce to avoid too many calls)
+              let resizeTimer;
+              window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(initMobileMenuToggles, 250);
+              });
+              
+              // Also initialize when mobile menu becomes visible
+              // This handles cases where the mobile menu is hidden initially
+              const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const target = mutation.target;
+                    if (target.classList.contains('active') || target.style.display !== 'none') {
+                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
+                      setTimeout(initMobileMenuToggles, 100);
+                    }
+                  }
+                });
+              });
+              
+              // Observe mobile menu containers
+              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
+              mobileMenus.forEach(function(menu) {
+                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+              });
+            })();
+          </script>
+        
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    
+    
+    
+    <meta property="og:locale" content="he_IL">
+    <!-- Twitter Card Meta Tags -->
+    
+    
+    
+    <style id="zappy-ai-page-styles">.library-software-hero-section {
+  position: relative;
+  background: #FFFFFF;
+  color: var(--text-dark);
+  padding: 120px 24px 80px;
+  overflow: visible;
+  direction: rtl;
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+}
+
+/* Decorative blob */
+.library-software-hero-section .lsh-blob {
+  position: absolute;
+  top: -60px;
+  left: -80px;
+  width: 520px;
+  height: 480px;
+  background: radial-gradient(ellipse at 60% 40%, rgba(37,99,235,0.09) 0%, rgba(37,99,235,0.03) 55%, transparent 75%);
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  pointer-events: none;
+  z-index: 0;
+  aria-hidden: true;
+}
+
+.library-software-hero-section .lsh-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Grid */
+.library-software-hero-section .lsh-grid {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: 56px;
+  align-items: center;
+  direction: rtl;
+}
+
+/* ── Text column ── */
+.library-software-hero-section .lsh-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.library-software-hero-section .lsh-eyebrow {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.library-software-hero-section .lsh-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.library-software-hero-section .lsh-h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  margin: 0 0 20px 0;
+  text-align: right;
+}
+
+.library-software-hero-section .lsh-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0 0 32px 0;
+  text-align: right;
+  max-width: 520px;
+}
+
+/* Feature list */
+.library-software-hero-section .lsh-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.library-software-hero-section .lsh-feature-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  text-align: right;
+}
+
+.library-software-hero-section .lsh-feature-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(36,87,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-top: 1px;
+}
+
+/* CTA row */
+.library-software-hero-section .lsh-cta-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.library-software-hero-section .lsh-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(36,87,255,0.25);
+  white-space: nowrap;
+}
+
+.library-software-hero-section .lsh-btn-primary:hover {
+  background: #1a46e0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(36,87,255,0.35);
+}
+
+.library-software-hero-section .lsh-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-dark);
+  padding: 13px 22px;
+  border-radius: 8px;
+  border: 2px solid var(--border-light);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.library-software-hero-section .lsh-btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* ── Visual column ── */
+.library-software-hero-section .lsh-visual-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Editorial tag */
+.library-software-hero-section .lsh-editorial-tag {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  background: rgba(47,163,107,0.1);
+  color: #1a7a4f;
+  border: 1px solid rgba(47,163,107,0.25);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-bottom: 4px;
+}
+
+/* Mockup card */
+.library-software-hero-section .lsh-mockup-card {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  box-shadow: 0 12px 48px rgba(30,41,59,0.12), 0 2px 8px rgba(30,41,59,0.06);
+  overflow: hidden;
+}
+
+/* Title bar */
+.library-software-hero-section .lsh-mockup-titlebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  background: #F8FAFC;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.library-software-hero-section .lsh-titlebar-dots {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.library-software-hero-section .lsh-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.library-software-hero-section .lsh-dot-red { background: #FC6058; }
+.library-software-hero-section .lsh-dot-yellow { background: #FEC02F; }
+.library-software-hero-section .lsh-dot-green { background: #2ACA44; }
+
+.library-software-hero-section .lsh-titlebar-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #94A3B8;
+  flex: 1;
+  text-align: center;
+}
+
+/* Toolbar */
+.library-software-hero-section .lsh-mockup-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-light);
+  background: #FAFAF7;
+}
+
+.library-software-hero-section .lsh-mock-search {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #94A3B8;
+  font-size: 0.75rem;
+}
+
+.library-software-hero-section .lsh-search-placeholder {
+  color: #CBD5E1;
+  font-size: 0.75rem;
+}
+
+.library-software-hero-section .lsh-mock-btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.library-software-hero-section .lsh-mock-btn {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #F1F5F9;
+  color: #475569;
+  border: 1px solid var(--border-light);
+  white-space: nowrap;
+}
+
+.library-software-hero-section .lsh-mock-btn-accent {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+}
+
+/* Stats row */
+.library-software-hero-section .lsh-mockup-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-light);
+  background: #FAFAF7;
+}
+
+.library-software-hero-section .lsh-stat-pill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 100px;
+  padding: 4px 12px;
+}
+
+.library-software-hero-section .lsh-stat-pill-alert {
+  border-color: rgba(239,68,68,0.3);
+  background: rgba(239,68,68,0.05);
+}
+
+.library-software-hero-section .lsh-stat-num {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.library-software-hero-section .lsh-stat-lbl {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.library-software-hero-section .lsh-stat-pill-alert .lsh-stat-num {
+  color: #DC2626;
+}
+
+/* Table */
+.library-software-hero-section .lsh-mock-table {
+  padding: 0;
+}
+
+.library-software-hero-section .lsh-mock-thead {
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr 1.4fr 1fr;
+  gap: 0;
+  padding: 8px 14px;
+  background: #F8FAFC;
+  border-bottom: 1px solid var(--border-light);
+  direction: rtl;
+}
+
+.library-software-hero-section .lsh-mock-thead span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  text-align: right;
+}
+
+.library-software-hero-section .lsh-mock-row {
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr 1.4fr 1fr;
+  gap: 0;
+  padding: 9px 14px;
+  border-bottom: 1px solid #F1F5F9;
+  align-items: center;
+  direction: rtl;
+  transition: background 0.15s ease;
+}
+
+.library-software-hero-section .lsh-mock-row:hover {
+  background: #F8FAFC;
+}
+
+.library-software-hero-section .lsh-mock-row:last-child {
+  border-bottom: none;
+}
+
+.library-software-hero-section .lsh-mock-row-muted {
+  opacity: 0.6;
+}
+
+.library-software-hero-section .lsh-book-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.library-software-hero-section .lsh-reader-name {
+  font-size: 0.75rem;
+  color: #475569;
+  text-align: right;
+}
+
+.library-software-hero-section .lsh-date {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.library-software-hero-section .lsh-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 100px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.library-software-hero-section .lsh-status-ok {
+  background: rgba(47,163,107,0.12);
+  color: #1a7a4f;
+}
+
+.library-software-hero-section .lsh-status-warn {
+  background: rgba(239,68,68,0.1);
+  color: #B91C1C;
+}
+
+.library-software-hero-section .lsh-status-available {
+  background: rgba(36,87,255,0.1);
+  color: var(--primary);
+}
+
+/* Mockup footer */
+.library-software-hero-section .lsh-mockup-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 14px;
+  background: #F8FAFC;
+  border-top: 1px solid var(--border-light);
+}
+
+.library-software-hero-section .lsh-mockup-footer span {
+  font-size: 0.68rem;
+  color: #94A3B8;
+}
+
+.library-software-hero-section .lsh-mock-pager {
+  font-size: 0.68rem;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: default;
+}
+
+/* Bottom separator */
+.library-software-hero-section::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border-light);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .library-software-hero-section .lsh-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .library-software-hero-section .lsh-visual-col {
+    align-items: stretch;
+  }
+
+  .library-software-hero-section .lsh-editorial-tag {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .library-software-hero-section {
+    padding: 100px 16px 60px;
+  }
+
+  .library-software-hero-section .lsh-blob {
+    width: 280px;
+    height: 260px;
+    top: -30px;
+    left: -40px;
+  }
+
+  .library-software-hero-section .lsh-h1 {
+    font-size: 2rem;
+  }
+
+  .library-software-hero-section .lsh-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .library-software-hero-section .lsh-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .library-software-hero-section .lsh-btn-primary,
+  .library-software-hero-section .lsh-btn-outline {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .library-software-hero-section .lsh-mock-thead,
+  .library-software-hero-section .lsh-mock-row {
+    grid-template-columns: 2fr 1.2fr 0fr 1fr;
+  }
+
+  .library-software-hero-section .lsh-date {
+    display: none;
+  }
+
+  .library-software-hero-section .lsh-mock-thead span:nth-child(3),
+  .library-software-hero-section .lsh-mock-row span:nth-child(3) {
+    display: none;
+  }
+
+  .library-software-hero-section .lsh-mock-thead,
+  .library-software-hero-section .lsh-mock-row {
+    grid-template-columns: 2fr 1.4fr 1fr;
+  }
+
+  .library-software-hero-section .lsh-mockup-stats {
+    flex-wrap: wrap;
+  }
+
+  .library-software-hero-section .lsh-mock-btn-group {
+    display: none;
+  }
+
+  .library-software-hero-section .lsh-mock-search {
+    border-radius: 6px;
+  }
+}
+/* ZAPPY_POSTGEN_GUARD_HERO_FONT_CAP:library-software-hero */
+.hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: min(var(--display-xl, 6rem), 6rem) !important; line-height: var(--leading-display, 1.05); }
+@media (max-width: 768px) {
+  .hero h1, .hero-section h1, [class*="hero-"] h1, [class~="hero"] h1, .hero .hero-title, .hero-title { font-size: clamp(2rem, 9vw, 3rem) !important; }
+}
+
+
+.library-software-services-section {
+  background: #FFFFFF;
+  color: var(--text-dark);
+  padding: 72px 24px 80px;
+  position: relative;
+  overflow: visible;
+  direction: rtl;
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+}
+
+.library-software-services-section .lss-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.library-software-services-section .lss-header {
+  margin-bottom: 48px;
+  max-width: 680px;
+}
+
+.library-software-services-section .lss-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+  text-align: right;
+}
+
+.library-software-services-section .lss-subtitle {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: right;
+}
+
+/* Grid */
+.library-software-services-section .lss-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  direction: rtl;
+}
+
+@media (min-width: 768px) {
+  .library-software-services-section .lss-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Card */
+.library-software-services-section .lss-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(30, 41, 59, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+  position: relative;
+}
+
+.library-software-services-section .lss-card:hover {
+  box-shadow: 0 12px 40px rgba(30, 41, 59, 0.12);
+  transform: translateY(-3px);
+}
+
+.library-software-services-section .lss-card-top-bar {
+  height: 4px;
+  background: var(--primary);
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.library-software-services-section .lss-card-inner {
+  padding: 28px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+/* Icon */
+.library-software-services-section .lss-card-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #EFF6FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+
+/* Card Content */
+.library-software-services-section .lss-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.library-software-services-section .lss-card-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin: 0 0 10px;
+  text-align: right;
+}
+
+.library-software-services-section .lss-card-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 18px;
+  text-align: right;
+}
+
+/* Feature list */
+.library-software-services-section .lss-feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.library-software-services-section .lss-feature-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  text-align: right;
+}
+
+.library-software-services-section .lss-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Decorative dot pattern */
+.library-software-services-section .lss-dots-decoration {
+  position: absolute;
+  bottom: 40px;
+  left: 24px;
+  width: 180px;
+  height: 120px;
+  background-image: radial-gradient(circle, rgba(203, 213, 225, 0.55) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Mobile overrides */
+@media (max-width: 767px) {
+  .library-software-services-section {
+    padding: 48px 16px 56px;
+  }
+
+  .library-software-services-section .lss-header {
+    margin-bottom: 32px;
+  }
+
+  .library-software-services-section .lss-title {
+    font-size: 1.6rem;
+  }
+
+  .library-software-services-section .lss-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+
+  .library-software-services-section .lss-card-inner {
+    padding: 22px 20px 22px;
+  }
+
+  .library-software-services-section .lss-dots-decoration {
+    display: none;
+  }
+}
+
+.library-software-benefits-section {
+  position: relative;
+  overflow: visible;
+  background-color: #1F2933;
+  background-image:
+    radial-gradient(ellipse at 10% 80%, rgba(36, 87, 255, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 20%, rgba(47, 163, 107, 0.07) 0%, transparent 50%),
+    linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+  color: var(--text-light);
+  padding: 80px 24px 120px;
+  direction: rtl;
+}
+
+.library-software-benefits-section .lsb-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── HEADER ── */
+.library-software-benefits-section .lsb-header {
+  text-align: right;
+  max-width: 640px;
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+  margin-bottom: 52px;
+}
+
+.library-software-benefits-section .lsb-title {
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text-light);
+  margin: 0 0 16px 0;
+}
+
+.library-software-benefits-section .lsb-subtitle {
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(250, 250, 247, 0.72);
+  margin: 0;
+}
+
+/* ── GRID ── */
+.library-software-benefits-section .lsb-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 44px;
+  direction: rtl;
+}
+
+@media (min-width: 768px) {
+  .library-software-benefits-section .lsb-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ── CARD ── */
+.library-software-benefits-section .lsb-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.library-software-benefits-section .lsb-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.library-software-benefits-section .lsb-card-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 14px 14px 0 0;
+}
+
+.library-software-benefits-section .lsb-card-accent--green {
+  background: var(--accent);
+}
+
+.library-software-benefits-section .lsb-card-accent--blue {
+  background: linear-gradient(90deg, var(--primary), #5B8DFF);
+}
+
+.library-software-benefits-section .lsb-card-inner {
+  padding: 28px 24px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* ── ICON ── */
+.library-software-benefits-section .lsb-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(36, 87, 255, 0.15);
+  color: #7BAAFF;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.library-software-benefits-section .lsb-icon-wrap--green {
+  background: rgba(47, 163, 107, 0.15);
+  color: #5DD4A0;
+}
+
+.library-software-benefits-section .lsb-icon-wrap--blue {
+  background: rgba(91, 141, 255, 0.15);
+  color: #93B8FF;
+}
+
+/* ── CARD CONTENT ── */
+.library-software-benefits-section .lsb-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.library-software-benefits-section .lsb-card-title {
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-light);
+  margin: 0;
+  text-align: right;
+}
+
+.library-software-benefits-section .lsb-card-text {
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(250, 250, 247, 0.68);
+  margin: 0;
+  text-align: right;
+}
+
+/* ── TRUST BAR ── */
+.library-software-benefits-section .lsb-trust-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 28px;
+}
+
+.library-software-benefits-section .lsb-trust-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  direction: rtl;
+}
+
+.library-software-benefits-section .lsb-trust-label {
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(250, 250, 247, 0.5);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.library-software-benefits-section .lsb-trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+.library-software-benefits-section .lsb-trust-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  color: rgba(250, 250, 247, 0.75);
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.library-software-benefits-section .lsb-trust-item svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.library-software-benefits-section .lsb-trust-item span {
+  color: rgba(250, 250, 247, 0.75);
+}
+
+/* ── DIVIDER ── */
+.library-software-benefits-section .lsb-divider-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.library-software-benefits-section .lsb-divider-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .library-software-benefits-section {
+    padding: 60px 16px 100px;
+  }
+
+  .library-software-benefits-section .lsb-header {
+    margin-bottom: 36px;
+    max-width: 100%;
+  }
+
+  .library-software-benefits-section .lsb-title {
+    font-size: 1.6rem;
+  }
+
+  .library-software-benefits-section .lsb-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .library-software-benefits-section .lsb-card-inner {
+    padding: 22px 18px;
+  }
+
+  .library-software-benefits-section .lsb-trust-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .library-software-benefits-section .lsb-trust-list {
+    gap: 8px 16px;
+  }
+}
+
+.library-software-process-section {
+  background: #FFFFFF;
+  color: var(--text-dark);
+  padding: 80px 20px 100px;
+  position: relative;
+  overflow: visible;
+  direction: rtl;
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+}
+
+.library-software-process-section .lsp-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ── Header ── */
+.library-software-process-section .lsp-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.library-software-process-section .lsp-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px 0;
+}
+
+.library-software-process-section .lsp-subtitle {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── Steps Grid ── */
+.library-software-process-section .lsp-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  direction: rtl;
+  margin-bottom: 56px;
+  position: relative;
+}
+
+/* ── Single Step ── */
+.library-software-process-section .lsp-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 20px;
+  position: relative;
+}
+
+.library-software-process-section .lsp-step-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Number circle */
+.library-software-process-section .lsp-step-number {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(36, 87, 255, 0.25);
+}
+
+/* Connector line */
+.library-software-process-section .lsp-step-connector {
+  flex: 1;
+  height: 2px;
+  background: var(--border-light);
+  margin-inline-start: 10px;
+  position: relative;
+}
+
+.library-software-process-section .lsp-step-connector::after {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  height: 2px;
+  background: var(--primary);
+  opacity: 0.35;
+}
+
+.library-software-process-section .lsp-step-connector--hidden {
+  background: transparent;
+}
+
+.library-software-process-section .lsp-step-connector--hidden::after {
+  display: none;
+}
+
+/* Step content */
+.library-software-process-section .lsp-step-content {
+  width: 100%;
+  text-align: right;
+}
+
+.library-software-process-section .lsp-step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.35;
+  margin: 0 0 10px 0;
+}
+
+.library-software-process-section .lsp-step-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Demo Panel ── */
+.library-software-process-section .lsp-demo-panel {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 14px;
+  padding: 32px 36px;
+  margin-top: 8px;
+}
+
+.library-software-process-section .lsp-demo-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  direction: rtl;
+}
+
+.library-software-process-section .lsp-demo-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 12px;
+  background: rgba(36, 87, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.library-software-process-section .lsp-demo-text {
+  flex: 1;
+  text-align: right;
+}
+
+.library-software-process-section .lsp-demo-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+}
+
+.library-software-process-section .lsp-demo-desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.library-software-process-section .lsp-demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 13px 26px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(36, 87, 255, 0.25);
+}
+
+.library-software-process-section .lsp-demo-btn:hover {
+  background: #1a45e0;
+  box-shadow: 0 8px 24px rgba(36, 87, 255, 0.35);
+}
+
+/* ── Responsive: Tablet (2 columns) ── */
+@media (max-width: 900px) {
+  .library-software-process-section .lsp-steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 0;
+  }
+
+  .library-software-process-section .lsp-step {
+    padding: 0 16px;
+  }
+
+  /* Hide connectors on second row */
+  .library-software-process-section .lsp-step:nth-child(2) .lsp-step-connector,
+  .library-software-process-section .lsp-step:nth-child(4) .lsp-step-connector {
+    background: transparent;
+  }
+
+  .library-software-process-section .lsp-step:nth-child(2) .lsp-step-connector::after,
+  .library-software-process-section .lsp-step:nth-child(4) .lsp-step-connector::after {
+    display: none;
+  }
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 640px) {
+  .library-software-process-section {
+    padding: 60px 16px 72px;
+  }
+
+  .library-software-process-section .lsp-header {
+    margin-bottom: 40px;
+  }
+
+  .library-software-process-section .lsp-title {
+    font-size: 1.6rem;
+  }
+
+  .library-software-process-section .lsp-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .library-software-process-section .lsp-steps {
+    grid-template-columns: 1fr !important;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+
+  .library-software-process-section .lsp-step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .library-software-process-section .lsp-step-top {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .library-software-process-section .lsp-step-number {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 0.95rem;
+  }
+
+  .library-software-process-section .lsp-step-connector {
+    width: 2px;
+    height: 40px;
+    flex: none;
+    margin-inline-start: 0;
+    margin-top: 6px;
+    background: var(--border-light);
+  }
+
+  .library-software-process-section .lsp-step-connector::after {
+    width: 2px;
+    height: 40%;
+    inset-inline-start: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .library-software-process-section .lsp-step-connector--hidden {
+    background: transparent;
+    height: 0;
+  }
+
+  .library-software-process-section .lsp-step-content {
+    padding-top: 6px;
+  }
+
+  .library-software-process-section .lsp-step-title {
+    font-size: 1rem;
+  }
+
+  .library-software-process-section .lsp-demo-panel {
+    padding: 24px 20px;
+  }
+
+  .library-software-process-section .lsp-demo-inner {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+  }
+
+  .library-software-process-section .lsp-demo-icon {
+    align-self: flex-end;
+  }
+
+  .library-software-process-section .lsp-demo-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.library-software-cta-section {
+  background-color: #1F2933;
+  background-image:
+    radial-gradient(ellipse at 10% 80%, rgba(36,87,255,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 20%, rgba(47,163,107,0.07) 0%, transparent 50%),
+    linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+  color: var(--text-light);
+  padding: 88px 20px;
+  position: relative;
+  overflow: visible;
+  direction: rtl;
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+}
+
+.library-software-cta-section .cta-container {
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.library-software-cta-section .cta-inner-panel {
+  background: rgba(255,255,255,0.035);
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  padding: 56px 52px;
+  position: relative;
+}
+
+.library-software-cta-section .cta-top-line {
+  display: none;
+}
+
+.library-software-cta-section .cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.library-software-cta-section .cta-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-light);
+  text-align: right;
+  margin: 0 0 18px 0;
+  max-width: 720px;
+  letter-spacing: -0.01em;
+}
+
+.library-software-cta-section .cta-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(250,250,247,0.82);
+  text-align: right;
+  margin: 0 0 32px 0;
+  max-width: 680px;
+}
+
+.library-software-cta-section .cta-contact-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.library-software-cta-section .cta-contact-item {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 4px 0;
+}
+
+.library-software-cta-section .cta-contact-item:hover {
+  color: var(--accent);
+}
+
+.library-software-cta-section .cta-contact-item i {
+  color: var(--accent);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.library-software-cta-section .cta-contact-divider {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background: var(--border-dark);
+  margin: 0 20px;
+  flex-shrink: 0;
+}
+
+.library-software-cta-section .cta-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.library-software-cta-section .btn-primary.cta-btn-main {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+}
+
+.library-software-cta-section .btn-primary.cta-btn-main:hover {
+  background: #1a46e0;
+  box-shadow: 0 6px 24px rgba(36,87,255,0.35);
+  transform: translateY(-1px);
+}
+
+.library-software-cta-section .cta-btn-outline {
+  background: transparent;
+  color: var(--text-light);
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(250,250,247,0.45);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  font-family: 'IBM Plex Sans Hebrew', 'Assistant', 'Heebo', sans-serif;
+}
+
+.library-software-cta-section .cta-btn-outline:hover {
+  border-color: var(--text-light);
+  background: rgba(255,255,255,0.07);
+  color: var(--text-light);
+}
+
+.library-software-cta-section .cta-trust-line {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: rgba(250,250,247,0.55);
+  text-align: right;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.library-software-cta-section .cta-trust-line i {
+  color: var(--accent);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .library-software-cta-section {
+    padding: 56px 16px;
+  }
+
+  .library-software-cta-section .cta-inner-panel {
+    padding: 36px 24px;
+    border-radius: 12px;
+  }
+
+  .library-software-cta-section .cta-heading {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+
+  .library-software-cta-section .cta-description {
+    margin-bottom: 24px;
+  }
+
+  .library-software-cta-section .cta-contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .library-software-cta-section .cta-contact-divider {
+    display: none;
+  }
+
+  .library-software-cta-section .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .library-software-cta-section .btn-primary.cta-btn-main,
+  .library-software-cta-section .cta-btn-outline {
+    justify-content: center;
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  .library-software-cta-section .cta-trust-line {
+    font-size: 0.8rem;
+  }
+}</style>
+    <link rel="stylesheet" href="/styles.css">
+
+    <style id="zappy-widget-visibility">
+      html[dir="rtl"] .whatsapp-float { right: 20px !important; left: auto !important; }
+      html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
+      html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
+      html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="ltr"] ._access-icon,
+      html:not([dir]) #mic-access-tool-general-button, html:not([dir]) .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool #mic-access-tool-general-button,
+      html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
+      @media (max-width: 768px) { .whatsapp-float { display: flex !important; } }
+      @media (min-width: 769px) { .whatsapp-float { display: flex !important; } }
+      @media (max-width: 768px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
+      }
+      @media (min-width: 769px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
+      }
+    </style>
+</head>
+<body>
+ <nav class="navbar" dir="rtl"> <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"> <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"> <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;"> <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> </button> <button class="phone-header-btn" data-phone="0523845555" aria-label="Call"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> </button> <div class="nav-container"> <div class="nav-right-group"> <div class="nav-brand"> <a href="/" class="logo-link nav-logo-link"> <span class="nav-logo-name">אריאל שוסהיים</span> <span class="nav-logo-sub">Microsoft Access Expert</span> </a> </div> <ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/experience">ניסיון מקצועי</a></li><li><a href="/about">אודות</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li><a href="/blog" class="nav-link">בלוג</a><ul class="sub-menu"><li><a href="/blog/fix-access-vs-rebuild" class="nav-link">תיקון Access</a></li><li><a href="/blog/operational-risk-signs" class="nav-link">סיכון תפעולי</a></li><li><a href="/blog/improve-system-performance" class="nav-link">שיפור ביצועים</a></li><li><a href="/blog/cloud-sql-migration-checklist" class="nav-link">מעבר לענן</a></li></ul></li><li><a href="/safety-software" class="nav-link">בטיחות</a></li><li><a href="/library-software" class="nav-link">ספרייה</a></li></ul> </div> <div class="nav-cta-container"><a href="/contact" class="navbar-cta-btn">קבל אבחון ראשוני ←</a></div> </div> </nav> <script> // Navbar Mobile Menu Toggle and Contrast Fix (function() { // Use 'load' event instead of 'DOMContentLoaded' to ensure we run AFTER all other scripts window.addEventListener('load', function() { // FIX MOBILE BUTTON CONTRAST // Detect navbar background color and apply contrasting color to mobile buttons const navbar = document.querySelector('.navbar, nav, header'); if (!navbar) { console.log('[Navbar] Navbar element not found'); return; } // DECLARE VARIABLES EARLY to avoid Temporal Dead Zone errors // These are used in multiple places below let mobileToggle = document.getElementById('mobileToggle') || document.querySelector('.mobile-toggle') || document.querySelector('.hamburger') || document.querySelector('.hamburger-menu') || document.querySelector('.menu-toggle') || document.querySelector('.burger-menu') || document.querySelector('[aria-label="Menu"]') || document.querySelector('[aria-label="תפריט"]'); const phoneBtn = document.querySelector('.phone-header-btn'); const computedStyle = window.getComputedStyle(navbar); let bgColor = computedStyle.backgroundColor; console.log('[Navbar] Initial navbar background:', bgColor); // Check if background is transparent or rgba with 0 alpha const isTransparent = bgColor === 'transparent' || bgColor === 'rgba(0, 0, 0, 0)' || (bgColor.startsWith('rgba') && bgColor.includes(', 0)')); if (isTransparent) { // Check for background-image or gradient const bgImage = computedStyle.backgroundImage; if (bgImage && bgImage !== 'none') { console.log('[Navbar] Navbar has background image/gradient, using dark text'); bgColor = 'rgb(240, 240, 240)'; // Assume light background } else { // Transparent navbar - check body background const bodyBg = window.getComputedStyle(document.body).backgroundColor; console.log('[Navbar] Navbar transparent, using body background:', bodyBg); bgColor = bodyBg; } } // Calculate luminance to determine if background is light or dark const rgb = bgColor.match(/\d+/g); if (rgb && rgb.length >= 3) { const r = parseInt(rgb[0]); const g = parseInt(rgb[1]); const b = parseInt(rgb[2]); const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255; // Mobile button colors are set by Claude's AI-generated CSS (same as .nav-menu a) // No dynamic color overrides needed - colors come from the generated navbar CSS console.log('[Navbar] Mobile button colors preserved from Claude CSS (luminance:', luminance.toFixed(2) + ')'); // FIX ICON SIZES - Ensure SVGs are properly sized and visible // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES const criticalCSS = document.createElement('style'); criticalCSS.id = 'zappy-mobile-nav-fix'; const htmlLang = document.documentElement.lang || 'en'; const htmlDir = document.documentElement.dir || 'ltr'; // Check both dir attribute AND lang for RTL detection // dir="rtl" is the most reliable indicator const isRTL = htmlDir === 'rtl' || htmlLang === 'he' || htmlLang === 'ar'; criticalCSS.textContent = ` /* Hide mobile buttons on desktop, show only on mobile */ @media (min-width: 769px) { .mobile-toggle, .phone-header-btn { display: none !important; } } /* Show and position mobile buttons correctly on mobile */ @media (max-width: 768px) { .mobile-toggle, .phone-header-btn { position: absolute !important; top: 50% !important; transform: translateY(-50%) !important; z-index: 1001 !important; display: flex !important; align-items: center !important; justify-content: center !important; width: 36px !important; height: 36px !important; border-radius: 50% !important; border: none !important; cursor: pointer !important; padding: 6px !important; background: none !important; color: var(--nav-text, var(--text-dark)) !important; } /* LTR positioning (default): hamburger LEFT, phone RIGHT */ html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .mobile-toggle, html[dir="ltr"] .mobile-toggle { left: 12px !important; right: auto !important; } html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .phone-header-btn, html[dir="ltr"] .phone-header-btn { right: 12px !important; left: auto !important; } /* RTL positioning: hamburger RIGHT, phone LEFT */ html[dir="rtl"] .mobile-toggle, html[lang="he"] .mobile-toggle, html[lang="ar"] .mobile-toggle { right: 12px !important; left: auto !important; } html[dir="rtl"] .phone-header-btn, html[lang="he"] .phone-header-btn, html[lang="ar"] .phone-header-btn { left: 12px !important; right: auto !important; } /* CRITICAL: Ensure nav-container has min-height on mobile */ /* All children are positioned absolutely/fixed on mobile, so height:auto collapses to 0 */ .nav-container { min-height: 70px !important; position: relative !important; } /* Ensure SVG icons are properly sized and inherit color */ .mobile-toggle svg, .phone-header-btn svg { width: 24px !important; height: 24px !important; /* Don't force display - let JavaScript control hamburger/close toggle */ } /* Reset nav-cta-container on mobile - remove desktop box-shadow/padding */ /* that creates a visible ghost box when CTA button is hidden */ .nav-cta-container { box-shadow: none !important; padding: 0 !important; } /* Hide nav-cta-container entirely on mobile when there's no lang-switcher */ /* (only the CTA button is inside, and it's hidden on mobile) */ .nav-cta-container:not(:has(.lang-switcher)) { display: none !important; } /* CRITICAL: Prevent hero image fade gradient from bleeding over headline text */ /* The .image-fade-gradient has bottom: -30px (extends below parent) */ /* On mobile stacked layout, this overlaps the h1 text below the image */ .hero-image-column { overflow: hidden !important; } .image-fade-gradient { bottom: 0 !important; } /* Hide desktop language switcher on mobile - hamburger menu handles it */ /* High specificity to override stored CSS */ .lang-switcher, .nav-cta-container .lang-switcher, .nav-container .lang-switcher, .navbar .lang-switcher, .navbar .nav-cta-container .lang-switcher { display: none !important; } } `; // Remove existing fix if present and inject new one const existing = document.getElementById('zappy-mobile-nav-fix'); if (existing) existing.remove(); document.head.appendChild(criticalCSS); console.log('[Navbar] Critical CSS injected for mobile nav positioning'); // ONLY apply inline positioning styles on mobile viewport // On desktop, the CSS handles hiding these buttons with display: none // Inline styles were breaking desktop layout by overriding CSS const isMobileViewport = window.innerWidth <= 768; if (mobileToggle) { // Icon sizing applies to all viewports for consistency const hamburgerIcon = mobileToggle.querySelector('.hamburger-icon'); const closeIcon = mobileToggle.querySelector('.close-icon'); if (hamburgerIcon) { hamburgerIcon.style.setProperty('width', '24px', 'important'); hamburgerIcon.style.setProperty('height', '24px', 'important'); hamburgerIcon.style.setProperty('display', 'block', 'important'); // Show hamburger by default } if (closeIcon) { closeIcon.style.setProperty('width', '24px', 'important'); closeIcon.style.setProperty('height', '24px', 'important'); closeIcon.style.setProperty('display', 'none', 'important'); // Hide close icon by default } // ONLY set positioning inline styles on mobile if (isMobileViewport) { mobileToggle.style.setProperty('position', 'absolute', 'important'); mobileToggle.style.setProperty('top', '50%', 'important'); mobileToggle.style.setProperty('transform', 'translateY(-50%)', 'important'); mobileToggle.style.setProperty('z-index', '1001', 'important'); // Clear any inline left/right so CSS can take over based on html[dir] mobileToggle.style.removeProperty('left'); mobileToggle.style.removeProperty('right'); console.log('[Navbar] Mobile toggle positioning applied (mobile viewport)'); } else { // On desktop, clear any positioning styles to let CSS handle it mobileToggle.style.removeProperty('position'); mobileToggle.style.removeProperty('top'); mobileToggle.style.removeProperty('transform'); mobileToggle.style.removeProperty('z-index'); mobileToggle.style.removeProperty('left'); mobileToggle.style.removeProperty('right'); console.log('[Navbar] Desktop viewport - cleared mobile toggle inline positioning'); } } if (phoneBtn) { // Icon sizing applies to all viewports const phoneIcon = phoneBtn.querySelector('svg'); if (phoneIcon) { phoneIcon.style.width = '24px'; phoneIcon.style.height = '24px'; phoneIcon.setAttribute('width', '24'); phoneIcon.setAttribute('height', '24'); } // ONLY set positioning inline styles on mobile if (isMobileViewport) { phoneBtn.style.setProperty('position', 'absolute', 'important'); phoneBtn.style.setProperty('top', '50%', 'important'); phoneBtn.style.setProperty('transform', 'translateY(-50%)', 'important'); phoneBtn.style.setProperty('z-index', '1001', 'important'); // Clear any inline left/right so CSS can take over based on html[dir] phoneBtn.style.removeProperty('left'); phoneBtn.style.removeProperty('right'); console.log('[Navbar] Phone button positioning applied (mobile viewport)'); } else { // On desktop, clear any positioning styles to let CSS handle it phoneBtn.style.removeProperty('position'); phoneBtn.style.removeProperty('top'); phoneBtn.style.removeProperty('transform'); phoneBtn.style.removeProperty('z-index'); phoneBtn.style.removeProperty('left'); phoneBtn.style.removeProperty('right'); console.log('[Navbar] Desktop viewport - cleared phone button inline positioning'); } } } else { console.log('[Navbar] Could not parse background color:', bgColor); } // MOBILE MENU TOGGLE // Re-query in case DOM changed (mobileToggle already declared at top of function) mobileToggle = document.getElementById('mobileToggle') || document.querySelector('.mobile-toggle') || document.querySelector('.hamburger') || document.querySelector('.hamburger-menu') || document.querySelector('.menu-toggle') || document.querySelector('.burger-menu') || document.querySelector('[aria-label="Menu"]') || document.querySelector('[aria-label="תפריט"]'); // EXPANDED SEARCH: Find nav menu by ID or class const navMenu = document.getElementById('navMenu') || document.querySelector('.nav-menu') || document.querySelector('.nav-links') || document.querySelector('nav ul:not(.submenu)'); if (!mobileToggle || !navMenu) { console.log('[Navbar] Mobile toggle or menu not found:', { toggle: !!mobileToggle, menu: !!navMenu }); return; } // Ensure navMenu has ID for CSS targeting if (!navMenu.id) { navMenu.id = 'navMenu'; } console.log('[Navbar] Initializing mobile menu...'); // Remove any existing event listeners by cloning the button const newToggle = mobileToggle.cloneNode(true); mobileToggle.parentNode.replaceChild(newToggle, mobileToggle); // Toggle menu on button click - use newToggle now newToggle.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); const hamburgerIcon = this.querySelector('.hamburger-icon'); const closeIcon = this.querySelector('.close-icon'); const isActive = navMenu.classList.contains('active'); if (isActive) { // Close menu navMenu.classList.remove('active'); if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important'); if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important'); document.body.style.overflow = ''; console.log('[Navbar] Menu closed'); } else { // Open menu navMenu.classList.add('active'); if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'none', 'important'); if (closeIcon) closeIcon.style.setProperty('display', 'block', 'important'); document.body.style.overflow = 'hidden'; console.log('[Navbar] Menu opened'); } }); // Close menu when clicking nav links (but NOT dropdown toggles) const navLinks = navMenu.querySelectorAll('a'); navLinks.forEach(function(link) { link.addEventListener('click', function() { // Don't close if it's a dropdown child (unless it's a real navigation link) if (this.getAttribute('href') === '#') return; const hamburgerIcon = newToggle.querySelector('.hamburger-icon'); const closeIcon = newToggle.querySelector('.close-icon'); navMenu.classList.remove('active'); if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important'); if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important'); document.body.style.overflow = ''; console.log('[Navbar] Menu closed (link clicked)'); }); }); // DROPDOWN MENU TOGGLE (for mobile and touch devices) var dropdownToggles = navMenu.querySelectorAll('.dropdown-toggle'); dropdownToggles.forEach(function(toggle) { toggle.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); var parent = this.closest('.nav-dropdown'); if (!parent) return; // Close other open dropdowns at the same level var siblings = parent.parentNode.querySelectorAll('.nav-dropdown.open'); siblings.forEach(function(sib) { if (sib !== parent) sib.classList.remove('open'); }); parent.classList.toggle('open'); console.log('[Navbar] Dropdown toggled:', parent.classList.contains('open') ? 'open' : 'closed'); }); }); // Close dropdowns when clicking outside document.addEventListener('click', function(e) { if (!e.target.closest('.nav-dropdown')) { var openDropdowns = document.querySelectorAll('.nav-dropdown.open'); openDropdowns.forEach(function(dd) { dd.classList.remove('open'); }); } }); console.log('[Navbar] Dropdown handlers initialized for ' + dropdownToggles.length + ' dropdowns'); // Phone button functionality (phoneBtn already declared at top of function) if (phoneBtn) { phoneBtn.addEventListener('click', function() { // Get phone number from placeholder in page or use default const phoneLinks = document.querySelectorAll('a[href^="tel:"]'); const phoneNumber = phoneLinks.length > 0 ? phoneLinks[0].getAttribute('href').replace('tel:', '') : '0523845555'; window.location.href = 'tel:' + phoneNumber; console.log('[Navbar] Phone button clicked'); }); } console.log('[Navbar] Mobile menu initialized successfully'); // === WHATSAPP BUTTON VISIBILITY FIX === // Ensure WhatsApp floating button is hidden on desktop and visible on mobile // IMPORTANT: Only target the floating button by its class, NOT generic wa.me links const handleWhatsAppVisibility = function() { const whatsappBtn = document.querySelector('.whatsapp-float'); if (whatsappBtn) { const isDesktop = window.innerWidth >= 769; if (isDesktop) { whatsappBtn.style.setProperty('display', 'none', 'important'); whatsappBtn.style.setProperty('visibility', 'hidden', 'important'); whatsappBtn.style.setProperty('opacity', '0', 'important'); whatsappBtn.style.setProperty('pointer-events', 'none', 'important'); console.log('[WhatsApp] Button hidden on desktop'); } else { whatsappBtn.style.removeProperty('display'); whatsappBtn.style.removeProperty('visibility'); whatsappBtn.style.removeProperty('opacity'); whatsappBtn.style.removeProperty('pointer-events'); console.log('[WhatsApp] Button visible on mobile'); } } }; // Run on load handleWhatsAppVisibility(); // Run on resize with debouncing let resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(handleWhatsAppVisibility, 100); }); }); })(); </script> <main class="blog-page ai-generated-page"><section class="library-software-hero-section" data-layout-spec="תוכנה לניהול ספרייה - אריאל פיתוח תוכנה-hero" dir="rtl" data-hero-type="text-only">
+  <!-- Decorative blob -->
+  <div class="lsh-blob" aria-hidden="true"></div>
+
+  <div class="lsh-container">
+    <div class="lsh-grid">
+
+      <!-- Right column: text -->
+      <div class="lsh-text-col">
+        <div class="lsh-eyebrow">
+          <span class="lsh-eyebrow-dot"></span>
+          <span>מערכת לניהול ספריות</span>
+        </div>
+
+        <h1 class="lsh-h1">ניהול ספרייה חכם,<br>פשוט ומדויק</h1>
+
+        <h3 class="lsh-subtitle">מעקב ספרים, קוראים והשאלות — הכל במקום אחד, ללא ניירת וללא בלבול</h3>
+
+        <ul class="lsh-features-list">
+          <li class="lsh-feature-item">
+            <span class="lsh-feature-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+            </span>
+            <span>מעקב השאלות בזמן אמת — מי לקח, מה לקח ומתי יחזיר</span>
+          </li>
+          <li class="lsh-feature-item">
+            <span class="lsh-feature-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
+            </span>
+            <span>קטלוג ספרים מלא עם חיפוש מהיר לפי שם, מחבר או נושא</span>
+          </li>
+          <li class="lsh-feature-item">
+            <span class="lsh-feature-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </span>
+            <span>ניהול כרטיסי קוראים, היסטוריית השאלות ותזכורות אוטומטיות</span>
+          </li>
+        </ul>
+
+        <div class="lsh-cta-row">
+          <a href="/contact" class="lsh-btn-primary">
+            <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            צרו קשר עכשיו
+          </a>
+          <a href="#features" class="lsh-btn-outline">
+            גלו את הפיצ'רים
+            <svg data-element-type="icon" data-icon-type="svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Left column: mock UI card -->
+      <div class="lsh-visual-col">
+        <div class="lsh-editorial-tag">
+          <svg data-element-type="icon" data-icon-type="svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          מעקב השאלות, קוראים וספרים במקום אחד
+        </div>
+
+        <div class="lsh-mockup-card">
+          <!-- Window chrome -->
+          <div class="lsh-mockup-titlebar">
+            <div class="lsh-titlebar-dots">
+              <span class="lsh-dot lsh-dot-red"></span>
+              <span class="lsh-dot lsh-dot-yellow"></span>
+              <span class="lsh-dot lsh-dot-green"></span>
+            </div>
+            <span class="lsh-titlebar-label">ניהול ספרייה — אריאל פיתוח תוכנה</span>
+          </div>
+
+          <!-- Search bar mock -->
+          <div class="lsh-mockup-toolbar">
+            <div class="lsh-mock-search">
+              <svg data-element-type="icon" data-icon-type="svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span class="lsh-search-placeholder">חיפוש לפי שם ספר, מחבר...</span>
+            </div>
+            <div class="lsh-mock-btn-group">
+              <span class="lsh-mock-btn">+ הוסף ספר</span>
+              <span class="lsh-mock-btn lsh-mock-btn-accent">השאלה חדשה</span>
+            </div>
+          </div>
+
+          <!-- Stats row -->
+          <div class="lsh-mockup-stats">
+            <div class="lsh-stat-pill">
+              <span class="lsh-stat-num">1,240</span>
+              <span class="lsh-stat-lbl">ספרים</span>
+            </div>
+            <div class="lsh-stat-pill">
+              <span class="lsh-stat-num">318</span>
+              <span class="lsh-stat-lbl">קוראים</span>
+            </div>
+            <div class="lsh-stat-pill lsh-stat-pill-alert">
+              <span class="lsh-stat-num">12</span>
+              <span class="lsh-stat-lbl">פגי תאריך</span>
+            </div>
+          </div>
+
+          <!-- Table header -->
+          <div class="lsh-mock-table">
+            <div class="lsh-mock-thead">
+              <span>שם הספר</span>
+              <span>קורא</span>
+              <span>תאריך החזרה</span>
+              <span>סטטוס</span>
+            </div>
+
+            <div class="lsh-mock-row">
+              <span class="lsh-book-title">הארי פוטר — אבן החכמים</span>
+              <span class="lsh-reader-name">מיכל כהן</span>
+              <span class="lsh-date">15.07.2025</span>
+              <span class="lsh-status lsh-status-ok">מושאל</span>
+            </div>
+            <div class="lsh-mock-row">
+              <span class="lsh-book-title">המסע אל מרכז כדור הארץ</span>
+              <span class="lsh-reader-name">דוד לוי</span>
+              <span class="lsh-date">08.07.2025</span>
+              <span class="lsh-status lsh-status-warn">באיחור</span>
+            </div>
+            <div class="lsh-mock-row">
+              <span class="lsh-book-title">קוד דה וינצ׳י</span>
+              <span class="lsh-reader-name">שרה אברהם</span>
+              <span class="lsh-date">22.07.2025</span>
+              <span class="lsh-status lsh-status-ok">מושאל</span>
+            </div>
+            <div class="lsh-mock-row">
+              <span class="lsh-book-title">1984 — ג׳ורג׳ אורוול</span>
+              <span class="lsh-reader-name">—</span>
+              <span class="lsh-date">—</span>
+              <span class="lsh-status lsh-status-available">זמין</span>
+            </div>
+            <div class="lsh-mock-row lsh-mock-row-muted">
+              <span class="lsh-book-title">העיוור לצבעים</span>
+              <span class="lsh-reader-name">יוסף מזרחי</span>
+              <span class="lsh-date">01.07.2025</span>
+              <span class="lsh-status lsh-status-warn">באיחור</span>
+            </div>
+          </div>
+
+          <!-- Footer row -->
+          <div class="lsh-mockup-footer">
+            <span>מציג 5 מתוך 87 השאלות פעילות</span>
+            <span class="lsh-mock-pager">עמוד 1 מתוך 18 ›</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="library-software-services-section" data-layout-spec="תוכנה לניהול ספרייה - אריאל פיתוח תוכנה-services" dir="rtl">
+  <div class="lss-container">
+    <div class="lss-header">
+      <h2 class="lss-title">יכולות המערכת</h2>
+      <p class="lss-subtitle">תוכנת ניהול הספרייה כוללת את כל הכלים הנדרשים לניהול שוטף — ממאגר הקוראים ועד להפקת דוחות ומכתבים אוטומטיים. הכל בממשק אחד, בעברית מלאה, ללא תלות בשרתים חיצוניים.</p>
+    </div>
+    <div class="lss-grid">
+
+      <!-- Card 1 -->
+      <article class="lss-card">
+        <div class="lss-card-top-bar"></div>
+        <div class="lss-card-inner">
+          <div class="lss-card-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="lss-card-content">
+            <h3 class="lss-card-title">ניהול מאגר שואלים וכרטיסי קורא</h3>
+            <p class="lss-card-desc">תיעוד מלא של כל קורא רשום, היסטוריית השאלות, וסטטוס פעיל — הכל נגיש בחיפוש מהיר.</p>
+            <ul class="lss-feature-list">
+              <li><span class="lss-dot"></span>הוספה, עריכה ומחיקה של קוראים</li>
+              <li><span class="lss-dot"></span>כרטיס קורא עם תמונה ופרטי קשר</li>
+              <li><span class="lss-dot"></span>חיפוש לפי שם, ת.ז. או מספר קורא</li>
+              <li><span class="lss-dot"></span>מעקב אחר קוראים עם חובות פתוחים</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="lss-card">
+        <div class="lss-card-top-bar"></div>
+        <div class="lss-card-inner">
+          <div class="lss-card-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              <line x1="8" y1="7" x2="16" y2="7"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <div class="lss-card-content">
+            <h3 class="lss-card-title">ניהול כרטסת ספרים וכותרים</h3>
+            <p class="lss-card-desc">קטלוג ספרים מסודר עם פרטים ביבליוגרפיים, מספרי עותקים, ומיקום על המדף.</p>
+            <ul class="lss-feature-list">
+              <li><span class="lss-dot"></span>רישום כותר, מחבר, הוצאה ושנה</li>
+              <li><span class="lss-dot"></span>ניהול מספר עותקים לכל כותר</li>
+              <li><span class="lss-dot"></span>סיווג לפי קטגוריה ומיקום</li>
+              <li><span class="lss-dot"></span>חיפוש לפי ISBN, כותר או מחבר</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="lss-card">
+        <div class="lss-card-top-bar"></div>
+        <div class="lss-card-inner">
+          <div class="lss-card-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 11 12 14 22 4"></polyline>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+          </div>
+          <div class="lss-card-content">
+            <h3 class="lss-card-title">ניהול השאלות והחזרות</h3>
+            <p class="lss-card-desc">תהליך השאלה מהיר ומדויק — מרישום ההשאלה עד לאישור ההחזרה, עם מעקב אוטומטי אחר תאריכי יעד.</p>
+            <ul class="lss-feature-list">
+              <li><span class="lss-dot"></span>רישום השאלה בלחיצה אחת</li>
+              <li><span class="lss-dot"></span>הגדרת תקופת השאלה גמישה</li>
+              <li><span class="lss-dot"></span>אישור החזרה ועדכון מלאי אוטומטי</li>
+              <li><span class="lss-dot"></span>ניהול הארכות ובקשות הזמנה</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="lss-card">
+        <div class="lss-card-top-bar"></div>
+        <div class="lss-card-inner">
+          <div class="lss-card-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+              <path d="M2 20h20"></path>
+            </svg>
+          </div>
+          <div class="lss-card-content">
+            <h3 class="lss-card-title">דוחות והתרעות</h3>
+            <p class="lss-card-desc">תמונת מצב עדכנית של הספרייה — ספרים שלא הוחזרו, קוראים חייבים, ופעילות לפי תקופה.</p>
+            <ul class="lss-feature-list">
+              <li><span class="lss-dot"></span>דוח ספרים באיחור לפי תאריך</li>
+              <li><span class="lss-dot"></span>סטטיסטיקת השאלות לפי תקופה</li>
+              <li><span class="lss-dot"></span>התרעה על ספרים שלא הוחזרו</li>
+              <li><span class="lss-dot"></span>ייצוא לאקסל להדפסה וניתוח</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="lss-card">
+        <div class="lss-card-top-bar"></div>
+        <div class="lss-card-inner">
+          <div class="lss-card-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div class="lss-card-content">
+            <h3 class="lss-card-title">מכתבים לקוראים מאחרים</h3>
+            <p class="lss-card-desc">הפקת מכתבי תזכורת מותאמים אישית לכל קורא שלא החזיר ספר — בלחיצת כפתור, בעברית תקנית.</p>
+            <ul class="lss-feature-list">
+              <li><span class="lss-dot"></span>תבנית מכתב הניתנת להתאמה</li>
+              <li><span class="lss-dot"></span>הכנסה אוטומטית של שם הקורא והספר</li>
+              <li><span class="lss-dot"></span>הדפסה לכל הקוראים המאחרים בבת אחת</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="lss-card">
+        <div class="lss-card-top-bar"></div>
+        <div class="lss-card-inner">
+          <div class="lss-card-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+              <line x1="7" y1="4" x2="7" y2="10"></line>
+              <line x1="12" y1="4" x2="12" y2="10"></line>
+              <line x1="17" y1="4" x2="17" y2="10"></line>
+              <line x1="7" y1="14" x2="7" y2="20"></line>
+              <line x1="12" y1="14" x2="12" y2="20"></line>
+              <line x1="17" y1="14" x2="17" y2="20"></line>
+            </svg>
+          </div>
+          <div class="lss-card-content">
+            <h3 class="lss-card-title">תמיכה בברקוד ומדבקות</h3>
+            <p class="lss-card-desc">סריקת ברקוד לזיהוי מהיר של ספרים וקוראים, יחד עם הדפסת מדבקות מותאמות לצרכי הספרייה.</p>
+            <ul class="lss-feature-list">
+              <li><span class="lss-dot"></span>תמיכה בסורקי ברקוד USB סטנדרטיים</li>
+              <li><span class="lss-dot"></span>הדפסת מדבקות לספרים וכרטיסי קורא</li>
+              <li><span class="lss-dot"></span>תבניות מדבקה מותאמות לפורמטים שונים</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Decorative dot pattern -->
+  <div class="lss-dots-decoration" aria-hidden="true"></div>
+</section>
+
+<section class="library-software-benefits-section" data-layout-spec="תוכנה לניהול ספרייה - אריאל פיתוח תוכנה-benefits" dir="rtl">
+  <div class="lsb-container">
+    <div class="lsb-header">
+      <h2 class="lsb-title">למה ספרייה מנוהלת בתוכנה עובדת טוב יותר?</h2>
+      <p class="lsb-subtitle">תוכנת ניהול ספרייה מותאמת אישית חוסכת זמן יקר, מפחיתה טעויות, ומאפשרת לצוות להתמקד בעיקר — השירות לקוראים.</p>
+    </div>
+
+    <div class="lsb-grid">
+
+      <article class="lsb-card">
+        <div class="lsb-card-accent"></div>
+        <div class="lsb-card-inner">
+          <div class="lsb-icon-wrap">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <div class="lsb-card-content">
+            <h3 class="lsb-card-title">איתור ספר בשניות, לא בדקות</h3>
+            <p class="lsb-card-text">חיפוש לפי שם, מחבר, נושא או מספר קטלוג — התוצאה מיידית. אין יותר חיפושים ידניים בין מדפים או גיליונות אקסל מסורבלים. כל ספר נמצא בדיוק איפה שצריך, תמיד.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="lsb-card">
+        <div class="lsb-card-accent lsb-card-accent--green"></div>
+        <div class="lsb-card-inner">
+          <div class="lsb-icon-wrap lsb-icon-wrap--green">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div class="lsb-card-content">
+            <h3 class="lsb-card-title">מעקב מדויק אחר השאלות והחזרות</h3>
+            <p class="lsb-card-text">כל השאלה מתועדת עם תאריך, שם השואל ומועד ההחזרה הצפוי. התוכנה מתריעה על ספרים שלא הוחזרו בזמן ומאפשרת ניהול רשימת המתנה בצורה מסודרת ושקופה.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="lsb-card">
+        <div class="lsb-card-accent lsb-card-accent--blue"></div>
+        <div class="lsb-card-inner">
+          <div class="lsb-icon-wrap lsb-icon-wrap--blue">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="lsb-card-content">
+            <h3 class="lsb-card-title">עבודה פשוטה ויעילה לכל הצוות</h3>
+            <p class="lsb-card-text">ממשק ידידותי שמתאים גם לעובדים שאינם טכנולוגיים. הדרכה קצרה מספיקה כדי להתחיל. כל הצוות עובד מאותה מערכת, ואין יותר בלבול בין גרסאות שונות של קבצים.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="lsb-trust-bar">
+      <div class="lsb-trust-inner">
+        <span class="lsb-trust-label">מתאים במיוחד עבור:</span>
+        <ul class="lsb-trust-list">
+          <li class="lsb-trust-item">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>בתי ספר</span>
+          </li>
+          <li class="lsb-trust-item">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>ישיבות וסמינרים</span>
+          </li>
+          <li class="lsb-trust-item">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>ספריות ציבוריות</span>
+          </li>
+          <li class="lsb-trust-item">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>ספריות ארגוניות</span>
+          </li>
+          <li class="lsb-trust-item">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>מוסדות אקדמיים</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="lsb-divider-wrapper" aria-hidden="true">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 L0,60 L1200,60 L1200,60 Z" fill="#FAFAF7"></path>
+      <path d="M0,60 L0,20 Q150,0 300,18 T600,12 Q750,4 900,16 T1200,10 L1200,60 Z" fill="#FAFAF7"></path>
+    </svg>
+  </div>
+</section>
+
+<section class="library-software-process-section" data-layout-spec="תוכנה לניהול ספרייה - אריאל פיתוח תוכנה-process" dir="rtl">
+  <div class="lsp-container">
+
+    <!-- Section Header -->
+    <div class="lsp-header">
+      <h2 class="lsp-title">איך מתחילים?</h2>
+      <p class="lsp-subtitle">תהליך הכניסה למערכת פשוט ומובנה — בלי בירוקרטיה, בלי הפתעות. ארבעה שלבים ברורים מהשיחה הראשונה ועד לעבודה שוטפת.</p>
+    </div>
+
+    <!-- Process Steps -->
+    <div class="lsp-steps">
+
+      <!-- Step 1 -->
+      <div class="lsp-step">
+        <div class="lsp-step-top">
+          <div class="lsp-step-number">1</div>
+          <div class="lsp-step-connector" aria-hidden="true"></div>
+        </div>
+        <div class="lsp-step-content">
+          <h3 class="lsp-step-title">שיחת אפיון קצרה</h3>
+          <p class="lsp-step-desc">מתחילים בשיחה על אופי הספרייה — גודל האוסף, סוגי הקהל, ואופן העבודה הנוכחי. כך ניתן לוודא שהמערכת מתאימה בדיוק לצרכים שלכם.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="lsp-step">
+        <div class="lsp-step-top">
+          <div class="lsp-step-number">2</div>
+          <div class="lsp-step-connector" aria-hidden="true"></div>
+        </div>
+        <div class="lsp-step-content">
+          <h3 class="lsp-step-title">התאמת המערכת</h3>
+          <p class="lsp-step-desc">מגדירים את השדות, הקטגוריות, ואופן הסיווג בהתאם לספרייה שלכם. המערכת מותאמת לדרך שבה אתם עובדים — לא להיפך.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="lsp-step">
+        <div class="lsp-step-top">
+          <div class="lsp-step-number">3</div>
+          <div class="lsp-step-connector" aria-hidden="true"></div>
+        </div>
+        <div class="lsp-step-content">
+          <h3 class="lsp-step-title">הטמעה והדרכה</h3>
+          <p class="lsp-step-desc">מתקינים את המערכת בסביבה שלכם ומעבירים הדרכה בסיסית לצוות. ההדרכה ממוקדת ומעשית — כדי שתוכלו להתחיל לעבוד מיד.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="lsp-step lsp-step--last">
+        <div class="lsp-step-top">
+          <div class="lsp-step-number">4</div>
+          <div class="lsp-step-connector lsp-step-connector--hidden" aria-hidden="true"></div>
+        </div>
+        <div class="lsp-step-content">
+          <h3 class="lsp-step-title">עבודה שוטפת עם ליווי</h3>
+          <p class="lsp-step-desc">עוברים לעבודה יומיומית עם המערכת. אני זמין לשאלות, עדכונים ושיפורים לאורך הדרך — כי מערכת טובה גדלה יחד עם הצרכים שלכם.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- End Process Steps -->
+
+    <!-- Demo Invite Panel -->
+    <div class="lsp-demo-panel">
+      <div class="lsp-demo-inner">
+        <div class="lsp-demo-icon" aria-hidden="true">
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="lsp-demo-text">
+          <h3 class="lsp-demo-title">רוצים להתרשם לפני שמחליטים?</h3>
+          <p class="lsp-demo-desc">ניתן לראות את המערכת בפעולה לפני כל התחייבות. פנו אליי לקבלת הדגמה אישית והצעת מחיר מותאמת לספרייה שלכם.</p>
+        </div>
+        <a href="#contact" class="lsp-demo-btn btn-primary">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          לקבלת הדגמה
+        </a>
+      </div>
+    </div>
+    <!-- End Demo Panel -->
+
+  </div>
+</section>
+
+<section class="library-software-cta-section" data-layout-spec="תוכנה לניהול ספרייה - אריאל פיתוח תוכנה-cta" dir="rtl">
+  <div class="cta-container">
+    <div class="cta-inner-panel">
+      <div class="cta-top-line" aria-hidden="true"></div>
+
+      <div class="cta-content">
+        <h2 class="cta-heading">מוכנים להפוך את ספריית המוסד לכלי עבודה אמיתי?</h2>
+        <p class="cta-description">מערכת ניהול ספרייה מותאמת ב-Microsoft Access — בנויה לפי הצרכים שלכם, מותקנת ועובדת. ללא מיקור חוץ, ללא תוכנות ענן יקרות, וללא עיכובים. פנו אלינו לשיחת היכרות קצרה.</p>
+
+        <div class="cta-contact-row">
+          <a href="mailto:[business_email]" class="cta-contact-item">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <span>[business_email]</span>
+          </a>
+          <span class="cta-contact-divider" aria-hidden="true"></span>
+          <a href="tel:[business_phone]" class="cta-contact-item">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span>[business_phone]</span>
+          </a>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="/contact" class="btn-primary cta-btn-main">
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+            שלחו לנו הודעה
+          </a>
+          <a href="tel:[business_phone]" class="cta-btn-outline">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            התקשרו עכשיו
+          </a>
+        </div>
+
+        <p class="cta-trust-line">
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+          בין לקוחותינו: מוסדות חינוך, בתי ספר, ישיבות ומכללות ברחבי הארץ
+        </p>
+      </div>
+    </div>
+  </div>
+</section></main> 
+
+
+
+<footer class="nf" dir="rtl" aria-label="Footer"> <div class="nf__wrap"> <div class="nf__grid"> <div class="nf__col-brand"> <a href="/" class="nf__brand-logo" aria-label="אריאל פיתוח תוכנה"> <img src="/assets/logo.webp" alt="אריאל פיתוח תוכנה" data-element-type="image" data-element-id="img-1778358244483-1r295lybz" data-zappy-footer-image="true" > </a> <p class="nf__brand-desc">מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות.</p> </div> <div class="nf__col-nav"> <p class="nf__col-title">ניווט מהיר</p> <ul class="nf__links"> <li><a href="/services">שירותים</a></li> <li><a href="/experience">ניסיון מקצועי</a></li> <li><a href="/about">אודות</a></li> <li><a href="/contact">צור קשר</a></li> </ul> </div> <div class="nf__col-contact"> <p class="nf__col-title">יצירת קשר</p> <ul class="nf__links"> <li> <a href="tel:0523845555"> <i class="fas fa-phone" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-yu2dss4h0" data-icon-type="fontawesome"></i> 0523845555 </a> </li> <li> <a href="mailto:ariel@ariel10.net" > <i class="fas fa-envelope" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-ajbzcdc06" data-icon-type="fontawesome" style="cursor: pointer;"></i> ariel@ariel10.net </a> </li> <li> <a href="https://maps.google.com/?q=קרני+יהודה+135/17+ירושלים" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:flex-start;gap:inherit"> <i class="fas fa-map-marker-alt" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-g2mz8i2t9" data-icon-type="fontawesome"></i>קרני יהודה 135/17, ירושלים, 97293, ישראל</a> </li> <li> <a href="https://wa.me/972523845555" aria-label="WhatsApp"> <i class="fab fa-whatsapp" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778358244482-8wav6bgct" data-icon-type="fontawesome"></i> WhatsApp </a> </li> <li> <a href="https://www.linkedin.com/in/%D7%90%D7%A8%D7%99%D7%90%D7%9C-%D7%A9%D7%95%D7%A1%D7%94%D7%99%D7%99%D7%9D-8954506/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" > <i class="fab fa-linkedin" aria-hidden="true" data-element-type="icon" data-element-id="icon-1778398679013-a0ywdv1bm" data-icon-type="fontawesome" style="cursor: pointer;"></i> LinkedIn </a> </li> </ul> </div> </div> <div class="nf__bottom"> <div class="nf__bottom-inner"> <p class="nf__copy">© 2000–2025 אריאל פיתוח תוכנה. כל הזכויות שמורות.</p> <nav class="nf__legal" aria-label="קישורים משפטיים"> <a href="/privacy">מדיניות פרטיות</a> <a href="/terms">תנאי שימוש</a> <a href="/accessibility">הצהרת נגישות</a> </nav> </div> </div> </div> </footer> <a href="https://wa.me/972523845555?text=שלום, הגעתי מהאתר שלך ואני מעוניין לברר" class="whatsapp-cta-fixed" aria-label="WhatsApp" style="display: flex !important; align-items: center !important; gap: 10px !important; padding: 14px 24px !important; font-size: 16px !important; font-weight: 700 !important; border-radius: 50px !important; background-color: #25D366 !important; color: #ffffff !important; text-decoration: none !important; position: fixed !important; bottom: 28px !important; left: 28px !important; z-index: 9999 !important; box-shadow: 0 4px 20px rgba(37,211,102,0.45) !important;"> <i class="fa-brands fa-whatsapp" style="font-size: 26px !important; color: #ffffff !important; font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', FontAwesome !important; font-weight: 400 !important; font-style: normal !important; display: inline-block !important; line-height: 1 !important; -webkit-font-smoothing: antialiased !important;"></i> <span style="font-family: 'Heebo', sans-serif; white-space: nowrap; color: #ffffff !important;">וואטסאפ</span> </a> <div data-integration="accessibility:toolbar"></div> 
+    <script src="/script.js"></script>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
+    })();
+    </script>
+</body>
+</html>
