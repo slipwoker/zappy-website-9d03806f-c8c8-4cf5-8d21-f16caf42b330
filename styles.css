@@ -30123,6 +30123,226 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 .software-services-section .software-services-img {
   border-radius: 10px;
 }
+/* Batch: Site-wide design polish: normalize text colors, fix hardcoded backgrounds, normalize spacing rhythm, fix Heebo in WhatsApp button */
+/* ═══════════════════════════════════════════════════════════
+   SITE-WIDE DESIGN POLISH — Strip inline color !important
+   overrides & normalize spacing rhythm
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── 1. INLINE color:rgb(26,26,26)!important NEUTRALIZATION ──
+   These inline overrides were baked into many service/experience
+   elements. We neutralize them with the correct design variable
+   at the same specificity tier (element style = 1000, but our
+   scoped selectors at 0,2,0 win when the inline !important is
+   absent or we match the tag+class). The real fix is the HTML
+   edit below; this CSS acts as a safety net. */
+
+.services-capabilities-section .services-capabilities-intro,
+.services-capabilities-section .services-cap-block-body p,
+.services-capabilities-section .services-cap-stat-label {
+  color: var(--text-muted);
+}
+
+.experience-profile-section .differentiator-content p,
+.experience-profile-section .experience-profile-stat-badge .stat-number,
+.experience-profile-section .experience-profile-stat-badge .stat-label,
+.experience-profile-section .experience-profile-trust-badge span {
+  color: var(--text-dark);
+}
+
+/* ── 2. ABOUT HERO: replace #F8FAFC with design variable ── */
+.abv2 {
+  background: var(--bg-light);
+}
+
+/* ── 3. CONTACT FAQ DIVIDER: hardcoded fill neutralized via CSS ──
+   (SVG fill is set inline on the path; the HTML patch below
+    removes it. This rule is the CSS-layer safety net.) */
+.contact-contact-form-section .contact-contact-form-divider-wrapper path {
+  fill: var(--bg-dark);
+}
+
+/* ── 4. WHATSAPP FIXED BUTTON: Rubik font, remove Heebo ── */
+.whatsapp-cta-fixed span,
+.whatsapp-float span {
+  font-family: 'Rubik', sans-serif;
+}
+
+/* ── 5. SPACING RHYTHM NORMALIZATION (site-wide) ──
+   Bring all major content sections to a consistent
+   72–88px vertical padding on desktop, 48px on mobile. */
+
+/* Services page */
+.services-intro-section {
+  padding-top: 120px;
+  padding-bottom: 72px;
+}
+.services-capabilities-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.services-benefits-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.services-process-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.services-closing-cta-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* About page */
+.abv2 {
+  padding-top: 110px;
+  padding-bottom: 80px;
+}
+.origin-story-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.diag-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.hw-how-i-work {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.exp-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* Experience page */
+.experience-profile-section {
+  padding-top: 120px;
+  padding-bottom: 72px;
+}
+.experience-portfolio-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.experience-stats-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.experience-trust-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* Contact page */
+.contact-contact-intro-section {
+  padding-top: 120px;
+  padding-bottom: 72px;
+}
+.contact-contact-form-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.contact-faq-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.contact-reassurance-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* Homepage sections */
+.familiar-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.how-it-works-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.testi-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.index-problems-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.index-services-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.index-case-studies-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.index-cta-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* Software page */
+.software-intro-section {
+  padding-top: 120px;
+  padding-bottom: 72px;
+}
+.software-services-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.software-trust-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.software-cta-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* ── Mobile overrides: tighter padding on small screens ── */
+@media (max-width: 768px) {
+  .services-intro-section,
+  .services-capabilities-section,
+  .services-benefits-section,
+  .services-process-section,
+  .services-closing-cta-section,
+  .abv2,
+  .origin-story-section,
+  .diag-section,
+  .hw-how-i-work,
+  .exp-section,
+  .experience-profile-section,
+  .experience-portfolio-section,
+  .experience-stats-section,
+  .experience-trust-section,
+  .contact-contact-intro-section,
+  .contact-contact-form-section,
+  .contact-faq-section,
+  .contact-reassurance-section,
+  .familiar-section,
+  .how-it-works-section,
+  .testi-section,
+  .index-problems-section,
+  .index-services-section,
+  .index-case-studies-section,
+  .index-cta-section,
+  .software-intro-section,
+  .software-services-section,
+  .software-trust-section,
+  .software-cta-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  /* Keep first section with extra top padding for navbar clearance */
+  .services-intro-section,
+  .experience-profile-section,
+  .contact-contact-intro-section,
+  .software-intro-section,
+  .abv2 {
+    padding-top: 88px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
