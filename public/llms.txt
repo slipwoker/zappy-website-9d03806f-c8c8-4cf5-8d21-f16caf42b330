@@ -14,17 +14,13 @@ https://www.ariel10.net
 https://www.ariel10.net/services
 תיקון קבצי Access פגומים, שדרוג ל-64 ביט, מעבר ל-SQL Server, שיפור ביצועים ואוטומציה עם Excel. פתרונות ממוקדים שמחזירים את המערכת לעבוד — בלי לבנות מחדש.
 
-### 25+ שנות ניסיון ב-Access | יד ושם, רשתות חינוך ועוד
-https://www.ariel10.net/experience
-ניסיון מוכח: מערכות עבור יד ושם, רשתות בתי ספר, ניהול בטיחות ואגודות רכיבה. 100+ מערכות פעילות, 90% מהמקרים נפתרים ללא בנייה מחדש.
-
 ### אודות אריאל שוסהיים — מומחה Microsoft Access עם 25+ שנות ניסיון
 https://www.ariel10.net/about
 אריאל — מפתח עצמאי עם מעל 25 שנות ניסיון בתיקון, ייצוב ושיפור מערכות Microsoft Access. גישת אבחון ותיקון ממוקד, שמירה על מה שעובד, תקשורת ישירה ומהירה.
 
-### צור קשר — אבחון ראשוני ללא עלות | אריאל פיתוח תוכנה
-https://www.ariel10.net/contact
-מערכת Access עושה בעיות? צרו קשר לאבחון מהיר ללא עלות. טלפון: 0523845555 | WhatsApp | אימייל. מענה תוך 24 שעות, שירות מרחוק לכל הארץ.
+### 25+ שנות ניסיון ב-Access | יד ושם, רשתות חינוך ועוד
+https://www.ariel10.net/experience
+ניסיון מוכח: מערכות עבור יד ושם, רשתות בתי ספר, ניהול בטיחות ואגודות רכיבה. 100+ מערכות פעילות, 90% מהמקרים נפתרים ללא בנייה מחדש.
 
 ### בלוג מקצועי - אריאל פיתוח תוכנה
 https://www.ariel10.net/blog
@@ -46,6 +42,14 @@ https://www.ariel10.net/blog/improve-system-performance
 https://www.ariel10.net/blog/cloud-sql-migration-checklist
 מאמר שמסביר אילו בדיקות חשוב לבצע לפני מעבר של מערכת ותיקה לענן או ל-SQL, כדי להימנע מתקלות, עיכובים וסיכונים עסקיים.
 
+### תוכנות - אריאל פיתוח תוכנה
+https://www.ariel10.net/software
+אריאל פיתוח תוכנה - תוכנות - אריאל פיתוח תוכנה
+
+### צור קשר — אבחון ראשוני ללא עלות | אריאל פיתוח תוכנה
+https://www.ariel10.net/contact
+מערכת Access עושה בעיות? צרו קשר לאבחון מהיר ללא עלות. טלפון: 0523845555 | WhatsApp | אימייל. מענה תוך 24 שעות, שירות מרחוק לכל הארץ.
+
 ### תוכנה לניהול בטיחות - אריאל פיתוח תוכנה
 https://www.ariel10.net/safety-software
 אריאל פיתוח תוכנה - תוכנה לניהול בטיחות - אריאל פיתוח תוכנה
@@ -53,10 +57,6 @@ https://www.ariel10.net/safety-software
 ### תוכנה לניהול ספרייה - אריאל פיתוח תוכנה
 https://www.ariel10.net/library-software
 אריאל פיתוח תוכנה - תוכנה לניהול ספרייה - אריאל פיתוח תוכנה
-
-### תוכנות - אריאל פיתוח תוכנה
-https://www.ariel10.net/software
-אריאל פיתוח תוכנה - תוכנות - אריאל פיתוח תוכנה
 
 ## Legal & Policy
 
@@ -90,7 +90,7 @@ Information about WCAG compliance and accessibility features.
   - `name` (text, required)
   - `email` (email, required)
   - `phone` (tel)
-  - `message` (textarea)
+  - `message` (textarea, required)
   - `privacy_consent` (checkbox, required)
 
 ---
