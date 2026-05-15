@@ -29967,6 +29967,162 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
     padding: 7px 16px;
   }
 }
+
+.software-intro-section,
+.software-intro-section .software-intro-label,
+.software-intro-section .software-intro-heading,
+.software-intro-section .software-intro-lead {
+  font-family: 'Rubik', sans-serif;
+}
+
+.software-services-section,
+.software-services-section .software-services-title,
+.software-services-section .software-services-subtitle,
+.software-services-section .software-services-software-title,
+.software-services-section .software-services-software-desc,
+.software-services-section .software-services-link,
+.software-services-section .software-services-th {
+  font-family: 'Rubik', sans-serif;
+}
+
+.software-trust-section .software-trust-title,
+.software-trust-section .software-trust-subtitle,
+.software-trust-section .software-trust-card-title,
+.software-trust-section .software-trust-card-text {
+  font-family: 'Rubik', sans-serif;
+}
+
+.software-cta-section .software-cta-heading,
+.software-cta-section .software-cta-text,
+.software-cta-section .software-cta-btn-primary,
+.software-cta-section .software-cta-btn-ghost,
+.software-cta-section .software-cta-reassurance {
+  font-family: 'Rubik', sans-serif;
+}
+
+.software-intro-section {
+  background: var(--surface);
+}
+
+.software-services-section {
+  background: var(--surface);
+}
+
+.software-services-section .software-services-table-wrapper {
+  background: var(--surface);
+  border-color: var(--border-light);
+}
+
+.software-services-section .software-services-thead-row {
+  background: var(--bg-light);
+}
+
+.software-services-section .software-services-row:hover {
+  background: var(--bg-light);
+}
+
+.software-services-section .software-services-img {
+  background: var(--bg-light);
+  border-color: var(--border-light);
+}
+
+.software-trust-section {
+  background: var(--bg-light);
+}
+
+.software-trust-section .software-trust-card {
+  background: var(--surface);
+  border-color: var(--border-light);
+}
+
+.software-cta-section {
+  background-color: var(--bg-dark);
+  background-image: radial-gradient(ellipse at 10% 80%, rgba(37, 99, 235, 0.10) 0%, transparent 55%),
+    linear-gradient(180deg, #1E293B 0%, var(--bg-dark) 100%);
+}
+
+.software-cta-section .software-cta-text {
+  color: rgba(241, 245, 249, 0.82);
+}
+
+.software-cta-section .software-cta-reassurance {
+  color: rgba(241, 245, 249, 0.55);
+}
+
+.software-services-section .software-services-row {
+  border-color: var(--border-light);
+}
+
+.software-services-section .software-services-link {
+  border-radius: 14px;
+  font-weight: 600;
+  padding: 9px 20px;
+  font-family: 'Rubik', sans-serif;
+  border-width: 1.5px;
+  box-shadow: none;
+  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.software-services-section .software-services-link:hover {
+  background: var(--primary);
+  color: var(--surface-color);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.22);
+}
+
+.software-cta-section .software-cta-btn-primary {
+  border-radius: 14px;
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  padding: 14px 32px;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.28);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.software-cta-section .software-cta-btn-primary:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.38);
+  color: var(--surface-color);
+}
+
+.software-cta-section .software-cta-btn-ghost {
+  border-radius: 14px;
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  padding: 13px 28px;
+  border: 2px solid rgba(241, 245, 249, 0.35);
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.software-cta-section .software-cta-btn-ghost:hover {
+  border-color: rgba(241, 245, 249, 0.72);
+  background: rgba(241, 245, 249, 0.08);
+  box-shadow: none;
+  color: var(--text-light);
+}
+
+.software-trust-section .software-trust-card {
+  border-radius: 14px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.software-trust-section .software-trust-card:hover {
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.10);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.software-services-section .software-services-table-wrapper {
+  border-radius: 14px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+}
+
+.software-services-section .software-services-img {
+  border-radius: 10px;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
