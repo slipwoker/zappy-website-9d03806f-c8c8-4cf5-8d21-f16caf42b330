@@ -30434,6 +30434,49 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
   --surface-subtle: var(--bg-light);
   --surface-dark: var(--bg-dark);
 }
+
+:root {
+  --hero-pad-v: 80px;
+  --hero-pad-h: 24px;
+  --hero-max-width: 1180px;
+  --hero-h1-desktop: clamp(2.4rem, 4vw, 3.45rem);
+  --hero-h1-tablet: 2.2rem;
+  --hero-h1-mobile: clamp(1.55rem, 7vw, 1.9rem);
+  --hero-bg: var(--bg-light);
+  --hero-subtitle-size: 1.05rem;
+  --hero-gap: 22px;
+  --hero-btn-radius: 8px;
+  --hero-btn-min-h: 48px;
+  --hero-btn-font-size: 0.93rem;
+  --hero-btn-font-weight: 700;
+  --hero-btn-pad: 12px 24px;
+  --hero-btn-primary-bg: var(--primary);
+  --hero-btn-primary-color: var(--surface-color);
+  --hero-btn-primary-shadow: 0 8px 20px rgba(30,78,216,0.16);
+  --hero-btn-whatsapp-bg: #1F9A4B;
+  --hero-btn-whatsapp-color: var(--surface-color);
+  --cta-unified-bg: var(--bg-dark);
+  --cta-unified-pad-v: 80px;
+  --cta-unified-pad-h: 24px;
+  --cta-unified-max-width: 860px;
+  --cta-unified-heading-size: clamp(1.6rem, 3vw, 2.1rem);
+  --cta-unified-text-color: rgba(241,245,249,0.85);
+  --cta-unified-btn-radius: 8px;
+  --cta-unified-btn-pad: 14px 32px;
+  --cta-unified-btn-font-size: 0.95rem;
+  --cta-unified-btn-font-weight: 700;
+  --cta-unified-btn-primary-bg: var(--primary);
+  --cta-unified-btn-primary-shadow: 0 4px 20px rgba(36,87,255,0.30);
+  --cta-unified-btn-ghost-border: rgba(241,245,249,0.35);
+  --wa-float-bg: #25D366;
+  --wa-float-color: var(--surface-color);
+  --wa-float-size: 56px;
+  --wa-float-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  --wa-float-bottom: 28px;
+  --wa-float-left: 28px;
+  --wa-float-radius: 50px;
+  --wa-float-z: 9999;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
