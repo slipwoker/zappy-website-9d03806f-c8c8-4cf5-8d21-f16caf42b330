@@ -33138,6 +33138,255 @@ body, html {
 .blog-blog-hero-section .blog-accent-text span {
   color: #475569 !important;
 }
+
+.diag-section .diag-card {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.diag-section .diag-card:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.diag-section .diag-icon {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border-radius: 10px !important;
+  background: rgba(37,99,235,0.07) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--accent-color) !important;
+  flex-shrink: 0 !important;
+}
+
+.diag-section .diag-card-title {
+  color: #1E293B !important;
+}
+
+.diag-section .diag-card-text {
+  color: #475569 !important;
+}
+
+.exp-section .exp-card {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.exp-section .exp-card:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.exp-section .exp-icon {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border-radius: 10px !important;
+  background: rgba(37,99,235,0.07) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--accent-color) !important;
+  flex-shrink: 0 !important;
+}
+
+.exp-section .exp-card-title {
+  color: #1E293B !important;
+}
+
+.exp-section .exp-card-text {
+  color: #475569 !important;
+}
+
+.contact-contact-intro-section .contact-card {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.contact-contact-intro-section .contact-card:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.contact-contact-intro-section .contact-card-icon-wrap {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.contact-contact-intro-section .contact-card-icon-wrap--primary {
+  background: rgba(37,99,235,0.07) !important;
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-card-icon-wrap--whatsapp {
+  background: rgba(37,211,102,0.08) !important;
+  color: #25D366 !important;
+}
+
+.contact-contact-intro-section .contact-card-icon-wrap--email {
+  background: rgba(37,99,235,0.07) !important;
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-card-action--whatsapp {
+  background: #25D366 !important;
+  color: var(--surface-color) !important;
+  border-radius: 6px !important;
+}
+
+.contact-contact-intro-section .contact-card-action--whatsapp:hover {
+  background: #1EBD5A !important;
+}
+
+.contact-contact-intro-section .contact-card-title {
+  color: #1E293B !important;
+}
+
+.contact-contact-intro-section .contact-card-desc {
+  color: #475569 !important;
+}
+
+.contact-contact-intro-section .contact-card-note {
+  color: #64748B !important;
+}
+
+.contact-contact-form-section .contact-guidance-card {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+}
+
+.contact-contact-form-section .contact-guidance-icon-wrap {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 10px !important;
+  background: rgba(37,99,235,0.07) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--accent-color) !important;
+}
+
+.contact-faq-section .contact-faq-item {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease !important;
+}
+
+.contact-faq-section .contact-faq-item:hover {
+  box-shadow: 0 6px 20px rgba(15,23,42,0.09) !important;
+}
+
+.contact-reassurance-section .contact-reassurance-btn-whatsapp {
+  background: #25D366 !important;
+  color: var(--surface-color) !important;
+  border-radius: 6px !important;
+}
+
+.contact-reassurance-section .contact-reassurance-btn-whatsapp:hover {
+  background: #1EBD5A !important;
+}
+
+.contact-contact-intro-section .contact-intro-title {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-title-line1 {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-title-line2 {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-subtitle {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-trust {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-intro-label {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-card-icon-wrap--whatsapp {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-card-action--whatsapp {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-card-title {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-card-desc {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-card-note {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-intro-section .contact-card-icon-wrap--whatsapp svg {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-form-section .contact-form input {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-form-section .contact-form textarea {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-form-section .contact-form select {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-form-section .contact-alt-whatsapp {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-form-section textarea#contact-message {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-form-section .contact-form input[type="text"] {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-form-section .contact-form input[type="email"] {
+  color: var(--accent-color) !important;
+}
+
+.contact-contact-form-section .contact-form input[type="tel"] {
+  color: var(--accent-color) !important;
+}
+
+.contact-reassurance-section .contact-reassurance-btn-primary {
+  color: var(--surface-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
