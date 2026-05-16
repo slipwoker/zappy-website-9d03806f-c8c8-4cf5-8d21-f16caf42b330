@@ -9476,7 +9476,7 @@ body .whatsapp-float:hover {
 
 .testi-section {
   background-color: #F1F5F9;
-  padding: 96px 20px;
+  padding: 96px 20px !important;
   font-family: system-ui, sans-serif;
   direction: rtl;
   text-align: right;
@@ -34208,6 +34208,357 @@ body, html {
 }
 
 .index-case-studies-section .case-tile-outcome span {
+  color: var(--text-color) !important;
+}
+
+.index-cta-section a.index-cta-btn-primary,
+.index-cta-section a.index-cta-btn-primary:link,
+.index-cta-section a.index-cta-btn-primary:visited {
+  background: var(--accent-color) !important;
+  background-image: none !important;
+  color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  min-height: 48px !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.28) !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.index-cta-section a.index-cta-btn-primary:hover {
+  background: #1D4ED8 !important;
+  background-image: none !important;
+  box-shadow: 0 8px 28px rgba(37,99,235,0.38) !important;
+  transform: translateY(-1px) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section a.index-cta-btn-secondary,
+.index-cta-section a.index-cta-btn-secondary:link,
+.index-cta-section a.index-cta-btn-secondary:visited {
+  background: transparent !important;
+  background-image: none !important;
+  color: var(--surface-color) !important;
+  border: 1.5px solid rgba(241,245,249,0.40) !important;
+  border-radius: 8px !important;
+  min-height: 48px !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.index-cta-section a.index-cta-btn-secondary:hover {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(241,245,249,0.70) !important;
+  color: var(--surface-color) !important;
+  transform: translateY(-1px) !important;
+}
+
+.testi-section {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
+}
+
+.testi-section .testi-main-title {
+  font-weight: 800 !important;
+  color: var(--text-color) !important;
+  line-height: 1.22 !important;
+}
+
+.testi-section .testi-card {
+  background: var(--surface-color) !important;
+  border: 1px solid rgba(15,23,42,0.07) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.testi-section .testi-card:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+  border-color: rgba(37,99,235,0.15) !important;
+}
+
+.testi-section .testi-star {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-role {
+  color: #64748B !important;
+}
+
+.testi-section .testi-subtitle {
+  color: #334155 !important;
+}
+
+.index-services-section h2,
+.index-problems-section h2,
+.index-case-studies-section h2 {
+  font-weight: 800 !important;
+  color: var(--text-color) !important;
+  line-height: 1.22 !important;
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.index-services-section .index-services-lead,
+.index-problems-section .index-problems-subtitle,
+.index-case-studies-section .case-studies-subtitle {
+  color: #334155 !important;
+}
+
+.navbar-cta-btn,
+.navbar-cta-btn:link,
+.navbar-cta-btn:visited {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  font-weight: 700 !important;
+  font-size: 0.875rem !important;
+  border: none !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.20) !important;
+}
+
+.navbar-cta-btn:hover {
+  background: #1D4ED8 !important;
+  color: var(--surface-color) !important;
+  box-shadow: 0 4px 14px rgba(37,99,235,0.32) !important;
+}
+
+.index-hero-section .hero-clean__btn-primary {
+  border-radius: 8px !important;
+  min-height: 48px !important;
+}
+
+.index-hero-section .hero-clean__btn-whatsapp {
+  background: #1F9A4B !important;
+  border-radius: 8px !important;
+  min-height: 48px !important;
+}
+
+.index-hero-section .hero-clean__btn-whatsapp:hover {
+  background: #178240 !important;
+}
+
+.testi-section .testi-subtitle {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-text p {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-name {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-role {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-star {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-letters-title {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-letters-subtitle {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-avatar {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-main-title {
+  color: #F59E0B !important;
+}
+
+.index-services-section .index-services-heading {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-lead {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-row-title {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-row-desc {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-label {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-process-sub {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-step-title {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-step-desc {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-process-badge {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-row-icon svg {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-principle {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-principle strong {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: var(--text-color) !important;
+}
+
+.index-services-section h2.index-services-heading {
+  color: var(--text-color) !important;
+}
+
+.index-services-section p.index-services-lead {
+  color: var(--text-color) !important;
+}
+
+.index-services-section h3.index-services-row-title {
+  color: var(--text-color) !important;
+}
+
+.index-services-section p.index-services-row-desc {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-principle-text {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-row-icon {
+  color: var(--text-color) !important;
+}
+
+.index-services-section p {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-icon-wrap {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-title {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-subtitle {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-summary-text {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-card-content p {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-icon-wrap svg {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-card-content h3 {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section p {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome i {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome span {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section p {
   color: var(--text-color) !important;
 }
 /* mobile-submenu-overflow-fix */
