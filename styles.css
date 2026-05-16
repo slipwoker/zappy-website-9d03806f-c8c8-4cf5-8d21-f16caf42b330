@@ -3822,7 +3822,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--primary) !important;
+  background: #2563EB !important;
   color: #ffffff !important;
   padding: 14px 28px;
   border-radius: 8px !important;
@@ -3834,12 +3834,13 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   border: none !important;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.30) !important;
 }
 
 .index-cta-section .index-cta-btn-primary:hover {
   background: #1D4ED8 !important;
   border-color: #2563EB;
-  box-shadow: 0 8px 28px rgba(37,99,235,0.38) !important;
+  box-shadow: 0 8px 28px rgba(37,99,235,0.40) !important;
   transform: translateY(-1px) !important;
 }
 
@@ -3856,14 +3857,14 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 700 !important;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 1.5px solid rgba(241,245,249,0.35) !important;
+  border: 1.5px solid rgba(241,245,249,0.40) !important;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
 }
 
 .index-cta-section .index-cta-btn-secondary:hover {
   background: rgba(255,255,255,0.08) !important;
-  border-color: var(--text-light);
+  border-color: rgba(241,245,249,0.70) !important;
   box-shadow: none !important;
   transform: translateY(-1px) !important;
 }
@@ -9475,7 +9476,7 @@ body .whatsapp-float:hover {
 
 .testi-section {
   background-color: #F1F5F9;
-  padding: 90px 20px 80px;
+  padding: 96px 20px;
   font-family: system-ui, sans-serif;
   direction: rtl;
   text-align: right;
@@ -33881,6 +33882,333 @@ body, html {
   --accessibility-focus: var(--accent-color);
   --focus-ring: 0 0 0 3px rgba(37,99,235,0.25);
   --hero-bg: var(--background-color);
+}
+
+.index-problems-section {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
+}
+
+.index-services-section {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
+}
+
+.index-case-studies-section {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+.how-it-works-section {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
+}
+
+@media (max-width: 768px) {
+.index-problems-section,
+  .index-services-section,
+  .index-case-studies-section,
+  .how-it-works-section,
+  .testi-section {
+  padding-top: 56px !important;
+  padding-bottom: 56px !important;
+}
+}
+
+.navbar-cta-btn {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  font-weight: 700 !important;
+  font-size: 0.875rem !important;
+  border: none !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease !important;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.20) !important;
+  white-space: nowrap !important;
+}
+
+.navbar-cta-btn:hover {
+  background: #1D4ED8 !important;
+  box-shadow: 0 4px 14px rgba(37,99,235,0.32) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-services-section h2,
+.index-problems-section h2,
+.how-it-works-section h2,
+.testi-section h2,
+.index-case-studies-section h2 {
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: 800 !important;
+  color: var(--text-color) !important;
+  line-height: 1.22 !important;
+}
+
+.index-services-section p,
+.index-problems-section p,
+.how-it-works-section p,
+.index-case-studies-section p {
+  color: #334155 !important;
+}
+
+.index-problems-section .index-problems-eyebrow,
+.index-case-studies-section .case-studies-eyebrow,
+.index-services-section .index-services-label {
+  color: var(--accent-color) !important;
+  font-weight: 600 !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.07em !important;
+  text-transform: uppercase !important;
+}
+
+.index-services-section .index-services-heading {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-lead {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-row-title {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-row-desc {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-label {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-process-sub {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-step-title {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-step-desc {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-process-badge {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-row-icon svg {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-principle {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-principle strong {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: var(--text-color) !important;
+}
+
+.index-services-section h2.index-services-heading {
+  color: var(--text-color) !important;
+}
+
+.index-services-section p.index-services-lead {
+  color: var(--text-color) !important;
+}
+
+.index-services-section h3.index-services-row-title {
+  color: var(--text-color) !important;
+}
+
+.index-services-section p.index-services-row-desc {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-principle-text {
+  color: var(--text-color) !important;
+}
+
+.index-services-section .index-services-row-icon {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-icon-wrap {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-title {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-subtitle {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-summary-text {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-card-content p {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-icon-wrap svg {
+  color: var(--text-color) !important;
+}
+
+.index-problems-section .index-problems-card-content h3 {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-title {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-subtitle {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-title {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-card-desc {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-reinforcement-text {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-note {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-step-number {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn {
+  color: var(--text-color) !important;
+}
+
+.how-it-works-section .how-it-works-badge {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-main-title {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-subtitle {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-text p {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-name {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-role {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-star {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-letters-title {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-letters-subtitle {
+  color: var(--text-color) !important;
+}
+
+.testi-section .testi-avatar {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome i {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: var(--text-color) !important;
+}
+
+.index-case-studies-section .case-tile-outcome span {
+  color: var(--text-color) !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
