@@ -31738,6 +31738,687 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 body, html {
   font-family: 'Rubik', sans-serif !important;
 }
+
+.familiar-section h2,
+.how-it-works-section h2,
+.testi-section h2,
+.index-problems-section h2,
+.index-services-section h2,
+.index-case-studies-section h2,
+.index-cta-section h2 {
+  font-weight: 800 !important;
+  letter-spacing: -0.3px !important;
+  line-height: 1.18 !important;
+}
+
+.familiar-section h3,
+.how-it-works-section h3,
+.testi-section h3,
+.index-problems-section h3,
+.index-services-section h3,
+.index-case-studies-section h3,
+.index-cta-section h3 {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  line-height: 1.40 !important;
+  letter-spacing: 0 !important;
+}
+
+.familiar-section p,
+.how-it-works-section p,
+.testi-section p,
+.index-problems-section p,
+.index-services-section p,
+.index-case-studies-section p,
+.index-cta-section p {
+  line-height: 1.72 !important;
+}
+
+.familiar-section .familiar-benefit-desc,
+.how-it-works-section .how-it-works-card-desc,
+.index-problems-section .index-problems-card-content p,
+.index-services-section .index-services-row-desc,
+.index-case-studies-section .case-tile-desc {
+  color: #475569 !important;
+  line-height: 1.72 !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: #334155 !important;
+  font-size: 0.95rem !important;
+}
+
+.index-services-section .index-services-label,
+.index-problems-section .index-problems-eyebrow,
+.index-case-studies-section .case-studies-eyebrow {
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.07em !important;
+  text-transform: uppercase !important;
+}
+
+.index-cta-section .index-cta-subtext {
+  color: rgba(241,245,249,0.82) !important;
+  line-height: 1.72 !important;
+  font-size: 1rem !important;
+}
+
+.familiar-section .familiar-title {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-subtitle {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-callout-text {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-transition {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-footnote {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-callout-icon {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-callout-text strong {
+  color: #475569 !important;
+}
+
+.how-it-works-section .how-it-works-title {
+  color: #475569 !important;
+}
+
+.how-it-works-section .how-it-works-subtitle {
+  color: #475569 !important;
+}
+
+.how-it-works-section .how-it-works-card-title {
+  color: #475569 !important;
+}
+
+.how-it-works-section .how-it-works-reinforcement-text {
+  color: #475569 !important;
+}
+
+.how-it-works-section .how-it-works-cta-note {
+  color: #475569 !important;
+}
+
+.how-it-works-section .how-it-works-step-number {
+  color: #475569 !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn {
+  color: #475569 !important;
+}
+
+.how-it-works-section .how-it-works-badge {
+  color: #475569 !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: #475569 !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: #475569 !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-heading {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-lead {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-row-title {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-label {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-process-sub {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-step-title {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-step-desc {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-process-badge {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-row-icon svg {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-principle {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-principle strong {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: #475569 !important;
+}
+
+.index-services-section h2.index-services-heading {
+  color: #475569 !important;
+}
+
+.index-services-section p.index-services-lead {
+  color: #475569 !important;
+}
+
+.index-services-section h3.index-services-row-title {
+  color: #475569 !important;
+}
+
+.index-services-section p.index-services-row-desc {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-principle-text {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-row-icon {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .case-tile-outcome {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .case-tile-outcome i {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .case-tile-outcome span {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: #334155 !important;
+}
+
+.index-cta-section .index-cta-heading {
+  color: rgba(241,245,249,0.82) !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  color: rgba(241,245,249,0.82) !important;
+}
+
+.index-cta-section .index-cta-btn-secondary {
+  color: rgba(241,245,249,0.82) !important;
+}
+
+.index-cta-section .index-cta-reassurance {
+  color: rgba(241,245,249,0.82) !important;
+}
+
+.index-cta-section .index-cta-reassurance span {
+  color: rgba(241,245,249,0.82) !important;
+}
+
+.familiar-section .familiar-benefit-card,
+.how-it-works-section .how-it-works-card,
+.testi-section .testi-card,
+.index-problems-section .index-problems-card,
+.index-case-studies-section .case-tile {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(15,23,42,0.08) !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.familiar-section .familiar-benefit-card:hover,
+.how-it-works-section .how-it-works-card:hover,
+.testi-section .testi-card:hover,
+.index-problems-section .index-problems-card:hover,
+.index-case-studies-section .case-tile:hover {
+  box-shadow: 0 8px 28px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.familiar-section .familiar-benefit-card {
+  padding: 28px !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.testi-section .testi-card {
+  padding: 28px !important;
+  border: 1px solid #E2E8F0 !important;
+  background: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-card {
+  border-radius: 12px !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+}
+
+.index-problems-section .index-problems-card:hover {
+  box-shadow: 0 6px 20px rgba(15,23,42,0.09) !important;
+  transform: translateY(-2px) !important;
+}
+
+.how-it-works-section .how-it-works-card {
+  padding: 28px 24px !important;
+  border: 1px solid rgba(15,23,42,0.07) !important;
+  background: var(--surface-color) !important;
+}
+
+.index-case-studies-section .case-tile {
+  border: 1px solid #E2E8F0 !important;
+  overflow: hidden !important;
+}
+
+.familiar-section .familiar-callout {
+  border-radius: 12px !important;
+  border: 1px solid rgba(37,99,235,0.15) !important;
+  background: rgba(37,99,235,0.04) !important;
+}
+
+.familiar-section .familiar-cta-btn,
+.how-it-works-section .how-it-works-cta-btn {
+  border-radius: 6px !important;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.18) !important;
+}
+
+.index-problems-section .index-problems-summary {
+  border-radius: 12px !important;
+}
+
+.testi-section .testi-avatar {
+  border-radius: 999px !important;
+}
+
+.how-it-works-section .how-it-works-badge {
+  border-radius: 999px !important;
+}
+
+.index-cta-section .index-cta-btn-secondary {
+  background: #25D366 !important;
+  color: var(--surface-color) !important;
+  border-radius: 6px !important;
+  border: none !important;
+}
+
+.index-cta-section .index-cta-btn-secondary:hover {
+  background: #1EBD5A !important;
+}
+
+.index-cta-section {
+  background: var(--text-color) !important;
+}
+
+.index-cta-section .index-cta-container {
+  background: transparent !important;
+}
+
+.index-cta-section .index-cta-heading {
+  color: var(--background-color) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.3px !important;
+}
+
+.index-cta-section .index-cta-subtext {
+  color: rgba(241,245,249,0.80) !important;
+}
+
+.index-cta-section .index-cta-reassurance {
+  color: rgba(241,245,249,0.55) !important;
+  font-size: 0.85rem !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  background: var(--primary) !important;
+  color: var(--surface-color) !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.30) !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease !important;
+}
+
+.index-cta-section .index-cta-btn-primary:hover {
+  background: #1D4ED8 !important;
+  box-shadow: 0 6px 24px rgba(37,99,235,0.40) !important;
+  transform: translateY(-1px) !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  background: var(--primary) !important;
+  color: var(--surface-color) !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.20) !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease !important;
+}
+
+.familiar-section .familiar-cta-btn:hover {
+  background: #1D4ED8 !important;
+  box-shadow: 0 6px 20px rgba(37,99,235,0.32) !important;
+  transform: translateY(-1px) !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: #EF4444 !important;
+  font-weight: 700 !important;
+}
+
+.testi-section .testi-star {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-avatar {
+  background: var(--primary) !important;
+  color: var(--surface-color) !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: var(--primary) !important;
+  font-weight: 800 !important;
+}
+
+.index-problems-section .index-problems-icon-wrap svg {
+  color: var(--primary) !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  background: var(--primary) !important;
+  color: var(--surface-color) !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.18) !important;
+}
+
+.index-problems-section .index-problems-summary-cta:hover {
+  background: #1D4ED8 !important;
+  box-shadow: 0 6px 20px rgba(37,99,235,0.30) !important;
+  transform: translateY(-1px) !important;
+}
+
+.index-cta-section .index-cta-heading {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-subtext {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-reassurance {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-reassurance span {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-btn-secondary {
+  color: var(--background-color) !important;
+}
+
+.familiar-section .familiar-title {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-callout-text {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-transition {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-footnote {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-callout-icon {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-callout-text strong {
+  color: var(--surface-color) !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  color: #EF4444 !important;
+}
+
+.testi-section .testi-main-title {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-subtitle {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-text p {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-name {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-role {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-letters-title {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-letters-subtitle {
+  color: #F59E0B !important;
+}
+
+.testi-section .testi-star {
+  color: var(--surface-color) !important;
+}
+
+.index-services-section .index-services-heading {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-lead {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-row-title {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-row-desc {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-label {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-process-sub {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-step-title {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-step-desc {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-process-badge {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-row-icon svg {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-principle {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-principle strong {
+  color: var(--primary) !important;
+}
+
+.index-services-section h2.index-services-heading {
+  color: var(--primary) !important;
+}
+
+.index-services-section p.index-services-lead {
+  color: var(--primary) !important;
+}
+
+.index-services-section h3.index-services-row-title {
+  color: var(--primary) !important;
+}
+
+.index-services-section p.index-services-row-desc {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-principle-text {
+  color: var(--primary) !important;
+}
+
+.index-services-section .index-services-row-icon {
+  color: var(--primary) !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: var(--primary) !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: var(--primary) !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: var(--primary) !important;
+}
+
+.index-problems-section .index-problems-card-content p {
+  color: var(--primary) !important;
+}
+
+.index-problems-section .index-problems-icon-wrap {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-title {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-subtitle {
+  color: var(--surface-color) !important;
+}
+
+.index-problems-section .index-problems-summary-text {
+  color: var(--surface-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
