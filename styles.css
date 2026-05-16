@@ -35111,6 +35111,253 @@ body {
 a, button {
   transition: color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
+
+.familiar-section .familiar-subtitle,
+.familiar-section .familiar-footnote {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-card-desc,
+.how-it-works-section .exp-subtitle {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-subtitle {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-card-content p {
+  color: #334155 !important;
+}
+
+.testi-section .testi-text p {
+  color: #334155 !important;
+}
+
+.testi-section .testi-subtitle,
+.testi-section .testi-letters-subtitle {
+  color: #64748B !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-title {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-callout-text {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-transition {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-footnote {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-callout-icon {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-callout-text strong {
+  color: #64748B !important;
+}
+
+.familiar-section .familiar-subtitle {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-title {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-subtitle {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-card-title {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-reinforcement-text {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-cta-note {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-step-number {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-badge {
+  color: #64748B !important;
+}
+
+.how-it-works-section .how-it-works-card-desc {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-icon-wrap {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-eyebrow {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-title {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-summary-text {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-card-content p {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-icon-wrap svg {
+  color: #64748B !important;
+}
+
+.index-problems-section .index-problems-card-content h3 {
+  color: #64748B !important;
+}
+
+.testi-section .testi-main-title {
+  color: #64748B !important;
+}
+
+.testi-section .testi-text p {
+  color: #64748B !important;
+}
+
+.testi-section .testi-name {
+  color: #64748B !important;
+}
+
+.testi-section .testi-role {
+  color: #64748B !important;
+}
+
+.testi-section .testi-star {
+  color: #64748B !important;
+}
+
+.testi-section .testi-letters-title {
+  color: #64748B !important;
+}
+
+.testi-section .testi-letters-subtitle {
+  color: #64748B !important;
+}
+
+.testi-section .testi-avatar {
+  color: #64748B !important;
+}
+
+.testi-section .testi-subtitle {
+  color: #64748B !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-tile-outcome {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-tile-outcome i {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-tile-outcome span {
+  color: #334155 !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: #64748B !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
