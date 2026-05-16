@@ -34615,6 +34615,99 @@ body, html {
 .navbar-cta-btn:link {
   color: var(--surface-color) !important;
 }
+
+.nav-cta-container .navbar-cta-btn {
+  background-color: var(--primary) !important;
+  background: var(--primary) !important;
+  color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  min-height: 40px !important;
+  padding: 10px 20px !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(37,99,235,0.22) !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease !important;
+}
+
+.nav-cta-container .navbar-cta-btn:hover {
+  background-color: #1D4ED8 !important;
+  background: #1D4ED8 !important;
+  box-shadow: 0 8px 22px rgba(37,99,235,0.34) !important;
+  transform: translateY(-1px) !important;
+}
+
+.index-case-studies-section .case-tile {
+  border-radius: 14px !important;
+  box-shadow: 0 2px 12px rgba(15,23,42,0.07) !important;
+  border: 1px solid rgba(15,23,42,0.08) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+.index-case-studies-section .case-tile:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 32px rgba(15,23,42,0.13) !important;
+  border-color: rgba(37,99,235,0.18) !important;
+}
+
+.index-case-studies-section .case-tile-body {
+  padding: 28px !important;
+}
+
+.index-case-studies-section .case-tile--featured .case-tile-body {
+  padding: 28px !important;
+}
+
+.testi-section .testi-card {
+  border-radius: 14px !important;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.07) !important;
+  border: 1px solid rgba(37,99,235,0.10) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease !important;
+}
+
+.testi-section .testi-card:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 32px rgba(37,99,235,0.12) !important;
+  border-color: rgba(37,99,235,0.22) !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  border-radius: 8px !important;
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease !important;
+}
+
+.familiar-section .familiar-cta-btn:hover {
+  transform: translateY(-1px) !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn {
+  border-radius: 8px !important;
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease !important;
+}
+
+.how-it-works-section .how-it-works-cta-btn:hover {
+  transform: translateY(-1px) !important;
+}
+
+.index-problems-section .index-problems-summary-cta {
+  border-radius: 8px !important;
+  min-height: 48px !important;
+  font-weight: 700 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
