@@ -30477,6 +30477,216 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
   --wa-float-radius: 50px;
   --wa-float-z: 9999;
 }
+/* Batch: אחידות Hero sections בכל האתר — padding, max-width, typography, button styles */
+/* ═══════════════════════════════════════════
+   HERO UNIFICATION — כל Hero sections
+   ═══════════════════════════════════════════ */
+
+/* hero-clean (Home page, Software page) */
+.hero-clean {
+  padding: var(--hero-pad-v, 80px) var(--hero-pad-h, 24px) !important;
+  background: var(--hero-bg, var(--bg-light)) !important;
+}
+.hero-clean__inner {
+  max-width: var(--hero-max-width, 1180px) !important;
+}
+.hero-clean__h1 {
+  font-size: var(--hero-h1-desktop, clamp(2.4rem, 4vw, 3.45rem)) !important;
+  color: var(--text-dark) !important;
+  font-weight: 800 !important;
+  line-height: 1.10 !important;
+}
+.hero-clean__subtitle {
+  font-size: var(--hero-subtitle-size, 1.05rem) !important;
+  color: var(--text-dark) !important;
+}
+.hero-clean__trust,
+.hero-clean__pain {
+  color: var(--text-muted) !important;
+}
+.hero-clean__btn-primary {
+  background: var(--hero-btn-primary-bg, var(--primary)) !important;
+  color: var(--hero-btn-primary-color, #ffffff) !important;
+  font-size: var(--hero-btn-font-size, 0.93rem) !important;
+  font-weight: var(--hero-btn-font-weight, 700) !important;
+  padding: var(--hero-btn-pad, 12px 24px) !important;
+  min-height: var(--hero-btn-min-h, 48px) !important;
+  border-radius: var(--hero-btn-radius, 8px) !important;
+  box-shadow: var(--hero-btn-primary-shadow, 0 8px 20px rgba(30,78,216,0.16)) !important;
+  transition: box-shadow 0.2s ease, transform 0.15s ease !important;
+}
+.hero-clean__btn-whatsapp {
+  background: var(--hero-btn-whatsapp-bg, #1F9A4B) !important;
+  color: var(--hero-btn-whatsapp-color, #ffffff) !important;
+  font-size: var(--hero-btn-font-size, 0.93rem) !important;
+  font-weight: 600 !important;
+  padding: var(--hero-btn-pad, 12px 24px) !important;
+  min-height: var(--hero-btn-min-h, 48px) !important;
+  border-radius: var(--hero-btn-radius, 8px) !important;
+}
+
+/* about hero (abv2) */
+.abv2 {
+  padding: var(--hero-pad-v, 80px) var(--hero-pad-h, 24px) !important;
+  background: var(--hero-bg, var(--bg-light)) !important;
+}
+.abv2__inner {
+  max-width: var(--hero-max-width, 1180px) !important;
+}
+.abv2__h1 {
+  font-size: var(--hero-h1-desktop, clamp(2.4rem, 4vw, 3.45rem)) !important;
+  color: var(--text-dark) !important;
+  font-weight: 800 !important;
+  line-height: 1.10 !important;
+}
+.abv2__desc {
+  font-size: var(--hero-subtitle-size, 1.05rem) !important;
+  color: var(--text-muted) !important;
+}
+.abv2__btn-primary {
+  background: var(--hero-btn-primary-bg, var(--primary)) !important;
+  color: var(--hero-btn-primary-color, #ffffff) !important;
+  font-size: var(--hero-btn-font-size, 0.93rem) !important;
+  font-weight: var(--hero-btn-font-weight, 700) !important;
+  padding: var(--hero-btn-pad, 12px 24px) !important;
+  min-height: var(--hero-btn-min-h, 48px) !important;
+  border-radius: var(--hero-btn-radius, 8px) !important;
+  box-shadow: var(--hero-btn-primary-shadow, 0 8px 20px rgba(30,78,216,0.16)) !important;
+}
+
+/* experience hero */
+.experience-profile-section {
+  padding: var(--hero-pad-v, 80px) var(--hero-pad-h, 24px) !important;
+  background: var(--hero-bg, var(--bg-light)) !important;
+}
+.experience-profile-container {
+  max-width: var(--hero-max-width, 1180px) !important;
+}
+.experience-profile-title {
+  font-size: var(--hero-h1-desktop, clamp(2.4rem, 4vw, 3.45rem)) !important;
+  color: var(--text-dark) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+}
+.experience-profile-intro {
+  font-size: var(--hero-subtitle-size, 1.05rem) !important;
+  color: var(--text-muted) !important;
+}
+.btn-primary-profile {
+  background: var(--hero-btn-primary-bg, var(--primary)) !important;
+  color: var(--hero-btn-primary-color, #ffffff) !important;
+  font-size: var(--hero-btn-font-size, 0.93rem) !important;
+  font-weight: var(--hero-btn-font-weight, 700) !important;
+  padding: var(--hero-btn-pad, 12px 24px) !important;
+  min-height: var(--hero-btn-min-h, 48px) !important;
+  border-radius: var(--hero-btn-radius, 8px) !important;
+}
+.btn-ghost-profile {
+  border: 2px solid var(--primary) !important;
+  color: var(--primary) !important;
+  font-size: var(--hero-btn-font-size, 0.93rem) !important;
+  font-weight: 600 !important;
+  padding: var(--hero-btn-pad, 12px 24px) !important;
+  min-height: var(--hero-btn-min-h, 48px) !important;
+  border-radius: var(--hero-btn-radius, 8px) !important;
+  background: transparent !important;
+}
+
+/* services intro hero */
+.services-intro-section {
+  padding: var(--hero-pad-v, 80px) var(--hero-pad-h, 24px) !important;
+  background: var(--hero-bg, var(--bg-light)) !important;
+}
+.services-intro-container {
+  max-width: var(--hero-max-width, 1180px) !important;
+}
+.services-intro-title {
+  font-size: var(--hero-h1-desktop, clamp(2.4rem, 4vw, 3.45rem)) !important;
+  color: var(--text-dark) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+}
+.services-intro-subtitle {
+  font-size: var(--hero-subtitle-size, 1.05rem) !important;
+  color: var(--text-muted) !important;
+}
+
+/* software intro hero */
+.software-intro-section {
+  padding: var(--hero-pad-v, 80px) var(--hero-pad-h, 24px) !important;
+  background: var(--hero-bg, var(--bg-light)) !important;
+}
+.software-intro-container {
+  max-width: var(--hero-max-width, 1180px) !important;
+}
+.software-intro-heading {
+  font-size: var(--hero-h1-desktop, clamp(2.4rem, 4vw, 3.45rem)) !important;
+  color: var(--text-dark) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+}
+.software-intro-lead {
+  font-size: var(--hero-subtitle-size, 1.05rem) !important;
+  color: var(--text-muted) !important;
+}
+
+/* contact intro hero */
+.contact-contact-intro-section {
+  padding: var(--hero-pad-v, 80px) var(--hero-pad-h, 24px) !important;
+  background: var(--hero-bg, var(--bg-light)) !important;
+}
+.contact-intro-container {
+  max-width: var(--hero-max-width, 1180px) !important;
+}
+.contact-intro-title {
+  font-size: var(--hero-h1-desktop, clamp(2.4rem, 4vw, 3.45rem)) !important;
+  color: var(--text-dark) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+}
+.contact-intro-subtitle {
+  font-size: var(--hero-subtitle-size, 1.05rem) !important;
+  color: var(--text-muted) !important;
+}
+
+/* ═══════════════════ RESPONSIVE — כל Heroes ═══════════════════ */
+@media (max-width: 900px) {
+  .hero-clean__h1,
+  .abv2__h1,
+  .experience-profile-title,
+  .services-intro-title,
+  .software-intro-heading,
+  .contact-intro-title {
+    font-size: var(--hero-h1-tablet, 2.2rem) !important;
+  }
+}
+@media (max-width: 768px) {
+  .hero-clean,
+  .abv2,
+  .experience-profile-section,
+  .services-intro-section,
+  .software-intro-section,
+  .contact-contact-intro-section {
+    padding: 82px 20px 48px !important;
+  }
+  .hero-clean__h1,
+  .abv2__h1,
+  .experience-profile-title,
+  .services-intro-title,
+  .software-intro-heading,
+  .contact-intro-title {
+    font-size: var(--hero-h1-mobile, clamp(1.55rem, 7vw, 1.9rem)) !important;
+  }
+  .hero-clean__btn-primary,
+  .hero-clean__btn-whatsapp,
+  .abv2__btn-primary,
+  .btn-primary-profile,
+  .btn-ghost-profile {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 50px !important;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
