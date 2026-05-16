@@ -30345,6 +30345,49 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 }
 /* Batch: הצגת 'צור קשר' בסרגל הניווט גם בדסקטופ */
 @media (min-width: 769px) { .nav-cta-item-mobile { display: list-item !important; } }
+
+.index-cta-section .index-cta-btn-secondary {
+  background: #1F9A4B !important;
+  color: var(--surface-color) !important;
+  border: none !important;
+  font-size: 0.93rem !important;
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+  min-height: 48px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  white-space: nowrap !important;
+  transition: background 0.2s ease, transform 0.15s ease !important;
+  box-shadow: none !important;
+}
+
+.index-cta-section .index-cta-btn-secondary:hover {
+  background: #17863f !important;
+  transform: translateY(-1px) !important;
+}
+
+.index-cta-section .index-cta-subtext {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-reassurance {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-heading {
+  color: var(--surface-color) !important;
+}
+
+.index-cta-section .index-cta-reassurance span {
+  color: var(--surface-color) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
