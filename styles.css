@@ -3769,8 +3769,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   position: relative;
   direction: rtl;
   text-align: center;
-  background: linear-gradient(135deg, var(--text-color) 0%, #182645 50%, var(--text-color) 100%) !important;
-  background-image: linear-gradient(135deg, var(--text-color) 0%, #182645 50%, var(--text-color) 100%) !important;
+  background: var(--bg-dark) !important;
+  background-image: none !important;
 }
 
 .index-cta-section .index-cta-container {
@@ -3788,10 +3788,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-cta-section .index-cta-heading {
   font-family: 'Rubik', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.1rem) !important;
+  font-weight: 800 !important;
   line-height: 1.3;
-  color: var(--text-light);
+  color: var(--text-light) !important;
   margin: 0;
   text-align: center;
   max-width: none !important;
@@ -3801,8 +3801,8 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-family: 'Rubik', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
-  color: #CBD5E1 !important;
-  opacity: 0.85;
+  color: rgba(241,245,249,0.82) !important;
+  opacity: 1 !important;
   margin: 0;
   max-width: 580px;
   text-align: center;
@@ -3837,40 +3837,43 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 }
 
 .index-cta-section .index-cta-btn-primary:hover {
-  background: #2563EB;
+  background: #1D4ED8 !important;
   border-color: #2563EB;
-  box-shadow: 0 8px 24px rgba(36,87,255,0.22);
+  box-shadow: 0 8px 28px rgba(37,99,235,0.38) !important;
+  transform: translateY(-1px) !important;
 }
 
 .index-cta-section .index-cta-btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
+  background: transparent !important;
   color: #ffffff !important;
   padding: 14px 28px;
-  border-radius: 6px;
+  border-radius: 8px !important;
   font-family: 'Rubik', sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700 !important;
   letter-spacing: 0.01em;
   text-decoration: none;
-  border: 2px solid rgba(255,255,255,0.4) !important;
+  border: 1.5px solid rgba(241,245,249,0.35) !important;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
 }
 
 .index-cta-section .index-cta-btn-secondary:hover {
-  background: rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.08) !important;
   border-color: var(--text-light);
+  box-shadow: none !important;
+  transform: translateY(-1px) !important;
 }
 
 .index-cta-section .index-cta-reassurance {
   font-family: 'Rubik', sans-serif;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: #94A3B8 !important;
-  opacity: 0.6;
+  color: rgba(241,245,249,0.55) !important;
+  opacity: 1 !important;
   margin: 0;
   display: flex;
   align-items: center;
@@ -31173,6 +31176,41 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 }
 /* Batch: Design System Cleanup — unified buttons, typography, cards, hero sections, CTA sections, WhatsApp float, badges, icons, section backgrounds site-wide */
 .hero-clean__btn-primary, .abv2__btn-primary, .btn-primary-profile, .services-btn-primary, .services-benefits-cta-btn, .experience-portfolio-btn, .exp-cta-btn, .how-it-works-cta-btn, .familiar-cta-btn, .index-problems-summary-cta, .index-cta-btn-primary, .contact-reassurance-btn-primary, .contact-faq-cta-btn, .cta-dark-final__btn--primary { background: var(--ds-btn-primary-bg, var(--primary)); color: var(--ds-btn-primary-color, #fff); font-size: var(--ds-btn-font-size, 0.93rem); font-weight: var(--ds-btn-font-weight, 700); padding: var(--ds-btn-pad-v, 12px) var(--ds-btn-pad-h, 26px); min-height: var(--ds-btn-min-h, 48px); border-radius: var(--ds-radius-btn, 8px); box-shadow: var(--ds-btn-primary-shadow, 0 4px 16px rgba(37,99,235,0.22)); transition: var(--ds-btn-transition, background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; white-space: nowrap; border: none; cursor: pointer; } .hero-clean__btn-primary:hover, .abv2__btn-primary:hover, .btn-primary-profile:hover, .services-btn-primary:hover, .services-benefits-cta-btn:hover, .experience-portfolio-btn:hover, .exp-cta-btn:hover, .how-it-works-cta-btn:hover, .familiar-cta-btn:hover, .index-problems-summary-cta:hover, .index-cta-btn-primary:hover, .contact-reassurance-btn-primary:hover, .contact-faq-cta-btn:hover, .cta-dark-final__btn--primary:hover { background: var(--ds-btn-primary-bg-hover, #1D4ED8); box-shadow: var(--ds-btn-primary-shadow-hover, 0 8px 28px rgba(37,99,235,0.34)); transform: translateY(-1px); } .hero-clean__btn-whatsapp, .btn-ghost-profile, .contact-reassurance-btn-whatsapp, .cta-dark-final__btn--secondary, .index-cta-btn-secondary, .services-btn-outline { border-radius: var(--ds-radius-btn, 8px); font-size: var(--ds-btn-font-size, 0.93rem); font-weight: var(--ds-btn-font-weight, 700); padding: var(--ds-btn-pad-v, 12px) var(--ds-btn-pad-h, 26px); min-height: var(--ds-btn-min-h, 48px); transition: var(--ds-btn-transition); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; white-space: nowrap; gap: 8px; } .hero-clean__btn-whatsapp, .contact-reassurance-btn-whatsapp { background: var(--ds-btn-wa-bg, #1F9A4B); color: var(--ds-btn-wa-color, #fff); border: none; } .hero-clean__btn-whatsapp:hover, .contact-reassurance-btn-whatsapp:hover { background: var(--ds-btn-wa-bg-hover, #178240); transform: translateY(-1px); } .services-btn-outline, .btn-ghost-profile { background: transparent; border: 1.5px solid rgba(37,99,235,0.35); color: var(--primary); } .services-btn-outline:hover, .btn-ghost-profile:hover { background: rgba(37,99,235,0.05); transform: translateY(-1px); } .cta-dark-final__btn--secondary, .index-cta-btn-secondary { background: transparent; border: 1.5px solid var(--ds-btn-ghost-border, rgba(241,245,249,0.32)); color: var(--text-light, #F1F5F9); } .cta-dark-final__btn--secondary:hover, .index-cta-btn-secondary:hover { background: rgba(255,255,255,0.08); transform: translateY(-1px); } .navbar-cta-btn { background: var(--primary); color: #fff; font-size: 0.88rem; font-weight: 700; padding: 9px 20px; border-radius: var(--ds-radius-btn, 8px); text-decoration: none; display: inline-flex; align-items: center; transition: background 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 2px 8px rgba(37,99,235,0.18); } .navbar-cta-btn:hover { background: #1D4ED8; box-shadow: 0 4px 14px rgba(37,99,235,0.28); } .whatsapp-cta-fixed, .whatsapp-float { position: fixed; bottom: var(--wa-float-bottom, 28px); left: var(--wa-float-left, 28px); width: var(--wa-float-size, 56px); height: var(--wa-float-size, 56px); border-radius: var(--wa-float-radius, 50px); background: var(--wa-float-bg, #25D366); color: var(--wa-float-color, #fff); display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 1.5rem; text-decoration: none; z-index: var(--wa-float-z, 9999); box-shadow: var(--wa-float-shadow, 0 4px 20px rgba(37,211,102,0.45)); transition: transform 0.2s ease, box-shadow 0.2s ease; } .whatsapp-cta-fixed { width: auto; padding: 0 20px; font-size: 0.95rem; font-weight: 700; } .whatsapp-cta-fixed:hover, .whatsapp-float:hover { transform: scale(1.06); box-shadow: 0 6px 28px rgba(37,211,102,0.55); } .hero-clean__badge, .abv2__badge, .experience-profile-badge, .services-intro-eyebrow, .services-capabilities-label, .services-benefits-label, .services-process-label, .experience-portfolio-eyebrow, .experience-trust-eyebrow, .index-problems-eyebrow, .contact-intro-label, .contact-faq-label, .case-studies-eyebrow, .index-services-label { display: inline-flex; align-items: center; gap: 7px; background: var(--ds-badge-bg, rgba(37,99,235,0.06)); border: 1px solid var(--ds-badge-border, rgba(37,99,235,0.16)); border-radius: var(--ds-radius-pill, 100px); padding: var(--ds-badge-pad, 5px 14px); font-size: var(--ds-eyebrow-size, 0.72rem); font-weight: var(--ds-eyebrow-weight, 600); color: var(--primary); letter-spacing: var(--ds-eyebrow-letter-spacing, 0.07em); width: fit-content; } .hero-clean { background: var(--bg-light); border-bottom: 1px solid rgba(15,23,42,0.06); padding: var(--ds-hero-pad-v, 80px) var(--ds-section-pad-h, 24px); } .abv2 { background: var(--bg-light); border-bottom: 1px solid rgba(15,23,42,0.06); padding: var(--ds-hero-pad-v, 80px) var(--ds-section-pad-h, 24px); font-family: var(--font-body, 'Rubik', sans-serif); } .abv2__h1, .experience-profile-title, .services-intro-title, .contact-intro-title { font-size: clamp(1.9rem, 3.5vw, 2.85rem); font-weight: var(--ds-h1-weight, 800); line-height: var(--ds-h1-line-height, 1.12); letter-spacing: var(--ds-h1-letter-spacing, -0.4px); color: var(--text-dark); margin: 0; padding: 0; } .abv2__desc, .experience-profile-intro, .services-intro-subtitle, .contact-intro-subtitle { color: var(--text-muted); font-size: 1.05rem; line-height: var(--ds-body-line-height, 1.72); } .familiar-title, .exp-title, .how-it-works-section h2, .testi-main-title, .index-problems-title, .index-services-heading, .case-studies-title, .services-intro-title, .services-capabilities-title, .services-benefits-title, .services-process-title, .services-cta-heading, .experience-portfolio-title, .experience-stats-section h2, .experience-trust-title, .origin-story-title, .diag-title, .hw-title, .cta-dark-final__heading, .contact-intro-title, .contact-faq-title, .contact-reassurance-heading, .index-cta-heading { font-size: var(--ds-h2-size, clamp(1.55rem, 3vw, 2.1rem)); font-weight: var(--ds-h2-weight, 800); line-height: var(--ds-h2-line-height, 1.22); letter-spacing: var(--ds-h2-letter-spacing, -0.2px); color: var(--text-dark); } .testi-main-title, .cta-dark-final__heading, .index-cta-heading, .experience-stats-section h2 { color: var(--text-light); } .familiar-subtitle, .exp-subtitle, .testi-subtitle, .index-problems-subtitle, .case-studies-subtitle, .services-benefits-subtitle, .services-process-subtitle, .experience-portfolio-subtitle, .experience-trust-subtitle, .diag-subtitle, .hw-subtitle, .contact-faq-subtitle, .index-services-lead { font-size: 1.02rem; color: var(--text-muted); line-height: var(--ds-body-line-height, 1.72); margin: 0; } .testi-card, .familiar-benefit-card, .diag-card, .exp-card, .index-problems-card, .experience-portfolio-card, .services-intro-card, .services-benefit-card, .services-process-step, .contact-card, .how-it-works-card { background: var(--surface, #fff); border: 1px solid var(--ds-card-border, rgba(15,23,42,0.07)); border-radius: var(--ds-radius-card, 12px); box-shadow: var(--ds-shadow-sm, 0 2px 8px rgba(15,23,42,0.07)); transition: var(--ds-card-transition, box-shadow 0.2s ease, transform 0.2s ease); } .testi-card:hover, .familiar-benefit-card:hover, .diag-card:hover, .exp-card:hover, .index-problems-card:hover, .experience-portfolio-card:hover, .services-intro-card:hover, .services-benefit-card:hover { box-shadow: var(--ds-shadow-md, 0 4px 20px rgba(15,23,42,0.08)); transform: var(--ds-card-hover-lift, translateY(-3px)); } .testi-card { padding: var(--ds-card-pad, 28px); } .familiar-benefit-card { padding: var(--ds-card-pad, 28px); } .diag-card { padding: var(--ds-card-pad, 28px); } .exp-card { padding: var(--ds-card-pad, 28px); } .index-problems-card { padding: 20px var(--ds-card-pad, 28px); } .services-intro-card { padding: var(--ds-card-pad, 28px); } .services-benefit-card { padding: var(--ds-card-pad, 28px); } .familiar-section, .how-it-works-section, .origin-story-section, .diag-section, .hw-how-i-work, .exp-section, .index-case-studies-section { padding-top: var(--ds-section-pad-v, 96px); padding-bottom: var(--ds-section-pad-v, 96px); } .familiar-section { background: var(--surface, #fff); } .how-it-works-section { background: var(--bg-light); } .testi-section { background: var(--bg-light); } .index-problems-section { background: var(--surface, #fff); } .index-services-section { background: var(--bg-light); } .services-intro-section { background: var(--bg-light); } .services-capabilities-section { background: var(--surface, #fff); } .services-benefits-section { background: var(--bg-light); } .origin-story-section { background: var(--surface, #fff); } .diag-section { background: var(--bg-light); } .hw-how-i-work { background: var(--surface, #fff); } .exp-section { background: var(--bg-light); } .index-case-studies-section { background: var(--surface, #fff); } .index-cta-section, .services-closing-cta-section, .cta-dark-final, .contact-reassurance-section, .experience-stats-section { background: var(--bg-dark); } .index-cta-container, .services-cta-container, .cta-dark-final__container, .contact-reassurance-container { max-width: var(--ds-max-width, 1180px); margin-inline: auto; padding: var(--ds-cta-pad-v, 80px) var(--ds-section-pad-h, 24px); text-align: center; } .index-cta-heading, .services-cta-heading, .cta-dark-final__heading, .contact-reassurance-heading { color: var(--text-light, #F1F5F9); font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 800; line-height: 1.22; margin: 0 0 16px; } .index-cta-subtext, .services-cta-subtext, .cta-dark-final__subheading, .contact-reassurance-body { color: rgba(241,245,249,0.82); font-size: 1.02rem; line-height: 1.72; margin: 0 0 32px; } .index-cta-buttons, .services-cta-actions, .cta-dark-final__actions, .contact-reassurance-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; align-items: center; } .testi-star { color: #F59E0B; } .testi-avatar { background: rgba(37,99,235,0.10); color: var(--primary); font-weight: 700; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; } .how-it-works-card { padding: var(--ds-card-pad, 28px); } .how-it-works-card--last { margin-bottom: 0; } .index-services-row-icon { background: var(--ds-icon-bg, rgba(37,99,235,0.08)); color: var(--primary); border-radius: var(--ds-radius-icon, 8px); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; } .familiar-benefit-icon, .diag-icon, .exp-icon, .services-card-icon, .services-benefit-card-icon-wrap, .experience-portfolio-card-icon, .contact-card-icon-wrap { background: var(--ds-icon-bg, rgba(37,99,235,0.08)); color: var(--primary); border-radius: var(--ds-radius-icon, 8px); display: flex; align-items: center; justify-content: center; flex-shrink: 0; } .how-it-works-reinforcement { background: var(--bg-light); border: 1px solid var(--ds-card-border); border-radius: var(--ds-radius-card, 12px); padding: 16px 24px; display: flex; align-items: center; gap: 12px; max-width: 600px; margin: 32px auto 0; } .index-services-principle { background: rgba(37,99,235,0.05); border: 1px solid var(--ds-badge-border, rgba(37,99,235,0.16)); border-radius: var(--ds-radius-card, 12px); padding: 20px 28px; display: flex; align-items: flex-start; gap: 16px; } .abv2__btn-primary { padding: 13px 28px; } .abv2__desc { color: var(--text-muted); max-width: 520px; } .experience-portfolio-featured { background: var(--bg-light); border: 1px solid var(--ds-card-border); border-radius: var(--ds-radius-lg, 14px); overflow: hidden; } .experience-stat-number { color: var(--text-light); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; } .experience-stat-label { color: rgba(241,245,249,0.85); } .experience-stat-desc { color: rgba(241,245,249,0.6); font-size: 0.88rem; } .credibility-number { color: var(--text-light); font-weight: 800; } .credibility-label { color: rgba(241,245,249,0.7); } .index-cta-reassurance { color: rgba(241,245,249,0.65); font-size: 0.82rem; margin-top: 16px; } .services-cta-note { color: rgba(241,245,249,0.6); font-size: 0.82rem; margin-top: 16px; } .services-cta-badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--ds-radius-pill); padding: 5px 16px; color: rgba(241,245,249,0.85); font-size: 0.78rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; } .contact-card { border-radius: var(--ds-radius-card, 12px); border: 1px solid var(--ds-card-border); box-shadow: var(--ds-shadow-sm); transition: var(--ds-card-transition); } .contact-card:hover { box-shadow: var(--ds-shadow-md); transform: var(--ds-card-hover-lift); } .contact-faq-item { border: 1px solid var(--ds-card-border); border-radius: var(--ds-radius-card, 12px); background: var(--surface); margin-bottom: 12px; } .contact-reassurance-panel { border-radius: var(--ds-radius-lg, 14px); } .abv2__trust-note { color: var(--text-muted); font-size: 0.82rem; } .services-process-step-number { background: rgba(37,99,235,0.08); color: var(--primary); border: 1.5px solid rgba(37,99,235,0.18); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; } .services-cap-status-badge { background: rgba(255,255,255,0.95); border: 1px solid var(--ds-card-border); border-radius: var(--ds-radius-card); box-shadow: var(--ds-shadow-sm); } .services-cap-stats-card { background: var(--surface); border: 1px solid var(--ds-card-border); border-radius: var(--ds-radius-card); box-shadow: var(--ds-shadow-md); } @media (max-width: 768px) { .familiar-section, .how-it-works-section, .origin-story-section, .diag-section, .hw-how-i-work, .exp-section, .index-case-studies-section { padding-top: var(--ds-section-pad-mobile, 56px); padding-bottom: var(--ds-section-pad-mobile, 56px); } .index-cta-container, .services-cta-container, .cta-dark-final__container, .contact-reassurance-container { padding-top: 56px; padding-bottom: 56px; } .index-cta-buttons, .services-cta-actions, .cta-dark-final__actions, .contact-reassurance-actions { flex-direction: column; align-items: stretch; } }
+
+.origin-story-section {
+  background: var(--surface, #fff) !important;
+  padding: var(--ds-section-pad-v, 96px) var(--ds-section-pad-h, 24px) !important;
+}
+
+.diag-section {
+  background: var(--bg-light) !important;
+  padding: var(--ds-section-pad-v, 96px) var(--ds-section-pad-h, 24px) !important;
+}
+
+.exp-section {
+  background: var(--bg-light) !important;
+}
+
+.services-closing-cta-section {
+  background: var(--bg-dark) !important;
+  padding: var(--ds-cta-pad-v, 80px) var(--ds-section-pad-h, 24px) !important;
+}
+
+.services-intro-section {
+  background: var(--bg-light) !important;
+}
+
+.services-capabilities-section {
+  background: var(--surface, #fff) !important;
+}
+
+.services-benefits-section {
+  background: var(--bg-light) !important;
+}
+
+.services-process-section {
+  background: var(--bg-light) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
