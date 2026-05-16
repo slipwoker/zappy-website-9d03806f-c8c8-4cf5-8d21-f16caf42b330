@@ -30388,6 +30388,52 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 .index-cta-section .index-cta-reassurance span {
   color: var(--surface-color) !important;
 }
+
+:root {
+  --font-size-h1-md: 2.2rem;
+  --font-size-h1-sm: 1.75rem;
+  --font-size-h2: 2.1rem;
+  --font-size-h2-md: 1.7rem;
+  --font-size-h2-sm: 1.4rem;
+  --font-size-h3: 1.15rem;
+  --font-size-body: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.78rem;
+  --font-weight-heading: 800;
+  --font-weight-sub: 600;
+  --font-weight-body: 400;
+  --line-height-heading: 1.15;
+  --line-height-body: 1.7;
+  --btn-padding-h: 26px;
+  --btn-min-height: 48px;
+  --btn-font-size: 0.93rem;
+  --btn-font-weight: 700;
+  --btn-radius: 8px;
+  --btn-transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  --btn-primary-bg: var(--primary);
+  --btn-primary-color: var(--surface-color);
+  --btn-primary-shadow: 0 4px 16px rgba(37,99,235,0.22);
+  --btn-primary-shadow-hover: 0 8px 28px rgba(37,99,235,0.32);
+  --section-pad-h: 24px;
+  --section-pad-v-md: 64px;
+  --section-pad-v-sm: 48px;
+  --container-max: 1180px;
+  --hover-lift-sm: translateY(-1px);
+  --focus-ring: 0 0 0 3px rgba(37,99,235,0.25);
+  --badge-border: rgba(37,99,235,0.18);
+  --badge-color: var(--primary);
+  --badge-radius: 100px;
+  --badge-font-size: 0.72rem;
+  --badge-font-weight: 600;
+  --badge-padding: 5px 14px;
+  --card-shadow: var(--shadow-card);
+  --card-shadow-hover: var(--shadow-elevated);
+  --card-transition: box-shadow 0.2s ease, transform 0.2s ease;
+  --card-hover-lift: translateY(-3px);
+  --divider-dark: var(--bg-dark);
+  --surface-subtle: var(--bg-light);
+  --surface-dark: var(--bg-dark);
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
