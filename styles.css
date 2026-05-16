@@ -33387,6 +33387,10 @@ body, html {
 .contact-reassurance-section .contact-reassurance-btn-primary {
   color: var(--surface-color) !important;
 }
+
+.origin-story-section .origin-story-paragraph {
+  color: #475569 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
