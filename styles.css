@@ -30687,6 +30687,265 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
     min-height: 50px !important;
   }
 }
+/* Batch: אחידות CTA sections בכל האתר */
+/* ═══════════════════════════════════════════
+   CTA UNIFICATION — כל CTA sections
+   ═══════════════════════════════════════════ */
+
+/* Home page CTA */
+.index-cta-section {
+  background: var(--cta-unified-bg, var(--bg-dark)) !important;
+  padding: var(--cta-unified-pad-v, 80px) var(--cta-unified-pad-h, 24px) !important;
+}
+.index-cta-container {
+  max-width: var(--cta-unified-max-width, 860px) !important;
+  margin: 0 auto !important;
+}
+.index-cta-heading {
+  font-size: var(--cta-unified-heading-size, clamp(1.6rem, 3vw, 2.1rem)) !important;
+  color: var(--text-light) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+.index-cta-subtext {
+  color: var(--cta-unified-text-color, rgba(241,245,249,0.85)) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+.index-cta-btn-primary {
+  background: var(--cta-unified-btn-primary-bg, var(--primary)) !important;
+  color: #ffffff !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: var(--cta-unified-btn-font-weight, 700) !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+  box-shadow: var(--cta-unified-btn-primary-shadow, 0 4px 20px rgba(36,87,255,0.30)) !important;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease !important;
+}
+.index-cta-btn-secondary {
+  background: transparent !important;
+  color: var(--text-light) !important;
+  border: 2px solid var(--cta-unified-btn-ghost-border, rgba(241,245,249,0.35)) !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: 600 !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+}
+
+/* Experience page CTA dark */
+.cta-dark-final {
+  background: var(--cta-unified-bg, var(--bg-dark)) !important;
+  padding: var(--cta-unified-pad-v, 80px) var(--cta-unified-pad-h, 24px) !important;
+}
+.cta-dark-final__container {
+  max-width: var(--cta-unified-max-width, 860px) !important;
+  margin: 0 auto !important;
+}
+.cta-dark-final__heading {
+  font-size: var(--cta-unified-heading-size, clamp(1.6rem, 3vw, 2.1rem)) !important;
+  color: var(--text-light) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+.cta-dark-final__subheading {
+  color: var(--cta-unified-text-color, rgba(241,245,249,0.85)) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+.cta-dark-final__btn--primary {
+  background: var(--cta-unified-btn-primary-bg, var(--primary)) !important;
+  color: #ffffff !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: var(--cta-unified-btn-font-weight, 700) !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+  box-shadow: var(--cta-unified-btn-primary-shadow, 0 4px 20px rgba(36,87,255,0.30)) !important;
+}
+.cta-dark-final__btn--secondary {
+  background: transparent !important;
+  color: var(--text-light) !important;
+  border: 2px solid var(--cta-unified-btn-ghost-border, rgba(241,245,249,0.35)) !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: 600 !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+}
+
+/* Services CTA */
+.services-closing-cta-section {
+  background: var(--cta-unified-bg, var(--bg-dark)) !important;
+  padding: var(--cta-unified-pad-v, 80px) var(--cta-unified-pad-h, 24px) !important;
+}
+.services-cta-container {
+  max-width: var(--cta-unified-max-width, 860px) !important;
+  margin: 0 auto !important;
+}
+.services-cta-heading {
+  font-size: var(--cta-unified-heading-size, clamp(1.6rem, 3vw, 2.1rem)) !important;
+  color: var(--text-light) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+.services-cta-subtext {
+  color: var(--cta-unified-text-color, rgba(241,245,249,0.85)) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+.services-btn-primary {
+  background: var(--cta-unified-btn-primary-bg, var(--primary)) !important;
+  color: #ffffff !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: var(--cta-unified-btn-font-weight, 700) !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+  box-shadow: var(--cta-unified-btn-primary-shadow, 0 4px 20px rgba(36,87,255,0.30)) !important;
+}
+.services-btn-outline {
+  background: transparent !important;
+  color: var(--text-light) !important;
+  border: 2px solid var(--cta-unified-btn-ghost-border, rgba(241,245,249,0.35)) !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: 600 !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+}
+
+/* Software CTA */
+.software-cta-section {
+  background: var(--cta-unified-bg, var(--bg-dark)) !important;
+  padding: var(--cta-unified-pad-v, 80px) var(--cta-unified-pad-h, 24px) !important;
+}
+.software-cta-container {
+  max-width: var(--cta-unified-max-width, 860px) !important;
+  margin: 0 auto !important;
+}
+.software-cta-heading {
+  font-size: var(--cta-unified-heading-size, clamp(1.6rem, 3vw, 2.1rem)) !important;
+  color: var(--text-light) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+.software-cta-text {
+  color: var(--cta-unified-text-color, rgba(241,245,249,0.85)) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+.software-cta-btn-primary {
+  background: var(--cta-unified-btn-primary-bg, var(--primary)) !important;
+  color: #ffffff !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: var(--cta-unified-btn-font-weight, 700) !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+  box-shadow: var(--cta-unified-btn-primary-shadow, 0 4px 20px rgba(36,87,255,0.30)) !important;
+}
+.software-cta-btn-ghost {
+  background: transparent !important;
+  color: var(--text-light) !important;
+  border: 2px solid var(--cta-unified-btn-ghost-border, rgba(241,245,249,0.35)) !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: 600 !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+}
+
+/* Contact reassurance CTA */
+.contact-reassurance-section {
+  background: var(--cta-unified-bg, var(--bg-dark)) !important;
+  padding: var(--cta-unified-pad-v, 80px) var(--cta-unified-pad-h, 24px) !important;
+}
+.contact-reassurance-container {
+  max-width: var(--cta-unified-max-width, 860px) !important;
+  margin: 0 auto !important;
+}
+.contact-reassurance-heading {
+  font-size: var(--cta-unified-heading-size, clamp(1.6rem, 3vw, 2.1rem)) !important;
+  color: var(--text-light) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+.contact-reassurance-body {
+  color: var(--cta-unified-text-color, rgba(241,245,249,0.85)) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+.contact-reassurance-btn-primary {
+  background: var(--cta-unified-btn-primary-bg, var(--primary)) !important;
+  color: #ffffff !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: var(--cta-unified-btn-font-weight, 700) !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+  box-shadow: var(--cta-unified-btn-primary-shadow, 0 4px 20px rgba(36,87,255,0.30)) !important;
+}
+.contact-reassurance-btn-whatsapp {
+  background: var(--hero-btn-whatsapp-bg, #1F9A4B) !important;
+  color: #ffffff !important;
+  font-size: var(--cta-unified-btn-font-size, 0.95rem) !important;
+  font-weight: 600 !important;
+  padding: var(--cta-unified-btn-pad, 14px 32px) !important;
+  border-radius: var(--cta-unified-btn-radius, 8px) !important;
+  min-height: 50px !important;
+}
+
+/* Home page index-cta buttons */
+.index-cta-buttons {
+  display: flex !important;
+  gap: 14px !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* CTA Responsive */
+@media (max-width: 768px) {
+  .index-cta-section,
+  .cta-dark-final,
+  .services-closing-cta-section,
+  .software-cta-section,
+  .contact-reassurance-section {
+    padding: 56px 20px !important;
+  }
+  .index-cta-heading,
+  .cta-dark-final__heading,
+  .services-cta-heading,
+  .software-cta-heading,
+  .contact-reassurance-heading {
+    font-size: 1.6rem !important;
+  }
+  .index-cta-buttons,
+  .cta-dark-final__actions,
+  .services-cta-actions,
+  .software-cta-buttons,
+  .contact-reassurance-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+  .index-cta-btn-primary,
+  .index-cta-btn-secondary,
+  .cta-dark-final__btn--primary,
+  .cta-dark-final__btn--secondary,
+  .services-btn-primary,
+  .services-btn-outline,
+  .software-cta-btn-primary,
+  .software-cta-btn-ghost,
+  .contact-reassurance-btn-primary,
+  .contact-reassurance-btn-whatsapp {
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
