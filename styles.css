@@ -32419,6 +32419,725 @@ body, html {
 .index-problems-section .index-problems-summary-text {
   color: var(--surface-color) !important;
 }
+
+:root {
+  --card-border: rgba(15,23,42,0.06);
+  --card-shadow-rest: 0 2px 8px rgba(15,23,42,0.06);
+  --card-shadow-hover: 0 8px 24px rgba(15,23,42,0.10);
+  --card-transition: box-shadow 0.2s ease, transform 0.2s ease;
+  --card-hover-lift: translateY(-2px);
+  --text-body-refined: #334155;
+  --text-secondary-refined: #475569;
+  --icon-bg: rgba(37,99,235,0.07);
+  --icon-size-sm: 40px;
+  --icon-size-md: 48px;
+}
+
+.testi-section .testi-card,
+.index-problems-section .index-problems-card,
+.familiar-section .familiar-benefit-card,
+.how-it-works-section .how-it-works-card,
+.index-case-studies-section .case-tile {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+  border-radius: 12px !important;
+}
+
+.testi-section .testi-card:hover,
+.index-problems-section .index-problems-card:hover,
+.familiar-section .familiar-benefit-card:hover,
+.how-it-works-section .how-it-works-card:hover,
+.index-case-studies-section .case-tile:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.testi-section .testi-card {
+  padding: 28px !important;
+}
+
+.familiar-section .familiar-benefit-card {
+  padding: 28px !important;
+}
+
+.how-it-works-section .how-it-works-card {
+  padding: 28px 24px !important;
+}
+
+.index-problems-section .index-problems-icon-wrap {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 10px !important;
+  background: rgba(37,99,235,0.07) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.index-problems-section .index-problems-card-content h3 {
+  color: #1E293B !important;
+}
+
+.index-problems-section .index-problems-card-content p {
+  color: #475569 !important;
+}
+
+.testi-section .testi-text p {
+  color: #334155 !important;
+  line-height: 1.70 !important;
+}
+
+.testi-section .testi-name {
+  color: #1E293B !important;
+  font-weight: 600 !important;
+}
+
+.testi-section .testi-role {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-benefit-icon {
+  font-size: 1.6rem !important;
+  margin-bottom: 8px !important;
+}
+
+.index-services-section .index-services-row-icon {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  border-radius: 8px !important;
+  background: rgba(37,99,235,0.07) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile {
+  overflow: hidden !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: #475569 !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  background: rgba(37,99,235,0.06) !important;
+  border: 1px solid rgba(37,99,235,0.12) !important;
+  color: var(--accent-color) !important;
+  border-radius: 999px !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+}
+
+.index-problems-section .index-problems-card h3 {
+  color: #1E293B !important;
+}
+
+.index-problems-section .index-problems-card p {
+  color: #1E293B !important;
+}
+
+.index-problems-section .index-problems-summary-icon svg {
+  color: #1E293B !important;
+}
+
+.index-problems-section .index-problems-card-content p {
+  color: #1E293B !important;
+}
+
+.index-problems-section .index-problems-icon-wrap svg {
+  color: #1E293B !important;
+}
+
+.testi-section .testi-main-title {
+  color: #1E293B !important;
+}
+
+.testi-section .testi-subtitle {
+  color: #1E293B !important;
+}
+
+.testi-section .testi-text p {
+  color: #1E293B !important;
+}
+
+.testi-section .testi-role {
+  color: #1E293B !important;
+}
+
+.testi-section .testi-star {
+  color: #1E293B !important;
+}
+
+.testi-section .testi-letters-title {
+  color: #1E293B !important;
+}
+
+.testi-section .testi-letters-subtitle {
+  color: #1E293B !important;
+}
+
+.testi-section .testi-avatar {
+  color: #1E293B !important;
+}
+
+.testi-section .testi-name {
+  color: #475569 !important;
+}
+
+.familiar-section .familiar-title {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-subtitle {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-pain-text {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-callout-text {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-transition {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-benefit-desc {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-footnote {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-callout-icon {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-pain-icon {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-cta-btn {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-callout-text strong {
+  color: #1E293B !important;
+}
+
+.familiar-section .familiar-benefit-title {
+  color: #475569 !important;
+}
+
+.index-services-section .index-services-heading {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-lead {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-title {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-label {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-process-sub {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-step-title {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-step-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-process-badge {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-row-icon svg {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle strong {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-step-num {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section h2.index-services-heading {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section p.index-services-lead {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section h3.index-services-row-title {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section p.index-services-row-desc {
+  color: var(--accent-color) !important;
+}
+
+.index-services-section .index-services-principle-text {
+  color: var(--accent-color) !important;
+}
+
+.index-case-studies-section .case-tile-desc {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .case-meta-tag {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .case-tile-outcome {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .case-tile-outcome i {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .case-studies-title {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .case-studies-subtitle {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .case-studies-eyebrow {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .credibility-number {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .credibility-label {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .credibility-statement {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .case-tile-outcome span {
+  color: #1E293B !important;
+}
+
+.index-case-studies-section .case-tile-title {
+  color: #475569 !important;
+}
+
+.services-intro-section .services-intro-card {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.services-intro-section .services-intro-card:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.services-intro-section .services-card-desc {
+  color: #475569 !important;
+}
+
+.services-capabilities-section .services-cap-block {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+  padding: 20px 24px !important;
+}
+
+.services-capabilities-section .services-cap-block:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.services-capabilities-section .services-cap-block-icon {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  border-radius: 8px !important;
+  background: rgba(37,99,235,0.07) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--accent-color) !important;
+  flex-shrink: 0 !important;
+}
+
+.services-capabilities-section .services-cap-block-body h3 {
+  color: #1E293B !important;
+}
+
+.services-capabilities-section .services-cap-block-body p {
+  color: #475569 !important;
+}
+
+.services-benefits-section .services-benefit-card {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.services-benefits-section .services-benefit-card:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.services-benefits-section .services-benefit-card-icon-wrap {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border-radius: 10px !important;
+  background: rgba(37,99,235,0.07) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--accent-color) !important;
+}
+
+.services-benefits-section .services-benefit-title {
+  color: #1E293B !important;
+}
+
+.services-benefits-section .services-benefit-desc {
+  color: #475569 !important;
+}
+
+.services-benefits-section .services-benefit-number {
+  color: rgba(37,99,235,0.18) !important;
+  font-weight: 800 !important;
+}
+
+.services-process-section .services-process-step-number {
+  background: var(--accent-color) !important;
+  color: var(--surface-color) !important;
+  border-radius: 999px !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+}
+
+.services-process-section .services-process-step-title {
+  color: #1E293B !important;
+}
+
+.services-process-section .services-process-step-desc {
+  color: #475569 !important;
+}
+
+.services-capabilities-section .services-cap-stat-label {
+  color: #475569 !important;
+}
+
+.services-intro-section .services-intro-eyebrow {
+  color: #475569 !important;
+}
+
+.services-intro-section .services-intro-title {
+  color: #475569 !important;
+}
+
+.services-intro-section .services-intro-subtitle {
+  color: #475569 !important;
+}
+
+.services-intro-section .services-card-title {
+  color: #475569 !important;
+}
+
+.services-intro-section .services-card-icon {
+  color: #475569 !important;
+}
+
+.services-capabilities-section .services-capabilities-label {
+  color: var(--accent-color) !important;
+}
+
+.services-capabilities-section .services-capabilities-title {
+  color: var(--accent-color) !important;
+}
+
+.services-capabilities-section .services-cap-block-body h3 {
+  color: var(--accent-color) !important;
+}
+
+.services-capabilities-section .services-cap-block-body p {
+  color: var(--accent-color) !important;
+}
+
+.services-capabilities-section .services-capabilities-intro {
+  color: var(--accent-color) !important;
+}
+
+.services-capabilities-section .services-cap-stat-label {
+  color: var(--accent-color) !important;
+}
+
+.services-benefits-section .services-benefits-cta-btn {
+  color: var(--accent-color) !important;
+}
+
+.services-benefits-section .services-benefits-label {
+  color: var(--accent-color) !important;
+}
+
+.services-benefits-section .services-benefits-title {
+  color: var(--accent-color) !important;
+}
+
+.services-benefits-section .services-benefit-title {
+  color: var(--accent-color) !important;
+}
+
+.services-benefits-section .services-benefit-desc {
+  color: var(--accent-color) !important;
+}
+
+.services-process-section .services-process-label {
+  color: var(--surface-color) !important;
+}
+
+.services-process-section .services-process-title {
+  color: var(--surface-color) !important;
+}
+
+.services-process-section .services-process-step-title {
+  color: var(--surface-color) !important;
+}
+
+.services-process-section .services-process-step-desc {
+  color: var(--surface-color) !important;
+}
+
+.services-capabilities-section .services-cap-block-icon {
+  color: #475569 !important;
+}
+
+.experience-portfolio-section .experience-portfolio-card {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.experience-portfolio-section .experience-portfolio-card:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.experience-portfolio-section .experience-portfolio-card-icon {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border-radius: 10px !important;
+  background: rgba(37,99,235,0.07) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--accent-color) !important;
+  flex-shrink: 0 !important;
+}
+
+.experience-portfolio-section .experience-portfolio-card-title {
+  color: #1E293B !important;
+}
+
+.experience-portfolio-section .experience-portfolio-card-desc {
+  color: #475569 !important;
+}
+
+.experience-portfolio-section .experience-portfolio-sector-label {
+  color: var(--accent-color) !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+}
+
+.experience-profile-section .differentiator-icon {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 10px !important;
+  background: rgba(37,99,235,0.07) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--accent-color) !important;
+  flex-shrink: 0 !important;
+}
+
+.experience-profile-section .differentiator-content h3 {
+  color: #1E293B !important;
+}
+
+.experience-profile-section .differentiator-content p {
+  color: #475569 !important;
+}
+
+.experience-stats-section .experience-stat-item {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.experience-stats-section .experience-stat-item:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.experience-stats-section .experience-stat-desc {
+  color: #475569 !important;
+}
+
+.experience-trust-section .experience-trust-col {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+}
+
+.experience-trust-section .experience-trust-item-content p {
+  color: #475569 !important;
+}
+
+.experience-trust-section .experience-trust-item-content strong {
+  color: #1E293B !important;
+}
+
+.experience-portfolio-section .experience-portfolio-featured {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.experience-portfolio-section .experience-portfolio-featured:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.experience-portfolio-section .experience-portfolio-featured-desc {
+  color: #475569 !important;
+}
+
+.experience-portfolio-section .experience-portfolio-btn {
+  color: var(--accent-color) !important;
+}
+
+.experience-portfolio-section .experience-portfolio-eyebrow {
+  color: var(--accent-color) !important;
+}
+
+.experience-profile-section .btn-primary-profile {
+  color: var(--accent-color) !important;
+}
+
+.experience-profile-section .btn-ghost-profile {
+  color: var(--accent-color) !important;
+}
+
+.blog-blog-grid-section .blog-card,
+.blog-blog-grid-section .blog-featured-card {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-top: 2px solid var(--accent-color) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.blog-blog-grid-section .blog-card:hover,
+.blog-blog-grid-section .blog-featured-card:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.blog-blog-grid-section .blog-card-excerpt,
+.blog-blog-grid-section .blog-featured-excerpt {
+  color: #475569 !important;
+}
+
+.blog-blog-grid-section .blog-date,
+.blog-blog-grid-section .blog-read-time {
+  color: #64748B !important;
+}
+
+.blog-blog-grid-section .blog-card-title a,
+.blog-blog-grid-section .blog-featured-title a {
+  color: #1E293B !important;
+}
+
+.blog-blog-hero-section .blog-hero-accent-card {
+  border: 1px solid rgba(15,23,42,0.06) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06) !important;
+  border-radius: 12px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.blog-blog-hero-section .blog-hero-accent-card:hover {
+  box-shadow: 0 8px 24px rgba(15,23,42,0.10) !important;
+  transform: translateY(-2px) !important;
+}
+
+.blog-blog-hero-section .blog-accent-text strong {
+  color: #1E293B !important;
+}
+
+.blog-blog-hero-section .blog-accent-text span {
+  color: #475569 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
