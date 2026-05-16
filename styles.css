@@ -34821,6 +34821,296 @@ body, html {
 .sql-blog-article-section * {
   font-family: inherit;
 }
+/* Batch: Final Design Stabilization — all 6 steps combined site-wide */
+/* ═══════════════════════════════════════════════════════
+   STEP 1 — WHATSAPP COLOR UNIFICATION → #25D366 only
+   Removes #1F9A4B and #178240 from all WA elements
+   ═══════════════════════════════════════════════════════ */
+
+.hero-clean__btn-whatsapp {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+}
+.hero-clean__btn-whatsapp:hover {
+  background: #1EBD5A !important;
+  border-color: #1EBD5A !important;
+  transform: translateY(-1px);
+}
+
+.index-cta-btn-secondary,
+a.index-cta-btn-secondary {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #ffffff !important;
+}
+.index-cta-btn-secondary:hover,
+a.index-cta-btn-secondary:hover {
+  background: #1EBD5A !important;
+}
+
+.whatsapp-cta-fixed {
+  background-color: #25D366 !important;
+  border-color: #25D366 !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   STEP 2 — TYPOGRAPHY STABILIZATION
+   Body text → #334155 | Muted → #64748B | Font: Rubik
+   ═══════════════════════════════════════════════════════ */
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: #334155;
+}
+
+/* Section body text unified */
+.familiar-section p,
+.familiar-pain-text,
+.familiar-callout-text,
+.familiar-transition,
+.familiar-benefit-desc,
+.familiar-footnote,
+.how-it-works-section p,
+.how-it-works-card-desc,
+.how-it-works-cta-note,
+.how-it-works-reinforcement-text,
+.index-problems-section p,
+.index-problems-card-content p,
+.index-problems-summary-text,
+.index-services-section p,
+.index-services-lead,
+.index-services-row-desc,
+.index-case-studies-section p,
+.case-tile-desc,
+.credibility-statement,
+.testi-section p,
+.testi-text p,
+.testi-role {
+  color: #334155;
+}
+
+/* Muted text — subtitles, captions, notes */
+.hero-clean__trust,
+.hero-clean__pain,
+.hero-clean__note,
+.familiar-subtitle,
+.exp-subtitle,
+.how-it-works-cta-note,
+.testi-subtitle,
+.testi-letters-subtitle,
+.index-problems-subtitle,
+.index-services-process-sub,
+.case-studies-subtitle,
+.index-cta-subtext,
+.credibility-label,
+.index-services-step-desc,
+.index-problems-eyebrow,
+.case-studies-eyebrow {
+  color: #64748B;
+}
+
+/* ═══════════════════════════════════════════════════════
+   STEP 3 — SHADOW POLISH
+   Soften all hover shadows to calm enterprise values
+   ═══════════════════════════════════════════════════════ */
+
+/* Button hover shadows — softened */
+.hero-clean__btn-primary:hover {
+  box-shadow: 0 4px 14px rgba(37,99,235,0.18);
+  transform: translateY(-1px);
+}
+
+.how-it-works-cta-btn:hover,
+.familiar-cta-btn:hover,
+.index-problems-summary-cta:hover,
+.navbar-cta-btn:hover {
+  box-shadow: 0 4px 14px rgba(37,99,235,0.18);
+  transform: translateY(-1px);
+}
+
+.index-cta-btn-primary:hover {
+  box-shadow: 0 4px 14px rgba(37,99,235,0.18);
+  transform: translateY(-1px);
+}
+
+/* Card rest shadows — subtle */
+.testi-card,
+.familiar-benefit-card,
+.index-problems-card,
+.how-it-works-card,
+.case-tile {
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Card hover — gentle lift only */
+.testi-card:hover,
+.familiar-benefit-card:hover,
+.index-problems-card:hover,
+.how-it-works-card:hover,
+.case-tile:hover {
+  box-shadow: 0 4px 16px rgba(15,23,42,0.10);
+  transform: translateY(-1px);
+}
+
+/* ═══════════════════════════════════════════════════════
+   STEP 4 — CARD SYSTEM CONSISTENCY
+   Unified borders, padding, hover, icon spacing
+   ═══════════════════════════════════════════════════════ */
+
+/* Testimonial cards */
+.testi-card {
+  border: 1px solid rgba(15,23,42,0.07);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Familiar benefit cards */
+.familiar-benefit-card {
+  border: 1px solid rgba(15,23,42,0.07);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Problems cards */
+.index-problems-card {
+  border: 1px solid rgba(15,23,42,0.07);
+  border-radius: 12px;
+}
+
+/* How it works cards */
+.how-it-works-card {
+  border: 1px solid rgba(15,23,42,0.07);
+  border-radius: 12px;
+}
+
+/* Case study tiles */
+.case-tile {
+  border: 1px solid rgba(15,23,42,0.07);
+  border-radius: 12px;
+}
+
+/* Icon wrap spacing unified */
+.index-problems-icon-wrap,
+.familiar-benefit-icon,
+.index-services-row-icon {
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════════════
+   STEP 5 — BUTTON CONSISTENCY
+   border-radius:8px | min-height:48px | fw:700
+   Consistent transitions site-wide
+   ═══════════════════════════════════════════════════════ */
+
+.hero-clean__btn-primary,
+.hero-clean__btn-whatsapp,
+.familiar-cta-btn,
+.how-it-works-cta-btn,
+.index-problems-summary-cta,
+.index-cta-btn-primary,
+.index-cta-btn-secondary,
+.navbar-cta-btn {
+  border-radius: 8px;
+  min-height: 48px;
+  font-weight: 700;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Navbar CTA specific */
+.navbar-cta-btn {
+  min-height: 40px;
+  padding: 8px 20px;
+  font-size: 0.875rem;
+}
+
+/* ═══════════════════════════════════════════════════════
+   STEP 6 — CSS CLEANUP & FINAL POLISH
+   Unify spacing, clean enterprise-grade look
+   ═══════════════════════════════════════════════════════ */
+
+/* Stabilize CSS variables site-wide */
+:root {
+  --wa-green: #25D366;
+  --wa-green-dark: #25D366;
+  --wa-green-dark-hover: #1EBD5A;
+  --wa-green-hover: #1EBD5A;
+  --ds-btn-wa-bg: #25D366;
+  --ds-btn-wa-bg-hover: #1EBD5A;
+  --hero-btn-whatsapp-bg: #25D366;
+  --shadow-btn-hover: 0 4px 14px rgba(37,99,235,0.18);
+  --ds-shadow-btn-hover: 0 4px 14px rgba(37,99,235,0.18);
+  --card-shadow-hover: 0 4px 16px rgba(15,23,42,0.10);
+  --ds-card-shadow-hover: 0 4px 16px rgba(15,23,42,0.10);
+  --card-hover-lift: translateY(-1px);
+  --ds-card-hover-lift: translateY(-1px);
+  --card-shadow: 0 2px 8px rgba(15,23,42,0.06);
+  --ds-card-shadow: 0 2px 8px rgba(15,23,42,0.06);
+  --text-body: #334155;
+  --text-muted: #64748B;
+  --text-secondary: #334155;
+  --text-body-refined: #334155;
+  --btn-radius: 8px;
+  --radius-btn: 8px;
+  --ds-btn-radius: 8px;
+  --btn-min-height: 48px;
+  --ds-btn-min-h: 48px;
+  --btn-font-weight: 700;
+  --ds-btn-font-weight: 700;
+}
+
+/* Hero primary button — baseline shadow */
+.hero-clean__btn-primary {
+  box-shadow: 0 4px 12px rgba(37,99,235,0.16);
+}
+
+/* Uniform section heading colors */
+.familiar-title,
+.exp-title,
+.index-problems-title,
+.index-services-heading,
+.case-studies-title,
+.index-cta-heading,
+.testi-main-title {
+  color: var(--text-dark);
+}
+
+/* Credibility numbers stay brand-colored */
+.credibility-number {
+  color: var(--primary);
+}
+
+/* Clean link hover in footer */
+.nf__links a:hover {
+  color: var(--primary);
+}
+
+/* Services icon column consistent */
+.index-services-step-num {
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* Principle banner clean */
+.index-services-principle {
+  border: 1px solid rgba(37,99,235,0.12);
+  border-radius: 12px;
+}
+
+/* Problem summary strip */
+.index-problems-summary-inner {
+  border-radius: 12px;
+}
+
+/* Smooth transition on all interactive elements */
+a, button {
+  transition: color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
