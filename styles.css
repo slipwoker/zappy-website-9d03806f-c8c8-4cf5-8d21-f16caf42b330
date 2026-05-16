@@ -30007,6 +30007,7 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 
 .software-services-section {
   background: var(--surface);
+  font-family: 'Rubik', sans-serif;
 }
 
 .software-services-section .software-services-table-wrapper {
@@ -34707,6 +34708,24 @@ body, html {
   border-radius: 8px !important;
   min-height: 48px !important;
   font-weight: 700 !important;
+}
+
+.software-intro-section .software-intro-label,
+.software-intro-section .software-intro-heading,
+.software-intro-section .software-intro-lead,
+.software-services-section,
+.software-services-section .software-services-title,
+.software-services-section .software-services-subtitle,
+.software-trust-section .software-trust-title,
+.software-trust-section .software-trust-subtitle,
+.software-trust-section .software-trust-card-title,
+.software-trust-section .software-trust-card-text,
+.software-cta-section .software-cta-heading,
+.software-cta-section .software-cta-text,
+.software-cta-section .software-cta-btn-primary,
+.software-cta-section .software-cta-btn-ghost,
+.software-cta-section .software-cta-reassurance {
+  font-family: 'Rubik', sans-serif !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
