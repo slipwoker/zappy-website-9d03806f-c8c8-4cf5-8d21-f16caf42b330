@@ -31211,6 +31211,340 @@ body .whatsapp-float { position: fixed !important; bottom: 24px !important; left
 .services-process-section {
   background: var(--bg-light) !important;
 }
+
+#about-hero-ariel .abv2__h1 {
+  font-size: clamp(1.9rem, 3.5vw, 2.85rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.3px !important;
+  color: var(--text-dark) !important;
+}
+
+#about-hero-ariel .abv2__desc {
+  color: var(--text-muted) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
+}
+
+#about-hero-ariel .abv2__badge {
+  background: rgba(37,99,235,0.06) !important;
+  border: 1px solid rgba(37,99,235,0.16) !important;
+  border-radius: 100px !important;
+  color: var(--primary) !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.07em !important;
+}
+
+#about-hero-ariel .abv2__btn-primary {
+  background: var(--primary) !important;
+  color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  font-size: 0.93rem !important;
+  font-weight: 700 !important;
+  padding: 12px 26px !important;
+  min-height: 48px !important;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.22) !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease !important;
+}
+
+#about-hero-ariel .abv2__btn-primary:hover {
+  background: #1D4ED8 !important;
+  box-shadow: 0 8px 28px rgba(37,99,235,0.34) !important;
+  transform: translateY(-1px) !important;
+}
+
+#about-hero-ariel .abv2__trust-note {
+  color: var(--text-muted) !important;
+}
+
+#about-hero-ariel .abv2__benefit-item {
+  color: var(--text-dark) !important;
+}
+
+#about-hero-ariel .abv2__check {
+  background: rgba(37,99,235,0.08) !important;
+  color: var(--primary) !important;
+}
+
+.origin-story-section {
+  background: var(--surface, #fff) !important;
+  padding: 96px 24px !important;
+}
+
+.diag-section {
+  background: var(--bg-light) !important;
+  padding: 96px 24px !important;
+}
+
+.exp-section {
+  background: var(--bg-light) !important;
+  padding: 96px 24px !important;
+}
+
+.services-intro-section {
+  background: var(--bg-light) !important;
+}
+
+.services-intro-section .services-intro-title {
+  font-size: clamp(1.9rem, 3.5vw, 2.85rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  color: var(--text-dark) !important;
+}
+
+.services-intro-section .services-intro-subtitle {
+  color: var(--text-muted) !important;
+  line-height: 1.72 !important;
+}
+
+.services-intro-section .services-intro-eyebrow {
+  background: rgba(37,99,235,0.06) !important;
+  border: 1px solid rgba(37,99,235,0.16) !important;
+  border-radius: 100px !important;
+  color: var(--primary) !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.07em !important;
+  display: inline-flex !important;
+  padding: 5px 14px !important;
+}
+
+.services-intro-section .services-intro-card {
+  background: var(--surface) !important;
+  border: 1px solid rgba(15,23,42,0.07) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.07) !important;
+  padding: 28px !important;
+}
+
+.services-intro-section .services-card-title {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+}
+
+.services-intro-section .services-card-desc {
+  color: var(--text-muted) !important;
+  line-height: 1.72 !important;
+}
+
+.services-intro-section .services-card-icon {
+  background: rgba(37,99,235,0.08) !important;
+  color: var(--primary) !important;
+  border-radius: 8px !important;
+}
+
+.services-capabilities-section {
+  background: var(--surface, #fff) !important;
+}
+
+.services-capabilities-section .services-capabilities-title {
+  font-size: clamp(1.55rem, 3vw, 2.1rem) !important;
+  font-weight: 800 !important;
+  color: var(--text-dark) !important;
+}
+
+.services-capabilities-section .services-capabilities-label {
+  background: rgba(37,99,235,0.06) !important;
+  border: 1px solid rgba(37,99,235,0.16) !important;
+  border-radius: 100px !important;
+  color: var(--primary) !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.07em !important;
+  display: inline-flex !important;
+  padding: 5px 14px !important;
+}
+
+.services-capabilities-section .services-cap-block-body h3 {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+}
+
+.services-capabilities-section .services-cap-block-body p {
+  color: var(--text-muted) !important;
+  line-height: 1.72 !important;
+}
+
+.services-capabilities-section .services-cap-block-icon {
+  background: rgba(37,99,235,0.08) !important;
+  color: var(--primary) !important;
+  border-radius: 8px !important;
+}
+
+.services-capabilities-section .services-capabilities-intro {
+  color: var(--text-muted) !important;
+  line-height: 1.72 !important;
+}
+
+.services-capabilities-section .services-cap-stat-label {
+  color: var(--text-muted) !important;
+}
+
+.services-benefits-section {
+  background: var(--bg-light) !important;
+}
+
+.services-benefits-section .services-benefits-title {
+  font-size: clamp(1.55rem, 3vw, 2.1rem) !important;
+  font-weight: 800 !important;
+  color: var(--text-dark) !important;
+}
+
+.services-benefits-section .services-benefit-card {
+  background: var(--surface) !important;
+  border: 1px solid rgba(15,23,42,0.07) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.07) !important;
+  padding: 28px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.services-benefits-section .services-benefit-title {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+}
+
+.services-benefits-section .services-benefit-desc {
+  color: var(--text-muted) !important;
+  line-height: 1.72 !important;
+}
+
+.services-benefits-section .services-benefits-cta-btn {
+  background: var(--primary) !important;
+  color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  padding: 12px 26px !important;
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.22) !important;
+}
+
+.services-benefits-section .services-benefits-cta-btn:hover {
+  background: #1D4ED8 !important;
+  transform: translateY(-1px) !important;
+}
+
+.services-process-section {
+  background: var(--bg-light) !important;
+}
+
+.services-process-section .services-process-title {
+  font-size: clamp(1.55rem, 3vw, 2.1rem) !important;
+  font-weight: 800 !important;
+  color: var(--text-dark) !important;
+}
+
+.services-process-section .services-process-step-title {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+}
+
+.services-process-section .services-process-step-desc {
+  color: var(--text-muted) !important;
+  line-height: 1.72 !important;
+}
+
+.services-closing-cta-section {
+  background: var(--bg-dark) !important;
+  padding: 80px 24px !important;
+}
+
+.services-closing-cta-section .services-cta-heading {
+  color: var(--text-light) !important;
+  font-size: clamp(1.6rem, 3vw, 2.1rem) !important;
+  font-weight: 800 !important;
+}
+
+.services-closing-cta-section .services-cta-subtext {
+  color: rgba(241,245,249,0.82) !important;
+}
+
+.services-closing-cta-section .services-cta-note {
+  color: rgba(241,245,249,0.55) !important;
+}
+
+.services-closing-cta-section .services-btn-primary {
+  background: var(--primary) !important;
+  color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 0.93rem !important;
+  padding: 13px 26px !important;
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.28) !important;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease !important;
+}
+
+.services-closing-cta-section .services-btn-primary:hover {
+  background: #1D4ED8 !important;
+  box-shadow: 0 8px 28px rgba(37,99,235,0.38) !important;
+  transform: translateY(-1px) !important;
+}
+
+.services-closing-cta-section .services-btn-outline {
+  background: transparent !important;
+  border: 1.5px solid rgba(241,245,249,0.35) !important;
+  color: var(--text-light) !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 0.93rem !important;
+  padding: 13px 26px !important;
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.15s ease !important;
+}
+
+.services-closing-cta-section .services-btn-outline:hover {
+  background: rgba(255,255,255,0.08) !important;
+  transform: translateY(-1px) !important;
+}
+
+.services-intro-section .services-intro-eyebrow {
+  color: var(--text-dark) !important;
+}
+
+.services-capabilities-section .services-capabilities-label {
+  color: var(--text-dark) !important;
+}
+
+.services-benefits-section .services-benefits-cta-btn {
+  color: var(--text-dark) !important;
+}
+
+.services-benefits-section .services-benefits-label {
+  color: var(--text-dark) !important;
+}
+
+.services-process-section .services-process-label {
+  color: var(--text-dark) !important;
+}
+
+.services-closing-cta-section .services-btn-primary {
+  color: var(--text-light) !important;
+}
+
+.services-closing-cta-section .services-btn-outline {
+  color: var(--text-light) !important;
+}
+
+.index-cta-section .index-cta-btn-primary {
+  box-shadow: 0 4px 16px rgba(37,99,235,0.28) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
