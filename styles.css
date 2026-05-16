@@ -34727,6 +34727,100 @@ body, html {
 .software-cta-section .software-cta-reassurance {
   font-family: 'Rubik', sans-serif !important;
 }
+
+.safety-software-hero-section,
+.safety-software-services-section,
+.safety-software-benefits-section,
+.safety-software-process-section,
+.safety-software-cta-section,
+.safety-software-hero-section .ssh-headline,
+.safety-software-hero-section .ssh-subtitle,
+.safety-software-hero-section .ssh-btn-primary,
+.safety-software-hero-section .ssh-btn-secondary,
+.safety-software-services-section .sss-title,
+.safety-software-services-section .sss-subtitle,
+.safety-software-services-section .sss-card-title,
+.safety-software-services-section .sss-card-desc,
+.safety-software-services-section .sss-card-footer,
+.safety-software-services-section .sss-footnote,
+.safety-software-benefits-section .ssb-title,
+.safety-software-benefits-section .ssb-subtitle,
+.safety-software-benefits-section .ssb-card-title,
+.safety-software-benefits-section .ssb-card-text,
+.safety-software-benefits-section .ssb-stat-label,
+.safety-software-benefits-section .ssb-stat-desc,
+.safety-software-process-section .ssp-title,
+.safety-software-process-section .ssp-intro,
+.safety-software-process-section .ssp-step-title,
+.safety-software-process-section .ssp-step-desc,
+.safety-software-process-section .ssp-compliance-title,
+.safety-software-process-section .ssp-compliance-desc,
+.safety-software-cta-section .safety-cta-heading,
+.safety-software-cta-section .safety-cta-subtext,
+.safety-software-cta-section .safety-contact-label,
+.safety-software-cta-section .safety-contact-value,
+.safety-software-cta-section .safety-btn-primary,
+.safety-software-cta-section .safety-btn-outline,
+.safety-software-cta-section .safety-cta-footnote {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.library-software-hero-section,
+.library-software-services-section,
+.library-software-benefits-section,
+.library-software-process-section,
+.library-software-cta-section,
+.library-software-hero-section *,
+.library-software-services-section .lsb-title,
+.library-software-services-section .lsb-subtitle,
+.library-software-services-section .lsb-card-title,
+.library-software-services-section .lsb-card-text,
+.library-software-benefits-section .lsb-title,
+.library-software-benefits-section .lsb-subtitle,
+.library-software-benefits-section .lsb-card-title,
+.library-software-benefits-section .lsb-card-text,
+.library-software-process-section .lsp-title,
+.library-software-process-section .lsp-subtitle,
+.library-software-process-section .lsp-step-title,
+.library-software-process-section .lsp-step-desc,
+.library-software-cta-section .cta-heading,
+.library-software-cta-section .cta-description,
+.library-software-cta-section .btn-primary,
+.library-software-cta-section .cta-btn-outline {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.access-blog-article-section {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.access-blog-article-section * {
+  font-family: inherit;
+}
+
+.5-blog-article-section {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.5-blog-article-section * {
+  font-family: inherit;
+}
+
+.blog-improve-system-performance-blog-article-section {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.blog-improve-system-performance-blog-article-section * {
+  font-family: inherit;
+}
+
+.sql-blog-article-section {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.sql-blog-article-section * {
+  font-family: inherit;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
