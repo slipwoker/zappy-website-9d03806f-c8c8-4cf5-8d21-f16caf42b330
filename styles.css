@@ -33493,6 +33493,48 @@ body, html {
 .index-cta-section {
   padding: 100px 24px !important;
 }
+
+#index-hero-section .hero-clean__inner {
+  gap: 48px !important;
+}
+
+#index-hero-section .hero-clean__img-col {
+  position: relative !important;
+}
+
+#index-hero-section .hero-clean__img-col::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(255,255,255,0.30), rgba(255,255,255,0)) !important;
+  border-radius: 14px !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+#index-hero-section .hero-clean__text-col {
+  gap: 14px !important;
+}
+
+#index-hero-section .hero-clean__h1 {
+  letter-spacing: -0.6px !important;
+  line-height: 1.08 !important;
+}
+
+#index-hero-section .hero-clean__subtitle {
+  line-height: 1.7 !important;
+  font-size: 1.05rem !important;
+}
+
+#index-hero-section .hero-clean__buttons {
+  margin-top: 6px !important;
+  gap: 12px !important;
+}
+
+#index-hero-section .hero-clean__orgs-wrap {
+  margin-top: 8px !important;
+  padding-top: 12px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
