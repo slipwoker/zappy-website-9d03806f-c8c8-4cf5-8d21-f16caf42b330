@@ -35454,6 +35454,38 @@ a, button {
   display: none !important;
 }
 }
+
+#about-hero-ariel .abv2__h1 {
+  font-size: 3.45rem !important;
+}
+
+@media (max-width: 960px) {
+#about-hero-ariel .abv2__h1 {
+  font-size: 2.2rem !important;
+}
+}
+
+@media (max-width: 768px) {
+#about-hero-ariel .abv2__h1 {
+  font-size: 1.85rem !important;
+}
+}
+
+#experience-profile-section .experience-profile-title {
+  font-size: 3.45rem !important;
+}
+
+@media (max-width: 960px) {
+#experience-profile-section .experience-profile-title {
+  font-size: 2.2rem !important;
+}
+}
+
+@media (max-width: 768px) {
+#experience-profile-section .experience-profile-title {
+  font-size: 1.85rem !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
