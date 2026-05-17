@@ -35486,6 +35486,32 @@ a, button {
   font-size: 1.85rem !important;
 }
 }
+
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.familiar-section {
+  margin-top: 0;
+}
+
+.navbar .sub-menu {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+}
+
+.navbar .mobile-submenu-toggle {
+  display: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
