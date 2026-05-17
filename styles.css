@@ -35529,6 +35529,17 @@ a, button {
   grid-template-columns: 1fr !important;
 }
 }
+
+@media (max-width: 768px) {
+.blog-blog-grid-section .blog-grid {
+  grid-template-columns: 1fr !important;
+  gap: 20px !important;
+}
+
+.blog-blog-grid-section .blog-card {
+  width: 100% !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
