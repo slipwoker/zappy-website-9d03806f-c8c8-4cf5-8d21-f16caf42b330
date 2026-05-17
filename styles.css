@@ -35512,6 +35512,23 @@ a, button {
 .navbar .mobile-submenu-toggle {
   display: none !important;
 }
+
+.blog-blog-grid-section .blog-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+.blog-blog-grid-section .blog-grid {
+  grid-template-columns: 1fr 1fr !important;
+}
+}
+
+@media (max-width: 600px) {
+.blog-blog-grid-section .blog-grid {
+  grid-template-columns: 1fr !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
