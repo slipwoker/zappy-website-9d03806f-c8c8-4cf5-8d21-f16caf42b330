@@ -35358,6 +35358,102 @@ a, button {
 .index-case-studies-section .case-tile-desc {
   color: #64748B !important;
 }
+
+@media (max-width: 768px) {
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  overflow: visible;
+}
+
+.nav-container {
+  position: relative !important;
+  min-height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 56px !important;
+  box-sizing: border-box !important;
+}
+
+.nav-right-group {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.nav-brand {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.nav-brand .nav-logo-name {
+  display: block !important;
+  text-align: center !important;
+  font-size: 1rem !important;
+}
+
+.nav-brand .nav-logo-sub {
+  display: block !important;
+  text-align: center !important;
+  font-size: 0.72rem !important;
+}
+
+.nav-menu {
+  display: none !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  background: var(--nav-bg) !important;
+  padding: 12px 0 20px !important;
+  border-top: 1px solid var(--border-light) !important;
+  list-style: none !important;
+  margin: 0 !important;
+  overflow-y: auto !important;
+  max-height: calc(100vh - 64px) !important;
+}
+
+.nav-menu.active {
+  display: flex !important;
+}
+
+.nav-menu > li {
+  width: 100% !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+.nav-menu > li:last-child {
+  border-bottom: none !important;
+}
+
+.nav-menu > li > a,
+  .nav-menu > li > .menu-group-title {
+  display: block !important;
+  width: 100% !important;
+  padding: 13px 20px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: var(--nav-text) !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+}
+
+.nav-menu > li > a:hover {
+  color: var(--nav-text-hover) !important;
+  background: rgba(37,99,235,0.04) !important;
+}
+
+.nav-cta-item-mobile > a {
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+}
+
+.nav-cta-container {
+  display: none !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
