@@ -58,6 +58,9 @@ https://www.ariel10.net/safety-software
 https://www.ariel10.net/library-software
 אריאל פיתוח תוכנה - תוכנה לניהול ספרייה - אריאל פיתוח תוכנה
 
+### Page
+https://www.ariel10.net/zz-schema-test
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -87,11 +90,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
+  - `name` (text)
+  - `email` (email)
   - `phone` (tel)
   - `message` (textarea)
-  - `privacy_consent` (checkbox, required)
+  - `privacy_consent` (checkbox)
 
 ---
 
