@@ -62,6 +62,9 @@ https://www.ariel10.net/library-software
 https://www.ariel10.net/access-database-repair
 מסד נתונים Access פגום או קובץ שלא נפתח? אני מאבחן, מתקן ומשחזר בלי בנייה מחדש. שירות מרחוק לכל הארץ, תגובה תוך 24 שעות ואבחון ראשוני ללא עלות.
 
+### Page
+https://www.ariel10.net/access-copy
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -91,11 +94,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text)
-  - `email` (email)
+  - `name` (text, required)
+  - `email` (email, required)
   - `phone` (tel)
-  - `message` (textarea)
-  - `privacy_consent` (checkbox)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
