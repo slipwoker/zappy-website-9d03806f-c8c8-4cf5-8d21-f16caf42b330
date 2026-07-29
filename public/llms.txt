@@ -58,6 +58,10 @@ https://www.ariel10.net/safety-software
 https://www.ariel10.net/library-software
 אריאל פיתוח תוכנה - תוכנה לניהול ספרייה - אריאל פיתוח תוכנה
 
+### תיקון ושחזור מסד נתונים Access פגום
+https://www.ariel10.net/access-database-repair
+אריאל פיתוח תוכנה - תיקון ושחזור מסד נתונים Access פגום
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -90,7 +94,7 @@ Information about WCAG compliance and accessibility features.
   - `name` (text, required)
   - `email` (email, required)
   - `phone` (tel)
-  - `message` (textarea)
+  - `message` (textarea, required)
   - `privacy_consent` (checkbox, required)
 
 ---
