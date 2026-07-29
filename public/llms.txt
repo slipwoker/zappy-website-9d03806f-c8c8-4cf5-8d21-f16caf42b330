@@ -44,7 +44,7 @@ https://www.ariel10.net/blog/cloud-sql-migration-checklist
 
 ### תוכנות - אריאל פיתוח תוכנה
 https://www.ariel10.net/software
-אריאל פיתוח תוכנה - תוכנות - אריאל פיתוח תוכנה
+מערכות Microsoft Access מוכנות לשימוש: ניהול בטיחות תעסוקתית וניהול ספרייה, לצד פיתוח מערכות מותאמות אישית לצרכי הארגון.
 
 ### צור קשר — אבחון ראשוני ללא עלות | אריאל פיתוח תוכנה
 https://www.ariel10.net/contact
