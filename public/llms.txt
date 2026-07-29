@@ -58,8 +58,9 @@ https://www.ariel10.net/safety-software
 https://www.ariel10.net/library-software
 אריאל פיתוח תוכנה - תוכנה לניהול ספרייה - אריאל פיתוח תוכנה
 
-### Page
+### תיקון מסד נתונים Access פגום | שחזור קבצים ונתונים
 https://www.ariel10.net/access-database-repair
+מסד נתונים Access פגום או קובץ שלא נפתח? אני מאבחן, מתקן ומשחזר בלי בנייה מחדש. שירות מרחוק לכל הארץ, תגובה תוך 24 שעות ואבחון ראשוני ללא עלות.
 
 ## Legal & Policy
 
