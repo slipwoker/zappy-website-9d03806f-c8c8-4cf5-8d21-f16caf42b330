@@ -24,7 +24,7 @@ https://www.ariel10.net/experience
 
 ### בלוג מקצועי - אריאל פיתוח תוכנה
 https://www.ariel10.net/blog
-אריאל פיתוח תוכנה - בלוג מקצועי - אריאל פיתוח תוכנה
+מדריכים מעשיים מניסיון של 25 שנה: מתי לתקן מערכת Access ומתי לבנות מחדש, סימני סיכון מוקדמים, שיפור ביצועים ומעבר ל-SQL או לענן.
 
 ### תיקון Access
 https://www.ariel10.net/blog/fix-access-vs-rebuild
