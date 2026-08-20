@@ -738,6 +738,10 @@ window.onload = function() {
 // אופציונלי: אין צורך ב-JS עבור סקשן זה
 // ה-iframe נטען בצורה עצלנית (lazy loading) כברירת מחדל
 
+/* Added Component Script */
+// אין צורך ב-JavaScript עבור מקטע זה
+// ניתן להוסיף אינטראקטיביות בהמשך אם תרצה
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
