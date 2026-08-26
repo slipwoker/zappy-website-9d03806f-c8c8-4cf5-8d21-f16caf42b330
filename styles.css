@@ -36448,6 +36448,15 @@ a, button {
 #video-testi-section .video-testi-cards { display: grid !important; }
 #video-testi-section .video-testi-cards { grid-template-columns: repeat(3, 1fr) !important; }
 
+
+#video-testi-section .home-testi-media video {
+  object-fit: contain !important;
+  background: #000;
+}
+
+#video-testi-section .home-testi-media {
+  aspect-ratio: 16 / 10 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
