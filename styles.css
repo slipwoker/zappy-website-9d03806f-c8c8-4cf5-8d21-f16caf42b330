@@ -36400,6 +36400,54 @@ a, button {
 /* zappy-self-heal */
 .video-testi-section { padding: 64px 24px !important; }
 
+
+#video-testi-section .video-testi-opener {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 28px 0 24px;
+}
+
+#video-testi-section .video-testi-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+#video-testi-section .video-testi-card {
+  background: var(--surface-color);
+  border: 1px solid rgba(15,23,42,0.08);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-subtle);
+}
+
+#video-testi-section .video-testi-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 12px;
+}
+
+#video-testi-section .video-testi-card-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+#video-testi-section .video-testi-cards {
+  grid-template-columns: 1fr;
+}
+}
+/* zappy-self-heal */
+#video-testi-section .video-testi-cards { display: grid !important; }
+#video-testi-section .video-testi-cards { grid-template-columns: repeat(3, 1fr) !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
