@@ -36457,6 +36457,19 @@ a, button {
 #video-testi-section .home-testi-media {
   aspect-ratio: 16 / 10 !important;
 }
+
+#video-testi-section .home-testi-media {
+  aspect-ratio: auto !important;
+  min-height: 340px !important;
+  height: 340px !important;
+}
+
+#video-testi-section .home-testi-media video {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #000 !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
