@@ -70,9 +70,6 @@ https://www.ariel10.net/access-upgrade-migration
 https://www.ariel10.net/guide
 מה לבדוק לפני שמוסרים מערכת Access ותיקה לטיפול, אילו שאלות לשאול, ומתי תיקון עדיף על בנייה מחדש. מדריך מעשי מתוך 25 שנות עבודה עם מערכות של אחרים.
 
-### Page
-https://www.ariel10.net/access-errors-troubleshooting
-
 ## Legal & Policy
 
 ### Privacy Policy
@@ -102,11 +99,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text)
-  - `email` (email)
+  - `name` (text, required)
+  - `email` (email, required)
   - `phone` (tel)
   - `message` (textarea)
-  - `privacy_consent` (checkbox)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
