@@ -66,6 +66,26 @@ https://www.ariel10.net/access-database-repair
 https://www.ariel10.net/access-upgrade-migration
 מערכת Access ותיקה שלא עובדת על מחשבים חדשים? אני משדרג גרסאות, מעביר ל-64 ביט ול-SQL Server ומייצב, בלי לבנות מחדש ובלי לאבד נתונים. אבחון ראשוני ללא עלות.
 
+### בלוג מקצועי - אריאל פיתוח תוכנה
+https://www.ariel10.net/blog-605947
+אריאל פיתוח תוכנה - בלוג מקצועי - אריאל פיתוח תוכנה
+
+### בחירה
+https://www.ariel10.net/blog/access-specialist-selection
+מדריך מקצועי לבחירת מומחה Microsoft Access לשיקום מערכת קיימת, כולל מה לבדוק, אילו שאלות לשאול ומתי תיקון עדיף על בנייה מחדש.
+
+### תיקון
+https://www.ariel10.net/blog/fix-access-vs-rebuild-5997
+מדריך לקבלת החלטה שקולה בין תיקון מערכת Access קיימת לבין בנייה מחדש, לפי מצב המערכת, הנתונים ורצף העבודה.
+
+### סיכון
+https://www.ariel10.net/blog/operational-risk-signs-6021
+חמישה סימנים שמערכת קיימת עלולה לפגוע ברצף העבודה, באיכות הנתונים וביכולת לקבל החלטות בזמן.
+
+### מיגרציה
+https://www.ariel10.net/blog/cloud-sql-migration-checklist-6038
+נקודות בדיקה לפני מיגרציה של מערכת ותיקה, כדי להבין את מצב הנתונים, התהליכים והסיכונים לפני שינוי תשתיתי.
+
 ## Legal & Policy
 
 ### Privacy Policy
