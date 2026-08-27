@@ -66,6 +66,9 @@ https://www.ariel10.net/access-database-repair
 https://www.ariel10.net/access-upgrade-migration
 מערכת Access ותיקה שלא עובדת על מחשבים חדשים? אני משדרג גרסאות, מעביר ל-64 ביט ול-SQL Server ומייצב, בלי לבנות מחדש ובלי לאבד נתונים. אבחון ראשוני ללא עלות.
 
+### Page
+https://www.ariel10.net/guide
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -95,11 +98,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
+  - `name` (text)
+  - `email` (email)
   - `phone` (tel)
   - `message` (textarea)
-  - `privacy_consent` (checkbox, required)
+  - `privacy_consent` (checkbox)
 
 ---
 
