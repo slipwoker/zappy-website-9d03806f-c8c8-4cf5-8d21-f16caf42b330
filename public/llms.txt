@@ -64,7 +64,7 @@ https://www.ariel10.net/access-database-repair
 
 ### שדרוג ומיגרציה של מערכת Access קיימת
 https://www.ariel10.net/access-upgrade-migration
-אריאל פיתוח תוכנה - שדרוג ומיגרציה של מערכת Access קיימת
+מערכת Access ותיקה שלא עובדת על מחשבים חדשים? אני משדרג גרסאות, מעביר ל-64 ביט ול-SQL Server ומייצב, בלי לבנות מחדש ובלי לאבד נתונים. אבחון ראשוני ללא עלות.
 
 ## Legal & Policy
 
