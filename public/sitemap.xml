@@ -91,36 +91,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ariel10.net/blog-605947</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ariel10.net/blog/access-specialist-selection</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ariel10.net/blog/fix-access-vs-rebuild-5997</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ariel10.net/blog/operational-risk-signs-6021</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ariel10.net/blog/cloud-sql-migration-checklist-6038</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.ariel10.net/privacy</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
