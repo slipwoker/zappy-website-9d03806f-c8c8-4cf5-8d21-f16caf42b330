@@ -36628,6 +36628,11 @@ a, button {
     padding: 18px 16px;
   }
 }
+
+#zappy-auto-grid-1787125644982-x7bsf0 {
+  --zappy-grid-cols: repeat(5, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
