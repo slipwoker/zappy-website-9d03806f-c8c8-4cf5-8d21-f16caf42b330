@@ -74,6 +74,9 @@ https://www.ariel10.net/guide
 https://www.ariel10.net/troubleshooting
 שגיאות חוזרות ב-Access, טפסים שקופאים או דוחות שמחזירים נתונים לא נכונים? אני מאתר את מקור התקלה ומתקן בלי לבנות מחדש. שירות מרחוק, אבחון ראשוני ללא עלות.
 
+### Page
+https://www.ariel10.net/access-to-sql-cloud
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -103,11 +106,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
+  - `name` (text)
+  - `email` (email)
   - `phone` (tel)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 
