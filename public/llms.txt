@@ -76,6 +76,7 @@ https://www.ariel10.net/troubleshooting
 
 ### מעבר ל-SQL וענן
 https://www.ariel10.net/access-to-sql-cloud
+שוקלים להעביר מערכת Access ל-SQL Server או לענן? לא כל מערכת צריכה לעבור. אני בודק קודם אם הבעיה נפתרת בחיזוק הקיים, ומבצע מעבר מלא כשהוא באמת נדרש.
 
 ## Legal & Policy
 

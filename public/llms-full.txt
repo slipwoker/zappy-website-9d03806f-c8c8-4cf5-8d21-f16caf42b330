@@ -6614,11 +6614,12 @@ Description: שגיאות חוזרות ב-Access, טפסים שקופאים או
 
 ---
 
-## מעבר ל-SQL וענן
+## מעבר ממערכת Access ל-SQL Server או לענן, מתי זה נדרש
 
 URL: https://www.ariel10.net/access-to-sql-cloud
+Description: שוקלים להעביר מערכת Access ל-SQL Server או לענן? לא כל מערכת צריכה לעבור. אני בודק קודם אם הבעיה נפתרת בחיזוק הקיים, ומבצע מעבר מלא כשהוא באמת נדרש.
 
-מעבר ל-SQL וענן                                                                                                              אריאל שוסהיים   Microsoft Access Expert       - שירותים
+מעבר ממערכת Access ל-SQL Server או לענן, מתי זה נדרש                                                                                                            אריאל שוסהיים   Microsoft Access Expert       - שירותים
 - ניסיון מקצועי
 - אודות
 - בלוגתיקון Access
