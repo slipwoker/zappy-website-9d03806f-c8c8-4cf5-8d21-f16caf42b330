@@ -70,8 +70,8 @@ https://www.ariel10.net/access-upgrade-migration
 https://www.ariel10.net/guide
 מה לבדוק לפני שמוסרים מערכת Access ותיקה לטיפול, אילו שאלות לשאול, ומתי תיקון עדיף על בנייה מחדש. מדריך מעשי מתוך 25 שנות עבודה עם מערכות של אחרים.
 
-### Page
-https://www.ariel10.net/access-copy
+### פתרון תקלות
+https://www.ariel10.net/troubleshooting
 
 ## Legal & Policy
 
