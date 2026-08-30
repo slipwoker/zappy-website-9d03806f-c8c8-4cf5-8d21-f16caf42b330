@@ -74,7 +74,7 @@ https://www.ariel10.net/guide
 https://www.ariel10.net/troubleshooting
 שגיאות חוזרות ב-Access, טפסים שקופאים או דוחות שמחזירים נתונים לא נכונים? אני מאתר את מקור התקלה ומתקן בלי לבנות מחדש. שירות מרחוק, אבחון ראשוני ללא עלות.
 
-### Page
+### מעבר ל-SQL וענן
 https://www.ariel10.net/access-to-sql-cloud
 
 ## Legal & Policy
