@@ -1,129 +1,382 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.ariel10.net</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net" />
   </url>
   <url>
     <loc>https://www.ariel10.net/services</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/services" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/services" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/services</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/services" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/services" />
   </url>
   <url>
     <loc>https://www.ariel10.net/about</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/about" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/about" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/about</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/about" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/about" />
   </url>
   <url>
     <loc>https://www.ariel10.net/experience</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/experience" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/experience" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/experience" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/experience</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/experience" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/experience" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/experience" />
   </url>
   <url>
     <loc>https://www.ariel10.net/blog</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/blog</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog" />
   </url>
   <url>
     <loc>https://www.ariel10.net/blog/fix-access-vs-rebuild</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/fix-access-vs-rebuild" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/fix-access-vs-rebuild" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/fix-access-vs-rebuild" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/blog/fix-access-vs-rebuild</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/fix-access-vs-rebuild" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/fix-access-vs-rebuild" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/fix-access-vs-rebuild" />
   </url>
   <url>
     <loc>https://www.ariel10.net/blog/operational-risk-signs</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/operational-risk-signs" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/operational-risk-signs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/operational-risk-signs" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/blog/operational-risk-signs</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/operational-risk-signs" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/operational-risk-signs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/operational-risk-signs" />
   </url>
   <url>
     <loc>https://www.ariel10.net/blog/improve-system-performance</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/improve-system-performance" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/improve-system-performance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/improve-system-performance" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/blog/improve-system-performance</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/improve-system-performance" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/improve-system-performance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/improve-system-performance" />
   </url>
   <url>
     <loc>https://www.ariel10.net/blog/cloud-sql-migration-checklist</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/cloud-sql-migration-checklist" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/cloud-sql-migration-checklist" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/cloud-sql-migration-checklist" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/blog/cloud-sql-migration-checklist</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/cloud-sql-migration-checklist" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/cloud-sql-migration-checklist" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/cloud-sql-migration-checklist" />
   </url>
   <url>
     <loc>https://www.ariel10.net/software</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/software" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/software" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/software" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/software</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/software" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/software" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/software" />
   </url>
   <url>
     <loc>https://www.ariel10.net/contact</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/contact" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/contact" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/contact</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/contact" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/contact" />
   </url>
   <url>
     <loc>https://www.ariel10.net/safety-software</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/safety-software" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/safety-software" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/safety-software" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/safety-software</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/safety-software" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/safety-software" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/safety-software" />
   </url>
   <url>
     <loc>https://www.ariel10.net/library-software</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/library-software" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/library-software" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/library-software" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/library-software</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/library-software" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/library-software" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/library-software" />
   </url>
   <url>
     <loc>https://www.ariel10.net/access-database-repair</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/access-database-repair" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/access-database-repair" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/access-database-repair" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/access-database-repair</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/access-database-repair" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/access-database-repair" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/access-database-repair" />
   </url>
   <url>
     <loc>https://www.ariel10.net/access-upgrade-migration</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/access-upgrade-migration" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/access-upgrade-migration" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/access-upgrade-migration" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/access-upgrade-migration</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/access-upgrade-migration" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/access-upgrade-migration" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/access-upgrade-migration" />
   </url>
   <url>
     <loc>https://www.ariel10.net/guide</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/guide" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/guide" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/guide</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/guide" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/guide" />
   </url>
   <url>
     <loc>https://www.ariel10.net/troubleshooting</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/troubleshooting" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/troubleshooting" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/troubleshooting" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/troubleshooting</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/troubleshooting" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/troubleshooting" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/troubleshooting" />
   </url>
   <url>
     <loc>https://www.ariel10.net/access-to-sql-cloud</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/access-to-sql-cloud" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/access-to-sql-cloud" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/access-to-sql-cloud" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/access-to-sql-cloud</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/access-to-sql-cloud" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/access-to-sql-cloud" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/access-to-sql-cloud" />
   </url>
   <url>
     <loc>https://www.ariel10.net/privacy</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/privacy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/privacy" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/privacy</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/privacy" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/privacy" />
   </url>
   <url>
     <loc>https://www.ariel10.net/terms</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/terms" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/terms" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/terms</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/terms" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/terms" />
   </url>
   <url>
     <loc>https://www.ariel10.net/accessibility</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/accessibility" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/accessibility" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/accessibility" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/accessibility</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/accessibility" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/accessibility" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/accessibility" />
   </url>
 </urlset>
