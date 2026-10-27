@@ -78,6 +78,9 @@ https://www.ariel10.net/troubleshooting
 https://www.ariel10.net/access-to-sql-cloud
 שוקלים להעביר מערכת Access ל-SQL Server או לענן? לא כל מערכת צריכה לעבור. אני בודק קודם אם הבעיה נפתרת בחיזוק הקיים, ומבצע מעבר מלא כשהוא באמת נדרש.
 
+### Page
+https://www.ariel10.net/blog/amber-connection-test
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -111,7 +114,7 @@ Information about WCAG compliance and accessibility features.
   - `email` (email, required)
   - `phone` (tel)
   - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `privacy_consent` (checkbox)
 
 ---
 
