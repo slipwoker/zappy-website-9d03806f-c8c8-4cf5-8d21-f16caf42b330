@@ -344,6 +344,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/amber-connection-test-2" />
   </url>
   <url>
+    <loc>https://www.ariel10.net/blog/amber-ai-test</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/amber-ai-test" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/amber-ai-test" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/amber-ai-test" />
+  </url>
+  <url>
+    <loc>https://www.ariel10.net/tr/blog/amber-ai-test</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.ariel10.net/blog/amber-ai-test" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.ariel10.net/tr/blog/amber-ai-test" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ariel10.net/blog/amber-ai-test" />
+  </url>
+  <url>
     <loc>https://www.ariel10.net/privacy</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>

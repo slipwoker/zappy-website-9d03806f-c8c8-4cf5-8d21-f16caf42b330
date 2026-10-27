@@ -82,6 +82,10 @@ https://www.ariel10.net/access-to-sql-cloud
 https://www.ariel10.net/blog/amber-connection-test-2
 דף בדיקה זמני
 
+### בדיקת Amber
+https://www.ariel10.net/blog/amber-ai-test
+אריאל פיתוח תוכנה - בדיקת Amber
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -115,7 +119,7 @@ Information about WCAG compliance and accessibility features.
   - `email` (email, required)
   - `phone` (tel)
   - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `privacy_consent` (checkbox)
 
 ---
 
