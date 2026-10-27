@@ -87,6 +87,7 @@
       "new_a_337": "← חזרה לבלוג",
       "new_a_353": "← חזרה לבלוג",
       "new_p_328": "This page is ready for your content.",
+      "new_p_330": "פסקת בדיקה עם <strong>הדגשה</strong> ו<a href=\"https://www.ariel10.net/\">קישור לדף הבית</a>.",
       "new_p_343": "מערכות מורכבות דורשות בדיקות קפדניות, במיוחד כשמדובר בכלי כמו Microsoft Access שמנהל תהליכים עסקיים קריטיים. במאמר זה נסקור את תהליך הבדיקה המעמיק שאנו מבצעים כדי להבטיח שהמערכת שלכם יציבה, מאובטחת ומוכנה לעבודה יומיומית. הבדיקה שלנו אינה רק טכנית – היא מבטיחה שהמערכת תמשיך לשרת אתכם נאמנה לאורך שנים.",
       "new_p_344": "הגישה שלנו מתמקדת בזיהוי נקודות כשל פוטנציאליות לפני שהן הופכות לבעיות אמיתיות. אנחנו בודקים כל שאילתה, כל טופס וכל דוח, ומוודאים שהביצועים נשארים גבוהים גם עם נפחי נתונים גדלים. כך אתם יכולים להיות רגועים שהמערכת שלכם לא תקרוס ברגע האמת.",
       "new_p_346": "מערכת שלא נבדקה כראוי עלולה להפוך לנטל כבד. תקלות קטנות, כמו אינדקס חסר או שאילתה לא אופטימלית, מצטברות עם הזמן ופוגעות בביצועים. בדיקה מקיפה מאפשרת לנו לאתר ולתקן את כל אלה בבת אחת, כך שהמערכת שלכם תפעל במהירות ובאמינות.",
@@ -2827,8 +2828,7 @@
       "blog_cloud_sql_migration_checklist_jsonld_0_description_16": "מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות. 25+ שנות ניסיון.",
       "blog_cloud_sql_migration_checklist_seo_twitter_description": "מאמר שמסביר אילו בדיקות חשוב לבצע לפני מעבר של מערכת ותיקה לענן או ל-SQL, כדי להימנע מתקלות, עיכובים וסיכונים עסקיים.",
       "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_1": "אריאל פיתוח תוכנה",
-      "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "אריאל שושיים",
-      "new_text_330_0": "פסקת בדיקה עם <strong>הדגשה</strong> ו<a href=\"https://www.ariel10.net/\">"
+      "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "אריאל שושיים"
     }
   },
   "tr": {
@@ -2919,6 +2919,7 @@
       "new_a_337": "← Bloga Dön",
       "new_a_353": "← Bloga Dön",
       "new_p_328": "Bu sayfa içeriğiniz için hazır.",
+      "new_p_330": "Test paragrafı <strong>vurgu</strong> ve <a href=\"https://www.ariel10.net/\">ana sayfaya bağlantı</a> içeriyor.",
       "new_p_343": "Karmaşık sistemler, özellikle kritik iş süreçlerini yöneten Microsoft Access gibi araçlar söz konusu olduğunda, titiz testler gerektirir. Bu makalede, sisteminizin kararlı, güvenli ve günlük kullanıma hazır olduğunu garantilemek için gerçekleştirdiğimiz kapsamlı test sürecini inceleyeceğiz. Testimiz yalnızca teknik değildir – sisteminizin yıllarca size sadakatle hizmet etmeye devam etmesini sağlar.",
       "new_p_344": "Yaklaşımımız, potansiyel hata noktalarını gerçek sorunlara dönüşmeden önce tespit etmeye odaklanır. Her sorguyu, her formu ve her raporu test eder; veri hacimleri büyüdükçe bile performansın yüksek kaldığını doğrularız. Böylece sisteminizin kritik anlarda çökmeyeceğinden emin olabilirsiniz.",
       "new_p_346": "Gereği gibi test edilmemiş bir sistem ağır bir yük haline gelebilir. Eksik bir dizin veya optimize edilmemiş bir sorgu gibi küçük hatalar zamanla birikerek performansı düşürür. Kapsamlı bir test, tüm bunları bir seferde tespit edip düzeltmemize olanak tanır; böylece sisteminiz hızlı ve güvenilir şekilde çalışır.",
@@ -5659,8 +5660,7 @@
       "blog_cloud_sql_migration_checklist_jsonld_0_description_16": "Microsoft Access Uzmanı — Mevcut sistemlerin onarımı, stabilizasyonu ve iyileştirilmesi. 25+ yıl deneyim.",
       "blog_cloud_sql_migration_checklist_seo_twitter_description": "Eski bir sistemi buluta veya SQL'e taşımadan önce hangi kontrollerin yapılması gerektiğini açıklayan makale; arızaları, gecikmeleri ve iş risklerini önlemek için.",
       "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_1": "Ariel Yazılım Geliştirme",
-      "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "Ariel Shushaim",
-      "new_text_330_0": "Test paragrafı <strong>vurgu</strong> ve <a href=\"https://www.ariel10.net/\">"
+      "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "Ariel Shushaim"
     }
   }
 }

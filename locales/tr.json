@@ -85,6 +85,7 @@
   "new_a_337": "← Bloga Dön",
   "new_a_353": "← Bloga Dön",
   "new_p_328": "Bu sayfa içeriğiniz için hazır.",
+  "new_p_330": "Test paragrafı <strong>vurgu</strong> ve <a href=\"https://www.ariel10.net/\">ana sayfaya bağlantı</a> içeriyor.",
   "new_p_343": "Karmaşık sistemler, özellikle kritik iş süreçlerini yöneten Microsoft Access gibi araçlar söz konusu olduğunda, titiz testler gerektirir. Bu makalede, sisteminizin kararlı, güvenli ve günlük kullanıma hazır olduğunu garantilemek için gerçekleştirdiğimiz kapsamlı test sürecini inceleyeceğiz. Testimiz yalnızca teknik değildir – sisteminizin yıllarca size sadakatle hizmet etmeye devam etmesini sağlar.",
   "new_p_344": "Yaklaşımımız, potansiyel hata noktalarını gerçek sorunlara dönüşmeden önce tespit etmeye odaklanır. Her sorguyu, her formu ve her raporu test eder; veri hacimleri büyüdükçe bile performansın yüksek kaldığını doğrularız. Böylece sisteminizin kritik anlarda çökmeyeceğinden emin olabilirsiniz.",
   "new_p_346": "Gereği gibi test edilmemiş bir sistem ağır bir yük haline gelebilir. Eksik bir dizin veya optimize edilmemiş bir sorgu gibi küçük hatalar zamanla birikerek performansı düşürür. Kapsamlı bir test, tüm bunları bir seferde tespit edip düzeltmemize olanak tanır; böylece sisteminiz hızlı ve güvenilir şekilde çalışır.",
@@ -2825,6 +2826,5 @@
   "blog_cloud_sql_migration_checklist_jsonld_0_description_16": "Microsoft Access Uzmanı — Mevcut sistemlerin onarımı, stabilizasyonu ve iyileştirilmesi. 25+ yıl deneyim.",
   "blog_cloud_sql_migration_checklist_seo_twitter_description": "Eski bir sistemi buluta veya SQL'e taşımadan önce hangi kontrollerin yapılması gerektiğini açıklayan makale; arızaları, gecikmeleri ve iş risklerini önlemek için.",
   "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_1": "Ariel Yazılım Geliştirme",
-  "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "Ariel Shushaim",
-  "new_text_330_0": "Test paragrafı <strong>vurgu</strong> ve <a href=\"https://www.ariel10.net/\">"
+  "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "Ariel Shushaim"
 }
