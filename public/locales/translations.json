@@ -100,6 +100,9 @@
       "new_p_349": "תהליך הבדיקה שלנו מתחיל בניתוח מעמיק של מבנה הנתונים. אנחנו בודקים טבלאות, קשרים ואינדקסים, ומוודאים שהכול בנוי נכון. לאחר מכן אנחנו עוברים על הטפסים והדוחות, ובודקים שהממשק ידידותי ושכל הפונקציות פועלות כמצופה.",
       "new_p_350": "אנחנו גם מבצעים בדיקות עומס, כדי לוודא שהמערכת מתמודדת היטב עם משתמשים מרובים ועם נפחי נתונים גדולים. לבסוף, אנחנו מספקים דוח מפורט עם כל הממצאים וההמלצות שלנו, כך שתדעו בדיוק מה מצב המערכת ומה הצעדים הבאים.",
       "new_p_351": "המטרה שלנו היא לא רק למצוא בעיות, אלא גם להציע פתרונות מעשיים. אנחנו עובדים בשיתוף פעולה מלא עם הלקוחות שלנו, כדי לוודא שכל שיפור מתאים לצרכים העסקיים שלהם.",
+      "new_p_355": "הדף הועבר. לבלוג",
+      "new_p_361": "הדף הועבר. לבלוג",
+      "new_p_367": "הדף הועבר. לבלוג",
       "about_h1_1": "יותר מ־25 שנות ניסיון\n\n\n        בשיקום ופיתוח מערכות\n\n\n        Microsoft Access",
       "about_h2_2": "איך הגעתי לתחום",
       "about_h2_3": "חשיבה של אבחון וייצוב",
@@ -2835,10 +2838,7 @@
       "blog_cloud_sql_migration_checklist_jsonld_0_description_16": "מומחה Microsoft Access — תיקון, ייצוב ושיפור מערכות קיימות. 25+ שנות ניסיון.",
       "blog_cloud_sql_migration_checklist_seo_twitter_description": "מאמר שמסביר אילו בדיקות חשוב לבצע לפני מעבר של מערכת ותיקה לענן או ל-SQL, כדי להימנע מתקלות, עיכובים וסיכונים עסקיים.",
       "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_1": "אריאל פיתוח תוכנה",
-      "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "אריאל שושיים",
-      "new_text_355_0": "הדף הועבר. ",
-      "new_text_361_0": "הדף הועבר. ",
-      "new_text_367_0": "הדף הועבר. "
+      "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "אריאל שושיים"
     }
   },
   "tr": {
@@ -2942,6 +2942,9 @@
       "new_p_349": "Test sürecimiz, veri yapısının derinlemesine analiziyle başlar. Tabloları, ilişkileri ve dizinleri inceleyerek her şeyin doğru şekilde oluşturulduğunu doğrularız. Ardından formlar ve raporlar üzerinden geçerek arayüzün kullanıcı dostu olduğunu ve tüm işlevlerin beklendiği gibi çalıştığını kontrol ederiz.",
       "new_p_350": "Ayrıca, sistemin birden fazla kullanıcıyla ve büyük veri hacimleriyle iyi başa çıktığını doğrulamak için yük testleri gerçekleştiririz. Son olarak, tüm bulgularımızı ve önerilerimizi içeren ayrıntılı bir rapor sunarız; böylece sistemin durumunu ve sonraki adımları tam olarak bilirsiniz.",
       "new_p_351": "Amacımız yalnızca sorunları bulmak değil, aynı zamanda pratik çözümler sunmaktır. Müşterilerimizle tam iş birliği içinde çalışarak her iyileştirmenin onların iş ihtiyaçlarına uygun olduğundan emin oluruz.",
+      "new_p_355": "Sayfa taşındı. Bloga git",
+      "new_p_361": "Sayfa taşındı. Bloga git",
+      "new_p_367": "Sayfa taşındı. Bloga git",
       "about_h1_1": "25 Yılı Aşkın Deneyim\n\n\n        Microsoft Access Sistemlerinin\n\n\n        Onarımı ve Geliştirilmesinde",
       "about_h2_2": "Bu Alana Nasıl Geldim",
       "about_h2_3": "Teşhis ve Stabilizasyon Düşüncesi",
@@ -5677,10 +5680,7 @@
       "blog_cloud_sql_migration_checklist_jsonld_0_description_16": "Microsoft Access Uzmanı — Mevcut sistemlerin onarımı, stabilizasyonu ve iyileştirilmesi. 25+ yıl deneyim.",
       "blog_cloud_sql_migration_checklist_seo_twitter_description": "Eski bir sistemi buluta veya SQL'e taşımadan önce hangi kontrollerin yapılması gerektiğini açıklayan makale; arızaları, gecikmeleri ve iş risklerini önlemek için.",
       "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_1": "Ariel Yazılım Geliştirme",
-      "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "Ariel Shushaim",
-      "new_text_355_0": "Sayfa taşındı. ",
-      "new_text_361_0": "Sayfa taşındı. ",
-      "new_text_367_0": "Sayfa taşındı. "
+      "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "Ariel Shushaim"
     }
   }
 }
