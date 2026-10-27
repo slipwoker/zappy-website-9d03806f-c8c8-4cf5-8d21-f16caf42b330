@@ -87,6 +87,10 @@
       "new_a_337": "← חזרה לבלוג",
       "new_a_353": "← חזרה לבלוג",
       "new_a_356": "לבלוג",
+      "new_a_358": "הפניה לבלוג 2",
+      "new_a_362": "לבלוג",
+      "new_a_364": "הפניה לבלוג 3",
+      "new_a_368": "לבלוג",
       "new_p_328": "This page is ready for your content.",
       "new_p_330": "פסקת בדיקה עם <strong>הדגשה</strong> ו<a href=\"https://www.ariel10.net/\">קישור לדף הבית</a>.",
       "new_p_343": "מערכות מורכבות דורשות בדיקות קפדניות, במיוחד כשמדובר בכלי כמו Microsoft Access שמנהל תהליכים עסקיים קריטיים. במאמר זה נסקור את תהליך הבדיקה המעמיק שאנו מבצעים כדי להבטיח שהמערכת שלכם יציבה, מאובטחת ומוכנה לעבודה יומיומית. הבדיקה שלנו אינה רק טכנית – היא מבטיחה שהמערכת תמשיך לשרת אתכם נאמנה לאורך שנים.",
@@ -218,6 +222,8 @@
       "home_p_121": "© 2000–2025 אריאל פיתוח תוכנה. כל הזכויות שמורות.",
       "new_h1_327": "בדיקת חיבור Amber",
       "new_h1_339": "בדיקת Amber",
+      "new_h1_359": "הפניה לבלוג 2",
+      "new_h1_365": "הפניה לבלוג 3",
       "new_h2_332": "כותרת משנה לבדיקה",
       "new_h2_345": "למה בדיקות מקיפות כל כך חשובות?",
       "new_h2_348": "מה כולל תהליך הבדיקה שלנו?",
@@ -868,7 +874,7 @@
       "experience_p_52": "ניווט מהיר",
       "experience_p_53": "יצירת קשר",
       "experience_p_54": "© 2000–2025 אריאל פיתוח תוכנה. כל הזכויות שמורות.",
-      "home_page_title": "בלוג",
+      "home_page_title": "הפניה לבלוג 3",
       "privacy_link_24": "ariel@ariel10.net",
       "privacy_link_25": "שירותים",
       "privacy_link_26": "ניסיון מקצועי",
@@ -1948,7 +1954,7 @@
       "access_database_repair_p_50": "זה אחד המצבים הנפוצים שאני פוגש. אני עובד עם קוד וטבלאות שאחרים בנו כבר יותר מ-25 שנה: קורא את הקוד הקיים, ממפה את הלוגיקה, מתקן ומתעד. בסוף התהליך יש לכם גם מערכת עובדת וגם תיעוד, כך שלא תהיו תלויים שוב באדם אחד.",
       "access_database_repair_p_51": "שלח לי את הקובץ או תאר את הבעיה בוואטסאפ. אחזור אליך עם אבחון ראשוני תוך שעות ספורות ללא התחייבות.",
       "access_database_repair_p_52": "דבר איתי בוואטסאפ",
-      "access_database_repair_p_53": "מומחה Microsoft Access\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nתיקון, ייצוב ושיפור מערכות קיימות.",
+      "access_database_repair_p_53": "מומחה Microsoft Access\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nתיקון, ייצוב ושיפור מערכות קיימות.",
       "access_database_repair_p_54": "ניווט מהיר",
       "access_database_repair_p_55": "יצירת קשר",
       "access_database_repair_p_56": "© 2000–2025 אריאל פיתוח תוכנה. כל הזכויות שמורות.",
@@ -2830,7 +2836,9 @@
       "blog_cloud_sql_migration_checklist_seo_twitter_description": "מאמר שמסביר אילו בדיקות חשוב לבצע לפני מעבר של מערכת ותיקה לענן או ל-SQL, כדי להימנע מתקלות, עיכובים וסיכונים עסקיים.",
       "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_1": "אריאל פיתוח תוכנה",
       "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "אריאל שושיים",
-      "new_text_355_0": "הדף הועבר. "
+      "new_text_355_0": "הדף הועבר. ",
+      "new_text_361_0": "הדף הועבר. ",
+      "new_text_367_0": "הדף הועבר. "
     }
   },
   "tr": {
@@ -2921,6 +2929,10 @@
       "new_a_337": "← Bloga Dön",
       "new_a_353": "← Bloga Dön",
       "new_a_356": "Bloga git",
+      "new_a_358": "Blog Yönlendirmesi 2",
+      "new_a_362": "Bloga git",
+      "new_a_364": "Blog Yönlendirmesi 3",
+      "new_a_368": "Bloga git",
       "new_p_328": "Bu sayfa içeriğiniz için hazır.",
       "new_p_330": "Test paragrafı <strong>vurgu</strong> ve <a href=\"https://www.ariel10.net/\">ana sayfaya bağlantı</a> içeriyor.",
       "new_p_343": "Karmaşık sistemler, özellikle kritik iş süreçlerini yöneten Microsoft Access gibi araçlar söz konusu olduğunda, titiz testler gerektirir. Bu makalede, sisteminizin kararlı, güvenli ve günlük kullanıma hazır olduğunu garantilemek için gerçekleştirdiğimiz kapsamlı test sürecini inceleyeceğiz. Testimiz yalnızca teknik değildir – sisteminizin yıllarca size sadakatle hizmet etmeye devam etmesini sağlar.",
@@ -3052,6 +3064,8 @@
       "home_p_121": "© 2000–2025 אריאל פיתוח תוכנה. Tüm hakları saklıdır.",
       "new_h1_327": "Amber Bağlantı Testi",
       "new_h1_339": "Amber Testi",
+      "new_h1_359": "Blog Yönlendirmesi 2",
+      "new_h1_365": "Blog Yönlendirmesi 3",
       "new_h2_332": "Test için alt başlık",
       "new_h2_345": "Neden Kapsamlı Testler Bu Kadar Önemlidir?",
       "new_h2_348": "Test Sürecimiz Neler İçeriyor?",
@@ -3702,7 +3716,7 @@
       "experience_p_52": "Hızlı Gezinme",
       "experience_p_53": "İletişim",
       "experience_p_54": "© 2000–2025 אריאל פיתוח תוכנה. Tüm hakları saklıdır.",
-      "home_page_title": "Blog",
+      "home_page_title": "Blog Yönlendirmesi 3",
       "privacy_link_24": "ariel@ariel10.net",
       "privacy_link_25": "Hizmetler",
       "privacy_link_26": "Profesyonel Deneyim",
@@ -4782,7 +4796,7 @@
       "access_database_repair_p_50": "Bu, karşılaştığım en yaygın durumlardan biri. Başkalarının yazdığı kod ve tablolarla 25 yılı aşkın süredir çalışıyorum: mevcut kodu okuyorum, mantığı haritalıyorum, düzeltiyor ve belgeliyorum. Sürecin sonunda hem çalışan bir sisteme hem de belgelere sahip olursunuz; böylece bir daha tek bir kişiye bağımlı kalmazsınız.",
       "access_database_repair_p_51": "Dosyayı bana gönderin ya da sorunu WhatsApp'ta açıklayın. Hiçbir taahhüt olmaksızın birkaç saat içinde ilk tanıyla size geri döneceğim.",
       "access_database_repair_p_52": "WhatsApp'tan benimle konuşun",
-      "access_database_repair_p_53": "Microsoft Access Uzmanı\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMevcut sistemlerin onarımı, stabilizasyonu ve iyileştirilmesi.",
+      "access_database_repair_p_53": "Microsoft Access Uzmanı\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMevcut sistemlerin onarımı, stabilizasyonu ve iyileştirilmesi.",
       "access_database_repair_p_54": "Hızlı Gezinti",
       "access_database_repair_p_55": "İletişim",
       "access_database_repair_p_56": "© 2000–2025 Ariel Yazılım Geliştirme. Tüm hakları saklıdır.",
@@ -5664,7 +5678,9 @@
       "blog_cloud_sql_migration_checklist_seo_twitter_description": "Eski bir sistemi buluta veya SQL'e taşımadan önce hangi kontrollerin yapılması gerektiğini açıklayan makale; arızaları, gecikmeleri ve iş risklerini önlemek için.",
       "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_1": "Ariel Yazılım Geliştirme",
       "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "Ariel Shushaim",
-      "new_text_355_0": "Sayfa taşındı. "
+      "new_text_355_0": "Sayfa taşındı. ",
+      "new_text_361_0": "Sayfa taşındı. ",
+      "new_text_367_0": "Sayfa taşındı. "
     }
   }
 }
