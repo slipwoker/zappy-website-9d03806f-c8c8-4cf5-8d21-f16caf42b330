@@ -7100,7 +7100,7 @@ SQL Server הוא שרת הנתונים, והוא יכול לשבת אצלכם �
 
 ## בדיקת חיבור Amber
 
-URL: https://www.ariel10.net/blog/amber-connection-test
+URL: https://www.ariel10.net/blog/amber-connection-test-2
 Description: דף בדיקה זמני
 
 בדיקת חיבור Amber
