@@ -35958,6 +35958,33 @@ body:has(#zappy-cookie-banner) .whatsapp-cta-fixed {
 body:has(#zappy-cookie-banner) #mic-access-tool-general-button {
   transform: translateY(-105px) !important;
 }
+
+#video-testi-section .home-testi-google-cta {
+  text-align: center;
+  margin-top: 28px;
+}
+
+#video-testi-section .home-testi-google-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--surface-color, var(--surface, #FFFFFF));
+  color: var(--text-dark);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 12px 24px;
+  min-height: 48px;
+  font-size: 0.93rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+#video-testi-section .home-testi-google-btn:hover {
+  box-shadow: 0 4px 16px rgba(15,23,42,0.12);
+  transform: translateY(-1px);
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
