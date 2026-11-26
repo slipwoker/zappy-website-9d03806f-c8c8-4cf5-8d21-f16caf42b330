@@ -36855,6 +36855,24 @@ html body nav.navbar div.nav-brand.nav-brand {
   top: 35px !important;
 }
 }
+
+.access-testimonials-section .access-testimonials-video {
+  aspect-ratio: auto;
+  height: auto;
+}
+
+.access-testimonials-section .access-testimonials-video video {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+/* zappy-self-heal */
+.access-testimonials-section .access-testimonials-video { aspect-ratio: auto !important; }
+
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

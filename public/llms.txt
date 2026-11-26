@@ -78,6 +78,10 @@ https://www.ariel10.net/troubleshooting
 https://www.ariel10.net/access-to-sql-cloud
 שוקלים להעביר מערכת Access ל-SQL Server או לענן? לא כל מערכת צריכה לעבור. אני בודק קודם אם הבעיה נפתרת בחיזוק הקיים, ומבצע מעבר מלא כשהוא באמת נדרש.
 
+### תיאור מקרה: מערכת Access למערך ההדרכה ביד ושם | אריאל פיתוח תוכנה
+https://www.ariel10.net/yad-vashem
+איך מערכת Microsoft Access שנבנתה יחד עם מערך ההדרכה של יד ושם מרכזת הזמנות, שיבוץ מדריכים, תשלומים וחשבוניות — ומפיקה דוחות בלחיצת כפתור.
+
 ## Legal & Policy
 
 ### Privacy Policy
