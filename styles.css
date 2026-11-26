@@ -35942,6 +35942,14 @@ a, button {
     font-size: 0.9375rem;
   }
 }
+
+body:has(#zappy-cookie-banner) .whatsapp-cta-fixed {
+  bottom: 130px !important;
+}
+
+body:has(#zappy-cookie-banner) #mic-access-tool-general-button {
+  bottom: 130px !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
