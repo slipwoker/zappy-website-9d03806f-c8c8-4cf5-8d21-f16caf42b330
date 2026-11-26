@@ -90,6 +90,8 @@
   "new_a_364": "Blog Yönlendirmesi 3",
   "new_a_368": "Bloga git",
   "new_a_370": "zz-qa-test-delete",
+  "new_a_427": "Güvenlik yönetim yazılımı hakkında bilgi için ←<span></span>",
+  "new_a_428": "<span>Kütüphane yönetim yazılımı hakkında bilgi için ←</span>",
   "new_p_328": "Bu sayfa içeriğiniz için hazır.",
   "new_p_330": "Test paragrafı <strong>vurgu</strong> ve <a href=\"https://www.ariel10.net/\">ana sayfaya bağlantı</a> içeriyor.",
   "new_p_343": "Karmaşık sistemler, özellikle kritik iş süreçlerini yöneten Microsoft Access gibi araçlar söz konusu olduğunda, titiz testler gerektirir. Bu makalede, sisteminizin kararlı, güvenli ve günlük kullanıma hazır olduğunu garantilemek için gerçekleştirdiğimiz kapsamlı test sürecini inceleyeceğiz. Testimiz yalnızca teknik değildir – sisteminizin yıllarca size sadakatle hizmet etmeye devam etmesini sağlar.",
@@ -102,6 +104,7 @@
   "new_p_355": "Sayfa taşındı. Bloga git",
   "new_p_361": "Sayfa taşındı. Bloga git",
   "new_p_367": "Sayfa taşındı. Bloga git",
+  "new_p_426": "<a href=\"/safety-software\" class=\"software-services-link\" style>Güvenlik yönetim yazılımı hakkında bilgi için ←<span></span></a>",
   "about_h1_1": "25 Yılı Aşkın Deneyim\n\n\n        Microsoft Access Sistemlerinin\n\n\n        Onarımı ve Geliştirilmesinde",
   "about_h2_2": "Bu Alana Nasıl Geldim",
   "about_h2_3": "Teşhis ve Stabilizasyon Düşüncesi",
@@ -807,6 +810,8 @@
   "services_li_97": "Queries ve indekslerin optimizasyonu",
   "services_li_98": "Excel ve VBA ile otomasyon",
   "services_li_99": "Kullanıcı arayüzü ve çalışma deneyiminin iyileştirilmesi",
+  "software_td_39": "İş Güvenliği Yönetim Sistemi\n              Kuruluştaki tüm güvenlik konularını tam olarak yönetmek için bilgisayarlı bir sistem: kazalar, denetimler, eğitimler, bulgular ve düzeltme takibi. Güvenlik sorumluları, güvenlik koordinatörleri ve üretim yöneticileri için uygundur — hepsi aynı veritabanı üzerinde gerçek zamanlı olarak çalışır.\n              Sistem Hakkında Daha Fazla Bilgi ←",
+  "software_td_40": "Kütüphane Yönetim Sistemi\n              Kütüphaneyi tam olarak yönetmek için bilgisayarlı bir sistem: kitap kataloğu, ödünç verme ve iade, abonelikler, otomatik hatırlatmalar ve stok yönetimi. Okul, halk ve kurumsal kütüphaneler için uygundur — tüm veriler tek bir yerde toplanmış, kullanımı kolay bir arayüz ile.\n              Sistem Hakkında Daha Fazla Bilgi ←",
   "software_th_41": "Yazılım",
   "software_th_42": "Görsel",
   "blog_page_title": "Profesyonel Blog | Microsoft Access Sistemlerinin Bakımı, Onarımı ve Stabilizasyonu",
@@ -2838,7 +2843,5 @@
   "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_1": "Ariel Yazılım Geliştirme",
   "blog_cloud_sql_migration_checklist_jsonld_0_alternateName_12": "Ariel Shushaim",
   "new_text_424_0": "איך",
-  "new_text_424_1": "לתיקון מערכת קיימת?",
-  "software_text_39_2": "              Sistem Hakkında Daha Fazla Bilgi ←",
-  "software_text_40_2": "\n              Sistem Hakkında Daha Fazla Bilgi ←"
+  "new_text_424_1": "לתיקון מערכת קיימת?"
 }
