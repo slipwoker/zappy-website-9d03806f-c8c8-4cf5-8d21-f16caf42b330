@@ -35959,6 +35959,10 @@ body:has(#zappy-cookie-banner) #mic-access-tool-general-button {
   transform: translateY(-105px) !important;
 }
 
+.testi-section {
+  padding-top: 0 !important;
+}
+
 #video-testi-section .home-testi-google-cta {
   text-align: center;
   margin-top: 28px;
