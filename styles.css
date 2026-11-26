@@ -35944,11 +35944,11 @@ a, button {
 }
 
 body:has(#zappy-cookie-banner) .whatsapp-cta-fixed {
-  bottom: 130px !important;
+
 }
 
 body:has(#zappy-cookie-banner) #mic-access-tool-general-button {
-  bottom: 130px !important;
+
 }
 
 body:has(#zappy-cookie-banner) .whatsapp-cta-fixed {
@@ -36080,6 +36080,12 @@ body:has(#zappy-cookie-banner) #mic-access-tool-general-button {
   padding: 0 !important;
   margin: 0 !important;
   border: 0 !important;
+}
+}
+
+@media (max-width:768px) {
+html body nav.navbar div.nav-brand.nav-brand {
+  top: 35px !important;
 }
 }
 /* mobile-submenu-overflow-fix */
