@@ -38450,6 +38450,48 @@ html body:not(#_) section.hero-clean {
 html body:not(#_):has(.whatsapp-cta-fixed) .whatsapp-float {
   display: none !important;
 }
+
+@media (max-width: 768px) {
+html body:not(#_) .ariel-mobile-bar {
+  display: flex !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  height: 56px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,.15);
+}
+
+html body:not(#_) .ariel-mobile-bar a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+  -webkit-text-fill-color: var(--surface-color, var(--surface, var(--surface-color, var(--surface, #FFFFFF))));
+}
+
+html body:not(#_) .ariel-mobile-bar .amb-wa {
+  background: #0f7a5f;
+}
+
+html body:not(#_) .ariel-mobile-bar .amb-call {
+  background: var(--accent-color, var(--accent, var(--accent-color, var(--accent, #2563EB))));
+}
+
+html body:not(#_) .whatsapp-cta-fixed, html body:not(#_) .whatsapp-float, html body:not(#_) .floating-whatsapp, html body:not(#_) [class*="float-whatsapp"] {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+html body:not(#_) {
+  padding-bottom: 56px !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
