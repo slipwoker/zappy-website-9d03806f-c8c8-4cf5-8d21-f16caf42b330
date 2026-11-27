@@ -38846,6 +38846,10 @@ html body:not(#_) {
 /* zappy-self-heal */
 .access-related-section .access-related-links { padding: 24px 16px 0 !important; }
 
+
+html body:not(#_) .numbers-card-icon svg circle, html body:not(#_) .numbers-card-icon svg path, html body:not(#_) .numbers-card-icon svg rect, html body:not(#_) .numbers-card-icon svg line, html body:not(#_) .numbers-card-icon svg polyline {
+  stroke: var(--accent-color, var(--accent, #2563EB));
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
