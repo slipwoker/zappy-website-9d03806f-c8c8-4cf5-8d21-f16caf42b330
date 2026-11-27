@@ -38106,6 +38106,350 @@ body .whatsapp-float {
 /* zappy-self-heal */
 html body .services-excel-access-section .services-excel-access-grid { display: grid !important; }
 
+
+html body:not(#_) .index-services-section,
+html body:not(#_) .index-services-section .index-services-lead,
+html body:not(#_) .index-services-section .index-services-row-desc,
+html body:not(#_) .index-services-section .index-services-step-desc,
+html body:not(#_) .index-services-section .index-services-process-sub,
+html body:not(#_) .index-services-section .index-services-principle {
+  color: #475569 !important;
+}
+
+html body:not(#_) .index-services-section .index-services-heading,
+html body:not(#_) .index-services-section .index-services-row-title,
+html body:not(#_) .index-services-section .index-services-step-title,
+html body:not(#_) .index-services-section .index-services-principle strong {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-label,
+html body:not(#_) .index-services-section .index-services-process-badge,
+html body:not(#_) .index-services-section .index-services-step-num,
+html body:not(#_) .index-services-section .index-services-row-icon svg {
+  color: var(--accent-color, var(--accent, #2563EB)) !important;
+}
+
+html body:not(#_) .hero-clean__btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .services-btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .abv2__btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-primary-profile {
+  color: #475569 !important;
+}
+
+html body:not(#_) .software-cta-btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .ssh-btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .lsh-btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-primary:not(.hero-clean__btn-whatsapp) {
+  color: #475569 !important;
+}
+
+html body:not(#_) .access-hero-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .access-cta__btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .contact-submit-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-pill {
+  color: #475569 !important;
+}
+
+html body:not(#_) .familiar-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .services-benefits-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .exp-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .access-faq-section__cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .contact-faq-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .experience-portfolio-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .services-btn-outline {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-ghost-profile {
+  color: #475569 !important;
+}
+
+html body:not(#_) .software-cta-btn-ghost {
+  color: #475569 !important;
+}
+
+html body:not(#_) .ssh-btn-secondary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .lsh-btn-outline {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-ghost {
+  color: #475569 !important;
+}
+
+html body:not(#_) .contact-alt-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .familiar-section .familiar-title {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .familiar-section .familiar-pain-item {
+  color: #334155 !important;
+}
+
+html body:not(#_) .familiar-section .familiar-callout,
+html body:not(#_) .familiar-section .familiar-systems-links,
+html body:not(#_) .index-cta-section .index-cta-reassurance,
+html body:not(#_) .index-cta-section .index-cta-subtext,
+html body:not(#_) .site-footer .footer-tagline,
+html body:not(#_) .site-footer .footer-legal a {
+  color: #1d4ed8 !important;
+}
+
+html body:not(#_) .index-cta-section .index-cta-heading {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .how-it-works-subtitle,
+html body:not(#_) .how-it-works-card-desc,
+html body:not(#_) .how-it-works-cta-note,
+html body:not(#_) .testi-subtitle,
+html body:not(#_) .testi-role,
+html body:not(#_) .testi-letters-subtitle,
+html body:not(#_) .testi-letters-note {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-primary:not(.hero-clean__btn-whatsapp) {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-lead {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-row-desc {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-step-desc {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-process-sub {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-principle {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-heading {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-row-title {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-step-title {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-principle strong {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-label {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-process-badge {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-step-num {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .index-services-section .index-services-row-icon svg {
+  color: #1e293b !important;
+}
+
+html body:not(#_) .hero-clean__btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .services-btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .abv2__btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-primary-profile {
+  color: #475569 !important;
+}
+
+html body:not(#_) .software-cta-btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .ssh-btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .lsh-btn-primary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .access-hero-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .access-cta__btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .contact-submit-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-pill {
+  color: #475569 !important;
+}
+
+html body:not(#_) .familiar-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .services-benefits-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .exp-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .access-faq-section__cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .contact-faq-cta-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .experience-portfolio-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .services-btn-outline {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-ghost-profile {
+  color: #475569 !important;
+}
+
+html body:not(#_) .software-cta-btn-ghost {
+  color: #475569 !important;
+}
+
+html body:not(#_) .ssh-btn-secondary {
+  color: #475569 !important;
+}
+
+html body:not(#_) .lsh-btn-outline {
+  color: #475569 !important;
+}
+
+html body:not(#_) .btn-ghost {
+  color: #475569 !important;
+}
+
+html body:not(#_) .contact-alt-btn {
+  color: #475569 !important;
+}
+
+html body:not(#_) .index-services-section {
+  color: #475569 !important;
+}
+
+html body:not(#_) .contact-card-action--whatsapp,
+html body:not(#_) .contact-reassurance-btn-whatsapp {
+  background: #0f7a5f !important;
+  border-color: #0f7a5f !important;
+}
+
+html body:not(#_) .whatsapp-cta-fixed {
+  background-image: linear-gradient(#0f7a5f, #0f7a5f) !important;
+}
+
+html body:not(#_) .whatsapp-float {
+  background: #0f7a5f !important;
+  width: auto !important;
+  min-width: 56px !important;
+  padding: 0 18px !important;
+  gap: 8px !important;
+}
+
+html body:not(#_) .whatsapp-float::before,
+html body:not(#_) .whatsapp-float i {
+  -webkit-text-fill-color: var(--surface-color, var(--surface, #FFFFFF));
+}
+
+@media (max-width: 768px) {
+html body:not(#_) section.hero-clean {
+  padding-top: 24px !important;
+  min-height: 0 !important;
+}
+}
+
+html body:not(#_):has(.whatsapp-cta-fixed) .whatsapp-float {
+  display: none !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
