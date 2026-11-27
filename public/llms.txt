@@ -88,6 +88,7 @@ https://www.ariel10.net/library-software
 
 ### Access 2016, 2019 או 2021 בלי תמיכה – מה עושים עכשיו?
 https://www.ariel10.net/access-end-of-support
+Access 2016, 2019 ו-2021 כבר לא מקבלים עדכוני אבטחה. מה זה אומר, האם Access מפסיק, ו-3 אפשרויות לשדרג בלי לבנות את המערכת מחדש.
 
 ## Legal & Policy
 
