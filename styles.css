@@ -37308,6 +37308,168 @@ html body nav.navbar div.nav-brand.nav-brand {
   max-height: 240px !important;
 }
 }
+
+/* AI-generated section */
+.how-it-works-section {
+  background: var(--background-color, #F1F5F9);
+  padding: 80px 24px;
+  direction: rtl;
+  font-family: system-ui, sans-serif;
+}
+
+.how-it-works-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.how-it-works-heading {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-color, #0F172A);
+  margin-bottom: 48px;
+  letter-spacing: -0.5px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.step-card {
+  background: var(--surface-color, #FFFFFF);
+  border-radius: 16px;
+  padding: 32px 24px 28px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.step-number {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--gradient-primary, linear-gradient(135deg, #1557E8 0%, #1040AA 100%));
+  color: #FFFFFF;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.step-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary-color, #5a687d);
+  margin: 0;
+}
+
+.rate-banner {
+  background: var(--secondary-color, #0F172A);
+  border-radius: 16px;
+  padding: 28px 32px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rate-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.22);
+}
+
+.rate-text {
+  font-size: 1.15rem;
+  color: #E2E8F0;
+  font-weight: 400;
+}
+
+.rate-amount {
+  color: #60A5FA;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 4px;
+  letter-spacing: -0.3px;
+}
+
+/* טאבלט */
+@media (max-width: 992px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .how-it-works-heading {
+    font-size: 2rem;
+  }
+}
+
+/* מובייל */
+@media (max-width: 600px) {
+  .how-it-works-section {
+    padding: 56px 16px;
+  }
+  
+  .how-it-works-heading {
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+  }
+  
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .step-card {
+    padding: 24px 20px 22px;
+    flex-direction: row;
+    text-align: right;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .step-number {
+    width: 48px;
+    height: 48px;
+    font-size: 1.35rem;
+    margin-bottom: 0;
+  }
+  
+  .step-text {
+    font-size: 0.95rem;
+    flex: 1;
+  }
+  
+  .rate-banner {
+    padding: 22px 20px;
+  }
+  
+  .rate-text {
+    font-size: 1rem;
+  }
+  
+  .rate-amount {
+    font-size: 1.3rem;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
