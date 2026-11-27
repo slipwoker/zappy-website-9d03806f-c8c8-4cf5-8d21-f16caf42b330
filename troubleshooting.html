@@ -3490,6 +3490,38 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 </div>
 </div></section>
 
+<section class="access-64bit-section" data-layout-spec="תיקון ושחזור מסד נתונים Access פגום-64bit" dir="rtl" id="access-64bit-section">
+  <div class="access-64bit-container">
+    <h2 class="access-64bit-heading">שגיאות Access אחרי מעבר ל-Office 64 ביט</h2>
+    <p class="access-64bit-intro">מחשב חדש, Microsoft 365 מעודכן – ופתאום מערכת ה-Access שעבדה שנים לא נפתחת, או מציגה הודעת שגיאה בקוד. זה קורה כי Office מותקן היום כברירת מחדל בגרסת 64 ביט, וקוד VBA שנכתב לגרסת 32 ביט צריך התאמה.</p>
+
+    <h3 class="access-64bit-subheading">הודעות השגיאה הנפוצות</h3>
+    <ul class="access-64bit-list">
+      <li>Compile error: The code in this project must be updated for use on 64-bit systems... mark them with the PtrSafe attribute</li>
+      <li>Compile error: Type mismatch – בקריאות ל-Windows API</li>
+      <li>Can't find project or library / MISSING: בחלון References</li>
+      <li>רכיבי ActiveX שלא נטענים (Common Controls, לוח שנה, TreeView)</li>
+      <li>קובץ MDE או ACCDE שנוצר ב-32 ביט ולא נפתח ב-64 ביט</li>
+    </ul>
+
+    <h3 class="access-64bit-subheading">איך מתקנים נכון</h3>
+    <ul class="access-64bit-list">
+      <li>סריקה של כל המודולים ואיתור הצהרות ה-API</li>
+      <li>עדכון ל-PtrSafe ו-LongPtr, עם קוד שתואם בו-זמנית ל-32 ול-64 ביט (#If VBA7)</li>
+      <li>החלפת רכיבי ActiveX שאין להם גרסת 64 ביט בפתרונות מובנים של Access</li>
+      <li>תיקון References חסרים, הידור מחדש ובדיקה מלאה לפני החזרה לעבודה</li>
+    </ul>
+
+    <pre class="access-64bit-code" dir="ltr"><code>#If VBA7 Then
+    Private Declare PtrSafe Function GetActiveWindow Lib "user32" () As LongPtr
+#Else
+    Private Declare Function GetActiveWindow Lib "user32" () As Long
+#End If</code></pre>
+
+    <p class="access-64bit-intro">אפשר להתקין Office 32 ביט כפתרון זמני, אבל עדיף להתאים את הקוד פעם אחת כך שיעבוד בשתי הגרסאות. איך יודעים מה מותקן? ב-Access: קובץ ← חשבון ← אודות Access.</p>
+  </div>
+</section>
+
 <section class="access-faq-section" data-layout-spec="תיקון ושחזור מסד נתונים Access פגום-faq" dir="rtl" id="access-faq-section">
   <div class="access-faq-section__container">
     
