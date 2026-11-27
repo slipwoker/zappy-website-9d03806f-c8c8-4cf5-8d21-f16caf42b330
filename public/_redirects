@@ -1,5 +1,5 @@
 # Clean URL redirects for Render static hosting
-# Generated: 2026-11-26T20:18:26.720Z
+# Generated: 2026-11-27T01:57:33.415Z
 # NOTE: Render uses render.yaml for routing, not _redirects (that is Netlify)
 # This file is kept for reference only
 
@@ -24,6 +24,7 @@
 /troubleshooting  /troubleshooting.html  200!
 /access-to-sql-cloud  /access-to-sql-cloud.html  200!
 /yad-vashem  /yad-vashem.html  200!
+/access-slow-network  /access-slow-network.html  200!
 
 # Legal pages - redirect old .html URLs to friendly URLs
 /privacy.html  /privacy  301

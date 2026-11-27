@@ -82,6 +82,10 @@ https://www.ariel10.net/access-to-sql-cloud
 https://www.ariel10.net/yad-vashem
 איך מערכת Microsoft Access שנבנתה יחד עם מערך ההדרכה של יד ושם מרכזת הזמנות, שיבוץ מדריכים, תשלומים וחשבוניות — ומפיקה דוחות בלחיצת כפתור.
 
+### מערכת Access איטית ברשת? כך מאבחנים ומתקנים
+https://www.ariel10.net/access-slow-network
+אריאל פיתוח תוכנה - מערכת Access איטית ברשת? כך מאבחנים ומתקנים
+
 ## Legal & Policy
 
 ### Privacy Policy

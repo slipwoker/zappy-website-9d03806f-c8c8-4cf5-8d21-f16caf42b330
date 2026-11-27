@@ -36873,6 +36873,12 @@ html body nav.navbar div.nav-brand.nav-brand {
 /* zappy-self-heal */
 .access-testimonials-section .access-testimonials-video { aspect-ratio: auto !important; }
 
+
+@media (max-width: 768px) {
+#access-blog-article-section .article-h1 {
+  font-size: 1.6rem !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
