@@ -754,6 +754,43 @@ try {
 } catch (e) {
   if (typeof console !== 'undefined' && console.error) console.error('[Zappy] Added component script failed', e);
 }
+/* ZAPPY_CUSTOM_JS_START:0852fa28e368 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  function fixWhatsappFloat() {
+    var links = document.querySelectorAll('a.whatsapp-float');
+    links.forEach(function(a) {
+      if (a.getAttribute('href') && a.getAttribute('href').indexOf('[whatsapp_handle]') !== -1) {
+        a.setAttribute('href', 'https://wa.me/972523845555');
+      }
+    });
+  }
+  // Run on load and again after a short delay to catch runtime-injected markup
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      fixWhatsappFloat();
+      setTimeout(fixWhatsappFloat, 600);
+      setTimeout(fixWhatsappFloat, 1600);
+    });
+  } else {
+    fixWhatsappFloat();
+    setTimeout(fixWhatsappFloat, 600);
+    setTimeout(fixWhatsappFloat, 1600);
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:0852fa28e368 */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
